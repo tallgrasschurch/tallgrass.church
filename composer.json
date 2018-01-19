@@ -1,0 +1,42 @@
+{
+  "name": "tallgrasschurch/tallgrass.church",
+  "type": "project",
+  "description": "Tallgrass Community Church",
+  "homepage": "http://tallgrass.church",
+  "authors": [
+    {
+      "name": "D. Nathan Dillon",
+      "role": "Developer",
+      "homepage": "https://natedillon.com"
+    }
+  ],
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://packages.drupal.org/8"
+    }
+  ],
+  "require": {
+    "composer/installers": "^1.2",
+    "drupal-composer/drupal-scaffold": "^2.2",
+    "drupal/console": "~1.0",
+    "drupal/core": "~8.4.0",
+    "drush/drush": "~8.0",
+    "drupal/pathauto": "^1.0",
+    "drupal/google_analytics": "^2.0",
+    "drupal/field_group": "^1.0-rc6"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "extra": {
+    "installer-paths": {
+      "web/core": ["type:drupal-core"],
+      "web/libraries/{$name}": ["type:drupal-library"],
+      "web/modules/contrib/{$name}": ["type:drupal-module"],
+      "web/modules/custom/{$name}": ["type:drupal-custom-module"],
+      "web/profiles/contrib/{$name}": ["type:drupal-profile"],
+      "web/themes/contrib/{$name}": ["type:drupal-theme"],
+      "web/themes/custom/{$name}": ["type:drupal-custom-theme"]
+    }
+  }
+}
