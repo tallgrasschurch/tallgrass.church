@@ -1,0 +1,17 @@
+<div class="layout-container">
+  {% if page.header %}
+    <header role="banner">
+      {{ page.header }}
+    </header>
+  {% endif %}
+
+  <main role="main">
+    {{ page.content }}
+  </main>
+
+  {% if page.footer %}
+    <footer role="contentinfo">
+      {{ page.footer }}
+    </footer>
+  {% endif %}
+</div>{# .layout-container #}
