@@ -1,0 +1,22 @@
+{
+  "name": "static-boilerplate",
+  "description": "Templates for commonly used project files.",
+  "version": "0.0.0",
+  "author": "D. Nathan Dillon",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:natedillon/static-boilerplate.git"
+  },
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "autoprefixer": "^6.7.6",
+    "grunt": "^1.0.1",
+    "grunt-concurrent": "^2.3.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-postcss": "^0.8.0",
+    "grunt-sass": "^2.0.0",
+    "load-grunt-tasks": "^3.5.2",
+    "time-grunt": "^1.4.0"
+  }
+}
