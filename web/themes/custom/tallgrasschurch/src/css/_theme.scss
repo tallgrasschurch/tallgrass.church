@@ -79,7 +79,6 @@ img {
 
 .logo {
   display: inline-block;
-  padding: $grid-gutter-width;
   color: white;
   background-color: $brand-success;
   font-weight: lighter;
@@ -89,6 +88,7 @@ img {
 
   a {
     display: block;
+    padding: $grid-gutter-width;
     color: inherit;
     text-decoration: none;
   }
