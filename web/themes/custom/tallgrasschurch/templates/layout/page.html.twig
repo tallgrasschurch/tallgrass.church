@@ -1,17 +1,17 @@
-<div class="layout-container">
+<div class="container">
   {% if page.header %}
-    <header role="banner">
+    <header role="banner" class="header">
       {{ page.header }}
     </header>
   {% endif %}
 
-  <main role="main">
+  <main role="main" class="content">
     {{ page.content }}
   </main>
 
   {% if page.footer %}
-    <footer role="contentinfo">
+    <footer role="contentinfo" class="footer">
       {{ page.footer }}
     </footer>
   {% endif %}
-</div>{# .layout-container #}
+</div>{# .container #}

@@ -1,0 +1,86 @@
+//
+// Theme
+// --------------------------------------------------
+
+
+// Scaffolding
+// -------------------------
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  color: $body-color;
+}
+
+
+// Links
+// -------------------------
+
+a {
+  color: $brand-primary;
+  text-decoration: underline;
+
+  &:hover,
+  &focus {
+  }
+}
+
+
+// Images
+// -------------------------
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+// Layout
+// -------------------------
+
+.container {
+  padding-left: ($grid-gutter-width / 2);
+  padding-right: ($grid-gutter-width / 2);
+
+  @media (min-width: $screen-sm) {
+    width: $container-sm;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media (min-width: $screen-md) {
+    width: $container-md;
+  }
+
+//  @media (min-width: $screen-lg) {
+//    width: $container-lg;
+//  }
+
+//  @media (min-width: $screen-xl) {
+//    width: $container-xl;
+//  }
+}
+
+.header {}
+
+.logo {
+  display: table-caption;
+}
+
+.content {}
+
+.footer {}
