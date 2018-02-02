@@ -29,8 +29,8 @@ img {
 }
 
 .container {
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 @media (min-width: 576px) {
@@ -47,8 +47,13 @@ img {
   }
 }
 
+.header {
+  margin-bottom: 40px;
+}
+
 .logo {
-  display: inline-block;
+  display: block;
+  margin: 0 -20px;
   color: white;
   background-color: #5cb85c;
   font-weight: lighter;
@@ -66,4 +71,10 @@ img {
 
 .logo span {
   display: block;
+}
+
+@media (min-width: 576px) {
+  .logo {
+    display: inline-block;
+  }
 }

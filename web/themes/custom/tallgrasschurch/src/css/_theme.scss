@@ -53,8 +53,8 @@ img {
 // -------------------------
 
 .container {
-  padding-left: ($grid-gutter-width / 2);
-  padding-right: ($grid-gutter-width / 2);
+  padding-left: $grid-gutter-width;
+  padding-right: $grid-gutter-width;
 
   @media (min-width: $screen-sm) {
     width: $container-sm;
@@ -75,10 +75,13 @@ img {
 //  }
 }
 
-.header {}
+.header {
+  margin-bottom: $grid-gutter-width * 2;
+}
 
 .logo {
-  display: inline-block;
+  display: block;
+  margin: 0 (-$grid-gutter-width);
   color: white;
   background-color: $brand-success;
   font-weight: lighter;
@@ -95,6 +98,10 @@ img {
 
   span {
     display: block;
+  }
+
+  @media (min-width: $screen-sm) {
+    display: inline-block;
   }
 }
 
