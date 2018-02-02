@@ -48,5 +48,22 @@ img {
 }
 
 .logo {
-  display: table-caption;
+  display: inline-block;
+  padding: 20px;
+  color: white;
+  background-color: #5cb85c;
+  font-weight: lighter;
+  letter-spacing: 0.1em;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.logo a {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.logo span {
+  display: block;
 }
