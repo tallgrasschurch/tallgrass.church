@@ -33,6 +33,7 @@ body {
 a {
   color: $brand-primary;
   text-decoration: underline;
+  transition: all 0.2s linear;
 
   &:hover,
   &focus {
@@ -88,6 +89,7 @@ img {
   letter-spacing: 0.1em;
   line-height: normal;
   text-transform: uppercase;
+  transition: all 0.2s linear;
 
   a {
     display: block;
@@ -100,8 +102,22 @@ img {
     display: block;
   }
 
+  &:hover,
+  &:focus {
+    background-color: darken($brand-success, 10%);
+  }
+
   @media (min-width: $screen-sm) {
     display: inline-block;
+
+    &:hover,
+    &:focus {
+      margin-bottom: -($grid-gutter-width * 0.5);
+
+      a {
+        padding-top: $grid-gutter-width * 1.5;
+      }
+    }
   }
 }
 

@@ -21,6 +21,7 @@ body {
 a {
   color: #337ab7;
   text-decoration: underline;
+  transition: all 0.2s linear;
 }
 
 img {
@@ -60,6 +61,7 @@ img {
   letter-spacing: 0.1em;
   line-height: normal;
   text-transform: uppercase;
+  transition: all 0.2s linear;
 }
 
 .logo a {
@@ -73,8 +75,18 @@ img {
   display: block;
 }
 
+.logo:hover, .logo:focus {
+  background-color: #449d44;
+}
+
 @media (min-width: 576px) {
   .logo {
     display: inline-block;
+  }
+  .logo:hover, .logo:focus {
+    margin-bottom: -10px;
+  }
+  .logo:hover a, .logo:focus a {
+    padding-top: 30px;
   }
 }
