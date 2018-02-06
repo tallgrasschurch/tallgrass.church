@@ -58,13 +58,56 @@ img {
   background-color: white;
 }
 
-.header nav ul {
+@media (min-width: 576px) {
+  .region--header:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@media (min-width: 576px) {
+  #block-tallgrasschurch-branding {
+    float: left;
+    margin-left: -20px;
+    padding: 0 20px;
+  }
+}
+
+#block-mainnavigation ul {
   margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+#block-mainnavigation ul li {
+  display: inline-block;
+}
+
+@media (max-width: 575px) {
+  #block-mainnavigation {
+    margin: 0 -20px;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+  }
+  #block-mainnavigation ul li {
+    margin-right: 20px;
+  }
+}
+
+@media (min-width: 576px) {
+  #block-mainnavigation {
+    float: right;
+    padding-top: 20px;
+  }
+  #block-mainnavigation ul li {
+    margin-left: 20px;
+  }
 }
 
 .logo {
   display: block;
-  margin: 0 0 20px;
+  margin: 0;
   font-weight: lighter;
   letter-spacing: 0.1em;
   line-height: normal;

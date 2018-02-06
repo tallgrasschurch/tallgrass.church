@@ -86,16 +86,71 @@ img {
   background-color: white;
 }
 
-.header nav {
+.region--header {
+
+  @media (min-width: $screen-sm) {
+    // Clearfix
+    // https://css-tricks.com/snippets/css/clear-fix/
+    &:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  }
+}
+
+#block-tallgrasschurch-branding {
+
+  @media (min-width: $screen-sm) {
+    float: left;
+    margin-left: -$grid-gutter-width;
+    padding: 0 $grid-gutter-width;
+  }
+}
+
+#block-mainnavigation {
 
   ul {
     margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    li {
+      display: inline-block;
+
+      a {}
+    }
+  }
+
+  @media (max-width: $screen-xs-max) {
+    margin: 0 (-$grid-gutter-width);
+    padding: ($grid-gutter-width / 2) $grid-gutter-width;
+    border-bottom: 1px solid $grey-lighter;
+
+    ul {
+
+      li {
+        margin-right: $grid-gutter-width;
+      }
+    }
+  }
+
+  @media (min-width: $screen-sm) {
+    float: right;
+    padding-top: $grid-gutter-width;
+
+    ul {
+
+      li {
+        margin-left: $grid-gutter-width;
+      }
+    }
   }
 }
 
 .logo {
   display: block;
-  margin: 0 0 $grid-gutter-width;
+  margin: 0;
   font-weight: lighter;
   letter-spacing: 0.1em;
   line-height: normal;
