@@ -54,20 +54,19 @@ img {
 
 .logo {
   display: block;
-  margin: 0 -20px;
-  color: white;
-  background-color: #5cb85c;
+  margin: 0;
   font-weight: lighter;
   letter-spacing: 0.1em;
   line-height: normal;
   text-transform: uppercase;
-  transition: all 0.2s linear;
 }
 
 .logo a {
   display: block;
+  margin: 0 -20px;
   padding: 20px;
-  color: inherit;
+  color: white;
+  background-color: #5cb85c;
   text-decoration: none;
 }
 
@@ -75,7 +74,7 @@ img {
   display: block;
 }
 
-.logo:hover, .logo:focus {
+.logo:hover a, .logo:focus a {
   background-color: #449d44;
 }
 
@@ -83,10 +82,8 @@ img {
   .logo {
     display: inline-block;
   }
-  .logo:hover, .logo:focus {
-    margin-bottom: -10px;
-  }
   .logo:hover a, .logo:focus a {
+    margin-bottom: -10px;
     padding-top: 30px;
   }
 }

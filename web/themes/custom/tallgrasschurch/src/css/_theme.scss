@@ -82,19 +82,18 @@ img {
 
 .logo {
   display: block;
-  margin: 0 (-$grid-gutter-width);
-  color: white;
-  background-color: $brand-success;
+  margin: 0;
   font-weight: lighter;
   letter-spacing: 0.1em;
   line-height: normal;
   text-transform: uppercase;
-  transition: all 0.2s linear;
 
   a {
     display: block;
+    margin: 0 (-$grid-gutter-width);
     padding: $grid-gutter-width;
-    color: inherit;
+    color: white;
+    background-color: $brand-success;
     text-decoration: none;
   }
 
@@ -104,7 +103,10 @@ img {
 
   &:hover,
   &:focus {
-    background-color: darken($brand-success, 10%);
+
+    a {
+      background-color: darken($brand-success, 10%);
+    }
   }
 
   @media (min-width: $screen-sm) {
@@ -112,9 +114,9 @@ img {
 
     &:hover,
     &:focus {
-      margin-bottom: -($grid-gutter-width * 0.5);
 
       a {
+        margin-bottom: -($grid-gutter-width * 0.5);
         padding-top: $grid-gutter-width * 1.5;
       }
     }
