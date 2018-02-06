@@ -108,3 +108,47 @@ img {
   background-color: #f5f5f5;
   font-size: 1.4rem;
 }
+
+@supports (display: flex) {
+  @media (min-width: 576px) {
+    .region--footer {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+      -ms-flex-align: center;
+          align-items: center;
+    }
+  }
+}
+
+@supports (display: flex) {
+  @media (min-width: 576px) {
+    #block-footercontent {
+      margin-right: 20px;
+    }
+  }
+}
+
+#block-useraccountmenu ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+#block-useraccountmenu ul li {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+#block-useraccountmenu ul li a {
+  display: block;
+  padding: 2px 7px;
+  color: inherit;
+  background-color: #ddd;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+#block-useraccountmenu ul li a:hover, #block-useraccountmenu ul li a:focus {
+  background-color: #c4c3c3;
+}

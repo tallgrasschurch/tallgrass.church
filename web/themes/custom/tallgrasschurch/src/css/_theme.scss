@@ -146,3 +146,52 @@ img {
   background-color: $grey-lightest;
   font-size: 1.4rem;
 }
+
+.region--footer {
+
+  @supports (display: flex) {
+
+    @media (min-width: $screen-sm) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+}
+
+#block-footercontent {
+
+  @supports (display: flex) {
+
+    @media (min-width: $screen-sm) {
+      margin-right: $grid-gutter-width;
+    }
+  }
+}
+
+#block-useraccountmenu {
+
+  ul {
+    padding: 0;
+    list-style-type: none;
+
+    li {
+      display: inline-block;
+      white-space: nowrap;
+
+      a {
+        display: block;
+        padding: 2px 7px;
+        color: inherit;
+        background-color: $grey-lighter;
+        font-size: 1.2rem;
+        text-decoration: none;
+
+        &:hover,
+        &:focus {
+          background-color: darken($grey-lighter, 10%);
+        }
+      }
+    }
+  }
+}
