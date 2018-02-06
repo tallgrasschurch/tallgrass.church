@@ -24,6 +24,7 @@ body {
   font-size: $font-size-base;
   line-height: $line-height-base;
   color: $body-color;
+  background-color: $grey-lightest;
 }
 
 
@@ -53,6 +54,8 @@ img {
 // Layout
 // -------------------------
 
+.page {}
+
 .container {
   padding-left: $grid-gutter-width;
   padding-right: $grid-gutter-width;
@@ -77,12 +80,20 @@ img {
 }
 
 .header {
-  margin-bottom: $grid-gutter-width * 2;
+  margin: 0;
+  background-color: white;
+}
+
+.header nav {
+
+  ul {
+    margin: 0;
+  }
 }
 
 .logo {
   display: block;
-  margin: 0;
+  margin: 0 0 $grid-gutter-width;
   font-weight: lighter;
   letter-spacing: 0.1em;
   line-height: normal;
@@ -123,6 +134,12 @@ img {
   }
 }
 
-.content {}
+.content {
+  padding: ($grid-gutter-width * 2) 0;
+  background-color: white;
+}
 
-.footer {}
+.footer {
+  padding: $grid-gutter-width 0;
+  font-size: 1.4rem;
+}
