@@ -54,7 +54,9 @@ img {
 // Layout
 // -------------------------
 
-.page {}
+.page {
+  background-color: white;
+}
 
 .container {
   padding-left: $grid-gutter-width;
@@ -141,5 +143,6 @@ img {
 
 .footer {
   padding: $grid-gutter-width 0;
+  background-color: $grey-lightest;
   font-size: 1.4rem;
 }
