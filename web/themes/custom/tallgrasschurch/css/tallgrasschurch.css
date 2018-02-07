@@ -432,6 +432,15 @@ template {
   display: none;
 }
 
+dl dt {
+  font-weight: bold;
+}
+
+dl dd {
+  margin-left: 0;
+  margin-bottom: 2.4rem;
+}
+
 label {
   display: inline-block;
   margin-bottom: 0.5rem;
