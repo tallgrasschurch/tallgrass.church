@@ -684,3 +684,39 @@ img {
 #block-useraccountmenu ul li a:hover, #block-useraccountmenu ul li a:focus {
   background-color: #c4c3c3;
 }
+
+#block-tallgrasschurch-local-tasks {
+  font-size: 1.4rem;
+  line-height: 1.5;
+}
+
+#block-tallgrasschurch-local-tasks ul {
+  margin: 0 0 20px;
+  padding: 0 10px;
+  list-style-type: none;
+  border-bottom: 1px solid #ddd;
+}
+
+#block-tallgrasschurch-local-tasks ul li {
+  display: inline-block;
+  margin: 0 5px -1px 0;
+  white-space: nowrap;
+}
+
+#block-tallgrasschurch-local-tasks ul li a {
+  display: block;
+  padding: 10px 20px;
+  color: inherit;
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  text-decoration: none;
+}
+
+#block-tallgrasschurch-local-tasks ul li a:hover, #block-tallgrasschurch-local-tasks ul li a:focus {
+  text-decoration: underline;
+}
+
+#block-tallgrasschurch-local-tasks ul li a.is-active {
+  background-color: white;
+  border-bottom-color: white;
+}
