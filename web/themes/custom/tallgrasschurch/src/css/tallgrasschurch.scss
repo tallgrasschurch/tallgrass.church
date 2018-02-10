@@ -1,0 +1,20 @@
+//
+// Tallgrass Community Church
+// --------------------------------------------------
+
+
+// Variables and mixins
+@import 'variables';
+@import 'mixins';
+
+// Reset and dependencies
+@import '../../node_modules/normalize.css/normalize';
+
+// Core CSS
+@import 'type';
+@import 'forms';
+
+// Components
+
+// Theme
+@import 'theme';

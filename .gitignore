@@ -1,0 +1,25 @@
+# System files
+.DS_Store
+
+# Server-generated files
+/favicon.ico
+/favicon.gif
+/web/favicon.ico
+/web/favicon.gif
+/web/.well-known/
+
+# Drupal Composer files
+/vendor/
+/web/core/
+/web/modules/contrib/
+/web/themes/contrib/
+/web/profiles/contrib/
+/web/libraries/
+
+# Drupal configuration files
+/web/sites/*/settings*.php
+/web/sites/*/services*.yml
+
+# Drupal user-generated content
+/web/sites/*/files/
+/web/sites/*/private/

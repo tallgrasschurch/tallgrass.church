@@ -1,0 +1,18 @@
+{% extends "block.html.twig" %}
+
+{% block content %}
+  <h1 class="logo">
+    <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home">
+      {% if site_logo %}
+        <img src="{{ site_logo }}" alt="{{ 'Home'|t }}">
+      {% endif %}
+      {% if site_name %}
+        {% set site_name_split = site_name|split(' ') %}
+        {% for word in site_name_split %}
+          <span>{{ word }}</span>
+        {% endfor %}
+      {% endif %}
+    </a>
+  </h1><!-- .logo -->
+  {{ site_slogan }}
+{% endblock %}
