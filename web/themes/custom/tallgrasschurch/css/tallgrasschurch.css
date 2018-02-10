@@ -563,33 +563,33 @@ img {
   }
 }
 
-#block-mainnavigation ul {
+#block-tallgrasschurch-main-menu ul {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
-#block-mainnavigation ul li {
+#block-tallgrasschurch-main-menu ul li {
   display: inline-block;
 }
 
 @media (max-width: 575px) {
-  #block-mainnavigation {
+  #block-tallgrasschurch-main-menu {
     margin: 0 -20px;
     padding: 10px 20px;
     border-bottom: 1px solid #ddd;
   }
-  #block-mainnavigation ul li {
+  #block-tallgrasschurch-main-menu ul li {
     margin-right: 20px;
   }
 }
 
 @media (min-width: 576px) {
-  #block-mainnavigation {
+  #block-tallgrasschurch-main-menu {
     float: right;
     padding-top: 20px;
   }
-  #block-mainnavigation ul li {
+  #block-tallgrasschurch-main-menu ul li {
     margin-left: 20px;
   }
 }
@@ -656,23 +656,23 @@ img {
 
 @supports (display: flex) {
   @media (min-width: 576px) {
-    #block-footercontent {
+    #block-tallgrasschurch-footer-content {
       margin-right: 20px;
     }
   }
 }
 
-#block-useraccountmenu ul {
+#block-tallgrasschurch-account-menu ul {
   padding: 0;
   list-style-type: none;
 }
 
-#block-useraccountmenu ul li {
+#block-tallgrasschurch-account-menu ul li {
   display: inline-block;
   white-space: nowrap;
 }
 
-#block-useraccountmenu ul li a {
+#block-tallgrasschurch-account-menu ul li a {
   display: block;
   padding: 2px 7px;
   color: inherit;
@@ -681,7 +681,7 @@ img {
   text-decoration: none;
 }
 
-#block-useraccountmenu ul li a:hover, #block-useraccountmenu ul li a:focus {
+#block-tallgrasschurch-account-menu ul li a:hover, #block-tallgrasschurch-account-menu ul li a:focus {
   background-color: #c4c3c3;
 }
 
