@@ -1,0 +1,289 @@
+//
+// Theme
+// --------------------------------------------------
+
+
+// Scaffolding
+// -------------------------
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  color: $body-color;
+  background-color: $grey-lightest;
+}
+
+
+// Links
+// -------------------------
+
+a {
+  color: $brand-primary;
+  text-decoration: underline;
+  transition: all 0.2s linear;
+
+  &:hover,
+  &focus {
+  }
+}
+
+
+// Images
+// -------------------------
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+// Layout
+// -------------------------
+
+.page {
+  background-color: white;
+}
+
+.container {
+  padding-left: $grid-gutter-width;
+  padding-right: $grid-gutter-width;
+
+  @media (min-width: $screen-sm) {
+    width: $container-sm;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media (min-width: $screen-md) {
+    width: $container-md;
+  }
+
+//  @media (min-width: $screen-lg) {
+//    width: $container-lg;
+//  }
+
+//  @media (min-width: $screen-xl) {
+//    width: $container-xl;
+//  }
+}
+
+.header {
+  margin: 0;
+  background-color: white;
+}
+
+.region--header {
+
+  @media (min-width: $screen-sm) {
+    // Clearfix
+    // https://css-tricks.com/snippets/css/clear-fix/
+    &:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  }
+}
+
+#block-tallgrasschurch-branding {
+
+  @media (min-width: $screen-sm) {
+    float: left;
+    margin-left: -$grid-gutter-width;
+    padding: 0 $grid-gutter-width;
+  }
+}
+
+#block-mainnavigation {
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    li {
+      display: inline-block;
+
+      a {}
+    }
+  }
+
+  @media (max-width: $screen-xs-max) {
+    margin: 0 (-$grid-gutter-width);
+    padding: ($grid-gutter-width / 2) $grid-gutter-width;
+    border-bottom: 1px solid $grey-lighter;
+
+    ul {
+
+      li {
+        margin-right: $grid-gutter-width;
+      }
+    }
+  }
+
+  @media (min-width: $screen-sm) {
+    float: right;
+    padding-top: $grid-gutter-width;
+
+    ul {
+
+      li {
+        margin-left: $grid-gutter-width;
+      }
+    }
+  }
+}
+
+.logo {
+  display: block;
+  margin: 0;
+  font-weight: lighter;
+  letter-spacing: 0.1em;
+  line-height: normal;
+  text-transform: uppercase;
+
+  a {
+    display: block;
+    margin: 0 (-$grid-gutter-width);
+    padding: $grid-gutter-width;
+    color: white;
+    background-color: $brand-success;
+    text-decoration: none;
+  }
+
+  span {
+    display: block;
+  }
+
+  &:hover,
+  &:focus {
+
+    a {
+      background-color: darken($brand-success, 10%);
+    }
+  }
+
+  @media (min-width: $screen-sm) {
+    display: inline-block;
+
+    &:hover,
+    &:focus {
+
+      a {
+        margin-bottom: -($grid-gutter-width * 0.5);
+        padding-top: $grid-gutter-width * 1.5;
+      }
+    }
+  }
+}
+
+.content {
+  padding: ($grid-gutter-width * 2) 0;
+  background-color: white;
+}
+
+.footer {
+  padding: $grid-gutter-width 0;
+  background-color: $grey-lightest;
+  font-size: 1.4rem;
+}
+
+.region--footer {
+
+  @supports (display: flex) {
+
+    @media (min-width: $screen-sm) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+}
+
+#block-footercontent {
+
+  @supports (display: flex) {
+
+    @media (min-width: $screen-sm) {
+      margin-right: $grid-gutter-width;
+    }
+  }
+}
+
+#block-useraccountmenu {
+
+  ul {
+    padding: 0;
+    list-style-type: none;
+
+    li {
+      display: inline-block;
+      white-space: nowrap;
+
+      a {
+        display: block;
+        padding: 2px 7px;
+        color: inherit;
+        background-color: $grey-lighter;
+        font-size: 1.2rem;
+        text-decoration: none;
+
+        &:hover,
+        &:focus {
+          background-color: darken($grey-lighter, 10%);
+        }
+      }
+    }
+  }
+}
+
+#block-tallgrasschurch-local-tasks {
+  font-size: 1.4rem;
+  line-height: $line-height-base;
+
+  ul {
+    margin: 0 0 $grid-gutter-width;
+    padding: 0 10px;
+    list-style-type: none;
+    border-bottom: 1px solid $grey-lighter;
+
+    li {
+      display: inline-block;
+      margin: 0 5px -1px 0;
+      white-space: nowrap;
+
+      a {
+        display: block;
+        padding: 10px 20px;
+        color: inherit;
+        background-color: $grey-lightest;
+        border: 1px solid $grey-lighter;
+        text-decoration: none;
+
+        &:hover,
+        &:focus {
+          text-decoration: underline;
+        }
+
+        &.is-active {
+          background-color: white;
+          border-bottom-color: white;
+        }
+      }
+    }
+  }
+}

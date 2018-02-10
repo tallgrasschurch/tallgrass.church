@@ -1,0 +1,8 @@
+global-css:
+  css:
+    theme:
+      css/tallgrasschurch.css: {}
+
+global-js:
+  js:
+    js/tallgrasschurch.js: {}

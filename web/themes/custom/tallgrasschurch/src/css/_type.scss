@@ -1,0 +1,23 @@
+//
+// Typography
+// --------------------------------------------------
+
+
+// Lists
+// -------------------------
+
+// Description lists
+dl {
+
+  dt,
+  dd {}
+
+  dt {
+    font-weight: bold;
+  }
+
+  dd {
+    margin-left: 0;
+    margin-bottom: $line-height-computed;
+  }
+}
