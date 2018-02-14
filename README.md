@@ -22,6 +22,8 @@ composer update
 
 Commit any changes to the repository (including the `composer.lock` file).
 
+**Note:** When updating Drupal, the update command should be run locally, tested, then deployed to the server. Once the changes are deployed, the `composer install` command can be run on the server in order to update the installation. Running the the `composer update` command directly on the server may cause excessive resource usage.
+
 ## Theme Development
 
 For theme development, you must have [npm](https://www.npmjs.com/) and [Grunt](https://gruntjs.com/) installed in order to build the static files.
