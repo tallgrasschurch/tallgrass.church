@@ -610,6 +610,16 @@ form .preview {
   text-align: center;
 }
 
+.alert {
+  padding: 20px;
+}
+
+.alert--primary {
+  color: #1d4567;
+  background-color: #c7ddef;
+  border: 1px solid #9fc4e4;
+}
+
 .embed-responsive {
   position: relative;
   display: block;
