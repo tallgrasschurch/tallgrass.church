@@ -20,6 +20,12 @@ textarea {
   line-height: $line-height-base;
 }
 
+input[readonly] {
+  color: $grey-light;
+  background-color: $grey-lightest;
+  cursor: not-allowed;
+}
+
 input[type="submit"] {
   display: inline-block;
   width: auto;
