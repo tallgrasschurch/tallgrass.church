@@ -1,0 +1,41 @@
+//
+// Buttons
+// --------------------------------------------------
+
+
+.btn {
+  display: inline-block;
+  padding: .3125em .625em;
+  border: 1px solid transparent;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  transition: color .2s ease-in-out, background-color .2s ease-in-out, border-color .2s ease-in-out, box-shadow .2s ease-in-out;
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+.btn-primary {
+  color: white;
+  background-color: $brand-primary;
+
+  &:hover,
+  &:focus {
+    background-color: darken($brand-primary, 10%);
+  }
+}
+
+.btn-lg {
+  font-size: 2.1rem;
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+}

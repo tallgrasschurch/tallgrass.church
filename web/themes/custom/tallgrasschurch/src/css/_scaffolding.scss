@@ -34,7 +34,7 @@ body {
 a {
   color: $brand-primary;
   text-decoration: underline;
-  transition: all 0.2s linear;
+  transition: all .2s linear;
 
   &:hover,
   &:focus {
