@@ -11,10 +11,14 @@
 @import '../../node_modules/normalize.css/normalize';
 
 // Core CSS
+@import 'scaffolding';
 @import 'type';
 @import 'forms';
+@import 'buttons';
 
 // Components
+@import 'align';
+@import 'embed';
 
 // Theme
 @import 'theme';
