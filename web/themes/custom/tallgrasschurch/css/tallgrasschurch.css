@@ -487,6 +487,16 @@ form .description {
   line-height: 1.5;
 }
 
+.alert {
+  padding: 20px;
+}
+
+.alert--primary {
+  color: #1d4567;
+  background-color: #c7ddef;
+  border: 1px solid #9fc4e4;
+}
+
 html {
   box-sizing: border-box;
   font-size: 62.5%;
