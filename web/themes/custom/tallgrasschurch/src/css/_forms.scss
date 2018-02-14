@@ -76,3 +76,10 @@ form .description {
   font-size: 1.4rem;
   line-height: $line-height-base;
 }
+
+form .preview {
+  margin: $grid-gutter-width 0;
+  padding: $grid-gutter-width;
+  background-color: $grey-lightest;
+  border: 1px solid $grey-lighter;
+}

@@ -511,6 +511,13 @@ form .description {
   line-height: 1.5;
 }
 
+form .preview {
+  margin: 20px 0;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+}
+
 html {
   box-sizing: border-box;
   font-size: 62.5%;
