@@ -1,0 +1,48 @@
+# EditorConfig (http://editorconfig.org)
+
+# Set this as the root EditorConfig file
+root = false
+
+# Default settings for all files
+[*]
+charset = utf-8
+end_of_line = lf
+trim_trailing_whitespace = true
+insert_final_newline = true
+indent_style = space
+indent_size = 2
+
+# Text and Markdown
+[*.{md,markdown,mdown,mkd,mkdown,ron,txt,text}]
+indent_style = space
+indent_size = 4
+
+# HTML, CSS, and JavaScript
+[*.{html,twig,css,scss,sass,less,js}]
+indent_style = space
+indent_size = 2
+
+# JSON and YAML
+[*.{json,yml}]
+indent_style = space
+indent_size = 2
+
+# PHP
+[*.php]
+indent_style = space
+indent_size = 2
+
+# Python
+[*.py]
+indent_style = space
+indent_size = 4
+
+# Ruby
+[*.rb]
+indent_style = space
+indent_size = 2
+
+# Java
+[*.jsp]
+indent_style = space
+indent_size = 2
