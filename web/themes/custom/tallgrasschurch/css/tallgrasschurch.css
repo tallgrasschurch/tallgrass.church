@@ -583,6 +583,7 @@ form .description {
   position: relative;
   display: block;
   width: 100%;
+  margin: 2.4rem 0;
   padding: 0;
   overflow: hidden;
 }
