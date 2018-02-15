@@ -1,0 +1,33 @@
+{%
+  set classes = [
+    'field',
+    'field--' ~ field_name|clean_class,
+  ]
+%}
+
+{% if label_hidden %}
+  {% if multiple %}
+    <div{{ attributes.addclass(classes) }}>
+      {% for item in items %}
+        <div{{ item.attributes }}>{{ item.content }}</div>
+      {% endfor %}
+    </div>
+  {% else %}
+    {% for item in items %}
+      <div{{ attributes.addclass(classes) }}>{{ item.content }}</div>
+    {% endfor %}
+  {% endif %}
+{% else %}
+  <div{{ attributes.addclass(classes) }}>
+    <div{{ title_attributes }}>{{ label }}</div>
+    {% if multiple %}
+      <div>
+    {% endif %}
+    {% for item in items %}
+      <div{{ item.attributes }}>{{ item.content }}</div>
+    {% endfor %}
+    {% if multiple %}
+      </div>
+    {% endif %}
+  </div>
+{% endif %}

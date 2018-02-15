@@ -239,3 +239,7 @@
     }
   }
 }
+
+.field--field-image {
+  @extend .alignright;
+}

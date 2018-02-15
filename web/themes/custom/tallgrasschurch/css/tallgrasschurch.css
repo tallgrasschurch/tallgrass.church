@@ -589,7 +589,7 @@ form .preview {
   width: 100%;
 }
 
-.alignright {
+.alignright, .field--field-image {
   position: relative;
   float: right;
   max-width: 50%;
