@@ -473,6 +473,13 @@ dl dd {
   margin-bottom: 2.4rem;
 }
 
+figure figcaption {
+  color: #777;
+  font-size: 1.4rem;
+  font-style: italic;
+  line-height: 1.5;
+}
+
 label {
   display: inline-block;
   margin-bottom: 0.5rem;
