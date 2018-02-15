@@ -589,21 +589,24 @@ form .preview {
   width: 100%;
 }
 
-.alignright, .field--field-image {
+.alignright, .field--field-image,
+.align-right {
   position: relative;
   float: right;
   max-width: 50%;
   margin: 0 0 20px 20px;
 }
 
-.alignleft {
+.alignleft,
+.align-left {
   position: relative;
   float: left;
   max-width: 50%;
   margin: 0 20px 20px 0;
 }
 
-.aligncenter {
+.aligncenter,
+.align-center {
   clear: both;
   display: block;
   margin: 20px auto;
