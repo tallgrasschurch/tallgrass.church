@@ -1,0 +1,17 @@
+{%
+  set classes = [
+    'field',
+    'field--' ~ field_name|clean_class,
+  ]
+%}
+
+<section{{ attributes.addclass(classes) }}>
+  <header>
+    <h2{{ title_attributes }}>Files</h2>
+  </header>
+  <ul>
+    {% for item in items %}
+      <li{{ item.attributes }}>{{ item.content }}</li>
+    {% endfor %}
+  </ul>
+</section>
