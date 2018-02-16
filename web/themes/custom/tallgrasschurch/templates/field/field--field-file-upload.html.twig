@@ -1,17 +1,18 @@
+{% extends "field.html.twig" %}
+
 {%
-  set classes = [
-    'field',
-    'field--' ~ field_name|clean_class,
+  set label_classes = [
+    'field__label',
   ]
 %}
 
-<section{{ attributes.addclass(classes) }}>
-  <header>
-    <h2{{ title_attributes }}>Files</h2>
-  </header>
+{% block label %}
+  <h2{{ title_attributes.addClass(label_classes) }}>Files</h2>
+{% endblock label %}
+{% block content %}
   <ul>
     {% for item in items %}
       <li{{ item.attributes }}>{{ item.content }}</li>
     {% endfor %}
   </ul>
-</section>
+{% endblock content %}

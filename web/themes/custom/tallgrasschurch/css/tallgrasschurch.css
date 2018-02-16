@@ -876,7 +876,7 @@ form .preview {
   border-bottom-color: white;
 }
 
-.field--field-file-upload header h2 {
+.field--field-file-upload .field__label {
   margin: 0;
   padding: 10px 20px;
   color: white;

@@ -5,29 +5,21 @@
   ]
 %}
 
-{% if label_hidden %}
-  {% if multiple %}
-    <div{{ attributes.addclass(classes) }}>
-      {% for item in items %}
-        <div{{ item.attributes }}>{{ item.content }}</div>
-      {% endfor %}
-    </div>
-  {% else %}
-    {% for item in items %}
-      <div{{ attributes.addclass(classes) }}>{{ item.content }}</div>
-    {% endfor %}
-  {% endif %}
-{% else %}
-  <div{{ attributes.addclass(classes) }}>
-    <div{{ title_attributes }}>{{ label }}</div>
-    {% if multiple %}
-      <div>
+{%
+  set label_classes = [
+    'field__label',
+  ]
+%}
+
+<div{{ attributes.addclass(classes) }}>
+  {% block label %}
+    {% if not label_hidden %}
+      <div{{ title_attributes.addClass(label_classes) }}>{{ label }}</div>
     {% endif %}
+  {% endblock %}
+  {% block content %}
     {% for item in items %}
       <div{{ item.attributes }}>{{ item.content }}</div>
     {% endfor %}
-    {% if multiple %}
-      </div>
-    {% endif %}
-  </div>
-{% endif %}
+  {% endblock %}
+</div>

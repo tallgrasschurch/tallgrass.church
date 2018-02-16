@@ -246,17 +246,14 @@
 
 .field--field-file-upload {
 
-  header {
-
-    h2 {
-      margin: 0;
-      padding: ($grid-gutter-width / 2) ($grid-gutter-width);
-      color: white;
-      background-color: $brand-primary;
-      border-bottom: 1px solid white;
-      font-size: $font-size-base;
-      line-height: $line-height-base;
-    }
+  .field__label {
+    margin: 0;
+    padding: ($grid-gutter-width / 2) ($grid-gutter-width);
+    color: white;
+    background-color: $brand-primary;
+    border-bottom: 1px solid white;
+    font-size: $font-size-base;
+    line-height: $line-height-base;
   }
 
   ul {
