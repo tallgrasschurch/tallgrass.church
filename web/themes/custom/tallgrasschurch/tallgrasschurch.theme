@@ -1,15 +1,40 @@
 <?php
 
-function tallgrasschurch_preprocess_field(&$variables) {
-  $element = $variables['element'];
+// Load dependencies
+// -------------------------
 
-  if (isset($element['#field_name']) && $element['#field_name'] == 'field_image') {
-    $node = \Drupal::routeMatch()->getParameter('node');
-    if ($node) {
-      if (isset($node->field_image_position->value)) {
-        $variables['image_position'] = $node->field_image_position->value;
-      } else {
-        $variables['image_position'] = 'none';
+use Drupal\image\Entity\ImageStyle;
+
+
+// template_preprocess_field
+// Prepares variables for field templates.
+//
+// https://api.drupal.org/api/drupal/core%21includes%21theme.inc/function/template_preprocess_field/8.4.x
+// -------------------------
+
+// field_image
+function tallgrasschurch_preprocess_field__field_image(&$variables) {
+
+  // Get the node
+  $node = \Drupal::routeMatch()->getParameter('node');
+
+  if ($node) {
+    if (isset($node->field_image_position->value)) {
+      // Set the image_position variable to match field value
+      $variables['image_position'] = $node->field_image_position->value;
+    } else {
+      // Set the image_position variable when value is empty
+      $variables['image_position'] = 'none';
+    }
+
+    // Handle the full width image position
+    if ($variables['image_position'] == 'full') {
+      // Get full list of image styles
+      $styles = ImageStyle::loadMultiple();
+
+      // Set the image to the full width image style if it exists
+      if (array_key_exists('full_width', $styles)) {
+        $variables['items'][0]['content']['#image_style'] = 'full_width';
       }
     }
   }
