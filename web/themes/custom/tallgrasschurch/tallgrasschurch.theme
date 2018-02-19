@@ -1,0 +1,16 @@
+<?php
+
+function tallgrasschurch_preprocess_field(&$variables) {
+  $element = $variables['element'];
+
+  if (isset($element['#field_name']) && $element['#field_name'] == 'field_image') {
+    $node = \Drupal::routeMatch()->getParameter('node');
+    if ($node) {
+      if (isset($node->field_image_position->value)) {
+        $variables['image_position'] = $node->field_image_position->value;
+      } else {
+        $variables['image_position'] = 'none';
+      }
+    }
+  }
+}

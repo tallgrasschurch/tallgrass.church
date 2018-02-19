@@ -240,8 +240,22 @@
   }
 }
 
-.field--field-image {
-  @extend .alignright;
+.field--field-image {}
+
+.field--field-image-right {
+  @extend .align-right;
+}
+
+.field--field-image-left {
+  @extend .align-left;
+}
+
+.field--field-image-center {
+  @extend .align-center;
+}
+
+.field--field-image-full {
+  @extend .align-center;
 }
 
 .field--field-file-upload {
