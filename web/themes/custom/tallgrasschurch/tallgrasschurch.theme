@@ -1,16 +1,18 @@
 <?php
 
-// Load dependencies
-// -------------------------
+/**
+ * Load dependencies
+ */
 
 use Drupal\image\Entity\ImageStyle;
 
 
-// template_preprocess_field
-// Prepares variables for field templates.
-//
-// https://api.drupal.org/api/drupal/core%21includes%21theme.inc/function/template_preprocess_field/8.4.x
-// -------------------------
+/**
+ * template_preprocess_field
+ * Prepares variables for field templates.
+ *
+ * @param array $variables
+ */
 
 // field_image
 function tallgrasschurch_preprocess_field__field_image(&$variables) {
@@ -37,5 +39,31 @@ function tallgrasschurch_preprocess_field__field_image(&$variables) {
         $variables['items'][0]['content']['#image_style'] = 'full_width';
       }
     }
+  }
+}
+
+
+/**
+ * hook_theme_suggestions_HOOK_alter
+ * Alters named suggestions for a specific theme hook.
+ *
+ * @param array $suggestions
+ * @param array $variables
+ */
+
+// Implement hook_theme_suggestions_page_alter() to set 40x template suggestions
+// https://www.drupal.org/project/drupal/issues/2363987#comment-12154462
+function tallgrasschurch_theme_suggestions_page_alter(array &$suggestions, array $variables) {
+  $path_args = explode('/', trim(\Drupal::service('path.current')->getPath(), '/'));
+  $suggestions = theme_get_suggestions($path_args, 'page');
+  $http_error_suggestions = [
+    'system.401' => 'page__401',
+    'system.403' => 'page__403',
+    'system.404' => 'page__404',
+  ];
+
+  $route_name = \Drupal::routeMatch()->getRouteName();
+  if (isset($http_error_suggestions[$route_name])) {
+    $suggestions[] = $http_error_suggestions[$route_name];
   }
 }
