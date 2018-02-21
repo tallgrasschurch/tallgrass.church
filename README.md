@@ -1,6 +1,6 @@
 # [tallgrass.church](http://tallgrass.church)
 
-The Tallgrass Community Church website.
+The website for Tallgrass Community Church in Manhattan, Kansas.
 
 ## Drupal Development
 
