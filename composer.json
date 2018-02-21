@@ -23,7 +23,9 @@
     "drupal/core": "~8.4.0",
     "drush/drush": "~8.0",
     "drupal/pathauto": "^1.0",
-    "drupal/google_analytics": "^2.0"
+    "drupal/google_analytics": "^2.0",
+    "drupal/insert": "^1.0",
+    "drupal/field_group": "^3.0"
   },
   "minimum-stability": "dev",
   "prefer-stable": true,

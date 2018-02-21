@@ -473,6 +473,13 @@ dl dd {
   margin-bottom: 2.4rem;
 }
 
+figure figcaption {
+  color: #777;
+  font-size: 1.4rem;
+  font-style: italic;
+  line-height: 1.5;
+}
+
 label {
   display: inline-block;
   margin-bottom: 0.5rem;
@@ -589,21 +596,28 @@ form .preview {
   width: 100%;
 }
 
-.alignright {
+.alignright,
+.align-right,
+.field--field-image-right {
   position: relative;
   float: right;
   max-width: 50%;
   margin: 0 0 20px 20px;
 }
 
-.alignleft {
+.alignleft,
+.align-left,
+.field--field-image-left {
   position: relative;
   float: left;
   max-width: 50%;
   margin: 0 20px 20px 0;
 }
 
-.aligncenter {
+.aligncenter,
+.align-center,
+.field--field-image-center,
+.field--field-image-full {
   clear: both;
   display: block;
   margin: 20px auto;
@@ -864,4 +878,34 @@ form .preview {
 #block-tallgrasschurch-local-tasks ul li a.is-active {
   background-color: white;
   border-bottom-color: white;
+}
+
+.field--field-file-upload .field__label {
+  margin: 0;
+  padding: 10px 20px;
+  color: white;
+  background-color: #337ab7;
+  border-bottom: 1px solid white;
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+.field--field-file-upload ul {
+  margin-top: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.field--field-file-upload ul li {
+  display: block;
+  padding: 10px 20px;
+  border-bottom: 1px solid white;
+}
+
+.field--field-file-upload ul li:nth-child(odd) {
+  background-color: #eff5fa;
+}
+
+.field--field-file-upload ul li:nth-child(even) {
+  background-color: #dbe9f5;
 }

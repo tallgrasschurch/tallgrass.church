@@ -1,0 +1,28 @@
+{%
+  set classes = [
+    'field',
+    'field--' ~ field_name|clean_class,
+    'field--' ~ field_name|clean_class ~ '-' ~ image_position|clean_class,
+  ]
+%}
+
+{%
+  set label_classes = [
+    'field__label',
+  ]
+%}
+
+{% if image_position != 'none' %}
+  <div{{ attributes.addclass(classes) }}>
+    {% if not label_hidden %}
+      <div{{ title_attributes.addClass(label_classes) }}>{{ label }}</div>
+    {% endif %}
+    {% for item in items|slice(0, 1) %}
+      {% if not item.attributes is empty %}
+        <div{{ item.attributes }}>{{ item.content }}</div>
+      {% else %}
+        {{ item.content }}
+      {% endif %}
+    {% endfor %}
+  </div>
+{% endif %}

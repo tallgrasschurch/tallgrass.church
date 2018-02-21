@@ -1,0 +1,25 @@
+{%
+  set classes = [
+    'field',
+    'field--' ~ field_name|clean_class,
+  ]
+%}
+
+{%
+  set label_classes = [
+    'field__label',
+  ]
+%}
+
+<div{{ attributes.addclass(classes) }}>
+  {% block label %}
+    {% if not label_hidden %}
+      <div{{ title_attributes.addClass(label_classes) }}>{{ label }}</div>
+    {% endif %}
+  {% endblock %}
+  {% block content %}
+    {% for item in items %}
+      <div{{ item.attributes }}>{{ item.content }}</div>
+    {% endfor %}
+  {% endblock %}
+</div>

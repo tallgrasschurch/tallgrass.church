@@ -1,0 +1,69 @@
+<?php
+
+/**
+ * Load dependencies
+ */
+
+use Drupal\image\Entity\ImageStyle;
+
+
+/**
+ * template_preprocess_field
+ * Prepares variables for field templates.
+ *
+ * @param array $variables
+ */
+
+// field_image
+function tallgrasschurch_preprocess_field__field_image(&$variables) {
+
+  // Get the node
+  $node = \Drupal::routeMatch()->getParameter('node');
+
+  if ($node) {
+    if (isset($node->field_image_position->value)) {
+      // Set the image_position variable to match field value
+      $variables['image_position'] = $node->field_image_position->value;
+    } else {
+      // Set the image_position variable when value is empty
+      $variables['image_position'] = 'none';
+    }
+
+    // Handle the full width image position
+    if ($variables['image_position'] == 'full') {
+      // Get full list of image styles
+      $styles = ImageStyle::loadMultiple();
+
+      // Set the image to the full width image style if it exists
+      if (array_key_exists('full_width', $styles)) {
+        $variables['items'][0]['content']['#image_style'] = 'full_width';
+      }
+    }
+  }
+}
+
+
+/**
+ * hook_theme_suggestions_HOOK_alter
+ * Alters named suggestions for a specific theme hook.
+ *
+ * @param array $suggestions
+ * @param array $variables
+ */
+
+// Implement hook_theme_suggestions_page_alter() to set 40x template suggestions
+// https://www.drupal.org/project/drupal/issues/2363987#comment-12154462
+function tallgrasschurch_theme_suggestions_page_alter(array &$suggestions, array $variables) {
+  $path_args = explode('/', trim(\Drupal::service('path.current')->getPath(), '/'));
+  $suggestions = theme_get_suggestions($path_args, 'page');
+  $http_error_suggestions = [
+    'system.401' => 'page__401',
+    'system.403' => 'page__403',
+    'system.404' => 'page__404',
+  ];
+
+  $route_name = \Drupal::routeMatch()->getRouteName();
+  if (isset($http_error_suggestions[$route_name])) {
+    $suggestions[] = $http_error_suggestions[$route_name];
+  }
+}
