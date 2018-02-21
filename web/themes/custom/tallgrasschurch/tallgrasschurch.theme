@@ -4,7 +4,27 @@
  * Load dependencies
  */
 
+use Drupal\Core\Render\Element; // TODO: Currently only used for the temporary fix in template_preprocess_user
 use Drupal\image\Entity\ImageStyle;
+
+
+/**
+ * template_preprocess_user
+ * Prepares variables for user templates.
+ *
+ * @param array $variables
+ */
+
+function tallgrasschurch_preprocess_user(&$variables) {
+
+  // TODO: This is only needed for the temporary fix below
+  foreach (Element::children($variables['elements']) as $key) {
+    $variables['content'][$key] = $variables['elements'][$key];
+  }
+
+  // TODO: Temporary fix to change the "member for" type so that it properly renders
+  $variables['content']['member_for']['#type'] = 'markup';
+}
 
 
 /**
