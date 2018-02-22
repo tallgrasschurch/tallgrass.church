@@ -880,6 +880,18 @@ form .preview {
   border-bottom-color: white;
 }
 
+.page-title {
+  margin-bottom: 2.4rem;
+}
+
+.page-title .page-title__title {
+  margin: 0;
+}
+
+.page-title .page-title__subtitle {
+  margin: 0;
+}
+
 .field--field-file-upload .field__label {
   margin: 0;
   padding: 10px 20px;

@@ -240,6 +240,18 @@
   }
 }
 
+.page-title {
+  margin-bottom: $line-height-computed;
+
+  .page-title__title {
+    margin: 0;
+  }
+
+  .page-title__subtitle {
+    margin: 0;
+  }
+}
+
 .field--field-image {}
 
 .field--field-image-right {

@@ -27,6 +27,19 @@ function tallgrasschurch_preprocess_user(&$variables) {
 }
 
 
+function tallgrasschurch_preprocess_page_title(&$variables) {
+
+  // Get the node
+  $node = \Drupal::routeMatch()->getParameter('node');
+
+  if ($node) {
+    if (isset($node->field_subtitle->value)) {
+      $variables['subtitle'] = $node->field_subtitle->value;
+    }
+  }
+}
+
+
 /**
  * template_preprocess_field
  * Prepares variables for field templates.

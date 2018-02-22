@@ -1,0 +1,14 @@
+{%
+  set classes = [
+    'page-title__title',
+  ]
+%}
+
+{{ title_prefix }}
+{% if title %}
+  <h1{{ title_attributes.addclass(classes) }}>{{ title }}</h1>
+{% endif %}
+{% if subtitle %}
+  <p class="page-title__subtitle">{{ subtitle }}</p>
+{% endif %}
+{{ title_suffix }}
