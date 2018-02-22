@@ -624,11 +624,11 @@ form .preview {
   text-align: center;
 }
 
-.alert {
+.alert, .status-message {
   padding: 20px;
 }
 
-.alert--primary {
+.alert--primary, .status-message {
   color: #1d4567;
   background-color: #c7ddef;
   border: 1px solid #9fc4e4;
@@ -890,6 +890,10 @@ form .preview {
 
 .page-title .page-title__subtitle {
   margin: 0;
+}
+
+.status-message {
+  margin-bottom: 2.4rem;
 }
 
 .field--field-file-upload .field__label {

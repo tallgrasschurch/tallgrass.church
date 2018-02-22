@@ -252,6 +252,12 @@
   }
 }
 
+.status-message {
+  @extend .alert;
+  @extend .alert--primary;
+  margin-bottom: $line-height-computed;
+}
+
 .field--field-image {}
 
 .field--field-image-right {
