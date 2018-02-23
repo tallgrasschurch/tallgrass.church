@@ -1,0 +1,10 @@
+{% extends "field.html.twig" %}
+
+{% block content %}
+  {% for item in items %}
+    <audio{{ item.attributes }} controls>
+      Your browser does not support the <code>audio</code> element.
+      <source src="{{ file_url(item.content['#file'].uri.value) }}" type="{{ item.content['#file'].filemime.value }}">
+    </audio>
+  {% endfor %}
+{% endblock %}
