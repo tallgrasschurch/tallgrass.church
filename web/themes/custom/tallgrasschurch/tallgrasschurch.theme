@@ -47,29 +47,32 @@ function tallgrasschurch_preprocess_page_title(&$variables) {
  * @param array $variables
  */
 
-// field_image
-function tallgrasschurch_preprocess_field__field_image(&$variables) {
+function tallgrasschurch_preprocess_field(&$variables) {
 
-  // Get the node
-  $node = \Drupal::routeMatch()->getParameter('node');
+  // Image field
+  if ($variables['field_name'] == "field_image") {
 
-  if ($node) {
-    if (isset($node->field_image_position->value)) {
-      // Set the image_position variable to match field value
-      $variables['image_position'] = $node->field_image_position->value;
-    } else {
-      // Set the image_position variable when value is empty
-      $variables['image_position'] = 'none';
-    }
+    // Get the node
+    $node = \Drupal::routeMatch()->getParameter('node');
 
-    // Handle the full width image position
-    if ($variables['image_position'] == 'full') {
-      // Get full list of image styles
-      $styles = ImageStyle::loadMultiple();
+    if ($node) {
+      if (isset($node->field_image_position->value)) {
+        // Set the image_position variable to match field value
+        $variables['image_position'] = $node->field_image_position->value;
+      } else {
+        // Set the image_position variable when value is empty
+        $variables['image_position'] = 'none';
+      }
 
-      // Set the image to the full width image style if it exists
-      if (array_key_exists('full_width', $styles)) {
-        $variables['items'][0]['content']['#image_style'] = 'full_width';
+      // Handle the full width image position
+      if ($variables['image_position'] == 'full') {
+        // Get full list of image styles
+        $styles = ImageStyle::loadMultiple();
+
+        // Set the image to the full width image style if it exists
+        if (array_key_exists('full_width', $styles)) {
+          $variables['items'][0]['content']['#image_style'] = 'full_width';
+        }
       }
     }
   }
