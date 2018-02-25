@@ -48,6 +48,7 @@ function tallgrasschurch_preprocess_page_title(&$variables) {
  */
 
 function tallgrasschurch_preprocess_field(&$variables) {
+  $element = $variables['element'];
 
   // Image field
   if ($variables['field_name'] == "field_image") {
@@ -73,6 +74,47 @@ function tallgrasschurch_preprocess_field(&$variables) {
         if (array_key_exists('full_width', $styles)) {
           $variables['items'][0]['content']['#image_style'] = 'full_width';
         }
+      }
+    }
+  }
+
+  // Video URL field
+  if ($variables['field_name'] == "field_video_url") {
+
+    // Configure supported YouTube URLs
+    $youtube_hosts = array(
+      'youtube.com',
+      'youtu.be'
+    );
+
+    // Configure supported Vimeo URLs
+    $vimeo_hosts = array(
+      'vimeo.com'
+    );
+
+    foreach ($variables['items'] as $key => $item) {
+
+      // Get URL and parse values
+      $url = $item['content']['#url']->toString();
+      $url_parsed = parse_url($url);
+      $url_host_array = explode('.', $url_parsed['host']);
+      $url_host = (array_key_exists(count($url_host_array) - 2, $url_host_array) ? $url_host_array[count($url_host_array) - 2] : '') . '.' . $url_host_array[count($url_host_array) - 1];
+      if (isset($url_parsed['query'])) {
+        parse_str($url_parsed['query'], $url_query);
+      }
+
+      // Set up template variables
+      if (in_array($url_host, $youtube_hosts)) {
+        $variables['items'][$key]['video_embed_supported'] = true;
+        $variables['items'][$key]['video_service'] = 'youtube';
+        $variables['items'][$key]['video_id'] = $url_query['v'];
+      } elseif (in_array($url_host, $vimeo_hosts)) {
+        $variables['items'][$key]['video_embed_supported'] = true;
+        $variables['items'][$key]['video_service'] = 'vimeo';
+        $variables['items'][$key]['video_id'] = str_replace('/', '', $url_parsed['path']);
+      } else {
+        $variables['items'][$key]['video_embed_supported'] = false;
+        $variables['items'][$key]['video_service'] = 'unknown';
       }
     }
   }
