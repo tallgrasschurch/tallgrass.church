@@ -2,9 +2,15 @@
 
 {% block content %}
   {% for item in items %}
-    <audio{{ item.attributes }} controls>
-      Your browser does not support the <code>audio</code> element.
-      <source src="{{ file_url(item.content['#file'].uri.value) }}" type="{{ item.content['#file'].filemime.value }}">
-    </audio>
+    {% if element['#formatter'] == 'file_default' %}
+      <audio{{ item.attributes }} controls>
+        Your browser does not support the <code>audio</code> element.
+        <source src="{{ file_url(item.content['#file'].uri.value) }}" type="{{ item.content['#file'].filemime.value }}">
+      </audio>
+    {% else %}
+      {% for item in items %}
+        <div{{ item.attributes }}>{{ item.content }}</div>
+      {% endfor %}
+    {% endif %}
   {% endfor %}
 {% endblock %}
