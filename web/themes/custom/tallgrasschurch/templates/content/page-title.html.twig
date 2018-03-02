@@ -11,4 +11,12 @@
 {% if subtitle %}
   <p class="page-title__subtitle">{{ subtitle }}</p>
 {% endif %}
+{% if speaker is defined and speaker is not empty %}
+  <p class="page-title__speaker">By
+    {% for item in speaker %}
+      <a href="{{ item.link }}">{{ item.name }}</a>{% if speaker|length > 2 and not loop.last %},{% endif %}
+      {% if speaker|length >= 2 and loop.index == (loop.length - 1) %}and{% endif %}
+    {% endfor %}
+  </p>
+{% endif %}
 {{ title_suffix }}

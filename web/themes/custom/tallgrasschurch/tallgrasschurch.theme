@@ -7,6 +7,8 @@
 use Drupal\Core\Render\Element; // TODO: Currently only used for the temporary fix in template_preprocess_user
 use Drupal\image\Entity\ImageStyle;
 
+use Drupal\taxonomy\Entity\Term;
+
 
 /**
  * template_preprocess_user
@@ -27,14 +29,42 @@ function tallgrasschurch_preprocess_user(&$variables) {
 }
 
 
+/**
+ * template_preprocess_page_title
+ * Implements hook_preprocess_HOOK() for page templates.
+ *
+ * @param array $variables
+ */
+
 function tallgrasschurch_preprocess_page_title(&$variables) {
 
   // Get the node
   $node = \Drupal::routeMatch()->getParameter('node');
 
   if ($node) {
+
+    // Get the node type
+    $variables['node_type'] = $node->getType();
+
+    // Get the subtitle field
     if (isset($node->field_subtitle->value)) {
       $variables['subtitle'] = $node->field_subtitle->value;
+    }
+
+    // Set variables for teaching content type
+    if ($variables['node_type'] == 'teaching') {
+
+      // Get the speaker field
+      if (isset($node->field_speaker)) {
+        $key = 0;
+        foreach ($node->field_speaker as $item) {
+          $tid = $item->target_id;
+          $term = Term::load($tid);
+          $variables['speaker'][$key]['name'] = $term->name->value;
+          $variables['speaker'][$key]['link'] = \Drupal\Core\Url::fromRoute('entity.taxonomy_term.canonical', ['taxonomy_term' => $tid]);
+          $key++;
+        }
+      }
     }
   }
 }
