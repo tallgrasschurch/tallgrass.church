@@ -65,6 +65,15 @@ function tallgrasschurch_preprocess_page_title(&$variables) {
           $key++;
         }
       }
+
+      // Get the series field
+      if (isset($node->field_series)) {
+        $tid = $node->field_series->target_id;
+        $term = Term::load($tid);
+        $variables['series']['name'] = $term->name->value;
+        $variables['series']['link'] = \Drupal\Core\Url::fromRoute('entity.taxonomy_term.canonical', ['taxonomy_term' => $tid]);
+        $key++;
+      }
     }
   }
 }

@@ -19,4 +19,9 @@
     {% endfor %}
   </p>
 {% endif %}
+{% if series is defined and series is not empty %}
+  <p class="page-title__series">
+    <a href="{{ series.link }}">{{ series.name }}</a>
+  </p>
+{% endif %}
 {{ title_suffix }}
