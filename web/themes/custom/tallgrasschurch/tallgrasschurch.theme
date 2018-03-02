@@ -74,6 +74,20 @@ function tallgrasschurch_preprocess_page_title(&$variables) {
         $variables['series']['link'] = \Drupal\Core\Url::fromRoute('entity.taxonomy_term.canonical', ['taxonomy_term' => $tid]);
         $key++;
       }
+
+      // Get the primary scripture book field
+      if (isset($node->field_scripture_book)) {
+        $tid = $node->field_scripture_book->target_id;
+        $term = Term::load($tid);
+        $variables['scripture_book']['name'] = $term->name->value;
+        $variables['scripture_book']['link'] = \Drupal\Core\Url::fromRoute('entity.taxonomy_term.canonical', ['taxonomy_term' => $tid]);
+        $key++;
+      }
+
+      // Get the primary scripture reference field
+      if (isset($node->field_scripture_reference)) {
+        $variables['scripture_reference'] = $node->field_scripture_reference->value;
+      }
     }
   }
 }

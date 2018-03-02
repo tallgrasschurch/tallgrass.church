@@ -24,4 +24,14 @@
     <a href="{{ series.link }}">{{ series.name }}</a>
   </p>
 {% endif %}
+{% if scripture_book is defined and scripture_book is not empty %}
+  <p class="page-title__scripture">
+    <a href="{{ scripture_book.link }}">
+      {{ scripture_book.name }}
+      {% if scripture_reference is defined and scripture_reference is not empty %}
+        {{ scripture_reference }}
+      {% endif %}
+    </a>
+  </p>
+{% endif %}
 {{ title_suffix }}
