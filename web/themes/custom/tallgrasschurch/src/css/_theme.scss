@@ -343,3 +343,29 @@
     }
   }
 }
+
+.field--field-tags {
+  margin: ($grid-gutter-width * 2) 0;
+  font-size: .7em;
+  line-height: $line-height-base;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    li {
+      display: inline;
+      margin-right: 5px;
+      white-space: nowrap;
+
+      a {
+        display: inline-block;
+        padding: 5px 10px;
+        background-color: $grey-lightest;
+        border-radius: 1em;
+        text-decoration: none;
+      }
+    }
+  }
+}
