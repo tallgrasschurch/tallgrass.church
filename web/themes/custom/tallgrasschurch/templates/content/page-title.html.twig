@@ -12,29 +12,35 @@
   <p class="page-title__subtitle">{{ subtitle }}</p>
 {% endif %}
 {% if node_type == 'teaching' %}
-  <p>{{ date_raw|format_date('long') }}</p>
-  {% if speaker is defined and speaker is not empty %}
-    <p class="page-title__speaker">By
-      {% for item in speaker %}
-        <a href="{{ item.link }}">{{ item.name }}</a>{% if speaker|length > 2 and not loop.last %},{% endif %}
-        {% if speaker|length >= 2 and loop.index == (loop.length - 1) %}and{% endif %}
-      {% endfor %}
-    </p>
-  {% endif %}
-  {% if series is defined and series is not empty %}
-    <p class="page-title__series">
-      <a href="{{ series.link }}">{{ series.name }}</a>
-    </p>
-  {% endif %}
-  {% if scripture_book is defined and scripture_book is not empty %}
-    <p class="page-title__scripture">
-      <a href="{{ scripture_book.link }}">
-        {{ scripture_book.name }}
-        {% if scripture_reference is defined and scripture_reference is not empty %}
-          {{ scripture_reference }}
-        {% endif %}
-      </a>
-    </p>
-  {% endif %}
+  <div class="page-title__date">
+    <time datetime="{{ date_raw|format_date('html_datetime') }}">{{ date_raw|format_date('custom', 'F j, Y') }}</time>
+  </div>
+  <div class="page-title__meta">
+    {% if speaker is defined and speaker is not empty %}
+      <div class="page-title__speaker">
+        Speaker{% if speaker|length > 1 %}s{% endif %}:
+        {% for item in speaker %}
+          <a href="{{ item.link }}">{{ item.name }}</a>{% if speaker|length > 2 and not loop.last %},{% endif %}
+          {% if speaker|length > 1 and loop.index == (loop.length - 1) %}and{% endif %}
+        {% endfor %}
+      </div>
+    {% endif %}
+    {% if scripture_book is defined and scripture_book is not empty %}
+      <div class="page-title__scripture">
+        Scripture:
+        <a href="{{ scripture_book.link }}">
+          {{ scripture_book.name }}
+          {% if scripture_reference is defined and scripture_reference is not empty %}
+            {{ scripture_reference }}
+          {% endif %}
+        </a>
+      </div>
+    {% endif %}
+    {% if series is defined and series is not empty %}
+      <div class="page-title__series">
+        Series: <a href="{{ series.link }}">{{ series.name }}</a>
+      </div>
+    {% endif %}
+  </div><!-- .page-title__meta -->
 {% endif %}
 {{ title_suffix }}
