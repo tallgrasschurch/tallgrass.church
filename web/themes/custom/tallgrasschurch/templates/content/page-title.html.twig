@@ -8,30 +8,33 @@
 {% if title %}
   <h1{{ title_attributes.addclass(classes) }}>{{ title }}</h1>
 {% endif %}
-{% if subtitle %}
+{% if subtitle is defined and subtitle is not empty %}
   <p class="page-title__subtitle">{{ subtitle }}</p>
 {% endif %}
-{% if speaker is defined and speaker is not empty %}
-  <p class="page-title__speaker">By
-    {% for item in speaker %}
-      <a href="{{ item.link }}">{{ item.name }}</a>{% if speaker|length > 2 and not loop.last %},{% endif %}
-      {% if speaker|length >= 2 and loop.index == (loop.length - 1) %}and{% endif %}
-    {% endfor %}
-  </p>
-{% endif %}
-{% if series is defined and series is not empty %}
-  <p class="page-title__series">
-    <a href="{{ series.link }}">{{ series.name }}</a>
-  </p>
-{% endif %}
-{% if scripture_book is defined and scripture_book is not empty %}
-  <p class="page-title__scripture">
-    <a href="{{ scripture_book.link }}">
-      {{ scripture_book.name }}
-      {% if scripture_reference is defined and scripture_reference is not empty %}
-        {{ scripture_reference }}
-      {% endif %}
-    </a>
-  </p>
+{% if node_type == 'teaching' %}
+  <p>{{ date_raw|format_date('long') }}</p>
+  {% if speaker is defined and speaker is not empty %}
+    <p class="page-title__speaker">By
+      {% for item in speaker %}
+        <a href="{{ item.link }}">{{ item.name }}</a>{% if speaker|length > 2 and not loop.last %},{% endif %}
+        {% if speaker|length >= 2 and loop.index == (loop.length - 1) %}and{% endif %}
+      {% endfor %}
+    </p>
+  {% endif %}
+  {% if series is defined and series is not empty %}
+    <p class="page-title__series">
+      <a href="{{ series.link }}">{{ series.name }}</a>
+    </p>
+  {% endif %}
+  {% if scripture_book is defined and scripture_book is not empty %}
+    <p class="page-title__scripture">
+      <a href="{{ scripture_book.link }}">
+        {{ scripture_book.name }}
+        {% if scripture_reference is defined and scripture_reference is not empty %}
+          {{ scripture_reference }}
+        {% endif %}
+      </a>
+    </p>
+  {% endif %}
 {% endif %}
 {{ title_suffix }}

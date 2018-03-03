@@ -54,6 +54,11 @@ function tallgrasschurch_preprocess_page_title(&$variables) {
     // Set variables for teaching content type
     if ($variables['node_type'] == 'teaching') {
 
+      // Get the created date
+      $date = $node->getCreatedTime();
+      $variables['date_raw'] = $date;
+      $variables['date'] = \Drupal::service('date.formatter')->format($date, 'medium');
+
       // Get the speaker field
       if (isset($node->field_speaker)) {
         $key = 0;
