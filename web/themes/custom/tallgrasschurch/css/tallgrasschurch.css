@@ -1020,6 +1020,10 @@ form .preview {
   background-color: #4d4c4c;
 }
 
+.media-group audio {
+  width: 100%;
+}
+
 .media-group .embed-responsive {
   margin: 0;
 }
