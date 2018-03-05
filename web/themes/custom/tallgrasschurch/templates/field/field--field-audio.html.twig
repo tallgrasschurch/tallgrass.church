@@ -1,5 +1,14 @@
 {% extends "field.html.twig" %}
 
+{%
+  set label_classes = [
+    'field__label',
+  ]
+%}
+
+{% block label %}
+  <h2{{ title_attributes.addClass(label_classes) }}>Audio</h2>
+{% endblock %}
 {% block content %}
   {% for item in items %}
     {% if element['#formatter'] == 'file_default' %}

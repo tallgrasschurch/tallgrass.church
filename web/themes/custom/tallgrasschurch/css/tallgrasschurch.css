@@ -979,3 +979,47 @@ form .preview {
   border-radius: 1em;
   text-decoration: none;
 }
+
+.media-group {
+  margin: 40px 0;
+  padding: 20px;
+  color: white;
+  background-color: #333;
+}
+
+.media-group .media-group__nav {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  margin: 0 0 20px;
+  padding: 0;
+  list-style-type: none;
+  font-size: .8em;
+}
+
+.media-group .media-group__nav li {
+  margin-left: -1px;
+}
+
+.media-group .media-group__nav li button {
+  padding: 10px 20px;
+  color: #807f7f;
+  background: none;
+  border: 1px solid #4d4c4c;
+  outline: none;
+  cursor: pointer;
+}
+
+.media-group .media-group__nav li:first-child {
+  margin-left: 0;
+}
+
+.media-group .media-group__nav li.active button {
+  color: white;
+  background-color: #4d4c4c;
+}
+
+.media-group .embed-responsive {
+  margin: 0;
+}

@@ -1,5 +1,14 @@
 {% extends "field.html.twig" %}
 
+{%
+  set label_classes = [
+    'field__label',
+  ]
+%}
+
+{% block label %}
+  <h2{{ title_attributes.addClass(label_classes) }}>Video</h2>
+{% endblock %}
 {% block content %}
   {% for item in items %}
     {% if item.video_embed_supported %}

@@ -369,3 +369,48 @@
     }
   }
 }
+
+.media-group {
+  margin: ($grid-gutter-width * 2) 0;
+  padding: $grid-gutter-width;
+  color: white;
+  background-color: #333;
+
+  .media-group__nav {
+    display: flex;
+    justify-content: center;
+    margin: 0 0 $grid-gutter-width;
+    padding: 0;
+    list-style-type: none;
+    font-size: .8em;
+
+    li {
+      margin-left: -1px;
+
+      button {
+        padding: 10px 20px;
+        color: darken(white, 50%);
+        background: none;
+        border: 1px solid darken(white, 70%);
+        outline: none;
+        cursor: pointer;
+      }
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &.active {
+
+        button {
+          color: white;
+          background-color: darken(white, 70%);
+        }
+      }
+    }
+  }
+
+  .embed-responsive {
+    margin: 0;
+  }
+}
