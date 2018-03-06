@@ -1,3 +1,36 @@
+{#
+/**
+ * Custom variables:
+ * - node_type
+ * - subtitle
+ * - date ('teaching' node type only)
+ * - date_raw ('teaching' node type only)
+ * - speaker ('teaching' node type only)
+ *   - name
+ *   - link
+ * - scripture_book ('teaching' node type only)
+ *   - name
+ *   - link
+ * - scripture_reference ('teaching' node type only)
+ * - series ('teaching' node type only)
+ *   - name
+ *   - link
+ *
+ * Date formats (for use with the format_date filter on the date_raw variable):
+ * - short
+ * - medium
+ * - long
+ * - html_datetime
+ * - html_date
+ * - html_time
+ * - html_yearless_date
+ * - html_week
+ * - html_month
+ * - html_year
+ * - custom: a PHP date format string
+ */
+#}
+
 {%
   set classes = [
     'page-title__title',
