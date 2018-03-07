@@ -5,8 +5,8 @@
  */
 
 use Drupal\Core\Render\Element; // TODO: Currently only used for the temporary fix in template_preprocess_user
+use Drupal\Core\Url;
 use Drupal\image\Entity\ImageStyle;
-
 use Drupal\taxonomy\Entity\Term;
 
 
@@ -66,7 +66,7 @@ function tallgrasschurch_preprocess_page_title(&$variables) {
           $tid = $item->target_id;
           $term = Term::load($tid);
           $variables['speaker'][$key]['name'] = $term->name->value;
-          $variables['speaker'][$key]['link'] = \Drupal\Core\Url::fromRoute('entity.taxonomy_term.canonical', ['taxonomy_term' => $tid]);
+          $variables['speaker'][$key]['link'] = Url::fromRoute('entity.taxonomy_term.canonical', ['taxonomy_term' => $tid]);
           $key++;
         }
       }
@@ -76,7 +76,7 @@ function tallgrasschurch_preprocess_page_title(&$variables) {
         $tid = $node->field_series->target_id;
         $term = Term::load($tid);
         $variables['series']['name'] = $term->name->value;
-        $variables['series']['link'] = \Drupal\Core\Url::fromRoute('entity.taxonomy_term.canonical', ['taxonomy_term' => $tid]);
+        $variables['series']['link'] = Url::fromRoute('entity.taxonomy_term.canonical', ['taxonomy_term' => $tid]);
         $key++;
       }
 
@@ -85,7 +85,7 @@ function tallgrasschurch_preprocess_page_title(&$variables) {
         $tid = $node->field_scripture_book->target_id;
         $term = Term::load($tid);
         $variables['scripture_book']['name'] = $term->name->value;
-        $variables['scripture_book']['link'] = \Drupal\Core\Url::fromRoute('entity.taxonomy_term.canonical', ['taxonomy_term' => $tid]);
+        $variables['scripture_book']['link'] = Url::fromRoute('entity.taxonomy_term.canonical', ['taxonomy_term' => $tid]);
         $key++;
       }
 
