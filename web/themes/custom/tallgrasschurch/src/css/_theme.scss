@@ -355,8 +355,9 @@
     list-style-type: none;
 
     li {
-      display: inline;
+      display: inline-block;
       margin-right: 5px;
+      margin-bottom: 10px;
       white-space: nowrap;
 
       a {
