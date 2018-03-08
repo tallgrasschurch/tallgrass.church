@@ -4,7 +4,98 @@
  * Load dependencies
  */
 
+use Drupal\Core\Render\Element; // TODO: Currently only used for the temporary fix in template_preprocess_user
+use Drupal\Core\Url;
 use Drupal\image\Entity\ImageStyle;
+use Drupal\taxonomy\Entity\Term;
+
+
+/**
+ * template_preprocess_user
+ * Prepares variables for user templates.
+ *
+ * @param array $variables
+ */
+
+function tallgrasschurch_preprocess_user(&$variables) {
+
+  // TODO: This is only needed for the temporary fix below
+  foreach (Element::children($variables['elements']) as $key) {
+    $variables['content'][$key] = $variables['elements'][$key];
+  }
+
+  // TODO: Temporary fix to change the "member for" type so that it properly renders
+  $variables['content']['member_for']['#type'] = 'markup';
+}
+
+
+/**
+ * template_preprocess_page_title
+ * Implements hook_preprocess_HOOK() for page templates.
+ *
+ * @param array $variables
+ */
+
+function tallgrasschurch_preprocess_page_title(&$variables) {
+
+  // Get the node
+  $node = \Drupal::routeMatch()->getParameter('node');
+
+  if ($node) {
+
+    // Get the node type
+    $variables['node_type'] = $node->getType();
+
+    // Get the subtitle field
+    if (isset($node->field_subtitle->value)) {
+      $variables['subtitle'] = $node->field_subtitle->value;
+    }
+
+    // Set variables for teaching content type
+    if ($variables['node_type'] == 'teaching') {
+
+      // Get the created date
+      $date = $node->getCreatedTime();
+      $variables['date_raw'] = $date;
+      $variables['date'] = \Drupal::service('date.formatter')->format($date, 'medium');
+
+      // Get the speaker field
+      if (isset($node->field_speaker)) {
+        $key = 0;
+        foreach ($node->field_speaker as $item) {
+          $tid = $item->target_id;
+          $term = Term::load($tid);
+          $variables['speaker'][$key]['name'] = $term->name->value;
+          $variables['speaker'][$key]['link'] = Url::fromRoute('entity.taxonomy_term.canonical', ['taxonomy_term' => $tid]);
+          $key++;
+        }
+      }
+
+      // Get the series field
+      if (isset($node->field_series->target_id)) {
+        $tid = $node->field_series->target_id;
+        $term = Term::load($tid);
+        $variables['series']['name'] = $term->name->value;
+        $variables['series']['link'] = Url::fromRoute('entity.taxonomy_term.canonical', ['taxonomy_term' => $tid]);
+        $key++;
+      }
+
+      // Get the primary scripture book field
+      if (isset($node->field_scripture_book->target_id)) {
+        $tid = $node->field_scripture_book->target_id;
+        $term = Term::load($tid);
+        $variables['scripture_book']['name'] = $term->name->value;
+        $variables['scripture_book']['link'] = Url::fromRoute('entity.taxonomy_term.canonical', ['taxonomy_term' => $tid]);
+        $key++;
+      }
+
+      // Get the primary scripture reference field
+      if (isset($node->field_scripture_reference->value)) {
+        $variables['scripture_reference'] = $node->field_scripture_reference->value;
+      }
+    }
+  }
+}
 
 
 /**
@@ -14,29 +105,74 @@ use Drupal\image\Entity\ImageStyle;
  * @param array $variables
  */
 
-// field_image
-function tallgrasschurch_preprocess_field__field_image(&$variables) {
+function tallgrasschurch_preprocess_field(&$variables) {
+  $element = $variables['element'];
 
-  // Get the node
-  $node = \Drupal::routeMatch()->getParameter('node');
+  // Image field
+  if ($variables['field_name'] == "field_image") {
 
-  if ($node) {
-    if (isset($node->field_image_position->value)) {
-      // Set the image_position variable to match field value
-      $variables['image_position'] = $node->field_image_position->value;
-    } else {
-      // Set the image_position variable when value is empty
-      $variables['image_position'] = 'none';
+    // Get the node
+    $node = \Drupal::routeMatch()->getParameter('node');
+
+    if ($node) {
+      if (isset($node->field_image_position->value)) {
+        // Set the image_position variable to match field value
+        $variables['image_position'] = $node->field_image_position->value;
+      } else {
+        // Set the image_position variable when value is empty
+        $variables['image_position'] = 'none';
+      }
+
+      // Handle the full width image position
+      if ($variables['image_position'] == 'full') {
+        // Get full list of image styles
+        $styles = ImageStyle::loadMultiple();
+
+        // Set the image to the full width image style if it exists
+        if (array_key_exists('full_width', $styles)) {
+          $variables['items'][0]['content']['#image_style'] = 'full_width';
+        }
+      }
     }
+  }
 
-    // Handle the full width image position
-    if ($variables['image_position'] == 'full') {
-      // Get full list of image styles
-      $styles = ImageStyle::loadMultiple();
+  // Video URL field
+  if ($variables['field_name'] == "field_video_url") {
 
-      // Set the image to the full width image style if it exists
-      if (array_key_exists('full_width', $styles)) {
-        $variables['items'][0]['content']['#image_style'] = 'full_width';
+    // Configure supported YouTube URLs
+    $youtube_hosts = array(
+      'youtube.com',
+      'youtu.be'
+    );
+
+    // Configure supported Vimeo URLs
+    $vimeo_hosts = array(
+      'vimeo.com'
+    );
+
+    foreach ($variables['items'] as $key => $item) {
+
+      // Get URL and parse values
+      $url = $item['content']['#url']->toString();
+      $url_parsed = parse_url($url);
+      $url_host_array = explode('.', $url_parsed['host']);
+      $url_host = (array_key_exists(count($url_host_array) - 2, $url_host_array) ? $url_host_array[count($url_host_array) - 2] : '') . '.' . $url_host_array[count($url_host_array) - 1];
+      if (isset($url_parsed['query'])) {
+        parse_str($url_parsed['query'], $url_query);
+      }
+
+      // Set up template variables
+      if (in_array($url_host, $youtube_hosts)) {
+        $variables['items'][$key]['video_embed_supported'] = true;
+        $variables['items'][$key]['video_service'] = 'youtube';
+        $variables['items'][$key]['video_id'] = $url_query['v'];
+      } elseif (in_array($url_host, $vimeo_hosts)) {
+        $variables['items'][$key]['video_embed_supported'] = true;
+        $variables['items'][$key]['video_service'] = 'vimeo';
+        $variables['items'][$key]['video_id'] = str_replace('/', '', $url_parsed['path']);
+      } else {
+        $variables['items'][$key]['video_embed_supported'] = false;
+        $variables['items'][$key]['video_service'] = 'unknown';
       }
     }
   }

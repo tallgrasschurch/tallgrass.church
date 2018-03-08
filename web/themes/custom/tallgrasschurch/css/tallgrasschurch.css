@@ -624,11 +624,11 @@ form .preview {
   text-align: center;
 }
 
-.alert {
+.alert, .status-message {
   padding: 20px;
 }
 
-.alert--primary {
+.alert--primary, .status-message {
   color: #1d4567;
   background-color: #c7ddef;
   border: 1px solid #9fc4e4;
@@ -880,6 +880,50 @@ form .preview {
   border-bottom-color: white;
 }
 
+.page-title {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  margin-bottom: 2.4rem;
+}
+
+.page-title .page-title__title {
+  -ms-flex-order: 2;
+      order: 2;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.page-title .page-title__subtitle {
+  -ms-flex-order: 3;
+      order: 3;
+  margin: 0;
+  font-size: 1.2em;
+  font-style: italic;
+  line-height: 1.2;
+}
+
+.page-title .page-title__date {
+  -ms-flex-order: 1;
+      order: 1;
+  margin-bottom: 10px;
+  font-size: 0.8em;
+  line-height: 1.5;
+}
+
+.page-title .page-title__meta {
+  -ms-flex-order: 4;
+      order: 4;
+  margin-top: 20px;
+  font-size: 0.8em;
+  line-height: 1.5;
+}
+
+.status-message {
+  margin-bottom: 2.4rem;
+}
+
 .field--field-file-upload .field__label {
   margin: 0;
   padding: 10px 20px;
@@ -908,4 +952,79 @@ form .preview {
 
 .field--field-file-upload ul li:nth-child(even) {
   background-color: #dbe9f5;
+}
+
+.field--field-tags {
+  margin: 40px 0;
+  font-size: .7em;
+  line-height: 1.5;
+}
+
+.field--field-tags ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.field--field-tags ul li {
+  display: inline-block;
+  margin-right: 5px;
+  margin-bottom: 10px;
+  white-space: nowrap;
+}
+
+.field--field-tags ul li a {
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: #f5f5f5;
+  border-radius: 1em;
+  text-decoration: none;
+}
+
+.media-group {
+  margin: 40px 0;
+  padding: 20px;
+  color: white;
+  background-color: #333;
+}
+
+.media-group .media-group__nav {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  margin: 0 0 20px;
+  padding: 0;
+  list-style-type: none;
+  font-size: .8em;
+}
+
+.media-group .media-group__nav li {
+  margin-left: -1px;
+}
+
+.media-group .media-group__nav li button {
+  padding: 10px 20px;
+  color: #807f7f;
+  background: none;
+  border: 1px solid #4d4c4c;
+  outline: none;
+  cursor: pointer;
+}
+
+.media-group .media-group__nav li:first-child {
+  margin-left: 0;
+}
+
+.media-group .media-group__nav li.active button {
+  color: white;
+  background-color: #4d4c4c;
+}
+
+.media-group audio {
+  width: 100%;
+}
+
+.media-group .embed-responsive {
+  margin: 0;
 }

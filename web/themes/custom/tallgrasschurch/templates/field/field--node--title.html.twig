@@ -1,0 +1,11 @@
+{% if not attributes is empty %}
+  <span{{ attributes }}>
+    {%- for item in items -%}
+      {{ item.content }}
+    {%- endfor -%}
+  </span>
+{% else %}
+  {%- for item in items -%}
+    {{ item.content }}
+  {%- endfor -%}
+{% endif %}

@@ -240,6 +240,59 @@
   }
 }
 
+.page-title {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: $line-height-computed;
+
+  .page-title__title {
+    order: 2;
+    margin: 0;
+    line-height: 1.2;
+  }
+
+  .page-title__subtitle {
+    order: 3;
+    margin: 0;
+    font-size: 1.2em;
+    font-style: italic;
+    line-height: 1.2;
+  }
+
+  .page-title__date {
+    order: 1;
+    margin-bottom: 10px;
+    font-size: 0.8em;
+    line-height: $line-height-base;
+  }
+
+  .page-title__meta {
+    order: 4;
+    //display: flex;
+    //justify-content: space-between;
+    //flex-wrap: wrap;
+    margin-top: 20px;
+    font-size: 0.8em;
+    line-height: $line-height-base;
+
+    div {
+      //flex: 0 0 auto;
+    }
+
+    .page-title__speaker {}
+
+    .page-title__scripture {}
+
+    .page-title__series {}
+  }
+}
+
+.status-message {
+  @extend .alert;
+  @extend .alert--primary;
+  margin-bottom: $line-height-computed;
+}
+
 .field--field-image {}
 
 .field--field-image-right {
@@ -288,5 +341,81 @@
         background-color: lighten($brand-primary, 45%);
       }
     }
+  }
+}
+
+.field--field-tags {
+  margin: ($grid-gutter-width * 2) 0;
+  font-size: .7em;
+  line-height: $line-height-base;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    li {
+      display: inline-block;
+      margin-right: 5px;
+      margin-bottom: 10px;
+      white-space: nowrap;
+
+      a {
+        display: inline-block;
+        padding: 5px 10px;
+        background-color: $grey-lightest;
+        border-radius: 1em;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.media-group {
+  margin: ($grid-gutter-width * 2) 0;
+  padding: $grid-gutter-width;
+  color: white;
+  background-color: #333;
+
+  .media-group__nav {
+    display: flex;
+    justify-content: center;
+    margin: 0 0 $grid-gutter-width;
+    padding: 0;
+    list-style-type: none;
+    font-size: .8em;
+
+    li {
+      margin-left: -1px;
+
+      button {
+        padding: 10px 20px;
+        color: darken(white, 50%);
+        background: none;
+        border: 1px solid darken(white, 70%);
+        outline: none;
+        cursor: pointer;
+      }
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &.active {
+
+        button {
+          color: white;
+          background-color: darken(white, 70%);
+        }
+      }
+    }
+  }
+
+  audio {
+    width: 100%;
+  }
+
+  .embed-responsive {
+    margin: 0;
   }
 }
