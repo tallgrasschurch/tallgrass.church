@@ -113,7 +113,7 @@ function tallgrasschurch_preprocess_field(&$variables) {
   $element = $variables['element'];
 
   // Image field
-  if ($variables['field_name'] == "field_image") {
+  if ($variables['field_name'] == 'field_image') {
 
     // Get the node
     $node = \Drupal::routeMatch()->getParameter('node');
@@ -141,7 +141,7 @@ function tallgrasschurch_preprocess_field(&$variables) {
   }
 
   // Video URL field
-  if ($variables['field_name'] == "field_video_url") {
+  if ($variables['field_name'] == 'field_video_url') {
 
     // Configure supported YouTube URLs
     $youtube_hosts = array(
