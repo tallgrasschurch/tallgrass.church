@@ -94,6 +94,10 @@ function tallgrasschurch_preprocess_page_title(&$variables) {
         $variables['scripture_reference'] = $node->field_scripture_reference->value;
       }
     }
+
+    // Set variables for event content type
+    if ($variables['node_type'] == 'event') {
+    }
   }
 }
 
@@ -173,6 +177,44 @@ function tallgrasschurch_preprocess_field(&$variables) {
       } else {
         $variables['items'][$key]['video_embed_supported'] = false;
         $variables['items'][$key]['video_service'] = 'unknown';
+      }
+    }
+  }
+
+  // Date range field
+  if ($variables['field_name'] == 'field_date_range') {
+
+    // Get the node
+    $node = $variables['element']['#object'];
+
+    if ($node) {
+
+      // Get the raw start and end dates, and create template variables for them
+      $variables['start_date_raw'] = $node->field_date_range->start_date->getTimestamp();
+      $variables['end_date_raw'] = $node->field_date_range->end_date->getTimestamp();
+
+      // Prepare variables for comparisons
+      $start_day = \Drupal::service('date.formatter')->format($variables['start_date_raw'], 'custom', 'Y-m-d');
+      $end_day = \Drupal::service('date.formatter')->format($variables['end_date_raw'], 'custom', 'Y-m-d');
+      $start_meridiem = \Drupal::service('date.formatter')->format($variables['start_date_raw'], 'custom', 'A');
+      $end_meridiem = \Drupal::service('date.formatter')->format($variables['end_date_raw'], 'custom', 'A');
+
+      // Check to see if the start and end dates are the same day, and set up single and multiple day template veriables
+      if ($start_day == $end_day) {
+        $variables['single_day'] = true;
+        $variables['multiple_day'] = false;
+      } else {
+        $variables['single_day'] = false;
+        $variables['multiple_day'] = true;
+      }
+
+      // Check to see if the start and end dates are the same meridiem, and set up single and multiple meridiem template veriables
+      if ($start_meridiem == $end_meridiem) {
+        $variables['single_meridiem'] = true;
+        $variables['multiple_meridiem'] = false;
+      } else {
+        $variables['single_meridiem'] = false;
+        $variables['multiple_meridiem'] = true;
       }
     }
   }
