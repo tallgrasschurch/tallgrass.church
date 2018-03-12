@@ -116,7 +116,7 @@ function tallgrasschurch_preprocess_field(&$variables) {
   if ($variables['field_name'] == 'field_image') {
 
     // Get the node
-    $node = \Drupal::routeMatch()->getParameter('node');
+    $node = $variables['element']['#object'];
 
     if ($node) {
       if (isset($node->field_image_position->value)) {
