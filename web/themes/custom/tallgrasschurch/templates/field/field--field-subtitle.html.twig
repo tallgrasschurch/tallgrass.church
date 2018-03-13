@@ -1,0 +1,17 @@
+{%
+  set classes = [
+    'field',
+    'field--' ~ field_name|clean_class,
+    'article-header__subtitle',
+  ]
+%}
+
+<p{{ attributes.addclass(classes) }}>
+  {% for item in items %}
+    {% if not item.attributes is empty %}
+      <span{{ item.attributes }}>{{ item.content }}</span>
+    {% else %}
+      {{ item.content }}
+    {% endif %}
+  {% endfor %}
+</p>

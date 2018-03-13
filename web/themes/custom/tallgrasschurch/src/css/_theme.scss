@@ -240,6 +240,7 @@
   }
 }
 
+// TODO: Remove/merge?
 .page-title {
   display: flex;
   flex-direction: column;
@@ -285,6 +286,80 @@
 
     .page-title__series {}
   }
+}
+
+.article-header {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: $line-height-computed;
+
+  .article-header__title {
+    order: 2;
+    margin: 0;
+    line-height: 1.2;
+  }
+
+  .article-header__subtitle {
+    order: 3;
+    margin: 0;
+    font-size: 1.2em;
+    font-style: italic;
+    line-height: 1.2;
+  }
+
+  .article-header__date {
+    order: 1;
+    margin-bottom: 10px;
+    font-size: 0.8em;
+    line-height: $line-height-base;
+  }
+
+  .article-header__meta {
+    order: 4;
+    //display: flex;
+    //justify-content: space-between;
+    //flex-wrap: wrap;
+    margin-top: 20px;
+    font-size: 0.8em;
+    line-height: $line-height-base;
+
+    dl {
+      //flex: 0 0 auto;
+    }
+  }
+
+  .article-header__speaker,
+  .article-header__scripture,
+  .article-header__series {
+    margin: 0;
+
+    dt,
+    dd {
+      display: inline;
+    }
+
+    dt {}
+
+    dd {
+
+      &:after {
+        content: ",";
+      }
+
+      &:last-child {
+
+        &:after {
+          content: "";
+        }
+      }
+    }
+  }
+
+  .article-header__speaker {}
+
+  .article-header__scripture {}
+
+  .article-header__series {}
 }
 
 .status-message {

@@ -71,15 +71,37 @@
  */
 #}
 
-<article{{ attributes }}>
+{%
+  set label_classes = [
+    'article-header__title',
+  ]
+%}
 
-  {{ title_prefix }}
-  {% if not page %}
-    <h2{{ title_attributes }}>
-      <a href="{{ url }}" rel="bookmark">{{ label }}</a>
-    </h2>
-  {% endif %}
-  {{ title_suffix }}
+<article{{ attributes }}>
+  <header class="article-header">
+    {{ title_prefix }}
+    {% if page %}
+      <h1{{ title_attributes.addClass(label_classes) }}>
+        {{ label }}
+      </h1>
+    {% else %}
+      <h2{{ title_attributes.addClass(label_classes) }}>
+        <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+      </h2>
+    {% endif %}
+    {{ title_suffix }}
+
+    {{ content.field_subtitle }}
+
+    {% if node_type == 'teaching' %}
+      <p class="article-header__date">{{ node.getCreatedTime|format_date('custom', 'F j, Y') }}</p>
+      <div class="article-header__meta">
+        {{ content.field_speaker }}
+        {{ content.field_scripture_reference }}
+        {{ content.field_series }}
+      </div>
+    {% endif %}
+  </header>
 
   {% if display_submitted %}
     <footer>
@@ -92,7 +114,6 @@
   {% endif %}
 
   <div{{ content_attributes }}>
-    {{ content }}
+    {{ content|without('field_subtitle', 'field_speaker', 'field_scripture_book', 'field_scripture_reference', 'field_series') }}
   </div>
-
 </article>

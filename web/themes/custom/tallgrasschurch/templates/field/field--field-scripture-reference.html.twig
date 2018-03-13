@@ -1,0 +1,20 @@
+{%
+  set classes = [
+    'field',
+    'field--' ~ field_name|clean_class,
+    'article-header__scripture',
+  ]
+%}
+
+{%
+  set label_classes = [
+    'field__label',
+  ]
+%}
+
+<dl{{ attributes.addclass(classes) }}>
+  <dt{{ title_attributes.addClass(label_classes) }}>Scripture:</dt>
+  {% for item in items %}
+    <dd{{ item.attributes }}><a href="{{ scripture_book.link }}">{{ scripture_book.name }} {{ item.content }}</a></dd>
+  {% endfor %}
+</dl>
