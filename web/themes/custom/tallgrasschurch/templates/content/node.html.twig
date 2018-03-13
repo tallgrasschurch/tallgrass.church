@@ -101,6 +101,10 @@
         {{ content.field_series }}
       </div>
     {% endif %}
+
+    {% if node_type == 'event' %}
+      {{ content.field_date_range }}
+    {% endif %}
   </header>
 
   {% if display_submitted %}
@@ -114,6 +118,12 @@
   {% endif %}
 
   <div{{ content_attributes }}>
-    {{ content|without('field_subtitle', 'field_speaker', 'field_scripture_book', 'field_scripture_reference', 'field_series') }}
+    {% if node_type == 'teaching' %}
+      {{ content|without('field_subtitle', 'field_speaker', 'field_scripture_book', 'field_scripture_reference', 'field_series') }}
+    {% elseif node_type == 'event' %}
+      {{ content|without('field_date_range') }}
+    {% else %}
+      {{ content }}
+    {% endif %}
   </div>
 </article>

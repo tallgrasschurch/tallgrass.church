@@ -23,32 +23,36 @@
  */
 #}
 
-{% extends "field.html.twig" %}
+{%
+  set classes = [
+    'field',
+    'field--' ~ field_name|clean_class,
+    'article-header__date',
+  ]
+%}
 
-{% block content %}
+<p{{ attributes.addclass(classes) }}>
   {% set meridiem_format = 'a' %}
   {% set base_date_format = 'l, F j, Y' %}
   {% set base_time_format = 'g:i' %}
   {% set default_date_format = [base_date_format, ' - ', base_time_format, meridiem_format]|join %}
   {% for item in items %}
-    <div>
-      {% if single_day %}
-        {% if single_meridiem %}
-          {% set start_date_format = [base_date_format, ' - ', base_time_format]|join %}
-          {% set end_date_format = [base_time_format, meridiem_format]|join %}
-          <time datetime="{{ start_date_raw|format_date('html_datetime') }}">{{ start_date_raw|format_date('custom', start_date_format) }}</time>-<time datetime="{{ start_date_raw|format_date('html_datetime') }}">{{ end_date_raw|format_date('custom', end_date_format) }}</time>
-        {% else %}
-          {% set start_date_format = default_date_format %}
-          {% set end_date_format = [base_time_format, meridiem_format]|join %}
-          <time datetime="{{ start_date_raw|format_date('html_datetime') }}">{{ start_date_raw|format_date('custom', start_date_format) }}</time>-<time datetime="{{ start_date_raw|format_date('html_datetime') }}">{{ end_date_raw|format_date('custom', end_date_format) }}</time>
-        {% endif %}
+    {% if single_day %}
+      {% if single_meridiem %}
+        {% set start_date_format = [base_date_format, ' - ', base_time_format]|join %}
+        {% set end_date_format = [base_time_format, meridiem_format]|join %}
+        <time datetime="{{ start_date_raw|format_date('html_datetime') }}">{{ start_date_raw|format_date('custom', start_date_format) }}</time>-<time datetime="{{ start_date_raw|format_date('html_datetime') }}">{{ end_date_raw|format_date('custom', end_date_format) }}</time>
       {% else %}
         {% set start_date_format = default_date_format %}
-        {% set end_date_format = default_date_format %}
-        <time datetime="{{ start_date_raw|format_date('html_datetime') }}">{{ start_date_raw|format_date('custom', start_date_format) }}</time>
-        -
-        <time datetime="{{ start_date_raw|format_date('html_datetime') }}">{{ end_date_raw|format_date('custom', end_date_format) }}</time>
+        {% set end_date_format = [base_time_format, meridiem_format]|join %}
+        <time datetime="{{ start_date_raw|format_date('html_datetime') }}">{{ start_date_raw|format_date('custom', start_date_format) }}</time>-<time datetime="{{ start_date_raw|format_date('html_datetime') }}">{{ end_date_raw|format_date('custom', end_date_format) }}</time>
       {% endif %}
-    </div>
+    {% else %}
+      {% set start_date_format = default_date_format %}
+      {% set end_date_format = default_date_format %}
+      <time datetime="{{ start_date_raw|format_date('html_datetime') }}">{{ start_date_raw|format_date('custom', start_date_format) }}</time>
+      -
+      <time datetime="{{ start_date_raw|format_date('html_datetime') }}">{{ end_date_raw|format_date('custom', end_date_format) }}</time>
+    {% endif %}
   {% endfor %}
-{% endblock %}
+</p>
