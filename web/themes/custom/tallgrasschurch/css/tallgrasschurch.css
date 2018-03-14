@@ -847,26 +847,26 @@ form .preview {
   background-color: #c4c3c3;
 }
 
-.menu-local-tasks {
-  margin: 20px 0;
+.article-header .menu-local-tasks {
+  margin: 40px 0 0;
   font-size: 1.4rem;
   line-height: 1.5;
 }
 
-.menu-local-tasks .menu-local-tasks__list {
+.article-header .menu-local-tasks .menu-local-tasks__list {
   margin: 0;
   padding: 0 10px;
   list-style-type: none;
   border-bottom: 1px solid #ddd;
 }
 
-.menu-local-tasks .menu-local-tasks__list .menu-local-tasks__list-item {
+.article-header .menu-local-tasks .menu-local-tasks__list .menu-local-tasks__list-item {
   display: inline-block;
   margin: 0 5px -1px 0;
   white-space: nowrap;
 }
 
-.menu-local-tasks .menu-local-tasks__list .menu-local-tasks__list-item a {
+.article-header .menu-local-tasks .menu-local-tasks__list .menu-local-tasks__list-item a {
   display: block;
   padding: 10px 20px;
   color: inherit;
@@ -875,13 +875,49 @@ form .preview {
   text-decoration: none;
 }
 
-.menu-local-tasks .menu-local-tasks__list .menu-local-tasks__list-item a:hover, .menu-local-tasks .menu-local-tasks__list .menu-local-tasks__list-item a:focus {
+.article-header .menu-local-tasks .menu-local-tasks__list .menu-local-tasks__list-item a:hover, .article-header .menu-local-tasks .menu-local-tasks__list .menu-local-tasks__list-item a:focus {
   text-decoration: underline;
 }
 
-.menu-local-tasks .menu-local-tasks__list .menu-local-tasks__list-item a.is-active {
+.article-header .menu-local-tasks .menu-local-tasks__list .menu-local-tasks__list-item a.is-active {
   background-color: white;
   border-bottom-color: white;
+}
+
+.block > .menu-local-tasks {
+  margin: 40px 0;
+  padding: 10px 20px;
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.block > .menu-local-tasks .menu-local-tasks__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.block > .menu-local-tasks .menu-local-tasks__list .menu-local-tasks__list-item {
+  display: inline-block;
+  margin: 0 5px 0 0;
+  white-space: nowrap;
+}
+
+.block > .menu-local-tasks .menu-local-tasks__list .menu-local-tasks__list-item a {
+  display: block;
+  padding: 5px 10px;
+  text-decoration: none;
+}
+
+.block > .menu-local-tasks .menu-local-tasks__list .menu-local-tasks__list-item a:hover, .block > .menu-local-tasks .menu-local-tasks__list .menu-local-tasks__list-item a:focus {
+  text-decoration: underline;
+}
+
+.block > .menu-local-tasks .menu-local-tasks__list .menu-local-tasks__list-item a.is-active {
+  color: white;
+  background-color: #337ab7;
 }
 
 .page-title {
