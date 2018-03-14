@@ -203,17 +203,18 @@
   }
 }
 
-#block-tallgrasschurch-local-tasks {
+.menu-local-tasks {
+  margin: $grid-gutter-width 0;
   font-size: 1.4rem;
   line-height: $line-height-base;
 
-  ul {
-    margin: 0 0 $grid-gutter-width;
+  .menu-local-tasks__list {
+    margin: 0;
     padding: 0 10px;
     list-style-type: none;
     border-bottom: 1px solid $grey-lighter;
 
-    li {
+    .menu-local-tasks__list-item {
       display: inline-block;
       margin: 0 5px -1px 0;
       white-space: nowrap;
@@ -361,6 +362,10 @@
   .article-header__scripture {}
 
   .article-header__series {}
+
+  > *:not(.article-header__title):not(.article-header__subtitle):not(.article-header__date):not(.article-header__meta) {
+    order: 5;
+  }
 }
 
 .status-message {

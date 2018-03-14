@@ -847,25 +847,26 @@ form .preview {
   background-color: #c4c3c3;
 }
 
-#block-tallgrasschurch-local-tasks {
+.menu-local-tasks {
+  margin: 20px 0;
   font-size: 1.4rem;
   line-height: 1.5;
 }
 
-#block-tallgrasschurch-local-tasks ul {
-  margin: 0 0 20px;
+.menu-local-tasks .menu-local-tasks__list {
+  margin: 0;
   padding: 0 10px;
   list-style-type: none;
   border-bottom: 1px solid #ddd;
 }
 
-#block-tallgrasschurch-local-tasks ul li {
+.menu-local-tasks .menu-local-tasks__list .menu-local-tasks__list-item {
   display: inline-block;
   margin: 0 5px -1px 0;
   white-space: nowrap;
 }
 
-#block-tallgrasschurch-local-tasks ul li a {
+.menu-local-tasks .menu-local-tasks__list .menu-local-tasks__list-item a {
   display: block;
   padding: 10px 20px;
   color: inherit;
@@ -874,11 +875,11 @@ form .preview {
   text-decoration: none;
 }
 
-#block-tallgrasschurch-local-tasks ul li a:hover, #block-tallgrasschurch-local-tasks ul li a:focus {
+.menu-local-tasks .menu-local-tasks__list .menu-local-tasks__list-item a:hover, .menu-local-tasks .menu-local-tasks__list .menu-local-tasks__list-item a:focus {
   text-decoration: underline;
 }
 
-#block-tallgrasschurch-local-tasks ul li a.is-active {
+.menu-local-tasks .menu-local-tasks__list .menu-local-tasks__list-item a.is-active {
   background-color: white;
   border-bottom-color: white;
 }
@@ -988,6 +989,11 @@ form .preview {
 .article-header .article-header__scripture dd:last-child:after,
 .article-header .article-header__series dd:last-child:after {
   content: "";
+}
+
+.article-header > *:not(.article-header__title):not(.article-header__subtitle):not(.article-header__date):not(.article-header__meta) {
+  -ms-flex-order: 5;
+      order: 5;
 }
 
 .status-message {

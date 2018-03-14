@@ -105,6 +105,10 @@
     {% if node_type == 'event' %}
       {{ content.field_date_range }}
     {% endif %}
+
+    {% if page %}
+      {{ tabs }}
+    {% endif %}
   </header>
 
   {% if display_submitted %}
