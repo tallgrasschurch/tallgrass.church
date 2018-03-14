@@ -27,6 +27,7 @@ function tallgrasschurch_preprocess_user(&$variables) {
   // TODO: Temporary fix to change the "member for" type so that it properly renders
   $variables['content']['member_for']['#type'] = 'markup';
 
+  // TODO: Remove this, as it is no longer needed
   $tabs = \Drupal\block\Entity\Block::load('tallgrasschurch_local_tasks');
   if ($tabs) {
     $variables['tabs'] = \Drupal::entityTypeManager()->getViewBuilder('block')->view($tabs);
@@ -41,6 +42,7 @@ function tallgrasschurch_preprocess_user(&$variables) {
  * @param array $variables
  */
 
+// TODO: Most of this code is no longer needed
 function tallgrasschurch_preprocess_page_title(&$variables) {
 
   // Get the node
@@ -112,6 +114,7 @@ function tallgrasschurch_preprocess_node(&$variables) {
     $variables['node_type'] = $node->getType();
   }
 
+  // TODO: Remove this, as it is no longer needed
   $tabs = \Drupal\block\Entity\Block::load('tallgrasschurch_local_tasks');
   if ($tabs) {
     $variables['tabs'] = \Drupal::entityTypeManager()->getViewBuilder('block')->view($tabs);
@@ -121,6 +124,7 @@ function tallgrasschurch_preprocess_node(&$variables) {
 
 function tallgrasschurch_preprocess_views_view(&$variables) {
 
+  // TODO: Remove this, as it is no longer needed
   $tabs = \Drupal\block\Entity\Block::load('tallgrasschurch_local_tasks');
   if ($tabs) {
     $variables['tabs'] = \Drupal::entityTypeManager()->getViewBuilder('block')->view($tabs);
