@@ -599,6 +599,16 @@ form .preview {
   width: 100%;
 }
 
+.alert, .status-message {
+  padding: 20px;
+}
+
+.alert--primary, .status-message {
+  color: #1d4567;
+  background-color: #c7ddef;
+  border: 1px solid #9fc4e4;
+}
+
 .alignright,
 .align-right,
 .field--field-image-right {
@@ -625,16 +635,6 @@ form .preview {
   display: block;
   margin: 20px auto;
   text-align: center;
-}
-
-.alert, .status-message {
-  padding: 20px;
-}
-
-.alert--primary, .status-message {
-  color: #1d4567;
-  background-color: #c7ddef;
-  border: 1px solid #9fc4e4;
 }
 
 .embed-responsive {
@@ -679,6 +679,54 @@ form .preview {
 
 .embed-responsive-1by1::before {
   padding-top: 100%;
+}
+
+.media-group {
+  margin: 40px 0;
+  padding: 20px;
+  color: white;
+  background-color: #333;
+}
+
+.media-group .media-group__nav {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  margin: 0 0 20px;
+  padding: 0;
+  list-style-type: none;
+  font-size: .8em;
+}
+
+.media-group .media-group__nav li {
+  margin-left: -1px;
+}
+
+.media-group .media-group__nav li button {
+  padding: 10px 20px;
+  color: #807f7f;
+  background: none;
+  border: 1px solid #4d4c4c;
+  outline: none;
+  cursor: pointer;
+}
+
+.media-group .media-group__nav li:first-child {
+  margin-left: 0;
+}
+
+.media-group .media-group__nav li.active button {
+  color: white;
+  background-color: #4d4c4c;
+}
+
+.media-group audio {
+  width: 100%;
+}
+
+.media-group .embed-responsive {
+  margin: 0;
 }
 
 .page {
@@ -814,37 +862,6 @@ form .preview {
           align-items: center;
     }
   }
-}
-
-@supports (display: flex) {
-  @media (min-width: 576px) {
-    #block-tallgrasschurch-footer-content {
-      margin-right: 20px;
-    }
-  }
-}
-
-#block-tallgrasschurch-account-menu ul {
-  padding: 0;
-  list-style-type: none;
-}
-
-#block-tallgrasschurch-account-menu ul li {
-  display: inline-block;
-  white-space: nowrap;
-}
-
-#block-tallgrasschurch-account-menu ul li a {
-  display: block;
-  padding: 2px 7px;
-  color: inherit;
-  background-color: #ddd;
-  font-size: 1.2rem;
-  text-decoration: none;
-}
-
-#block-tallgrasschurch-account-menu ul li a:hover, #block-tallgrasschurch-account-menu ul li a:focus {
-  background-color: #c4c3c3;
 }
 
 .article-header .menu-local-tasks {
@@ -1036,6 +1053,37 @@ form .preview {
   margin-bottom: 2.4rem;
 }
 
+#block-tallgrasschurch-account-menu ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+#block-tallgrasschurch-account-menu ul li {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+#block-tallgrasschurch-account-menu ul li a {
+  display: block;
+  padding: 2px 7px;
+  color: inherit;
+  background-color: #ddd;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+#block-tallgrasschurch-account-menu ul li a:hover, #block-tallgrasschurch-account-menu ul li a:focus {
+  background-color: #c4c3c3;
+}
+
+@supports (display: flex) {
+  @media (min-width: 576px) {
+    #block-tallgrasschurch-footer-content {
+      margin-right: 20px;
+    }
+  }
+}
+
 .field--field-file-upload .field__label {
   margin: 0;
   padding: 10px 20px;
@@ -1091,52 +1139,4 @@ form .preview {
   background-color: #f5f5f5;
   border-radius: 1em;
   text-decoration: none;
-}
-
-.media-group {
-  margin: 40px 0;
-  padding: 20px;
-  color: white;
-  background-color: #333;
-}
-
-.media-group .media-group__nav {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: center;
-      justify-content: center;
-  margin: 0 0 20px;
-  padding: 0;
-  list-style-type: none;
-  font-size: .8em;
-}
-
-.media-group .media-group__nav li {
-  margin-left: -1px;
-}
-
-.media-group .media-group__nav li button {
-  padding: 10px 20px;
-  color: #807f7f;
-  background: none;
-  border: 1px solid #4d4c4c;
-  outline: none;
-  cursor: pointer;
-}
-
-.media-group .media-group__nav li:first-child {
-  margin-left: 0;
-}
-
-.media-group .media-group__nav li.active button {
-  color: white;
-  background-color: #4d4c4c;
-}
-
-.media-group audio {
-  width: 100%;
-}
-
-.media-group .embed-responsive {
-  margin: 0;
 }

@@ -43,6 +43,7 @@
   @media (min-width: $screen-sm) {
     // Clearfix
     // https://css-tricks.com/snippets/css/clear-fix/
+    // TODO: Set up reusable clearfix
     &:after {
       content: "";
       display: table;
@@ -162,43 +163,6 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-    }
-  }
-}
-
-#block-tallgrasschurch-footer-content {
-
-  @supports (display: flex) {
-
-    @media (min-width: $screen-sm) {
-      margin-right: $grid-gutter-width;
-    }
-  }
-}
-
-#block-tallgrasschurch-account-menu {
-
-  ul {
-    padding: 0;
-    list-style-type: none;
-
-    li {
-      display: inline-block;
-      white-space: nowrap;
-
-      a {
-        display: block;
-        padding: 2px 7px;
-        color: inherit;
-        background-color: $grey-lighter;
-        font-size: 1.2rem;
-        text-decoration: none;
-
-        &:hover,
-        &:focus {
-          background-color: darken($grey-lighter, 10%);
-        }
-      }
     }
   }
 }
@@ -409,131 +373,4 @@
   @extend .alert;
   @extend .alert--primary;
   margin-bottom: $line-height-computed;
-}
-
-.field--field-image {}
-
-.field--field-image-right {
-  @extend .align-right;
-}
-
-.field--field-image-left {
-  @extend .align-left;
-}
-
-.field--field-image-center {
-  @extend .align-center;
-}
-
-.field--field-image-full {
-  @extend .align-center;
-}
-
-.field--field-file-upload {
-
-  .field__label {
-    margin: 0;
-    padding: ($grid-gutter-width / 2) ($grid-gutter-width);
-    color: white;
-    background-color: $brand-primary;
-    border-bottom: 1px solid white;
-    font-size: $font-size-base;
-    line-height: $line-height-base;
-  }
-
-  ul {
-    margin-top: 0;
-    padding: 0;
-    list-style-type: none;
-
-    li {
-      display: block;
-      padding: ($grid-gutter-width / 2) ($grid-gutter-width);
-      border-bottom: 1px solid white;
-
-      &:nth-child(odd) {
-        background-color: lighten($brand-primary, 50%);
-      }
-
-      &:nth-child(even) {
-        background-color: lighten($brand-primary, 45%);
-      }
-    }
-  }
-}
-
-.field--field-tags {
-  margin: ($grid-gutter-width * 2) 0;
-  font-size: .7em;
-  line-height: $line-height-base;
-
-  ul {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-
-    li {
-      display: inline-block;
-      margin-right: 5px;
-      margin-bottom: 10px;
-      white-space: nowrap;
-
-      a {
-        display: inline-block;
-        padding: 5px 10px;
-        background-color: $grey-lightest;
-        border-radius: 1em;
-        text-decoration: none;
-      }
-    }
-  }
-}
-
-.media-group {
-  margin: ($grid-gutter-width * 2) 0;
-  padding: $grid-gutter-width;
-  color: white;
-  background-color: #333;
-
-  .media-group__nav {
-    display: flex;
-    justify-content: center;
-    margin: 0 0 $grid-gutter-width;
-    padding: 0;
-    list-style-type: none;
-    font-size: .8em;
-
-    li {
-      margin-left: -1px;
-
-      button {
-        padding: 10px 20px;
-        color: darken(white, 50%);
-        background: none;
-        border: 1px solid darken(white, 70%);
-        outline: none;
-        cursor: pointer;
-      }
-
-      &:first-child {
-        margin-left: 0;
-      }
-
-      &.active {
-
-        button {
-          color: white;
-          background-color: darken(white, 70%);
-        }
-      }
-    }
-  }
-
-  audio {
-    width: 100%;
-  }
-
-  .embed-responsive {
-    margin: 0;
-  }
 }
