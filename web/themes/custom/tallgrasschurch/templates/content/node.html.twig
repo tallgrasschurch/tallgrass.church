@@ -103,7 +103,7 @@
     {% endif %}
 
     {% if node_type == 'event' %}
-      {{ content.field_date_range }}
+      {{ content.field_event_date }}
     {% endif %}
 
     {% if page %}
@@ -125,7 +125,7 @@
     {% if node_type == 'teaching' %}
       {{ content|without('field_subtitle', 'field_speaker', 'field_scripture_book', 'field_scripture_reference', 'field_series') }}
     {% elseif node_type == 'event' %}
-      {{ content|without('field_date_range') }}
+      {{ content|without('field_event_date') }}
     {% else %}
       {{ content }}
     {% endif %}
