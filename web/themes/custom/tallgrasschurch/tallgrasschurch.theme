@@ -225,8 +225,8 @@ function tallgrasschurch_preprocess_field(&$variables) {
     }
   }
 
-  // Date range field
-  if ($variables['field_name'] == 'field_date_range') {
+  // Event date field
+  if ($variables['field_name'] == 'field_event_date') {
 
     // Get the node
     $node = $variables['element']['#object'];
@@ -234,8 +234,8 @@ function tallgrasschurch_preprocess_field(&$variables) {
     if ($node) {
 
       // Get the raw start and end dates, and create template variables for them
-      $variables['start_date_raw'] = $node->field_date_range->start_date->getTimestamp();
-      $variables['end_date_raw'] = $node->field_date_range->end_date->getTimestamp();
+      $variables['start_date_raw'] = $node->field_event_date->start_date->getTimestamp();
+      $variables['end_date_raw'] = $node->field_event_date->end_date->getTimestamp();
 
       // Prepare variables for comparisons
       $start_day = \Drupal::service('date.formatter')->format($variables['start_date_raw'], 'custom', 'Y-m-d');
