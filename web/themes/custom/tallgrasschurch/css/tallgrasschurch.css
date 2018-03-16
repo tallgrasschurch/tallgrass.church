@@ -464,13 +464,16 @@ img {
   height: auto;
 }
 
+dl {
+  margin-bottom: 2.4rem;
+}
+
 dl dt {
   font-weight: bold;
 }
 
 dl dd {
   margin-left: 0;
-  margin-bottom: 2.4rem;
 }
 
 figure figcaption {
@@ -596,6 +599,16 @@ form .preview {
   width: 100%;
 }
 
+.alert, .status-message {
+  padding: 20px;
+}
+
+.alert--primary, .status-message {
+  color: #1d4567;
+  background-color: #c7ddef;
+  border: 1px solid #9fc4e4;
+}
+
 .alignright,
 .align-right,
 .field--field-image-right {
@@ -622,16 +635,6 @@ form .preview {
   display: block;
   margin: 20px auto;
   text-align: center;
-}
-
-.alert, .status-message {
-  padding: 20px;
-}
-
-.alert--primary, .status-message {
-  color: #1d4567;
-  background-color: #c7ddef;
-  border: 1px solid #9fc4e4;
 }
 
 .embed-responsive {
@@ -678,6 +681,54 @@ form .preview {
   padding-top: 100%;
 }
 
+.media-group {
+  margin: 40px 0;
+  padding: 20px;
+  color: white;
+  background-color: #333;
+}
+
+.media-group .media-group__nav {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  margin: 0 0 20px;
+  padding: 0;
+  list-style-type: none;
+  font-size: .8em;
+}
+
+.media-group .media-group__nav li {
+  margin-left: -1px;
+}
+
+.media-group .media-group__nav li button {
+  padding: 10px 20px;
+  color: #807f7f;
+  background: none;
+  border: 1px solid #4d4c4c;
+  outline: none;
+  cursor: pointer;
+}
+
+.media-group .media-group__nav li:first-child {
+  margin-left: 0;
+}
+
+.media-group .media-group__nav li.active button {
+  color: white;
+  background-color: #4d4c4c;
+}
+
+.media-group audio {
+  width: 100%;
+}
+
+.media-group .embed-responsive {
+  margin: 0;
+}
+
 .page {
   background-color: white;
 }
@@ -706,22 +757,6 @@ form .preview {
   background-color: white;
 }
 
-@media (min-width: 576px) {
-  .region--header:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-}
-
-@media (min-width: 576px) {
-  #block-tallgrasschurch-branding {
-    float: left;
-    margin-left: -20px;
-    padding: 0 20px;
-  }
-}
-
 #block-tallgrasschurch-main-menu ul {
   margin: 0;
   padding: 0;
@@ -745,11 +780,10 @@ form .preview {
 
 @media (min-width: 576px) {
   #block-tallgrasschurch-main-menu {
-    float: right;
-    padding-top: 20px;
+    margin-top: 40px;
   }
   #block-tallgrasschurch-main-menu ul li {
-    margin-left: 20px;
+    margin-right: 20px;
   }
 }
 
@@ -783,7 +817,11 @@ form .preview {
   .logo {
     display: inline-block;
   }
-  .logo:hover a, .logo:focus a {
+  .logo a {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .logo a:hover, .logo a:focus {
     margin-bottom: -10px;
     padding-top: 30px;
   }
@@ -813,56 +851,26 @@ form .preview {
   }
 }
 
-@supports (display: flex) {
-  @media (min-width: 576px) {
-    #block-tallgrasschurch-footer-content {
-      margin-right: 20px;
-    }
-  }
-}
-
-#block-tallgrasschurch-account-menu ul {
-  padding: 0;
-  list-style-type: none;
-}
-
-#block-tallgrasschurch-account-menu ul li {
-  display: inline-block;
-  white-space: nowrap;
-}
-
-#block-tallgrasschurch-account-menu ul li a {
-  display: block;
-  padding: 2px 7px;
-  color: inherit;
-  background-color: #ddd;
-  font-size: 1.2rem;
-  text-decoration: none;
-}
-
-#block-tallgrasschurch-account-menu ul li a:hover, #block-tallgrasschurch-account-menu ul li a:focus {
-  background-color: #c4c3c3;
-}
-
-#block-tallgrasschurch-local-tasks {
+.article-header .menu-local-tasks {
+  margin: 20px 0 0;
   font-size: 1.4rem;
   line-height: 1.5;
 }
 
-#block-tallgrasschurch-local-tasks ul {
-  margin: 0 0 20px;
+.article-header .menu-local-tasks .menu-local-tasks__list {
+  margin: 0;
   padding: 0 10px;
   list-style-type: none;
   border-bottom: 1px solid #ddd;
 }
 
-#block-tallgrasschurch-local-tasks ul li {
+.article-header .menu-local-tasks .menu-local-tasks__list .menu-local-tasks__list-item {
   display: inline-block;
   margin: 0 5px -1px 0;
   white-space: nowrap;
 }
 
-#block-tallgrasschurch-local-tasks ul li a {
+.article-header .menu-local-tasks .menu-local-tasks__list .menu-local-tasks__list-item a {
   display: block;
   padding: 10px 20px;
   color: inherit;
@@ -871,13 +879,49 @@ form .preview {
   text-decoration: none;
 }
 
-#block-tallgrasschurch-local-tasks ul li a:hover, #block-tallgrasschurch-local-tasks ul li a:focus {
+.article-header .menu-local-tasks .menu-local-tasks__list .menu-local-tasks__list-item a:hover, .article-header .menu-local-tasks .menu-local-tasks__list .menu-local-tasks__list-item a:focus {
   text-decoration: underline;
 }
 
-#block-tallgrasschurch-local-tasks ul li a.is-active {
+.article-header .menu-local-tasks .menu-local-tasks__list .menu-local-tasks__list-item a.is-active {
   background-color: white;
   border-bottom-color: white;
+}
+
+.block > .menu-local-tasks {
+  margin: 40px 0;
+  padding: 10px 20px;
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.block > .menu-local-tasks .menu-local-tasks__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.block > .menu-local-tasks .menu-local-tasks__list .menu-local-tasks__list-item {
+  display: inline-block;
+  margin: 0 5px 0 0;
+  white-space: nowrap;
+}
+
+.block > .menu-local-tasks .menu-local-tasks__list .menu-local-tasks__list-item a {
+  display: block;
+  padding: 5px 10px;
+  text-decoration: none;
+}
+
+.block > .menu-local-tasks .menu-local-tasks__list .menu-local-tasks__list-item a:hover, .block > .menu-local-tasks .menu-local-tasks__list .menu-local-tasks__list-item a:focus {
+  text-decoration: underline;
+}
+
+.block > .menu-local-tasks .menu-local-tasks__list .menu-local-tasks__list-item a.is-active {
+  color: white;
+  background-color: #337ab7;
 }
 
 .page-title {
@@ -920,8 +964,111 @@ form .preview {
   line-height: 1.5;
 }
 
+.article-header {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  margin-bottom: 2.4rem;
+}
+
+.article-header .article-header__title {
+  -ms-flex-order: 2;
+      order: 2;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.article-header .article-header__subtitle {
+  -ms-flex-order: 3;
+      order: 3;
+  margin: 0;
+  font-size: 1.2em;
+  font-style: italic;
+  line-height: 1.2;
+}
+
+.article-header .article-header__date {
+  -ms-flex-order: 1;
+      order: 1;
+  margin-bottom: 10px;
+  font-size: 0.8em;
+  line-height: 1.5;
+}
+
+.article-header .article-header__meta {
+  -ms-flex-order: 4;
+      order: 4;
+  margin-top: 20px;
+  font-size: 0.8em;
+  line-height: 1.5;
+}
+
+.article-header .article-header__speaker,
+.article-header .article-header__scripture,
+.article-header .article-header__series {
+  margin: 0;
+}
+
+.article-header .article-header__speaker dt,
+.article-header .article-header__speaker dd,
+.article-header .article-header__scripture dt,
+.article-header .article-header__scripture dd,
+.article-header .article-header__series dt,
+.article-header .article-header__series dd {
+  display: inline;
+}
+
+.article-header .article-header__speaker dd:after,
+.article-header .article-header__scripture dd:after,
+.article-header .article-header__series dd:after {
+  content: ",";
+}
+
+.article-header .article-header__speaker dd:last-child:after,
+.article-header .article-header__scripture dd:last-child:after,
+.article-header .article-header__series dd:last-child:after {
+  content: "";
+}
+
+.article-header > *:not(.article-header__title):not(.article-header__subtitle):not(.article-header__date):not(.article-header__meta) {
+  -ms-flex-order: 5;
+      order: 5;
+}
+
 .status-message {
   margin-bottom: 2.4rem;
+}
+
+#block-tallgrasschurch-account-menu ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+#block-tallgrasschurch-account-menu ul li {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+#block-tallgrasschurch-account-menu ul li a {
+  display: block;
+  padding: 2px 7px;
+  color: inherit;
+  background-color: #ddd;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+#block-tallgrasschurch-account-menu ul li a:hover, #block-tallgrasschurch-account-menu ul li a:focus {
+  background-color: #c4c3c3;
+}
+
+@supports (display: flex) {
+  @media (min-width: 576px) {
+    #block-tallgrasschurch-footer-content {
+      margin-right: 20px;
+    }
+  }
 }
 
 .field--field-file-upload .field__label {
@@ -979,52 +1126,4 @@ form .preview {
   background-color: #f5f5f5;
   border-radius: 1em;
   text-decoration: none;
-}
-
-.media-group {
-  margin: 40px 0;
-  padding: 20px;
-  color: white;
-  background-color: #333;
-}
-
-.media-group .media-group__nav {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: center;
-      justify-content: center;
-  margin: 0 0 20px;
-  padding: 0;
-  list-style-type: none;
-  font-size: .8em;
-}
-
-.media-group .media-group__nav li {
-  margin-left: -1px;
-}
-
-.media-group .media-group__nav li button {
-  padding: 10px 20px;
-  color: #807f7f;
-  background: none;
-  border: 1px solid #4d4c4c;
-  outline: none;
-  cursor: pointer;
-}
-
-.media-group .media-group__nav li:first-child {
-  margin-left: 0;
-}
-
-.media-group .media-group__nav li.active button {
-  color: white;
-  background-color: #4d4c4c;
-}
-
-.media-group audio {
-  width: 100%;
-}
-
-.media-group .embed-responsive {
-  margin: 0;
 }

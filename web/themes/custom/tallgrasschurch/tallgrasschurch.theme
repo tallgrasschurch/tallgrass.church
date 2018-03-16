@@ -26,6 +26,12 @@ function tallgrasschurch_preprocess_user(&$variables) {
 
   // TODO: Temporary fix to change the "member for" type so that it properly renders
   $variables['content']['member_for']['#type'] = 'markup';
+
+  // TODO: Remove this, as it is no longer needed
+  $tabs = \Drupal\block\Entity\Block::load('tallgrasschurch_local_tasks');
+  if ($tabs) {
+    $variables['tabs'] = \Drupal::entityTypeManager()->getViewBuilder('block')->view($tabs);
+  }
 }
 
 
@@ -36,6 +42,7 @@ function tallgrasschurch_preprocess_user(&$variables) {
  * @param array $variables
  */
 
+// TODO: Most of this code is no longer needed
 function tallgrasschurch_preprocess_page_title(&$variables) {
 
   // Get the node
@@ -86,7 +93,6 @@ function tallgrasschurch_preprocess_page_title(&$variables) {
         $term = Term::load($tid);
         $variables['scripture_book']['name'] = $term->name->value;
         $variables['scripture_book']['link'] = Url::fromRoute('entity.taxonomy_term.canonical', ['taxonomy_term' => $tid]);
-        $key++;
       }
 
       // Get the primary scripture reference field
@@ -94,10 +100,34 @@ function tallgrasschurch_preprocess_page_title(&$variables) {
         $variables['scripture_reference'] = $node->field_scripture_reference->value;
       }
     }
+  }
+}
 
-    // Set variables for event content type
-    if ($variables['node_type'] == 'event') {
-    }
+
+function tallgrasschurch_preprocess_node(&$variables) {
+
+  // Get the node
+  $node = $variables['elements']['#node'];
+
+  if ($node) {
+    // Set up a variable for node type
+    $variables['node_type'] = $node->getType();
+  }
+
+  // TODO: Remove this, as it is no longer needed
+  $tabs = \Drupal\block\Entity\Block::load('tallgrasschurch_local_tasks');
+  if ($tabs) {
+    $variables['tabs'] = \Drupal::entityTypeManager()->getViewBuilder('block')->view($tabs);
+  }
+}
+
+
+function tallgrasschurch_preprocess_views_view(&$variables) {
+
+  // TODO: Remove this, as it is no longer needed
+  $tabs = \Drupal\block\Entity\Block::load('tallgrasschurch_local_tasks');
+  if ($tabs) {
+    $variables['tabs'] = \Drupal::entityTypeManager()->getViewBuilder('block')->view($tabs);
   }
 }
 
@@ -112,11 +142,11 @@ function tallgrasschurch_preprocess_page_title(&$variables) {
 function tallgrasschurch_preprocess_field(&$variables) {
   $element = $variables['element'];
 
+  // Get the node
+  $node = $variables['element']['#object'];
+
   // Image field
   if ($variables['field_name'] == 'field_image') {
-
-    // Get the node
-    $node = $variables['element']['#object'];
 
     if ($node) {
       if (isset($node->field_image_position->value)) {
@@ -136,6 +166,20 @@ function tallgrasschurch_preprocess_field(&$variables) {
         if (array_key_exists('full_width', $styles)) {
           $variables['items'][0]['content']['#image_style'] = 'full_width';
         }
+      }
+    }
+  }
+
+  // Scripture reference field
+  if ($variables['field_name'] == 'field_scripture_reference') {
+
+    if ($node) {
+      // Get the primary scripture book field
+      if (isset($node->field_scripture_book->target_id)) {
+        $tid = $node->field_scripture_book->target_id;
+        $term = Term::load($tid);
+        $variables['scripture_book']['name'] = $term->name->value;
+        $variables['scripture_book']['link'] = Url::fromRoute('entity.taxonomy_term.canonical', ['taxonomy_term' => $tid]);
       }
     }
   }

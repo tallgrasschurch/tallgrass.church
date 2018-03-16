@@ -1,0 +1,20 @@
+{%
+  set classes = [
+    'field',
+    'field--' ~ field_name|clean_class,
+    'article-header__series',
+  ]
+%}
+
+{%
+  set label_classes = [
+    'field__label',
+  ]
+%}
+
+<dl{{ attributes.addclass(classes) }}>
+  <dt{{ title_attributes.addClass(label_classes) }}>{{ label }}:</dt>
+  {% for item in items %}
+    <dd{{ item.attributes }}>{{ item.content }}</dd>
+  {% endfor %}
+</dl>

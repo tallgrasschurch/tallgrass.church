@@ -18,9 +18,21 @@
 @import 'buttons';
 
 // Components
-@import 'align';
-@import 'alerts';
-@import 'embed';
+@import 'components/alerts';
+@import 'components/align';
+@import 'components/embed';
+@import 'components/media-group';
 
 // Theme
 @import 'theme';
+
+// Drupal blocks
+@import 'blocks/block';
+@import 'blocks/block-account-menu';
+@import 'blocks/block-footer-content';
+
+// Drupal fields
+@import 'fields/field';
+@import 'fields/field-file-upload';
+@import 'fields/field-image';
+@import 'fields/field-tags';

@@ -1,0 +1,14 @@
+//
+// Footer content block
+// --------------------------------------------------
+
+
+#block-tallgrasschurch-footer-content {
+
+  @supports (display: flex) {
+
+    @media (min-width: $screen-sm) {
+      margin-right: $grid-gutter-width;
+    }
+  }
+}

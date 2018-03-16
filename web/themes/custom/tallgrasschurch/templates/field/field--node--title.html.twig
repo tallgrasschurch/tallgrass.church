@@ -1,4 +1,4 @@
-{% if not attributes is empty %}
+{% if attributes is not empty %}
   <span{{ attributes }}>
     {%- for item in items -%}
       {{ item.content }}
