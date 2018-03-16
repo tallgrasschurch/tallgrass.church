@@ -95,11 +95,13 @@
 
     {% if node_type == 'teaching' %}
       <p class="article-header__date">{{ node.getCreatedTime|format_date('custom', 'F j, Y') }}</p>
-      <div class="article-header__meta">
-        {{ content.field_speaker }}
-        {{ content.field_scripture_reference }}
-        {{ content.field_series }}
-      </div>
+      {% if content.field_speaker or content.field_scripture_reference or content.field_series %}
+        <div class="article-header__meta">
+          {{ content.field_speaker }}
+          {{ content.field_scripture_reference }}
+          {{ content.field_series }}
+        </div>
+      {% endif %}
     {% endif %}
 
     {% if node_type == 'event' %}
@@ -121,7 +123,7 @@
     </footer>
   {% endif %}
 
-  <div{{ content_attributes }}>
+  {% if content_attributes is not empty %}<div{{ content_attributes }}>{% endif %}
     {% if node_type == 'teaching' %}
       {{ content|without('field_subtitle', 'field_speaker', 'field_scripture_book', 'field_scripture_reference', 'field_series') }}
     {% elseif node_type == 'event' %}
@@ -129,5 +131,5 @@
     {% else %}
       {{ content }}
     {% endif %}
-  </div>
+  {% if content_attributes is not empty %}</div>{% endif %}
 </article>
