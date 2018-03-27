@@ -969,7 +969,7 @@ form .preview {
   display: flex;
   -ms-flex-direction: column;
       flex-direction: column;
-  margin-bottom: 2.4rem;
+  margin-bottom: 20px;
 }
 
 .article-header .article-header__title {
@@ -991,6 +991,7 @@ form .preview {
 .article-header .article-header__date {
   -ms-flex-order: 1;
       order: 1;
+  margin-top: 0;
   margin-bottom: 10px;
   font-size: 0.8em;
   line-height: 1.5;
@@ -1038,6 +1039,15 @@ form .preview {
 
 .status-message {
   margin-bottom: 2.4rem;
+}
+
+.block {
+  margin-bottom: 20px;
+}
+
+.block__label {
+  margin-top: 0;
+  margin-bottom: 20px;
 }
 
 #block-tallgrasschurch-account-menu ul {

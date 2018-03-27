@@ -296,7 +296,7 @@
 .article-header {
   display: flex;
   flex-direction: column;
-  margin-bottom: $line-height-computed;
+  margin-bottom: $grid-gutter-width;
 
   .article-header__title {
     order: 2;
@@ -314,6 +314,7 @@
 
   .article-header__date {
     order: 1;
+    margin-top: 0;
     margin-bottom: 10px;
     font-size: 0.8em;
     line-height: $line-height-base;
