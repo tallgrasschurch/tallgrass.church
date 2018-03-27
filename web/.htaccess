@@ -71,6 +71,7 @@ AddEncoding gzip svgz
 
   # Force HTTPS
   RewriteCond %{HTTPS} !=on
+  RewriteCond %{HTTP_HOST} ^tallgrass.church$
   RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
   # Set "protossl" to "s" if we were accessed via https://.  This is used later
