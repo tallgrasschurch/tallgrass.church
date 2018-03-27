@@ -758,32 +758,42 @@ form .preview {
 }
 
 #block-tallgrasschurch-main-menu ul {
-  margin: 0;
-  padding: 0;
+  margin: -20px -20px 0;
+  padding: 20px 20px 10px;
   list-style-type: none;
+  border-bottom: 1px solid #ddd;
 }
 
 #block-tallgrasschurch-main-menu ul li {
   display: inline-block;
+  margin-bottom: 10px;
 }
 
-@media (max-width: 575px) {
-  #block-tallgrasschurch-main-menu {
-    margin: 0 -20px;
-    padding: 10px 20px;
-    border-bottom: 1px solid #ddd;
-  }
-  #block-tallgrasschurch-main-menu ul li {
-    margin-right: 20px;
-  }
+#block-tallgrasschurch-main-menu ul li:after {
+  content: " /";
+  margin: 0 5px;
+}
+
+#block-tallgrasschurch-main-menu ul li:last-child:after {
+  content: "";
+  margin: 0;
+}
+
+#block-tallgrasschurch-main-menu ul li a {
+  color: #333;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#block-tallgrasschurch-main-menu ul li a:hover, #block-tallgrasschurch-main-menu ul li a:active {
+  text-decoration: underline;
 }
 
 @media (min-width: 576px) {
-  #block-tallgrasschurch-main-menu {
-    margin-top: 40px;
-  }
-  #block-tallgrasschurch-main-menu ul li {
-    margin-right: 20px;
+  #block-tallgrasschurch-main-menu ul {
+    margin: 40px 0 0;
+    padding: 10px 20px 0;
+    border-top: 1px solid #ddd;
   }
 }
 

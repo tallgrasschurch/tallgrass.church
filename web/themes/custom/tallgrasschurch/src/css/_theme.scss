@@ -64,39 +64,47 @@
 #block-tallgrasschurch-main-menu {
 
   ul {
-    margin: 0;
-    padding: 0;
+    margin: (-$grid-gutter-width) (-$grid-gutter-width) 0;
+    padding: $grid-gutter-width $grid-gutter-width ($grid-gutter-width / 2);
     list-style-type: none;
+    border-bottom: 1px solid $grey-lighter;
 
     li {
       display: inline-block;
+      margin-bottom: ($grid-gutter-width / 2);
 
-      a {}
-    }
-  }
+      &:after {
+        content: " /";
+        margin: 0 5px;
+      }
 
-  @media (max-width: $screen-xs-max) {
-    margin: 0 (-$grid-gutter-width);
-    padding: ($grid-gutter-width / 2) $grid-gutter-width;
-    border-bottom: 1px solid $grey-lighter;
+      &:last-child {
 
-    ul {
+        &:after {
+          content: "";
+          margin: 0;
+        }
+      }
 
-      li {
-        margin-right: $grid-gutter-width;
+      a {
+        color: $body-color;
+        font-weight: bold;
+        text-decoration: none;
+
+        &:hover,
+        &:active {
+          text-decoration: underline;
+        }
       }
     }
   }
 
   @media (min-width: $screen-sm) {
-    //float: right;
-    margin-top: $grid-gutter-width * 2;
 
     ul {
-
-      li {
-        margin-right: $grid-gutter-width;
-      }
+      margin: ($grid-gutter-width * 2) 0 0;
+      padding: ($grid-gutter-width / 2) $grid-gutter-width 0;
+      border-top: 1px solid $grey-lighter;
     }
   }
 }
