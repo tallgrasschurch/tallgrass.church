@@ -102,8 +102,8 @@
   @media (min-width: $screen-sm) {
 
     ul {
-      margin: ($grid-gutter-width * 2) 0 0;
-      padding: ($grid-gutter-width / 2) $grid-gutter-width 0;
+      margin: 0;
+      padding: ($grid-gutter-width / 2) 0 0;
       border-top: 1px solid $grey-lighter;
     }
   }
@@ -120,10 +120,28 @@
   a {
     display: block;
     margin: 0 (-$grid-gutter-width);
+    text-decoration: none;
+  }
+
+  img {}
+
+  @media (min-width: $screen-sm) {
+
+    a {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+}
+
+.logo--with-img {}
+
+.logo--no-img {
+
+  a {
     padding: $grid-gutter-width;
     color: white;
-    background-color: $brand-success;
-    text-decoration: none;
+    background-color: $grey-dark;
   }
 
   span {
@@ -134,23 +152,12 @@
   &:focus {
 
     a {
-      background-color: darken($brand-success, 10%);
+      background-color: $grey;
     }
   }
 
   @media (min-width: $screen-sm) {
     display: inline-block;
-
-    a {
-      margin-left: 0;
-      margin-right: 0;
-
-      &:hover,
-      &:focus {
-        margin-bottom: -($grid-gutter-width * 0.5);
-        padding-top: $grid-gutter-width * 1.5;
-      }
-    }
   }
 }
 
