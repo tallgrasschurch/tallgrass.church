@@ -791,8 +791,8 @@ form .preview {
 
 @media (min-width: 576px) {
   #block-tallgrasschurch-main-menu ul {
-    margin: 40px 0 0;
-    padding: 10px 20px 0;
+    margin: 0;
+    padding: 10px 0 0;
     border-top: 1px solid #ddd;
   }
 }
@@ -809,31 +809,33 @@ form .preview {
 .logo a {
   display: block;
   margin: 0 -20px;
-  padding: 20px;
-  color: white;
-  background-color: #5cb85c;
   text-decoration: none;
 }
 
-.logo span {
-  display: block;
-}
-
-.logo:hover a, .logo:focus a {
-  background-color: #449d44;
-}
-
 @media (min-width: 576px) {
-  .logo {
-    display: inline-block;
-  }
   .logo a {
     margin-left: 0;
     margin-right: 0;
   }
-  .logo a:hover, .logo a:focus {
-    margin-bottom: -10px;
-    padding-top: 30px;
+}
+
+.logo--no-img a {
+  padding: 20px;
+  color: white;
+  background-color: #333;
+}
+
+.logo--no-img span {
+  display: block;
+}
+
+.logo--no-img:hover a, .logo--no-img:focus a {
+  background-color: #555;
+}
+
+@media (min-width: 576px) {
+  .logo--no-img {
+    display: inline-block;
   }
 }
 
