@@ -81,13 +81,13 @@
   <header class="article-header">
     {{ title_prefix }}
     {% if page %}
-      <h1{{ title_attributes.addClass(label_classes) }}>
-        {{ label }}
-      </h1>
+      <h1{{ title_attributes.addClass(label_classes) }}>{{ label }}</h1>
     {% else %}
-      <h2{{ title_attributes.addClass(label_classes) }}>
-        <a href="{{ url }}" rel="bookmark">{{ label }}</a>
-      </h2>
+      {% if is_front %}
+        <h3{{ title_attributes.addClass(label_classes) }}><a href="{{ url }}" rel="bookmark">{{ label }}</a></h3>
+      {% else %}
+        <h2{{ title_attributes.addClass(label_classes) }}><a href="{{ url }}" rel="bookmark">{{ label }}</a></h2>
+      {% endif %}
     {% endif %}
     {{ title_suffix }}
 

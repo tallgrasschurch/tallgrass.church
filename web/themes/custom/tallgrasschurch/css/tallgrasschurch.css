@@ -758,32 +758,42 @@ form .preview {
 }
 
 #block-tallgrasschurch-main-menu ul {
-  margin: 0;
-  padding: 0;
+  margin: -20px -20px 0;
+  padding: 20px 20px 10px;
   list-style-type: none;
+  border-bottom: 1px solid #ddd;
 }
 
 #block-tallgrasschurch-main-menu ul li {
   display: inline-block;
+  margin-bottom: 10px;
 }
 
-@media (max-width: 575px) {
-  #block-tallgrasschurch-main-menu {
-    margin: 0 -20px;
-    padding: 10px 20px;
-    border-bottom: 1px solid #ddd;
-  }
-  #block-tallgrasschurch-main-menu ul li {
-    margin-right: 20px;
-  }
+#block-tallgrasschurch-main-menu ul li:after {
+  content: " /";
+  margin: 0 5px;
+}
+
+#block-tallgrasschurch-main-menu ul li:last-child:after {
+  content: "";
+  margin: 0;
+}
+
+#block-tallgrasschurch-main-menu ul li a {
+  color: #333;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#block-tallgrasschurch-main-menu ul li a:hover, #block-tallgrasschurch-main-menu ul li a:active {
+  text-decoration: underline;
 }
 
 @media (min-width: 576px) {
-  #block-tallgrasschurch-main-menu {
-    margin-top: 40px;
-  }
-  #block-tallgrasschurch-main-menu ul li {
-    margin-right: 20px;
+  #block-tallgrasschurch-main-menu ul {
+    margin: 40px 0 0;
+    padding: 10px 20px 0;
+    border-top: 1px solid #ddd;
   }
 }
 
@@ -969,7 +979,7 @@ form .preview {
   display: flex;
   -ms-flex-direction: column;
       flex-direction: column;
-  margin-bottom: 2.4rem;
+  margin-bottom: 20px;
 }
 
 .article-header .article-header__title {
@@ -991,6 +1001,7 @@ form .preview {
 .article-header .article-header__date {
   -ms-flex-order: 1;
       order: 1;
+  margin-top: 0;
   margin-bottom: 10px;
   font-size: 0.8em;
   line-height: 1.5;
@@ -1038,6 +1049,35 @@ form .preview {
 
 .status-message {
   margin-bottom: 2.4rem;
+}
+
+.links {
+  padding: 0;
+  list-style-type: none;
+}
+
+.links li {
+  display: inline-block;
+}
+
+.links li a {
+  display: inline-block;
+  padding: 5px 10px;
+  border: 1px solid #ddd;
+  text-decoration: none;
+}
+
+.links li a:hover, .links li a:focus {
+  background-color: #f5f5f5;
+}
+
+.block {
+  margin-bottom: 20px;
+}
+
+.block__label {
+  margin-top: 0;
+  margin-bottom: 20px;
 }
 
 #block-tallgrasschurch-account-menu ul {

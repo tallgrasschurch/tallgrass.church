@@ -35,6 +35,17 @@ function tallgrasschurch_preprocess_user(&$variables) {
 }
 
 
+function tallgrasschurch_preprocess_block(&$variables) {
+
+  // Create variable to check if the block is on the front page
+  try {
+    $variables['is_front'] = \Drupal::service('path.matcher')->isFrontPage();
+  } catch (Exception $e) {
+    $variables['is_front'] = FALSE;
+  }
+}
+
+
 /**
  * template_preprocess_page_title
  * Implements hook_preprocess_HOOK() for page templates.
@@ -118,6 +129,13 @@ function tallgrasschurch_preprocess_node(&$variables) {
   $tabs = \Drupal\block\Entity\Block::load('tallgrasschurch_local_tasks');
   if ($tabs) {
     $variables['tabs'] = \Drupal::entityTypeManager()->getViewBuilder('block')->view($tabs);
+  }
+
+  // Create variable to check if the node is on the front page
+  try {
+    $variables['is_front'] = \Drupal::service('path.matcher')->isFrontPage();
+  } catch (Exception $e) {
+    $variables['is_front'] = FALSE;
   }
 }
 
