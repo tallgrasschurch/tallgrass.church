@@ -637,6 +637,64 @@ form .preview {
   text-align: center;
 }
 
+.card {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+.card > * {
+  -ms-flex: 1 1 100%;
+      flex: 1 1 100%;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.card .card__title {
+  -ms-flex-order: 2;
+      order: 2;
+  margin: 0;
+}
+
+.card .card__subtitle {
+  -ms-flex-order: 3;
+      order: 3;
+  margin: 0;
+  font-style: italic;
+}
+
+.card img {
+  -ms-flex-order: 1;
+      order: 1;
+  margin: 0 0 10px;
+}
+
+.card-deck {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 20px;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .card-deck {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+}
+
+@supports ((display: -ms-grid) or (display: grid)) {
+  .card-deck .card {
+    margin: 0;
+  }
+}
+
 .embed-responsive {
   position: relative;
   display: block;
