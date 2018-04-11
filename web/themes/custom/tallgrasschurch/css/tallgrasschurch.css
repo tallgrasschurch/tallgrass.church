@@ -649,10 +649,8 @@ form .preview {
 }
 
 .card > * {
-  -ms-flex: 1 1 100%;
-      flex: 1 1 100%;
-  -ms-flex-item-align: start;
-      align-self: flex-start;
+  -ms-flex: 0 1 auto;
+      flex: 0 1 auto;
 }
 
 .card .card__title {
