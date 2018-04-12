@@ -172,7 +172,7 @@ function tallgrasschurch_preprocess_field(&$variables) {
         $variables['image_position'] = $node->field_image_position->value;
       } else {
         // Set the image_position variable when value is empty
-        $variables['image_position'] = 'none';
+        $variables['image_position'] = 'right';
       }
 
       // Handle the full width image position
