@@ -1,0 +1,51 @@
+//
+// Cards
+// --------------------------------------------------
+
+
+.card {
+  display: flex;
+  flex-direction: column;
+  margin-top: $grid-gutter-width;
+  margin-bottom: $grid-gutter-width;
+  padding: ($grid-gutter-width / 2);
+  border: 1px solid $grey-lighter;
+
+
+  > * {
+    flex: 0 1 auto;
+  }
+
+  .card__title {
+    order: 2;
+    margin: 0;
+  }
+
+  .card__subtitle {
+    order: 3;
+    margin: 0;
+    font-style: italic;
+  }
+
+  img {
+    order: 1;
+    margin: 0 0 ($grid-gutter-width / 2);
+  }
+}
+
+.card-deck {
+  display: grid;
+  grid-gap: $grid-gutter-width;
+  grid-template-columns: 1fr;
+
+  @media (min-width: $screen-md) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @supports (display: grid) {
+
+    .card {
+      margin: 0;
+    }
+  }
+}
