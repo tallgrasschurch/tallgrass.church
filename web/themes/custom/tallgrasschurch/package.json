@@ -10,7 +10,7 @@
   "license": "MIT",
   "private": true,
   "devDependencies": {
-    "autoprefixer": "^6.7.6",
+    "autoprefixer": "^8.3.0",
     "grunt": "^1.0.2",
     "grunt-concurrent": "^2.3.1",
     "grunt-contrib-watch": "^1.0.1",
