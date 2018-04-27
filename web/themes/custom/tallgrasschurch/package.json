@@ -6,7 +6,6 @@
     "type": "git",
     "url": "https://github.com/tallgrasschurch/tallgrass.church.git"
   },
-  "license": "MIT",
   "private": true,
   "devDependencies": {
     "autoprefixer": "^8.3.0",
