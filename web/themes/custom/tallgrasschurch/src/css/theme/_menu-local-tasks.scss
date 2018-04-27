@@ -1,0 +1,42 @@
+//
+// Drupal local tasks menu (tabs)
+// --------------------------------------------------
+
+
+.menu-local-tasks {
+  margin: $grid-gutter-width 0 0;
+  font-size: 1.4rem;
+  line-height: $line-height-base;
+
+  .menu-local-tasks__list {
+    margin: 0;
+    padding: 0 10px;
+    list-style-type: none;
+    border-bottom: 1px solid $grey-lighter;
+
+    .menu-local-tasks__list-item {
+      display: inline-block;
+      margin: 0 5px -1px 0;
+      white-space: nowrap;
+
+      a {
+        display: block;
+        padding: 10px 20px;
+        color: inherit;
+        background-color: $grey-lightest;
+        border: 1px solid $grey-lighter;
+        text-decoration: none;
+
+        &:hover,
+        &:focus {
+          text-decoration: underline;
+        }
+
+        &.is-active {
+          background-color: white;
+          border-bottom-color: white;
+        }
+      }
+    }
+  }
+}

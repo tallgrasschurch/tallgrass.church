@@ -1,4 +1,4 @@
-# [tallgrass.church](http://tallgrass.church)
+# [tallgrass.church](https://tallgrass.church)
 
 The website for Tallgrass Community Church in Manhattan, Kansas.
 

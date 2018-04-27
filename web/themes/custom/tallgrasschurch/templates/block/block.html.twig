@@ -29,7 +29,7 @@
 {%
   set classes = [
     'block',
-    'block--' ~ attributes.id|clean_class,
+    attributes.id ? 'block--' ~ attributes.id|clean_class,
   ]
 %}
 
