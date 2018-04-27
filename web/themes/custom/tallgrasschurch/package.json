@@ -1,11 +1,10 @@
 {
-  "name": "static-boilerplate",
-  "description": "Templates for commonly used project files.",
-  "version": "0.0.0",
+  "name": "@tallgrasschurch/tallgrass.church",
+  "description": "Drupal theme for Tallgrass Community Church in Manhattan, Kansas.",
   "author": "D. Nathan Dillon",
   "repository": {
     "type": "git",
-    "url": "git@github.com:natedillon/static-boilerplate.git"
+    "url": "https://github.com/tallgrasschurch/tallgrass.church.git"
   },
   "license": "MIT",
   "private": true,
