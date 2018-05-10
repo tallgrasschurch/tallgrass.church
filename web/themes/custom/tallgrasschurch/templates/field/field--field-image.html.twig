@@ -12,7 +12,7 @@
   ]
 %}
 
-{% if image_position != 'none' %}
+{% if image_position != 'hide' %}
   <div{{ attributes.addclass(classes) }}>
     {% if not label_hidden %}
       <div{{ title_attributes.addClass(label_classes) }}>{{ label }}</div>
