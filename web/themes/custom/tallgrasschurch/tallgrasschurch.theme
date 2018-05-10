@@ -132,6 +132,7 @@ function tallgrasschurch_preprocess_node(&$variables) {
   }
 
   // Create variable to check if the node is on the front page
+  // TODO: It looks like Drupal caching is making this not work
   try {
     $variables['is_front'] = \Drupal::service('path.matcher')->isFrontPage();
   } catch (Exception $e) {
