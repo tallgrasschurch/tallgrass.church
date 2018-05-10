@@ -83,11 +83,16 @@
     {% if page %}
       <h1{{ title_attributes.addClass(label_classes) }}>{{ label }}</h1>
     {% else %}
-      {% if is_front %}
-        <h3{{ title_attributes.addClass(label_classes) }}><a href="{{ url }}" rel="bookmark">{{ label }}</a></h3>
-      {% else %}
-        <h2{{ title_attributes.addClass(label_classes) }}><a href="{{ url }}" rel="bookmark">{{ label }}</a></h2>
-      {% endif %}
+      {#
+        TODO: It looks like Drupal caching is making this not work
+        {% if is_front %}
+          <h3{{ title_attributes.addClass(label_classes) }}><a href="{{ url }}" rel="bookmark">{{ label }}</a></h3>
+        {% else %}
+          <h2{{ title_attributes.addClass(label_classes) }}><a href="{{ url }}" rel="bookmark">{{ label }}</a></h2>
+        {% endif %}
+      #}
+
+      <h2{{ title_attributes.addClass(label_classes) }}><a href="{{ url }}" rel="bookmark">{{ label }}</a></h2>
     {% endif %}
     {{ title_suffix }}
 
