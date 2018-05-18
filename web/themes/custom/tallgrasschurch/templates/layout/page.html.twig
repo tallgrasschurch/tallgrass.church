@@ -1,23 +1,37 @@
 <div class="page">
   {% if page.header %}
-    <header role="banner" class="header">
+    <header role="banner" id="header">
       <div class="container">
         {{ page.header }}
       </div><!-- .container -->
-    </header>
+    </header><!-- #header -->
   {% endif %}
 
-  <main role="main" class="content">
-    <div class="container">
-      {{ page.content }}
-    </div><!-- .container -->
-  </main>
+  {% if page.content_top %}
+    <div id="content-top">
+      {{ page.content_top }}
+    </div><!-- #content-top -->
+  {% endif %}
+
+  {% if page.content %}
+    <main role="main" id="content">
+      <div class="container">
+        {{ page.content }}
+      </div><!-- .container -->
+    </main><!-- #content -->
+  {% endif %}
+
+  {% if page.content_bottom %}
+    <div id="content-bottom">
+      {{ page.content_bottom }}
+    </div><!-- #content-bottom -->
+  {% endif %}
 
   {% if page.footer %}
-    <footer role="contentinfo" class="footer">
+    <footer role="contentinfo" id="footer">
       <div class="container">
         {{ page.footer }}
       </div><!-- .container -->
-    </footer>
+    </footer><!-- #footer -->
   {% endif %}
 </div>

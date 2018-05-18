@@ -723,7 +723,7 @@ form .preview {
   }
 }
 
-.header {
+#header {
   margin: 0;
   background-color: white;
 }
