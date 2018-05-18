@@ -723,9 +723,39 @@ form .preview {
   }
 }
 
+@media (min-width: 992px) {
+  .container {
+    width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1160px;
+  }
+}
+
 #header {
   margin: 0;
+  padding: 20px 0;
   background-color: white;
+  border-bottom: 1px solid #ddd;
+}
+
+@media (min-width: 768px) {
+  .region--header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .region--header .block {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+  }
 }
 
 #content {
@@ -976,46 +1006,22 @@ form .preview {
   background-color: #c4c3c3;
 }
 
-.logo {
-  display: block;
+#block-tallgrasschurch-branding {
   margin: 0;
-  font-weight: lighter;
-  letter-spacing: 0.1em;
-  line-height: normal;
-  text-transform: uppercase;
 }
 
-.logo a {
+#block-tallgrasschurch-branding .logo {
   display: block;
-  margin: 0 -20px;
+  margin: 0;
+}
+
+#block-tallgrasschurch-branding .logo a {
+  display: inline-block;
   text-decoration: none;
 }
 
-@media (min-width: 576px) {
-  .logo a {
-    margin-left: 0;
-    margin-right: 0;
-  }
-}
-
-.logo--no-img a {
-  padding: 20px;
-  color: white;
-  background-color: #333;
-}
-
-.logo--no-img span {
-  display: block;
-}
-
-.logo--no-img:hover a, .logo--no-img:focus a {
-  background-color: #555;
-}
-
-@media (min-width: 576px) {
-  .logo--no-img {
-    display: inline-block;
-  }
+#block-tallgrasschurch-branding .logo--with-img {
+  line-height: 1;
 }
 
 @supports (display: flex) {
@@ -1026,43 +1032,27 @@ form .preview {
   }
 }
 
+#block-tallgrasschurch-main-menu {
+  margin: 20px 0 0;
+}
+
 #block-tallgrasschurch-main-menu ul {
-  margin: -20px -20px 0;
-  padding: 20px 20px 10px;
-  list-style-type: none;
-  border-bottom: 1px solid #ddd;
-}
-
-#block-tallgrasschurch-main-menu ul li {
-  display: inline-block;
-  margin-bottom: 10px;
-}
-
-#block-tallgrasschurch-main-menu ul li:after {
-  content: " /";
-  margin: 0 5px;
-}
-
-#block-tallgrasschurch-main-menu ul li:last-child:after {
-  content: "";
   margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
 
-#block-tallgrasschurch-main-menu ul li a {
-  color: #333;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-#block-tallgrasschurch-main-menu ul li a:hover, #block-tallgrasschurch-main-menu ul li a:active {
-  text-decoration: underline;
-}
-
-@media (min-width: 576px) {
-  #block-tallgrasschurch-main-menu ul {
+@media (min-width: 768px) {
+  #block-tallgrasschurch-main-menu {
     margin: 0;
-    padding: 10px 0 0;
-    border-top: 1px solid #ddd;
+    text-align: right;
+  }
+  #block-tallgrasschurch-main-menu ul li {
+    display: inline-block;
+    margin-right: 20px;
+  }
+  #block-tallgrasschurch-main-menu ul li:last-child {
+    margin-right: 0;
   }
 }
 

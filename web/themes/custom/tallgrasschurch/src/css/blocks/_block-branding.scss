@@ -4,62 +4,23 @@
 
 
 #block-tallgrasschurch-branding {
-
-  @media (min-width: $screen-sm) {
-    //float: left;
-    //margin-left: -$grid-gutter-width;
-    //padding: 0 $grid-gutter-width;
-  }
-}
-
-.logo {
-  display: block;
   margin: 0;
-  font-weight: lighter;
-  letter-spacing: 0.1em;
-  line-height: normal;
-  text-transform: uppercase;
 
-  a {
+  .logo {
     display: block;
-    margin: 0 (-$grid-gutter-width);
-    text-decoration: none;
-  }
-
-  img {}
-
-  @media (min-width: $screen-sm) {
+    margin: 0;
 
     a {
-      margin-left: 0;
-      margin-right: 0;
+      display: inline-block;
+      text-decoration: none;
     }
-  }
-}
 
-.logo--with-img {}
-
-.logo--no-img {
-
-  a {
-    padding: $grid-gutter-width;
-    color: white;
-    background-color: $grey-dark;
+    img {}
   }
 
-  span {
-    display: block;
+  .logo--with-img {
+    line-height: 1;
   }
 
-  &:hover,
-  &:focus {
-
-    a {
-      background-color: $grey;
-    }
-  }
-
-  @media (min-width: $screen-sm) {
-    display: inline-block;
-  }
+  .logo--no-img {}
 }

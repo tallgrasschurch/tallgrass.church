@@ -34,13 +34,13 @@
     width: $container-md;
   }
 
-//  @media (min-width: $screen-lg) {
-//    width: $container-lg;
-//  }
+  @media (min-width: $screen-lg) {
+    width: $container-lg;
+  }
 
-//  @media (min-width: $screen-xl) {
-//    width: $container-xl;
-//  }
+  @media (min-width: $screen-xl) {
+    width: $container-xl;
+  }
 }
 
 
@@ -49,20 +49,22 @@
 
 #header {
   margin: 0;
+  padding: $grid-gutter-width 0;
   background-color: white;
+  border-bottom: 1px solid $grey-lighter;
 }
+
+#header .container {}
 
 .region--header {
 
-  @media (min-width: $screen-sm) {
-    // Clearfix
-    // https://css-tricks.com/snippets/css/clear-fix/
-    // TODO: Set up reusable clearfix
-//    &:after {
-//      content: "";
-//      display: table;
-//      clear: both;
-//    }
+  @media (min-width: $screen-md) {
+    display: flex;
+    align-items: center;
+
+    .block {
+      flex: 1 1 auto;
+    }
   }
 }
 
