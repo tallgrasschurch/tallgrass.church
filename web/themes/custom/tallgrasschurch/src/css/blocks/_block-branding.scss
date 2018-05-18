@@ -1,0 +1,65 @@
+//
+// Branding block
+// --------------------------------------------------
+
+
+#block-tallgrasschurch-branding {
+
+  @media (min-width: $screen-sm) {
+    //float: left;
+    //margin-left: -$grid-gutter-width;
+    //padding: 0 $grid-gutter-width;
+  }
+}
+
+.logo {
+  display: block;
+  margin: 0;
+  font-weight: lighter;
+  letter-spacing: 0.1em;
+  line-height: normal;
+  text-transform: uppercase;
+
+  a {
+    display: block;
+    margin: 0 (-$grid-gutter-width);
+    text-decoration: none;
+  }
+
+  img {}
+
+  @media (min-width: $screen-sm) {
+
+    a {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+}
+
+.logo--with-img {}
+
+.logo--no-img {
+
+  a {
+    padding: $grid-gutter-width;
+    color: white;
+    background-color: $grey-dark;
+  }
+
+  span {
+    display: block;
+  }
+
+  &:hover,
+  &:focus {
+
+    a {
+      background-color: $grey;
+    }
+  }
+
+  @media (min-width: $screen-sm) {
+    display: inline-block;
+  }
+}
