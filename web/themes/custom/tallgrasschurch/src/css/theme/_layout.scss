@@ -3,9 +3,22 @@
 // --------------------------------------------------
 
 
+// Page
+// -------------------------
+
 .page {
   background-color: white;
 }
+
+
+// Region
+// -------------------------
+
+.region {}
+
+
+// Container
+// -------------------------
 
 .container {
   padding-left: $grid-gutter-width;
@@ -30,6 +43,10 @@
 //  }
 }
 
+
+// Header
+// -------------------------
+
 #header {
   margin: 0;
   background-color: white;
@@ -49,10 +66,18 @@
   }
 }
 
+
+// Content
+// -------------------------
+
 #content {
   padding: ($grid-gutter-width * 2) 0;
   background-color: white;
 }
+
+
+// Footer
+// -------------------------
 
 #footer {
   padding: $grid-gutter-width 0;
