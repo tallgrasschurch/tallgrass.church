@@ -40,12 +40,14 @@
 %}
 
 <div{{ attributes.addclass(classes) }}>
-  {{ title_prefix }}
-  {% if label %}
-    <h2{{ title_attributes.addclass(label_classes) }}>{{ label }}</h2>
-  {% endif %}
-  {{ title_suffix }}
-  {% block content %}
-    {{ content }}
-  {% endblock %}
+  <div class="wrapper">
+    {{ title_prefix }}
+    {% if label %}
+      <h2{{ title_attributes.addclass(label_classes) }}>{{ label }}</h2>
+    {% endif %}
+    {{ title_suffix }}
+    {% block content %}
+      {{ content }}
+    {% endblock %}
+  </div><!-- .wrapper -->
 </div>
