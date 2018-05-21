@@ -7,25 +7,27 @@
     </header><!-- #header -->
   {% endif %}
 
-  {% if page.content_top %}
-    <div id="content-top">
-      {{ page.content_top }}
-    </div><!-- #content-top -->
-  {% endif %}
+  <main role="main" id="main-content">
+    {% if page.content_top %}
+      <div id="content-top">
+        {{ page.content_top }}
+      </div><!-- #content-top -->
+    {% endif %}
 
-  {% if page.content %}
-    <main role="main" id="content">
-      <div class="container">
-        {{ page.content }}
-      </div><!-- .container -->
-    </main><!-- #content -->
-  {% endif %}
+    {% if page.content %}
+      <div id="content">
+        <div class="container">
+          {{ page.content }}
+        </div><!-- .container -->
+      </div><!-- #content -->
+    {% endif %}
 
-  {% if page.content_bottom %}
-    <div id="content-bottom">
-      {{ page.content_bottom }}
-    </div><!-- #content-bottom -->
-  {% endif %}
+    {% if page.content_bottom %}
+      <div id="content-bottom">
+        {{ page.content_bottom }}
+      </div><!-- #content-bottom -->
+    {% endif %}
+  </main><!-- #main-content -->
 
   {% if page.footer %}
     <footer role="contentinfo" id="footer">
