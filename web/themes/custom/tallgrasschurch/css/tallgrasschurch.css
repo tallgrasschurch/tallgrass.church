@@ -1024,6 +1024,19 @@ form .preview {
   line-height: 1;
 }
 
+@media (min-width: 992px) {
+  #block-tallgrasschurch-content .wrapper {
+    display: grid;
+    grid-template-columns: repeat(12, [col] 1fr);
+    grid-gap: 20px;
+  }
+}
+
+#block-tallgrasschurch-content .wrapper > * {
+  grid-column-start: 3;
+  grid-column-end: span 8;
+}
+
 @supports (display: flex) {
   @media (min-width: 576px) {
     #block-tallgrasschurch-footer-content {
