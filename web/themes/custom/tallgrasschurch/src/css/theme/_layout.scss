@@ -82,19 +82,13 @@
 // -------------------------
 
 #footer {
-  padding: $grid-gutter-width 0;
-  background-color: $grey-lightest;
+  padding: ($grid-gutter-width * 4) 0;
+  color: white;
+  background-color: $grey-darker;
   font-size: 1.4rem;
-}
+  text-align: center;
 
-.region--footer {
-
-  @supports (display: flex) {
-
-    @media (min-width: $screen-sm) {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+  a {
+    color: inherit;
   }
 }

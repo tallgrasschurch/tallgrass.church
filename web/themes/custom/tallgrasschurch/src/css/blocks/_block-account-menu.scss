@@ -17,13 +17,13 @@
         display: block;
         padding: 2px 7px;
         color: inherit;
-        background-color: $grey-lighter;
+        border: 1px solid $grey;
         font-size: 1.2rem;
         text-decoration: none;
 
         &:hover,
         &:focus {
-          background-color: darken($grey-lighter, 10%);
+          border-color: $grey-lighter;
         }
       }
     }

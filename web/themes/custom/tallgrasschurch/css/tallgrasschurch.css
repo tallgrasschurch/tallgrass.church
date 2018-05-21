@@ -354,7 +354,7 @@ body {
   font-size: 1.6rem;
   line-height: 1.5;
   color: #333;
-  background-color: #f5f5f5;
+  background-color: #222;
 }
 
 a {
@@ -764,25 +764,15 @@ form .preview {
 }
 
 #footer {
-  padding: 20px 0;
-  background-color: #f5f5f5;
+  padding: 80px 0;
+  color: white;
+  background-color: #222;
   font-size: 1.4rem;
+  text-align: center;
 }
 
-@supports (display: flex) {
-  @media (min-width: 576px) {
-    .region--footer {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: justify;
-          -ms-flex-pack: justify;
-              justify-content: space-between;
-      -webkit-box-align: center;
-          -ms-flex-align: center;
-              align-items: center;
-    }
-  }
+#footer a {
+  color: inherit;
 }
 
 .menu-local-tasks {
@@ -1009,13 +999,13 @@ form .preview {
   display: block;
   padding: 2px 7px;
   color: inherit;
-  background-color: #ddd;
+  border: 1px solid #555;
   font-size: 1.2rem;
   text-decoration: none;
 }
 
 #block-tallgrasschurch-account-menu ul li a:hover, #block-tallgrasschurch-account-menu ul li a:focus {
-  background-color: #c4c3c3;
+  border-color: #ddd;
 }
 
 #block-tallgrasschurch-branding {
