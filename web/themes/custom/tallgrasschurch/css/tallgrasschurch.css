@@ -974,6 +974,18 @@ form .preview {
   background-color: #f5f5f5;
 }
 
+@media (min-width: 992px) {
+  .region--content-bottom {
+    display: grid;
+    grid-template-columns: repeat(12, [col] 1fr);
+    grid-gap: 20px;
+  }
+  .region--content-bottom > * {
+    grid-column-start: 3;
+    grid-column-end: span 8;
+  }
+}
+
 .block {
   margin-bottom: 20px;
 }
@@ -1030,11 +1042,10 @@ form .preview {
     grid-template-columns: repeat(12, [col] 1fr);
     grid-gap: 20px;
   }
-}
-
-#block-tallgrasschurch-content .wrapper > * {
-  grid-column-start: 3;
-  grid-column-end: span 8;
+  #block-tallgrasschurch-content .wrapper > * {
+    grid-column-start: 3;
+    grid-column-end: span 8;
+  }
 }
 
 @supports (display: flex) {

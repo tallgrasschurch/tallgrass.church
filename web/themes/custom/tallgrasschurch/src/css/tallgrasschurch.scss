@@ -29,6 +29,10 @@
 @import 'theme/menu-local-tasks';
 @import 'theme/misc'; // TODO: Moved these styles somewhere else
 
+// Drupal regions
+@import 'regions/region';
+@import 'regions/region-content-bottom';
+
 // Drupal blocks
 @import 'blocks/block';
 @import 'blocks/block-account-menu';

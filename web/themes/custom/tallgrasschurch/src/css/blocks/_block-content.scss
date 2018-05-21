@@ -11,11 +11,11 @@
       display: grid;
       grid-template-columns: repeat(12, [col] 1fr);
       grid-gap: $grid-gutter-width;
-    }
 
-    > * {
-      grid-column-start: 3;
-      grid-column-end: span 8;
+      > * {
+        grid-column-start: 3;
+        grid-column-end: span 8;
+      }
     }
   }
 }
