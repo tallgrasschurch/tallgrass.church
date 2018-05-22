@@ -1038,14 +1038,6 @@ form .preview {
   }
 }
 
-@supports (display: flex) {
-  @media (min-width: 576px) {
-    #block-tallgrasschurch-footer-content {
-      margin-right: 20px;
-    }
-  }
-}
-
 #block-tallgrasschurch-hero-home {
   min-height: 500px;
   margin: 0;
