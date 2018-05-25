@@ -1081,21 +1081,25 @@ form .preview {
   }
 }
 
-#block-tallgrasschurch-hero-home .field--field-subtitle {
+#block-tallgrasschurch-hero-home .field--body {
   margin: 0;
   font-size: 2.4rem;
   font-weight: lighter;
   line-height: normal;
 }
 
+#block-tallgrasschurch-hero-home .field--body > * {
+  margin: 0;
+}
+
 @media (min-width: 768px) {
-  #block-tallgrasschurch-hero-home .field--field-subtitle {
+  #block-tallgrasschurch-hero-home .field--body {
     font-size: 3.6rem;
   }
 }
 
 @media (min-width: 992px) {
-  #block-tallgrasschurch-hero-home .field--field-subtitle {
+  #block-tallgrasschurch-hero-home .field--body {
     grid-row-start: 2;
     grid-column-end: span 6;
   }
