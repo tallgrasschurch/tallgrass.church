@@ -8,24 +8,11 @@
   {% endif %}
 
   <main role="main" id="main-content">
-    {# if page.content_top #}
-    {% if is_front %}
+    {% if page.content_top %}
       <div id="content-top">
-        <div id="block-tallgrasschurch-hero-home" class="block block--block-tallgrasschurch-hero-home">
-          <div class="wrapper">
-            <h1 class="field field--field-title">
-              Reclaiming Neighboring
-            </h1>
-            <p class="field field--field-subtitle article-header__subtitle">
-              Because God first loved us, we exist to love God and love our neighbors.
-            </p>
-          </div><!-- .wrapper -->
-        </div><!-- #block-tallgrasschurch-hero-home -->
-
         {{ page.content_top }}
       </div><!-- #content-top -->
     {% endif %}
-    {# endif #}
 
     {% if page.content %}
       <div id="content">
