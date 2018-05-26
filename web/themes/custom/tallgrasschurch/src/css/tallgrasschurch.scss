@@ -25,13 +25,16 @@
 @import 'components/media-group';
 
 // Theme
-@import 'theme';
+@import 'theme/layout';
 @import 'theme/menu-local-tasks';
+@import 'theme/misc'; // TODO: Moved these styles somewhere else
 
 // Drupal blocks
 @import 'blocks/block';
 @import 'blocks/block-account-menu';
+@import 'blocks/block-branding';
 @import 'blocks/block-footer-content';
+@import 'blocks/block-main-menu';
 
 // Drupal fields
 @import 'fields/field';

@@ -1,0 +1,98 @@
+//
+// Layout
+// --------------------------------------------------
+
+
+// Page
+// -------------------------
+
+.page {
+  background-color: white;
+}
+
+
+// Region
+// -------------------------
+
+.region {}
+
+
+// Container
+// -------------------------
+
+.container {
+  padding-left: $grid-gutter-width;
+  padding-right: $grid-gutter-width;
+
+  @media (min-width: $screen-sm) {
+    width: $container-sm;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media (min-width: $screen-md) {
+    width: $container-md;
+  }
+
+//  @media (min-width: $screen-lg) {
+//    width: $container-lg;
+//  }
+
+//  @media (min-width: $screen-xl) {
+//    width: $container-xl;
+//  }
+}
+
+
+// Header
+// -------------------------
+
+#header {
+  margin: 0;
+  background-color: white;
+}
+
+.region--header {
+
+  @media (min-width: $screen-sm) {
+    // Clearfix
+    // https://css-tricks.com/snippets/css/clear-fix/
+    // TODO: Set up reusable clearfix
+//    &:after {
+//      content: "";
+//      display: table;
+//      clear: both;
+//    }
+  }
+}
+
+
+// Content
+// -------------------------
+
+#content {
+  padding: ($grid-gutter-width * 2) 0;
+  background-color: white;
+}
+
+
+// Footer
+// -------------------------
+
+#footer {
+  padding: $grid-gutter-width 0;
+  background-color: $grey-lightest;
+  font-size: 1.4rem;
+}
+
+.region--footer {
+
+  @supports (display: flex) {
+
+    @media (min-width: $screen-sm) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+}

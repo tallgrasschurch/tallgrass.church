@@ -10,7 +10,9 @@ libraries-override:
 base theme: stable
 regions:
   header: 'Header'
+  content_top: 'Content top'
   content: 'Content'
+  content_bottom: 'Content bottom'
   footer: 'Footer'
 features:
   -
