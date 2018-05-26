@@ -11,12 +11,6 @@
 }
 
 
-// Region
-// -------------------------
-
-.region {}
-
-
 // Container
 // -------------------------
 
@@ -69,6 +63,12 @@
 }
 
 
+// Content top
+// -------------------------
+
+#content-top {}
+
+
 // Content
 // -------------------------
 
@@ -76,6 +76,12 @@
   padding: ($grid-gutter-width * 2) 0;
   background-color: white;
 }
+
+
+// Content bottom
+// -------------------------
+
+#content-bottom {}
 
 
 // Footer

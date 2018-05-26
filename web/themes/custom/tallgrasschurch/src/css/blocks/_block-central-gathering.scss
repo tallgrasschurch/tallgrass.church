@@ -1,0 +1,18 @@
+//
+// Central Gathering block
+// --------------------------------------------------
+
+
+#block-tallgrasschurch-central-gathering {
+  background-color: $grey-lighter;
+
+  .wrapper {
+    @extend .container;
+
+    @media (min-width: $screen-lg) {
+      display: grid;
+      grid-template-columns: repeat(12, [col] 1fr);
+      grid-gap: $grid-gutter-width;
+    }
+  }
+}
