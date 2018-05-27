@@ -1,5 +1,7 @@
 {% extends "block.html.twig" %}
 
+{% set remove_container = true %}
+
 {% block content %}
   <h1 class="logo {% if site_logo %}logo--with-img{% else %}logo--no-img{% endif %}">
     <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home">
