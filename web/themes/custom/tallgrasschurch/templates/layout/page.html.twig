@@ -22,26 +22,11 @@
       </div><!-- #content -->
     {% endif %}
 
-    {# if page.content_bottom #}
+    {% if page.content_bottom %}
       <div id="content-bottom">
-        <div id="block-tallgrasschurch-central-gathering" class="block block--block-tallgrasschurch-central-gathering">
-          <div class="wrapper">
-            <h1 class="field field--field-block-title">
-              Join us for our Central Gathering
-            </h1>
-            <div data-quickedit-field-id="block_content/5/body/en/full" class="field field--body">
-              <p>Sundays at 5:00 PM<br>
-                College Heights Baptist Church<br>
-                2320 Anderson Ave<br>
-                Manhattan, Kansas 66502</p>
-              <p><a href="https://goo.gl/maps/LfMai6oyY792" title="Get Directions on Google Maps" class="btn btn-primary">Get Directions</a></p>
-            </div>
-          </div><!-- .wrapper -->
-        </div>
-
         {{ page.content_bottom }}
       </div><!-- #content-bottom -->
-    {# endif #}
+    {% endif %}
   </main><!-- #main-content -->
 
   {% if page.footer %}
