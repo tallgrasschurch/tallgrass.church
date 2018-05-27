@@ -1015,6 +1015,7 @@ form .preview {
 }
 
 #block-tallgrasschurch-central-gathering {
+  margin: 0;
   padding: 20px 0;
   background-color: #ddd;
 }
