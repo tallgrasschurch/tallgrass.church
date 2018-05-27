@@ -1,0 +1,12 @@
+//
+// Upcoming events block
+// --------------------------------------------------
+
+
+#block-tallgrasschurch-events-home {
+  margin: $grid-gutter-width 0;
+
+  @media (min-width: $screen-sm) {
+    margin: ($grid-gutter-width * 4) 0;
+  }
+}

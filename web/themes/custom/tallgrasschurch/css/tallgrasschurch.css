@@ -1137,6 +1137,16 @@ form .preview {
   }
 }
 
+#block-tallgrasschurch-latest-teaching {
+  margin: 20px 0;
+}
+
+@media (min-width: 576px) {
+  #block-tallgrasschurch-latest-teaching {
+    margin: 80px 0;
+  }
+}
+
 #block-tallgrasschurch-main-menu {
   margin: 20px 0 0;
 }
@@ -1158,6 +1168,16 @@ form .preview {
   }
   #block-tallgrasschurch-main-menu ul li:last-child {
     margin-right: 0;
+  }
+}
+
+#block-tallgrasschurch-events-home {
+  margin: 20px 0;
+}
+
+@media (min-width: 576px) {
+  #block-tallgrasschurch-events-home {
+    margin: 80px 0;
   }
 }
 
