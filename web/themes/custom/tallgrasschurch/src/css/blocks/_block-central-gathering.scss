@@ -1,0 +1,45 @@
+//
+// Central Gathering block
+// --------------------------------------------------
+
+
+#block-tallgrasschurch-central-gathering {
+  margin: 0;
+  padding: $grid-gutter-width 0;
+  background-color: $grey-lighter;
+
+  @media (min-width: $screen-sm) {
+    padding: ($grid-gutter-width * 4) 0;
+  }
+
+  .container {
+
+    @media (min-width: $screen-md) {
+      display: grid;
+      grid-template-columns: repeat(12, [col] 1fr);
+      grid-gap: $grid-gutter-width;
+    }
+  }
+
+  .wrapper {
+    padding: ($grid-gutter-width * 2);
+    background-color: rgba(white, .9);
+    text-align: center;
+
+    @media (min-width: $screen-md) {
+      grid-column-start: 2;
+      grid-column-end: span 10;
+    }
+
+    @media (min-width: $screen-lg) {
+      grid-column-start: 3;
+      grid-column-end: span 8;
+    }
+  }
+
+  .field--field-block-title {
+    margin: 0 0 $grid-gutter-width;
+  }
+
+  .field--body {}
+}

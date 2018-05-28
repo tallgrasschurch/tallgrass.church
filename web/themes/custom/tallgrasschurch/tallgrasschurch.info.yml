@@ -14,5 +14,6 @@ regions:
   content: 'Content'
   content_bottom: 'Content bottom'
   footer: 'Footer'
-features:
-  -
+# TODO: Disable features
+#features:
+#  -
