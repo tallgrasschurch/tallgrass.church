@@ -31,13 +31,13 @@
  */
 #}
 
-{%
+{#
   set classes = [
     dom_id ? 'js-view-dom-id-' ~ dom_id,
   ]
-%}
+#}
 
-<div{{ attributes.addClass(classes) }}>
+{% if attributes is not empty %}<div{{ attributes.addClass(classes) }}>{% endif %}
   {{ title_prefix }}
   {{ title }}
   {{ title_suffix }}
@@ -67,4 +67,4 @@
   {% endif %}
 
   {{ feed_icons }}
-</div>
+{% if attributes is not empty %}</div>{% endif %}

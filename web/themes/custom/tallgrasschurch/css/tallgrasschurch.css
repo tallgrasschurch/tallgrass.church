@@ -1138,12 +1138,112 @@ form .preview {
 }
 
 #block-tallgrasschurch-latest-teaching {
-  margin: 20px 0;
+  padding: 20px 0;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
 }
 
 @media (min-width: 576px) {
   #block-tallgrasschurch-latest-teaching {
-    margin: 80px 0;
+    padding: 80px 0;
+  }
+}
+
+#block-tallgrasschurch-latest-teaching .views-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 20px;
+  border: 1px solid #ddd;
+}
+
+@media (min-width: 768px) {
+  #block-tallgrasschurch-latest-teaching .views-row {
+    display: grid;
+    grid-template-columns: repeat(12, [col] 1fr);
+    grid-gap: 20px;
+  }
+}
+
+#block-tallgrasschurch-latest-teaching .views-row .views-row__content,
+#block-tallgrasschurch-latest-teaching .views-row .views-row__img {
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+#block-tallgrasschurch-latest-teaching .views-row .views-row__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+
+@media (min-width: 768px) {
+  #block-tallgrasschurch-latest-teaching .views-row .views-row__content {
+    grid-column-start: 7;
+    grid-column-end: span 6;
+  }
+}
+
+#block-tallgrasschurch-latest-teaching .views-row .views-row__content a {
+  text-decoration: none;
+}
+
+#block-tallgrasschurch-latest-teaching .views-row .views-row__content .views-row__title {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  margin: 0;
+  font-size: 4.8rem;
+  line-height: normal;
+}
+
+#block-tallgrasschurch-latest-teaching .views-row .views-row__content .views-row__date {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  font-size: 1.4rem;
+}
+
+#block-tallgrasschurch-latest-teaching .views-row .views-row__content .views-row__scripture-reference {
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
+  font-size: 2.4rem;
+  font-style: italic;
+}
+
+#block-tallgrasschurch-latest-teaching .views-row .views-row__content .views-row__speaker {
+  -webkit-box-ordinal-group: 5;
+      -ms-flex-order: 4;
+          order: 4;
+  margin-top: 10px;
+  font-size: 1.4rem;
+}
+
+#block-tallgrasschurch-latest-teaching .views-row .views-row__img {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  margin-bottom: 20px;
+  line-height: 1;
+}
+
+@media (min-width: 768px) {
+  #block-tallgrasschurch-latest-teaching .views-row .views-row__img {
+    grid-column-start: 1;
+    grid-column-end: span 6;
+    margin-bottom: 0;
   }
 }
 

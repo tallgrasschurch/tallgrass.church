@@ -4,9 +4,86 @@
 
 
 #block-tallgrasschurch-latest-teaching {
-  margin: $grid-gutter-width 0;
+  padding: $grid-gutter-width 0;
+  border-top: 1px solid $grey-lighter;
+  border-bottom: 1px solid $grey-lighter;
 
   @media (min-width: $screen-sm) {
-    margin: ($grid-gutter-width * 4) 0;
+    padding: ($grid-gutter-width * 4) 0;
+  }
+
+  .container {}
+
+  .wrapper {}
+
+  .block__label {}
+
+  .views-row {
+    display: flex;
+    flex-direction: column;
+    padding: $grid-gutter-width;
+    border: 1px solid $grey-lighter;
+
+    @media (min-width: $screen-md) {
+      display: grid;
+      grid-template-columns: repeat(12, [col] 1fr);
+      grid-gap: $grid-gutter-width;
+    }
+
+    .views-row__content,
+    .views-row__img {
+      align-self: center;
+    }
+
+    .views-row__content {
+      display: flex;
+      flex-direction: column;
+      order: 2;
+
+      @media (min-width: $screen-md) {
+        grid-column-start: 7;
+        grid-column-end: span 6;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      .views-row__title {
+        order: 2;
+        margin: 0;
+        font-size: 4.8rem;
+        line-height: normal;
+      }
+
+      .views-row__date {
+        order: 1;
+        font-size: 1.4rem;
+      }
+
+      .views-row__scripture-reference {
+        order: 3;
+        font-size: 2.4rem;
+        font-style: italic;
+      }
+
+      .views-row__speaker {
+        order: 4;
+        margin-top: ($grid-gutter-width / 2);
+        font-size: 1.4rem;
+      }
+    }
+
+    .views-row__img {
+      order: 1;
+      margin-bottom: $grid-gutter-width;
+      line-height: 1;
+
+      @media (min-width: $screen-md) {
+        grid-column-start: 1;
+        grid-column-end: span 6;
+        margin-bottom: 0;
+      }
+    }
   }
 }
