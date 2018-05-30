@@ -72,12 +72,20 @@
 #}
 
 {%
+  set classes = [
+    'article',
+    'article--' ~ view_mode,
+    'article--' ~ node_type,
+  ]
+%}
+
+{%
   set label_classes = [
     'article-header__title',
   ]
 %}
 
-<article{{ attributes }}>
+<article{{ attributes.addClass(classes) }}>
   <header class="article-header">
     {{ title_prefix }}
     {% if page %}
@@ -98,8 +106,11 @@
 
     {{ content.field_subtitle }}
 
-    {% if node_type == 'teaching' %}
+    {% if node_type == 'teaching' or node_type == 'news' %}
       <p class="article-header__date">{{ node.getCreatedTime|format_date('custom', 'F j, Y') }}</p>
+    {% endif %}
+
+    {% if node_type == 'teaching' %}
       {% if content.field_speaker or content.field_scripture_reference or content.field_series %}
         <div class="article-header__meta">
           {{ content.field_speaker }}

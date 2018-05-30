@@ -1,0 +1,127 @@
+//
+// Upcoming events block
+// --------------------------------------------------
+
+
+#block-tallgrasschurch-news-and-events {
+  margin: 0;
+  padding: $grid-gutter-width 0;
+  background-color: $grey-lightest;
+
+  @media (min-width: $screen-sm) {
+    padding: ($grid-gutter-width * 4) 0;
+  }
+
+  .container {}
+
+  .wrapper {}
+
+  .block__label {}
+
+  .news-and-events-content {
+    padding-top: $grid-gutter-width;
+    border-top: 1px solid $grey-lighter;
+
+    @media (min-width: $screen-md) {
+      display: grid;
+      grid-template-columns: repeat(12, [col] 1fr);
+      grid-gap: $grid-gutter-width;
+    }
+  }
+
+  .views-element-container {
+
+    .article-header {}
+  }
+
+
+  // News
+  // -------------------------
+
+  // TODO: Get a better class name to use
+  .views-element-container:first-of-type {
+
+    @media (min-width: $screen-md) {
+      grid-column-end: span 8;
+    }
+
+    // TODO: Get a better selector for this
+    > .article-header {
+      display: none;
+    }
+  }
+
+  .article--news {
+    margin-bottom: $grid-gutter-width;
+    padding-bottom: $grid-gutter-width;
+    border-bottom: 1px solid $grey-lighter;
+
+    @media (min-width: $screen-md) {
+      margin-right: $grid-gutter-width;
+    }
+
+    .article-header {
+
+      .article-header__title {}
+
+      .article-header__date {}
+    }
+
+    .field--field-image {}
+
+    .field--body {
+      font-size: 1.4rem;
+    }
+
+    .links {}
+  }
+
+
+  // Events
+  // -------------------------
+
+  // TODO: Get a better class name to use
+  .views-element-container:last-of-type {
+
+    a {
+      color: inherit;
+    }
+
+    @media (min-width: $screen-md) {
+      grid-column-end: span 4;
+    }
+
+    // TODO: Rename this?
+    .events-content {
+      padding: $grid-gutter-width;
+      color: white;
+      background-color: $brand-primary;
+
+      // TODO: Get a better selector for this
+      > .article-header {
+        margin: (-$grid-gutter-width) (-$grid-gutter-width) $grid-gutter-width;
+        background-color: rgba(black, .5);
+
+        .article-header__title {
+          padding: ($grid-gutter-width / 2) $grid-gutter-width;
+        }
+      }
+    }
+  }
+
+  .views-row {
+
+    .views-row__title {}
+
+    .views-row__date-and-time {
+
+      .views-row__date {}
+
+      .views-row__date-and-time-separator {
+        display: none;
+      }
+
+      .views-row__time {}
+    }
+  }
+}
