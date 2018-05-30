@@ -69,8 +69,25 @@
 
       .views-row__speaker {
         order: 4;
+        display: flex;
+        align-items: center;
         margin-top: ($grid-gutter-width / 2);
         font-size: 1.4rem;
+
+        .views-row__speaker-img {
+          display: inline-block;
+          width: 30px;
+          height: 30px;
+          margin-right: 5px;
+          border-radius: 30px;
+          background-color: $grey;
+          overflow: hidden;
+
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
       }
     }
 
