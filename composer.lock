@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "87bab648735030f5e4195ee885e27a26",
+    "content-hash": "32a816b05d8e6d0fdad7ceee9f96917d",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -365,16 +365,16 @@
         },
         {
             "name": "consolidation/annotated-command",
-            "version": "2.8.3",
+            "version": "2.8.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/consolidation/annotated-command.git",
-                "reference": "8f8f5da2ca06fbd3a85f7d551c49f844b7c59437"
+                "reference": "651541a0b68318a2a202bda558a676e5ad92223c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/consolidation/annotated-command/zipball/8f8f5da2ca06fbd3a85f7d551c49f844b7c59437",
-                "reference": "8f8f5da2ca06fbd3a85f7d551c49f844b7c59437",
+                "url": "https://api.github.com/repos/consolidation/annotated-command/zipball/651541a0b68318a2a202bda558a676e5ad92223c",
+                "reference": "651541a0b68318a2a202bda558a676e5ad92223c",
                 "shasum": ""
             },
             "require": {
@@ -386,9 +386,9 @@
                 "symfony/finder": "^2.5|^3|^4"
             },
             "require-dev": {
-                "greg-1-anderson/composer-test-scenarios": "^1",
-                "phpunit/phpunit": "^4.8",
-                "satooshi/php-coveralls": "^1.0.2 | dev-master",
+                "g1a/composer-test-scenarios": "^2",
+                "phpunit/phpunit": "^6",
+                "satooshi/php-coveralls": "^2",
                 "squizlabs/php_codesniffer": "^2.7"
             },
             "type": "library",
@@ -413,20 +413,20 @@
                 }
             ],
             "description": "Initialize Symfony Console commands from annotated command class methods.",
-            "time": "2018-02-23T16:32:04+00:00"
+            "time": "2018-05-25T18:04:25+00:00"
         },
         {
             "name": "consolidation/output-formatters",
-            "version": "3.2.0",
+            "version": "3.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/consolidation/output-formatters.git",
-                "reference": "da889e4bce19f145ca4ec5b1725a946f4eb625a9"
+                "reference": "d78ef59aea19d3e2e5a23f90a055155ee78a0ad5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/consolidation/output-formatters/zipball/da889e4bce19f145ca4ec5b1725a946f4eb625a9",
-                "reference": "da889e4bce19f145ca4ec5b1725a946f4eb625a9",
+                "url": "https://api.github.com/repos/consolidation/output-formatters/zipball/d78ef59aea19d3e2e5a23f90a055155ee78a0ad5",
+                "reference": "d78ef59aea19d3e2e5a23f90a055155ee78a0ad5",
                 "shasum": ""
             },
             "require": {
@@ -435,7 +435,7 @@
                 "symfony/finder": "^2.5|^3|^4"
             },
             "require-dev": {
-                "g-1-a/composer-test-scenarios": "^2",
+                "g1a/composer-test-scenarios": "^2",
                 "phpunit/phpunit": "^5.7.27",
                 "satooshi/php-coveralls": "^2",
                 "squizlabs/php_codesniffer": "^2.7",
@@ -468,7 +468,7 @@
                 }
             ],
             "description": "Format text by applying transformations provided by plug-in formatters.",
-            "time": "2018-03-20T15:18:32+00:00"
+            "time": "2018-05-25T18:02:34+00:00"
         },
         {
             "name": "cweagans/composer-patches",
@@ -1123,16 +1123,16 @@
         },
         {
             "name": "drupal-composer/drupal-scaffold",
-            "version": "2.4.0",
+            "version": "2.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal-composer/drupal-scaffold.git",
-                "reference": "745f0a2d4141fc83d3b42222beff43d66afb3dc6"
+                "reference": "76342f9cd22a673b0b87b5e8774613f8ee287fbc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal-composer/drupal-scaffold/zipball/745f0a2d4141fc83d3b42222beff43d66afb3dc6",
-                "reference": "745f0a2d4141fc83d3b42222beff43d66afb3dc6",
+                "url": "https://api.github.com/repos/drupal-composer/drupal-scaffold/zipball/76342f9cd22a673b0b87b5e8774613f8ee287fbc",
+                "reference": "76342f9cd22a673b0b87b5e8774613f8ee287fbc",
                 "shasum": ""
             },
             "require": {
@@ -1158,10 +1158,10 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "GPL-2.0+"
+                "GPL-2.0-or-later"
             ],
             "description": "Composer Plugin for updating the Drupal scaffold files when using drupal/core",
-            "time": "2017-12-08T22:53:11+00:00"
+            "time": "2018-04-18T16:14:55+00:00"
         },
         {
             "name": "drupal/address",
@@ -1690,7 +1690,8 @@
                     "merge-extra": false
                 },
                 "patches_applied": {
-                    "Views integration for datetime range fields": "https://www.drupal.org/files/issues/2786577-270_0.patch"
+                    "Views integration for datetime range fields": "https://www.drupal.org/files/issues/2786577-270_0.patch",
+                    "Add option to show only start or end date in the DateTime Range custom formatter": "https://www.drupal.org/files/issues/2018-05-23/drupal-display-one-date-formatter-2827055-25.patch"
                 }
             },
             "autoload": {
@@ -4953,16 +4954,16 @@
         },
         {
             "name": "zendframework/zend-diactoros",
-            "version": "1.7.1",
+            "version": "1.7.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-diactoros.git",
-                "reference": "bf26aff803a11c5cc8eb7c4878a702c403ec67f1"
+                "reference": "741e7a571836f038de731105f4742ca8a164e43a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/zend-diactoros/zipball/bf26aff803a11c5cc8eb7c4878a702c403ec67f1",
-                "reference": "bf26aff803a11c5cc8eb7c4878a702c403ec67f1",
+                "url": "https://api.github.com/repos/zendframework/zend-diactoros/zipball/741e7a571836f038de731105f4742ca8a164e43a",
+                "reference": "741e7a571836f038de731105f4742ca8a164e43a",
                 "shasum": ""
             },
             "require": {
@@ -4982,7 +4983,8 @@
             "extra": {
                 "branch-alias": {
                     "dev-master": "1.7.x-dev",
-                    "dev-develop": "1.8.x-dev"
+                    "dev-develop": "1.8.x-dev",
+                    "dev-release-2.0": "2.0.x-dev"
                 }
             },
             "autoload": {
@@ -5001,7 +5003,7 @@
                 "psr",
                 "psr-7"
             ],
-            "time": "2018-02-26T15:44:50+00:00"
+            "time": "2018-05-29T16:53:08+00:00"
         },
         {
             "name": "zendframework/zend-escaper",
