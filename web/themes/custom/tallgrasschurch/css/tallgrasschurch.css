@@ -1140,7 +1140,6 @@ form .preview {
 #block-tallgrasschurch-latest-teaching {
   margin: 0;
   padding: 20px 0;
-  border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
 }
 
@@ -1444,13 +1443,96 @@ form .preview {
   text-decoration: none;
 }
 
-#block-tallgrasschurch-events-home {
-  margin: 20px 0;
+#block-tallgrasschurch-upcoming-events {
+  margin: 0;
+  padding: 20px 0;
+  border-bottom: 1px solid #ddd;
 }
 
 @media (min-width: 576px) {
-  #block-tallgrasschurch-events-home {
-    margin: 80px 0;
+  #block-tallgrasschurch-upcoming-events {
+    padding: 80px 0;
+  }
+}
+
+@media (min-width: 768px) {
+  #block-tallgrasschurch-upcoming-events .events-list {
+    display: grid;
+    grid-template-columns: repeat(12, [col] 1fr);
+    grid-gap: 20px;
+  }
+}
+
+#block-tallgrasschurch-upcoming-events .views-row {
+  margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+  #block-tallgrasschurch-upcoming-events .views-row {
+    grid-column-end: span 4;
+    margin-bottom: 0;
+  }
+}
+
+#block-tallgrasschurch-upcoming-events .views-row a {
+  position: relative;
+  display: block;
+  min-height: calc(1.2rem + 2.4rem + (5px * 2 * 2) + (20px * 2));
+  padding: 20px 20px 20px 100px;
+  color: inherit;
+  border: 1px solid #ddd;
+  text-decoration: none;
+}
+
+#block-tallgrasschurch-upcoming-events .views-row .views-row__title {
+  margin: 0;
+  font-size: 1.6rem;
+  line-height: normal;
+}
+
+#block-tallgrasschurch-upcoming-events .views-row .views-row__date-and-time .views-row__date {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 60px;
+  overflow: hidden;
+  color: white;
+  background-color: #15819E;
+  text-align: center;
+}
+
+#block-tallgrasschurch-upcoming-events .views-row .views-row__date-and-time .views-row__date .views-row__date-month,
+#block-tallgrasschurch-upcoming-events .views-row .views-row__date-and-time .views-row__date .views-row__date-day {
+  display: block;
+  padding: 5px 0;
+  line-height: 1;
+}
+
+#block-tallgrasschurch-upcoming-events .views-row .views-row__date-and-time .views-row__date .views-row__date-month {
+  background-color: rgba(0, 0, 0, 0.5);
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+#block-tallgrasschurch-upcoming-events .views-row .views-row__date-and-time .views-row__date .views-row__date-day {
+  font-size: 2.4rem;
+}
+
+#block-tallgrasschurch-upcoming-events .views-row .views-row__date-and-time .views-row__date-and-time-separator {
+  display: none;
+}
+
+#block-tallgrasschurch-upcoming-events .views-row .views-row__date-and-time .views-row__time {
+  display: block;
+  margin-top: 5px;
+  font-size: 1.4rem;
+  font-style: italic;
+  line-height: normal;
+}
+
+@media (min-width: 768px) {
+  #block-tallgrasschurch-upcoming-events .article-footer {
+    grid-column-end: span 12;
   }
 }
 

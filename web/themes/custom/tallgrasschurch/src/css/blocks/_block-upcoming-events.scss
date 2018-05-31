@@ -3,10 +3,103 @@
 // --------------------------------------------------
 
 
-#block-tallgrasschurch-events-home {
-  margin: $grid-gutter-width 0;
+#block-tallgrasschurch-upcoming-events {
+  margin: 0;
+  padding: $grid-gutter-width 0;
+  border-bottom: 1px solid $grey-lighter;
 
   @media (min-width: $screen-sm) {
-    margin: ($grid-gutter-width * 4) 0;
+    padding: ($grid-gutter-width * 4) 0;
+  }
+
+  .events-list {
+
+    @media (min-width: $screen-md) {
+      display: grid;
+      grid-template-columns: repeat(12, [col] 1fr);
+      grid-gap: $grid-gutter-width;
+    }
+  }
+
+  // TODO: Rename this class
+  .views-row {
+
+    // Variables
+    $date-month-font-size: 1.2rem;
+    $date-day-font-size: 2.4rem;
+    $date-padding-size: 5px;
+
+    margin-bottom: $grid-gutter-width;
+
+    @media (min-width: $screen-md) {
+      grid-column-end: span 4;
+      margin-bottom: 0;
+    }
+
+    a {
+      position: relative;
+      display: block;
+      min-height: calc(#{$date-month-font-size} + #{$date-day-font-size} + (#{$date-padding-size} * 2 * 2) + (#{$grid-gutter-width} * 2));
+      padding: $grid-gutter-width $grid-gutter-width $grid-gutter-width ($grid-gutter-width + 80px);
+      color: inherit;
+      border: 1px solid $grey-lighter;
+      text-decoration: none;
+    }
+
+    .views-row__title {
+      margin: 0;
+      font-size: 1.6rem;
+      line-height: normal;
+    }
+
+    .views-row__date-and-time {
+
+      .views-row__date {
+        position: absolute;
+        top: $grid-gutter-width;
+        left: $grid-gutter-width;
+        width: 60px;
+        overflow: hidden;
+        color: white;
+        background-color: $brand-primary;
+        text-align: center;
+
+        .views-row__date-month,
+        .views-row__date-day {
+          display: block;
+          padding: $date-padding-size 0;
+          line-height: 1;
+        }
+
+        .views-row__date-month {
+          background-color: rgba(black, .5);
+          font-size: $date-month-font-size;
+          text-transform: uppercase;
+        }
+
+        .views-row__date-day {
+          font-size: $date-day-font-size;
+        }
+      }
+
+      .views-row__date-and-time-separator {
+        display: none;
+      }
+
+      .views-row__time {
+        display: block;
+        margin-top: 5px;
+        font-size: 1.4rem;
+        font-style: italic;
+        line-height: normal;
+      }
+    }
+  }
+
+  .article-footer {
+
+    @media (min-width: $screen-md) {
+      grid-column-end: span 12;
+    }
   }
 }

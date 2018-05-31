@@ -6,12 +6,13 @@
 // TODO: Adjust text sizes
 // TODO: Optimize image size (700px tall is maybe too much)
 
-// Variables
-$hero-bg-overlay-color:          $brand-primary;
-$hero-bg-overlay-opacity-start:  .5;
-$hero-bg-overlay-opacity-end:    .2;
-
 #block-tallgrasschurch-hero-home {
+
+  // Variables
+  $hero-bg-overlay-color:          $brand-primary;
+  $hero-bg-overlay-opacity-start:  .5;
+  $hero-bg-overlay-opacity-end:    .2;
+
   min-height: 500px;
   margin: 0;
   padding: ($grid-gutter-width * 4) 0;
