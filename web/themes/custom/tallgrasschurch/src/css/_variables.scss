@@ -6,37 +6,30 @@
 // Colors
 // -------------------------
 
-$gray-darker:           #222;
-$gray-dark:             #333;
-$gray:                  #555;
-$gray-light:            #777;
-$gray-lighter:          #ddd;
-$gray-lightest:         #f5f5f5;
+// Grays/greys
+$gray-darker:           #222;                   $grey-darker:           $gray-darker;
+$gray-dark:             #333;                   $grey-dark:             $gray-dark;
+$gray:                  #555;                   $grey:                  $gray;
+$gray-light:            #777;                   $grey-light:            $gray-light;
+$gray-lighter:          #ddd;                   $grey-lighter:          $gray-lighter;
+$gray-lightest:         #f5f5f5;                $grey-lightest:         $gray-lightest;
 
-// Cover both spellings
-$grey-darker:           $gray-darker;
-$grey-dark:             $gray-dark;
-$grey:                  $gray;
-$grey-light:            $gray-light;
-$grey-lighter:          $gray-lighter;
-$grey-lightest:         $gray-lightest;
+// Transparent grays/greys
+$gray-darker-alpha:     rgba(0, 0, 0, 0.865);   $grey-darker-alpha:     $gray-darker-alpha;   // #222
+$gray-dark-alpha:       rgba(0, 0, 0, 0.8);     $grey-dark-alpha:       $gray-dark-alpha;     // #333
+$gray-alpha:            rgba(0, 0, 0, 0.665);   $grey-alpha:            $gray-alpha;          // #555
+$gray-light-alpha:      rgba(0, 0, 0, 0.535);   $grey-light-alpha:      $gray-light-alpha;    // #777
+$gray-lighter-alpha:    rgba(0, 0, 0, 0.135);   $grey-lighter-alpha:    $gray-lighter-alpha;  // #ddd
+$gray-lightest-alpha:   rgba(0, 0, 0, 0.04);    $grey-lightest-alpha:   $gray-lightest-alpha; // #f5f5f5
 
-$gray-darker-alpha:     rgba(0, 0, 0, 0.865); // #222
-$gray-dark-alpha:       rgba(0, 0, 0, 0.8);   // #333
-$gray-alpha:            rgba(0, 0, 0, 0.665); // #555
-$gray-light-alpha:      rgba(0, 0, 0, 0.535); // #777
-$gray-lighter-alpha:    rgba(0, 0, 0, 0.135); // #ddd
-$gray-lightest-alpha:   rgba(0, 0, 0, 0.04);  // #f5f5f5
+// Custom colors
+$blue-light:            #37C9CF;
+$blue-medium:           #15819E;
+$blue-dark:             #476D83;
+$yellow:                #FED382;
 
-// Cover both spellings
-$grey-darker-alpha:     $gray-darker-alpha;
-$grey-dark-alpha:       $gray-dark-alpha;
-$grey-alpha:            $gray-alpha;
-$grey-light-alpha:      $gray-light-alpha;
-$grey-lighter-alpha:    $gray-lighter-alpha;
-$grey-lightest-alpha:   $gray-lightest-alpha;
-
-$brand-primary:         #337ab7;
+// Brand colors
+$brand-primary:         $blue-medium;
 $brand-success:         #5cb85c;
 $brand-info:            #5bc0de;
 $brand-warning:         #f0ad4e;

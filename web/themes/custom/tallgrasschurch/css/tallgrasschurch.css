@@ -358,7 +358,7 @@ body {
 }
 
 a {
-  color: #337ab7;
+  color: #15819E;
   text-decoration: underline;
   -webkit-transition: all .2s linear;
   transition: all .2s linear;
@@ -443,12 +443,12 @@ input[type="submit"]:hover, input[type="submit"]:focus {
 
 #edit-submit {
   color: white;
-  background-color: #337ab7;
+  background-color: #15819E;
   border: none;
 }
 
 #edit-submit:hover, #edit-submit:focus {
-  background-color: #285f8f;
+  background-color: #0f5c71;
 }
 
 form .description {
@@ -492,11 +492,11 @@ form .preview {
 
 .btn-primary {
   color: white;
-  background-color: #337ab7;
+  background-color: #15819E;
 }
 
 .btn-primary:hover, .btn-primary:focus {
-  background-color: #285f8f;
+  background-color: #0f5c71;
 }
 
 .btn-lg {
@@ -513,9 +513,9 @@ form .preview {
 }
 
 .alert--primary, .status-message {
-  color: #1d4567;
-  background-color: #c7ddef;
-  border: 1px solid #9fc4e4;
+  color: #093744;
+  background-color: #8fdcf0;
+  border: 1px solid #62cdea;
 }
 
 .alignright,
@@ -1075,11 +1075,11 @@ form .preview {
   margin: 0;
   padding: 80px 0;
   color: white;
-  background: radial-gradient(ellipse at top left, rgba(51, 122, 183, 0.5) 0%, rgba(51, 122, 183, 0.2) 100%) center, -webkit-gradient(linear, left top, right top, from(rgba(51, 122, 183, 0.5)), to(rgba(51, 122, 183, 0.2))) center, url("../img/DSC_3673-1800x700.jpg") top left;
-  background: radial-gradient(ellipse at top left, rgba(51, 122, 183, 0.5) 0%, rgba(51, 122, 183, 0.2) 100%) center, linear-gradient(to right, rgba(51, 122, 183, 0.5) 0%, rgba(51, 122, 183, 0.2) 100%) center, url("../img/DSC_3673-1800x700.jpg") top left;
+  background: radial-gradient(ellipse at top left, rgba(21, 129, 158, 0.5) 0%, rgba(21, 129, 158, 0.2) 100%) center, -webkit-gradient(linear, left top, right top, from(rgba(21, 129, 158, 0.5)), to(rgba(21, 129, 158, 0.2))) center, url("../img/DSC_3673-1800x700.jpg") top left;
+  background: radial-gradient(ellipse at top left, rgba(21, 129, 158, 0.5) 0%, rgba(21, 129, 158, 0.2) 100%) center, linear-gradient(to right, rgba(21, 129, 158, 0.5) 0%, rgba(21, 129, 158, 0.2) 100%) center, url("../img/DSC_3673-1800x700.jpg") top left;
   background-size: auto, auto, cover;
   background-repeat: no-repeat;
-  background-color: #337ab7;
+  background-color: #15819E;
   text-shadow: 0px 1px 2px black;
 }
 
@@ -1349,7 +1349,7 @@ form .preview {
       align-self: start;
   padding: 20px;
   color: white;
-  background-color: #337ab7;
+  background-color: #15819E;
 }
 
 #block-tallgrasschurch-news-and-events .events-content .article-header {
@@ -1458,7 +1458,7 @@ form .preview {
   margin: 0;
   padding: 10px 20px;
   color: white;
-  background-color: #337ab7;
+  background-color: #15819E;
   border-bottom: 1px solid white;
   font-size: 1.6rem;
   line-height: 1.5;
@@ -1477,11 +1477,11 @@ form .preview {
 }
 
 .field--field-file-upload ul li:nth-child(odd) {
-  background-color: #eff5fa;
+  background-color: #bceaf6;
 }
 
 .field--field-file-upload ul li:nth-child(even) {
-  background-color: #dbe9f5;
+  background-color: #a5e3f3;
 }
 
 .field--field-tags {
