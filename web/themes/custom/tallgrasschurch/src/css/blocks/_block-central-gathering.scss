@@ -6,7 +6,8 @@
 #block-tallgrasschurch-central-gathering {
   margin: 0;
   padding: $grid-gutter-width 0;
-  background-color: $grey-lighter;
+  background-color: $grey-lightest;
+  border-bottom: 1px solid $grey-lighter;
 
   @media (min-width: $screen-sm) {
     padding: ($grid-gutter-width * 4) 0;
@@ -23,7 +24,8 @@
 
   .wrapper {
     padding: ($grid-gutter-width * 2);
-    background-color: rgba(white, .9);
+    background-color: white;
+    border: 1px solid $grey-lighter;
     text-align: center;
 
     @media (min-width: $screen-md) {
