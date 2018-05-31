@@ -75,14 +75,15 @@
   // -------------------------
 
   .events-content {
+    align-self: start;
     padding: $grid-gutter-width;
     color: white;
     background-color: $brand-primary;
 
-    // TODO: Get a better selector for this
-    > .article-header {
+    .article-header {
       margin: (-$grid-gutter-width) (-$grid-gutter-width) $grid-gutter-width;
       background-color: rgba(black, .5);
+      text-align: center;
 
       .article-header__title {
         padding: ($grid-gutter-width / 2) $grid-gutter-width;
@@ -96,22 +97,86 @@
     @media (min-width: $screen-md) {
       grid-column-end: span 4;
     }
-  }
 
-  // TODO: Rename this class
-  .views-row {
+    // TODO: Rename this class
+    .views-row {
+      $date-month-font-size: 1.2rem;
+      $date-day-font-size: 2.4rem;
+      $date-padding-size: 5px;
 
-    .views-row__title {}
+      position: relative;
+      min-height: calc(#{$date-month-font-size} + #{$date-day-font-size} + (#{$date-padding-size} * 2 * 2));
+      padding-left: 70px;
+      margin-bottom: $grid-gutter-width;
 
-    .views-row__date-and-time {
+      .views-row__title {
+        margin: 0;
+        font-size: 1.6rem;
+        line-height: normal;
 
-      .views-row__date {}
-
-      .views-row__date-and-time-separator {
-        display: none;
+        a {
+          text-decoration: none;
+        }
       }
 
-      .views-row__time {}
+      .views-row__date-and-time {
+
+        .views-row__date {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 60px;
+          overflow: hidden;
+          background-color: rgba(black, .2);
+          text-align: center;
+
+          .views-row__date-month,
+          .views-row__date-day {
+            display: block;
+            padding: $date-padding-size 0;
+            line-height: 1;
+          }
+
+          .views-row__date-month {
+            background-color: rgba(black, .2);
+            font-size: $date-month-font-size;
+            text-transform: uppercase;
+          }
+
+          .views-row__date-day {
+            font-size: $date-day-font-size;
+          }
+        }
+
+        .views-row__date-and-time-separator {
+          display: none;
+        }
+
+        .views-row__time {
+          display: block;
+          margin-top: 5px;
+          font-size: 1.4rem;
+          font-style: italic;
+          line-height: normal;
+        }
+      }
+    }
+
+    // TODO: Add class names to this section
+    .article-footer {
+      text-align: center;
+
+      p {
+        margin: 0;
+      }
+
+      a {
+        display: block;
+        margin: 0 (-$grid-gutter-width) (-$grid-gutter-width);
+        padding: ($grid-gutter-width / 2) $grid-gutter-width;
+        background-color: rgba(black, .2);
+        text-decoration: none;
+      }
     }
   }
 }
