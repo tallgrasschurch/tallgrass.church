@@ -35,7 +35,9 @@
 {% endfor %}
 
 {% if attributes is not empty or has_classes %}
-  <div{{ attributes.addClass(classes) }}>{{ children }}</div>
+  {# TODO: Clean up this mess #}
+  {# <div{{ attributes.addClass(classes) }}>{{ children }}</div> #}
+  {{ children }}
 {% else %}
   {{ children }}
 {% endif %}

@@ -29,17 +29,11 @@
     }
   }
 
-  .views-element-container {
-
-    .article-header {}
-  }
-
 
   // News
   // -------------------------
 
-  // TODO: Get a better class name to use
-  .views-element-container:first-of-type {
+  .news-content {
 
     @media (min-width: $screen-md) {
       grid-column-end: span 8;
@@ -80,8 +74,20 @@
   // Events
   // -------------------------
 
-  // TODO: Get a better class name to use
-  .views-element-container:last-of-type {
+  .events-content {
+    padding: $grid-gutter-width;
+    color: white;
+    background-color: $brand-primary;
+
+    // TODO: Get a better selector for this
+    > .article-header {
+      margin: (-$grid-gutter-width) (-$grid-gutter-width) $grid-gutter-width;
+      background-color: rgba(black, .5);
+
+      .article-header__title {
+        padding: ($grid-gutter-width / 2) $grid-gutter-width;
+      }
+    }
 
     a {
       color: inherit;
@@ -90,25 +96,9 @@
     @media (min-width: $screen-md) {
       grid-column-end: span 4;
     }
-
-    // TODO: Rename this?
-    .events-content {
-      padding: $grid-gutter-width;
-      color: white;
-      background-color: $brand-primary;
-
-      // TODO: Get a better selector for this
-      > .article-header {
-        margin: (-$grid-gutter-width) (-$grid-gutter-width) $grid-gutter-width;
-        background-color: rgba(black, .5);
-
-        .article-header__title {
-          padding: ($grid-gutter-width / 2) $grid-gutter-width;
-        }
-      }
-    }
   }
 
+  // TODO: Rename this class
   .views-row {
 
     .views-row__title {}
