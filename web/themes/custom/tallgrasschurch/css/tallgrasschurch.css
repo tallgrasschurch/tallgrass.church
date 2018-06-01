@@ -369,6 +369,44 @@ img {
   height: auto;
 }
 
+p,
+ul,
+ol,
+dl {
+  margin-top: 0;
+  margin-bottom: 2.4rem;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  margin-top: 0;
+  margin-bottom: 1.2rem;
+}
+
+h1, .h1 {
+  font-size: 4.8rem;
+}
+
+h2, .h2 {
+  font-size: 3.2rem;
+}
+
+h3, .h3 {
+  font-size: 2.8rem;
+}
+
+h4, .h4 {
+  font-size: 2.4rem;
+}
+
+h5, .h5 {
+  font-size: 2rem;
+}
+
+h6, .h6 {
+  font-size: 1.6rem;
+}
+
 dl {
   margin-bottom: 2.4rem;
 }
@@ -833,7 +871,8 @@ form .preview {
       -ms-flex-order: 2;
           order: 2;
   margin: 0;
-  line-height: 1.2;
+  font-size: 6.4rem;
+  line-height: normal;
 }
 
 .page-title .page-title__subtitle {
@@ -1078,6 +1117,7 @@ form .preview {
 
 #block-tallgrasschurch-central-gathering .field--field-block-title {
   margin: 0 0 20px;
+  font-size: 3.2rem;
 }
 
 #block-tallgrasschurch-contact {
@@ -1157,7 +1197,7 @@ form .preview {
 
 #block-tallgrasschurch-hero-home .field--field-block-title {
   margin: 0 0 20px;
-  font-size: 3.6rem;
+  font-size: 4.8rem;
   line-height: normal;
 }
 
@@ -1190,7 +1230,7 @@ form .preview {
 
 @media (min-width: 768px) {
   #block-tallgrasschurch-hero-home .field--body {
-    font-size: 3.6rem;
+    font-size: 3.2rem;
   }
 }
 
