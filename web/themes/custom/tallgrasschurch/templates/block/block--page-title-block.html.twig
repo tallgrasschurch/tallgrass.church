@@ -5,12 +5,13 @@
 %}
 
 <header{{ attributes.addclass(classes) }}>
-  {{ title_prefix }}
-  {% if label %}
-    <h2{{ title_attributes }}>{{ label }}</h2>
-  {% endif %}
-  {{ title_suffix }}
-  {% block content %}
+  <div class="container">
+    {{ title_prefix }}
+    {% if label %}
+      <h2{{ title_attributes }}>{{ label }}</h2>
+    {% endif %}
+    {{ title_suffix }}
+
     {{ content }}
-  {% endblock %}
+  </div><!-- .container -->
 </header>
