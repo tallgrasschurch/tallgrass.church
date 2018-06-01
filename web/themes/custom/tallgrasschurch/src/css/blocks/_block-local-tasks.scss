@@ -1,0 +1,27 @@
+//
+// Local tasks (tabs) block
+// --------------------------------------------------
+
+
+#block-tallgrasschurch-local-tasks {
+  margin: $grid-gutter-width 0;
+
+  .container {}
+
+  .wrapper {
+
+    @media (min-width: $screen-md) {
+      display: grid;
+      grid-template-columns: repeat(12, [col] 1fr);
+      grid-gap: $grid-gutter-width;
+    }
+  }
+
+  .menu-local-tasks {
+
+    @media (min-width: $screen-md) {
+      grid-column-start: 3;
+      grid-column-end: span 8;
+    }
+  }
+}

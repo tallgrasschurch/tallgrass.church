@@ -780,7 +780,7 @@ form .preview {
 }
 
 .menu-local-tasks {
-  margin: 20px 0 0;
+  margin: 0;
   font-size: 1.4rem;
   line-height: 1.5;
 }
@@ -1329,6 +1329,25 @@ form .preview {
     grid-column-start: 1;
     grid-column-end: span 6;
     margin-bottom: 0;
+  }
+}
+
+#block-tallgrasschurch-local-tasks {
+  margin: 20px 0;
+}
+
+@media (min-width: 768px) {
+  #block-tallgrasschurch-local-tasks .wrapper {
+    display: grid;
+    grid-template-columns: repeat(12, [col] 1fr);
+    grid-gap: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  #block-tallgrasschurch-local-tasks .menu-local-tasks {
+    grid-column-start: 3;
+    grid-column-end: span 8;
   }
 }
 
