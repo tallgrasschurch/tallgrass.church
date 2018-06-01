@@ -692,7 +692,7 @@ form .preview {
 }
 
 .media-group {
-  margin: 40px 0;
+  margin: 0 0 40px;
   padding: 20px;
   border: 1px solid #ddd;
 }
