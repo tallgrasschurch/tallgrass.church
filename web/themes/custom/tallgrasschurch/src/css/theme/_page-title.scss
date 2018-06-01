@@ -1,0 +1,71 @@
+//
+// Page title
+// --------------------------------------------------
+
+
+// TODO: Move to _block-page-title.scss file?
+.page-title {
+  margin: ($grid-gutter-width * 4) 0;
+  text-align: center;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .page-title__title {
+    order: 2;
+    margin: 0;
+    font-size: $display1-font-size;
+    line-height: normal;
+  }
+
+  .page-title__subtitle {
+    order: 3;
+    margin: 0;
+    font-size: 1.2em; // TODO: Use a variable size for this
+    font-style: italic;
+    line-height: 1.2;
+  }
+
+  .page-title__date {
+    order: 1;
+    margin-bottom: 10px;
+  }
+
+  .page-title__meta {
+    order: 4;
+    margin-top: $grid-gutter-width;
+
+    &:before {
+      content: "";
+      display: block;
+      width: ($grid-gutter-width * 4);
+      margin: 0 auto $grid-gutter-width;
+      border-top: 1px solid $grey-lighter;
+    }
+
+    .page-title__meta-item {
+      display: inline-block;
+
+      &:after {
+        content: " / ";
+        display: inline-block;
+        margin-left: 5px;
+        margin-right: 5px;
+        color: $grey-light;
+      }
+
+      &:last-child {
+
+        &:after {
+          content: "";
+        }
+      }
+    }
+
+    .page-title__speaker {}
+
+    .page-title__scripture {}
+  }
+}
