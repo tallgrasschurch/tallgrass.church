@@ -1060,6 +1060,48 @@ form .preview {
   margin: 0 0 20px;
 }
 
+#block-tallgrasschurch-contact {
+  margin: 0;
+  padding: 20px 0;
+  color: white;
+  background-color: #15819E;
+  font-size: 1.4rem;
+}
+
+#block-tallgrasschurch-contact a {
+  color: inherit;
+}
+
+@media (min-width: 576px) {
+  #block-tallgrasschurch-contact {
+    padding: 40px 0;
+  }
+}
+
+@media (min-width: 768px) {
+  #block-tallgrasschurch-contact .field--body {
+    display: grid;
+    grid-template-columns: repeat(12, [col] 1fr);
+    grid-gap: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  #block-tallgrasschurch-contact .field--body section {
+    grid-column-end: span 4;
+  }
+}
+
+#block-tallgrasschurch-contact .field--body section h2 {
+  margin: 0 0 10px;
+  font-size: 1.6rem;
+  line-height: normal;
+}
+
+#block-tallgrasschurch-contact .field--body section .more {
+  margin: 0;
+}
+
 @media (min-width: 992px) {
   #block-tallgrasschurch-content .wrapper {
     display: grid;
