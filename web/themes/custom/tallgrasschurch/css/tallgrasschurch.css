@@ -508,14 +508,18 @@ form .preview {
   width: 100%;
 }
 
-.alert, .status-message {
+.alert, .status-messages .status-message {
   padding: 20px;
 }
 
-.alert--primary, .status-message {
-  color: #093744;
-  background-color: #8fdcf0;
-  border: 1px solid #62cdea;
+.alert--primary, .status-messages .status-message {
+  color: #0f5c71;
+  background-color: #bceaf6;
+  border: 1px solid #8fdcf0;
+}
+
+.alert--primary a, .status-messages .status-message a {
+  color: inherit;
 }
 
 .alignright,
@@ -940,8 +944,23 @@ form .preview {
           order: 5;
 }
 
-.status-message {
-  margin-bottom: 2.4rem;
+.status-messages {
+  margin: 40px 0;
+}
+
+@media (min-width: 768px) {
+  .status-messages .container {
+    display: grid;
+    grid-template-columns: repeat(12, [col] 1fr);
+    grid-gap: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  .status-messages .status-message {
+    grid-column-start: 3;
+    grid-column-end: span 8;
+  }
 }
 
 .links {
