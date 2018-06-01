@@ -7,20 +7,20 @@
 .page-title {
   display: flex;
   flex-direction: column;
-  margin: ($grid-gutter-width * 2) 0;
+  margin: ($grid-gutter-width * 4) 0;
   text-align: center;
 
   .page-title__title {
     order: 2;
     margin: 0;
-    font-size: 6.4rem;
+    font-size: $display1-font-size;
     line-height: normal;
   }
 
   .page-title__subtitle {
     order: 3;
     margin: 0;
-    font-size: 1.2em;
+    font-size: 1.2em; // TODO: Use a variable size for this
     font-style: italic;
     line-height: 1.2;
   }
