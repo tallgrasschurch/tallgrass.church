@@ -416,6 +416,7 @@ dl dt {
 
 dl dd {
   margin-left: 0;
+  margin-bottom: 1.2rem;
 }
 
 figure figcaption {
