@@ -804,6 +804,64 @@ form .preview {
   background-color: white;
 }
 
+@media (min-width: 992px) {
+  #content .layout--onecol {
+    display: grid;
+    grid-template-columns: repeat(12, [col] 1fr);
+    grid-gap: 20px;
+  }
+  #content .layout--onecol > * {
+    grid-column-start: 3;
+    grid-column-end: span 8;
+  }
+}
+
+@media (min-width: 992px) {
+  #content .layout--sidebar {
+    display: grid;
+    grid-template-columns: repeat(12, [col] 1fr);
+    grid-gap: 20px;
+  }
+}
+
+#content .layout--sidebar .layout__region--top {
+  grid-row-start: 1;
+  grid-column-end: span 12;
+}
+
+#content .layout--sidebar .layout__region--main {
+  grid-row-start: 2;
+  grid-column-end: span 7;
+}
+
+#content .layout--sidebar .layout__region--sidebar {
+  grid-row-start: 2;
+  grid-column-end: span 3;
+}
+
+#content .layout--sidebar .layout__region--bottom {
+  grid-row-start: 3;
+  grid-column-end: span 12;
+}
+
+#content .layout--sidebar-right .layout__region--main {
+  grid-column-start: 2;
+}
+
+#content .layout--sidebar-right .layout__region--sidebar {
+  grid-column-start: 9;
+  padding-left: 20px;
+}
+
+#content .layout--sidebar-left .layout__region--main {
+  grid-column-start: 5;
+}
+
+#content .layout--sidebar-left .layout__region--sidebar {
+  grid-column-start: 2;
+  padding-right: 20px;
+}
+
 #footer {
   padding: 80px 0;
   color: white;
@@ -1182,18 +1240,6 @@ form .preview {
 
 #block-tallgrasschurch-contact .field--body section .more {
   margin: 0;
-}
-
-@media (min-width: 992px) {
-  #block-tallgrasschurch-content .wrapper {
-    display: grid;
-    grid-template-columns: repeat(12, [col] 1fr);
-    grid-gap: 20px;
-  }
-  #block-tallgrasschurch-content .wrapper > * {
-    grid-column-start: 3;
-    grid-column-end: span 8;
-  }
 }
 
 #block-tallgrasschurch-hero-home {

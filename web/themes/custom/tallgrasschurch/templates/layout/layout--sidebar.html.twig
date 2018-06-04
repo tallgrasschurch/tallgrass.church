@@ -1,0 +1,52 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a two-column layout.
+ *
+ * Available variables:
+ * - content: The content for this layout.
+ * - attributes: HTML attributes for the layout <div>.
+ *
+ * @ingroup themeable
+ */
+#}
+
+{%
+  set classes = [
+    'layout',
+    'layout--sidebar',
+    'layout--' ~ layout.id|clean_class,
+  ]
+%}
+
+{% if content %}
+  <div{{ attributes.addClass(classes) }}>
+    {% set has_content_top = content.top|render|striptags|trim is not empty %}
+    {% if has_content_top %}
+      <div {{ region_attributes.top.addClass('layout__region', 'layout__region--top') }}>
+        {{ content.top }}
+      </div>
+    {% endif %}
+
+    {% set has_content_main = content.main|render|striptags|trim is not empty %}
+    {% if content.main %}
+      <div {{ region_attributes.main.addClass('layout__region', 'layout__region--main') }}>
+        {{ content.main }}
+      </div>
+    {% endif %}
+
+    {% set has_content_sidebar = content.sidebar|render|striptags|trim is not empty %}
+    {% if has_content_sidebar %}
+      <div {{ region_attributes.sidebar.addClass('layout__region', 'layout__region--sidebar') }}>
+        {{ content.sidebar }}
+      </div>
+    {% endif %}
+
+    {% set has_content_bottom = content.bottom|render|striptags|trim is not empty %}
+    {% if has_content_bottom %}
+      <div {{ region_attributes.bottom.addClass('layout__region', 'layout__region--bottom') }}>
+        {{ content.bottom }}
+      </div>
+    {% endif %}
+  </div>
+{% endif %}
