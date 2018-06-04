@@ -950,6 +950,7 @@ form .preview {
   margin: 0;
   font-size: 1.4rem;
   line-height: 1.5;
+  text-align: center;
 }
 
 .menu-local-tasks .menu-local-tasks__list {
@@ -963,6 +964,10 @@ form .preview {
   display: inline-block;
   margin: 0 5px -1px 0;
   white-space: nowrap;
+}
+
+.menu-local-tasks .menu-local-tasks__list .menu-local-tasks__list-item:last-child {
+  margin-right: 0;
 }
 
 .menu-local-tasks .menu-local-tasks__list .menu-local-tasks__list-item a {
@@ -1442,21 +1447,6 @@ form .preview {
 
 #block-tallgrasschurch-local-tasks {
   margin: 20px 0;
-}
-
-@media (min-width: 768px) {
-  #block-tallgrasschurch-local-tasks .wrapper {
-    display: grid;
-    grid-template-columns: repeat(12, [col] 1fr);
-    grid-gap: 20px;
-  }
-}
-
-@media (min-width: 768px) {
-  #block-tallgrasschurch-local-tasks .menu-local-tasks {
-    grid-column-start: 3;
-    grid-column-end: span 8;
-  }
 }
 
 #block-tallgrasschurch-main-menu {

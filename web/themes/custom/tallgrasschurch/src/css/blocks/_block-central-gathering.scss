@@ -13,9 +13,7 @@
     padding: ($grid-gutter-width * 4) 0;
   }
 
-  .container {}
-
-  .layout {
+  .container {
 
     @media (min-width: $screen-md) {
       display: grid;
@@ -24,7 +22,7 @@
     }
   }
 
-  .layout__region {
+  .wrapper {
     padding: ($grid-gutter-width * 2);
     background-color: white;
     border: 1px solid $grey-lighter;
