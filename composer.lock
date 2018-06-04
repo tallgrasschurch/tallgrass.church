@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "32a816b05d8e6d0fdad7ceee9f96917d",
+    "content-hash": "f933ba6ced8a6e968bf1372ec5fe8a6a",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -1812,17 +1812,11 @@
         },
         {
             "name": "drupal/field_group",
-            "version": "3.0.0-beta1",
+            "version": "dev-3.x",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/field_group",
-                "reference": "8.x-3.0-beta1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/field_group-8.x-3.0-beta1.zip",
-                "reference": "8.x-3.0-beta1",
-                "shasum": "a5dfb66385be7a1b3db232e49779d5bc530a048e"
+                "reference": "9ab1b9963a07bdefde4829b025a1ea56cb63e03e"
             },
             "require": {
                 "drupal/core": "*"
@@ -1833,12 +1827,15 @@
                     "dev-3.x": "3.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-3.0-beta1",
-                    "datestamp": "1510352338",
+                    "version": "8.x-3.0-beta1+2-dev",
+                    "datestamp": "1523311084",
                     "security-coverage": {
                         "status": "not-covered",
-                        "message": "Beta releases are not covered by Drupal security advisories."
+                        "message": "Dev releases are not covered by Drupal security advisories."
                     }
+                },
+                "patches_applied": {
+                    "Field groups are not compatible with field layout": "https://www.drupal.org/files/issues/2018-04-20/field_layout_support-2878359-56.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -1871,7 +1868,8 @@
             "homepage": "https://www.drupal.org/project/field_group",
             "support": {
                 "source": "http://cgit.drupalcode.org/field_group"
-            }
+            },
+            "time": "2018-04-09T22:07:48+00:00"
         },
         {
             "name": "drupal/google_analytics",
@@ -2721,16 +2719,16 @@
         },
         {
             "name": "nikic/php-parser",
-            "version": "v4.0.1",
+            "version": "v4.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nikic/PHP-Parser.git",
-                "reference": "e4a54fa90a5cd8e8dd3fb4099942681731c5cdd3"
+                "reference": "35b8caf75e791ba1b2d24fec1552168d72692b12"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/e4a54fa90a5cd8e8dd3fb4099942681731c5cdd3",
-                "reference": "e4a54fa90a5cd8e8dd3fb4099942681731c5cdd3",
+                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/35b8caf75e791ba1b2d24fec1552168d72692b12",
+                "reference": "35b8caf75e791ba1b2d24fec1552168d72692b12",
                 "shasum": ""
             },
             "require": {
@@ -2768,7 +2766,7 @@
                 "parser",
                 "php"
             ],
-            "time": "2018-03-25T17:35:16+00:00"
+            "time": "2018-06-03T11:33:10+00:00"
         },
         {
             "name": "paragonie/random_compat",
@@ -3021,16 +3019,16 @@
         },
         {
             "name": "psy/psysh",
-            "version": "v0.9.4",
+            "version": "v0.9.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bobthecow/psysh.git",
-                "reference": "4d969a0e08e1e05e7207c07cb4207017ecc9a331"
+                "reference": "0951e91ac04ca28cf317f3997a0adfc319e80106"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/4d969a0e08e1e05e7207c07cb4207017ecc9a331",
-                "reference": "4d969a0e08e1e05e7207c07cb4207017ecc9a331",
+                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/0951e91ac04ca28cf317f3997a0adfc319e80106",
+                "reference": "0951e91ac04ca28cf317f3997a0adfc319e80106",
                 "shasum": ""
             },
             "require": {
@@ -3089,7 +3087,7 @@
                 "interactive",
                 "shell"
             ],
-            "time": "2018-05-22T06:48:07+00:00"
+            "time": "2018-06-02T16:39:22+00:00"
         },
         {
             "name": "stack/builder",
@@ -5161,7 +5159,9 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "drupal/field_group": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": [],
