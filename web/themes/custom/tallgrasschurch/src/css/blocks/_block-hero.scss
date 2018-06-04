@@ -31,7 +31,9 @@
 
   .container {}
 
-  .wrapper {
+  .layout {}
+
+  .layout__region {
 
     @media (min-width: $screen-lg) {
       display: grid;
