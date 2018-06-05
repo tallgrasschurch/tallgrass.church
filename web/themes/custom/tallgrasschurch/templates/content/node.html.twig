@@ -89,16 +89,14 @@
         </h2>
         {% if node_type == 'teaching' %}
           <p class="article-header__date">{{ node.getCreatedTime|format_date('custom', 'F j, Y') }}</p>
-          {% if content.field_speaker or content.field_scripture_reference %}
-            <div class="article-header__meta">
-              {{ content.field_speaker }}
-              {{ content.field_scripture_reference }}
-            </div>
-          {% endif %}
+          {{ content.field_speaker }}
+          {{ content.field_scripture_reference }}
         {% endif %}
       </header><!-- .article-header -->
       {% if series.image_id %}
-        {{ drupal_image(series.image_id, 'large') }}
+        <div class="field--field-image">
+          {{ drupal_image(series.image_id, 'large') }}
+        </div>
       {% endif %}
     {% endif %}
     {{ title_suffix }}
