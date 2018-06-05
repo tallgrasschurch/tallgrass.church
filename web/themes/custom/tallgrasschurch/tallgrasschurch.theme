@@ -95,7 +95,6 @@ function tallgrasschurch_preprocess_page_title(&$variables) {
         $term = Term::load($tid);
         $variables['series']['name'] = $term->name->value;
         $variables['series']['link'] = Url::fromRoute('entity.taxonomy_term.canonical', ['taxonomy_term' => $tid]);
-        $key++;
       }
 
       // Get the primary scripture book field

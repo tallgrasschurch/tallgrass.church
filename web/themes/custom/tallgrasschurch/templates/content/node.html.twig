@@ -97,6 +97,9 @@
           {% endif %}
         {% endif %}
       </header><!-- .article-header -->
+      {% if series.image_id %}
+        {{ drupal_image(series.image_id, 'large') }}
+      {% endif %}
     {% endif %}
     {{ title_suffix }}
 
