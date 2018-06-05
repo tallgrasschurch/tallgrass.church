@@ -6,6 +6,73 @@
 .article--teaching {}
 
 
+.article--full {
+
+  @media (min-width: $screen-lg) {
+    display: grid;
+    grid-template-columns: repeat(12, [col] 1fr);
+    grid-gap: $grid-gutter-width;
+  }
+
+  .article-wrapper {
+    grid-column-start: 3;
+    grid-column-end: span 8;
+  }
+}
+
+.article--full.article--teaching {
+
+  .article-wrapper {
+    grid-column-start: 2;
+    grid-column-end: span 10;
+  }
+
+  .layout {}
+
+  .layout--sidebar-right {
+
+    @media (min-width: $screen-lg) {
+      display: grid;
+      grid-template-columns: repeat(10, [col] 1fr);
+      grid-gap: $grid-gutter-width;
+
+      .layout__top {
+        grid-column-end: span 10;
+      }
+
+      .layout__main {
+        grid-column-end: span 7;
+      }
+
+      .layout__sidebar {
+        grid-column-end: span 3;
+        padding-left: $grid-gutter-width;
+      }
+
+      .layout__bottom {
+        grid-column-end: span 10;
+      }
+    }
+  }
+}
+
+
+.teachings-list {
+
+  @media (min-width: $screen-lg) {
+    display: grid;
+    grid-template-columns: repeat(12, [col] 1fr);
+    grid-gap: $grid-gutter-width;
+  }
+
+  .article {
+    grid-column-end: span 4;
+    padding: $grid-gutter-width;
+    border: 1px solid $grey-lighter;
+  }
+}
+
+
 // TODO: Some of these styles should only apply to specific content types
 .article-header {
   display: flex;
