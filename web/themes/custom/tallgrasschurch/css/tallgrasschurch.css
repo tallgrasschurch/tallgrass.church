@@ -1619,6 +1619,46 @@ form .preview {
   text-decoration: none;
 }
 
+#block-tallgrasschurch-subnav {
+  margin: 20px 0;
+}
+
+@media (min-width: 576px) {
+  #block-tallgrasschurch-subnav {
+    margin: 40px 0;
+  }
+}
+
+#block-tallgrasschurch-subnav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+#block-tallgrasschurch-subnav ul li {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
+}
+
+#block-tallgrasschurch-subnav ul li a {
+  display: block;
+  margin-right: -1px;
+  padding: 10px 20px;
+  border: 1px solid #ddd;
+  text-decoration: none;
+}
+
+#block-tallgrasschurch-subnav ul li a.is-active {
+  background-color: #f5f5f5;
+}
+
 #block-tallgrasschurch-upcoming-events {
   margin: 0;
   padding: 20px 0;
