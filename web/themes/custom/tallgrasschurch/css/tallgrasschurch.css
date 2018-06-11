@@ -800,7 +800,7 @@ form .preview {
 }
 
 #content {
-  margin: 40px 0;
+  margin: 0;
   background-color: white;
 }
 
@@ -975,12 +975,15 @@ form .preview {
     grid-template-columns: repeat(12, [col] 1fr);
     grid-gap: 20px;
   }
-}
-
-.teachings-list .article {
-  grid-column-end: span 4;
-  padding: 20px;
-  border: 1px solid #ddd;
+  .teachings-list > .article-header,
+  .teachings-list > .article-footer {
+    grid-column-end: span 12;
+  }
+  .teachings-list .article {
+    grid-column-end: span 4;
+    padding: 20px;
+    border: 1px solid #ddd;
+  }
 }
 
 .article-header {
@@ -1103,7 +1106,32 @@ form .preview {
   background-color: #f5f5f5;
 }
 
+.region--content #block-tallgrasschurch-breadcrumbs {
+  margin: 80px 0 -60px;
+  font-size: 1.4rem;
+}
+
+.region--content #block-tallgrasschurch-breadcrumbs ol {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-align: center;
+}
+
+.region--content #block-tallgrasschurch-breadcrumbs ol li {
+  display: inline-block;
+}
+
+.region--content #block-tallgrasschurch-breadcrumbs ol li:after {
+  content: " / ";
+}
+
+.region--content #block-tallgrasschurch-breadcrumbs ol li:last-child:after {
+  content: "";
+}
+
 .block {
+  clear: both;
   margin-bottom: 20px;
 }
 
