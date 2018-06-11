@@ -63,12 +63,17 @@
     display: grid;
     grid-template-columns: repeat(12, [col] 1fr);
     grid-gap: $grid-gutter-width;
-  }
 
-  .article {
-    grid-column-end: span 4;
-    padding: $grid-gutter-width;
-    border: 1px solid $grey-lighter;
+    > .article-header,
+    > .article-footer {
+      grid-column-end: span 12;
+    }
+
+    .article {
+      grid-column-end: span 4;
+      padding: $grid-gutter-width;
+      border: 1px solid $grey-lighter;
+    }
   }
 }
 
