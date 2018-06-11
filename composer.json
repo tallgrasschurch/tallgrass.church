@@ -23,6 +23,7 @@
     "drupal/console": "~1.0",
     "drupal/core": "~8.5.0",
     "drush/drush": "~8.0",
+    "drupal/devel": "^1.2",
     "drupal/pathauto": "^1.0",
     "drupal/google_analytics": "^2.0",
     "drupal/insert": "^1.0",
