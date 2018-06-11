@@ -613,6 +613,12 @@ form .preview {
       -ms-flex-order: 2;
           order: 2;
   margin: 0;
+  font-size: inherit;
+  line-height: 1.5;
+}
+
+.card .card__title a {
+  text-decoration: none;
 }
 
 .card .card__subtitle {
@@ -623,11 +629,13 @@ form .preview {
   font-style: italic;
 }
 
-.card img {
+.card .card__img {
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;
   margin: 0 0 10px;
+  line-height: 1;
+  text-align: center;
 }
 
 .card-deck {
