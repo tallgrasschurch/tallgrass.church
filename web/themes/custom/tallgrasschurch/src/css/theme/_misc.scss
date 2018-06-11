@@ -164,26 +164,16 @@
 
 // TODO: Finish these styles
 .status-messages {
-  margin: ($grid-gutter-width * 2) 0;
+  @extend .alert;
+  @extend .alert--primary;
+  margin: -1px 0 0;
+  border-left: none;
+  border-right: none;
+  text-align: center;
 
-  .container {
+  .container {}
 
-    @media (min-width: $screen-md) {
-      display: grid;
-      grid-template-columns: repeat(12, [col] 1fr);
-      grid-gap: $grid-gutter-width;
-    }
-  }
-
-  .status-message {
-    @extend .alert;
-    @extend .alert--primary;
-
-    @media (min-width: $screen-md) {
-      grid-column-start: 3;
-      grid-column-end: span 8;
-    }
-  }
+  .status-message {}
 }
 
 

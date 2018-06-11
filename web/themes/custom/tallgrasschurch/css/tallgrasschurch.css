@@ -546,17 +546,17 @@ form .preview {
   width: 100%;
 }
 
-.alert, .status-messages .status-message {
+.alert, .status-messages {
   padding: 20px;
 }
 
-.alert--primary, .status-messages .status-message {
+.alert--primary, .status-messages {
   color: #0f5c71;
-  background-color: #bceaf6;
-  border: 1px solid #8fdcf0;
+  background-color: #e9f8fc;
+  border: 1px solid #bceaf6;
 }
 
-.alert--primary a, .status-messages .status-message a {
+.alert--primary a, .status-messages a {
   color: inherit;
 }
 
@@ -1076,22 +1076,10 @@ form .preview {
 }
 
 .status-messages {
-  margin: 40px 0;
-}
-
-@media (min-width: 768px) {
-  .status-messages .container {
-    display: grid;
-    grid-template-columns: repeat(12, [col] 1fr);
-    grid-gap: 20px;
-  }
-}
-
-@media (min-width: 768px) {
-  .status-messages .status-message {
-    grid-column-start: 3;
-    grid-column-end: span 8;
-  }
+  margin: -1px 0 0;
+  border-left: none;
+  border-right: none;
+  text-align: center;
 }
 
 .links {
