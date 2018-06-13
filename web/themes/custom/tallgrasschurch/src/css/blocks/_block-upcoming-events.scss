@@ -6,7 +6,7 @@
 #block-tallgrasschurch-upcoming-events {
   margin: 0;
   padding: $grid-gutter-width 0;
-  border-bottom: 1px solid $grey-lighter;
+  border-top: 1px solid $grey-lighter;
 
   @media (min-width: $screen-sm) {
     padding: ($grid-gutter-width * 4) 0;
@@ -39,6 +39,7 @@
     a {
       position: relative;
       display: block;
+      height: 100%;
       min-height: calc(#{$date-month-font-size} + #{$date-day-font-size} + (#{$date-padding-size} * 2 * 2) + (#{$grid-gutter-width} * 2));
       padding: $grid-gutter-width $grid-gutter-width $grid-gutter-width ($grid-gutter-width + 80px);
       color: inherit;

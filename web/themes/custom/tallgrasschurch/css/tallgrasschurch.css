@@ -1128,12 +1128,22 @@ form .preview {
 
 .block {
   clear: both;
-  margin-bottom: 20px;
 }
 
-.block__label {
+.region--content-bottom .block .block__label {
   margin-top: 0;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
+  font-size: 4.8rem;
+  text-align: center;
+}
+
+.region--content-bottom .block .article-footer {
+  margin: 20px 0 0 0;
+}
+
+.region--content-bottom .block .article-footer > * {
+  margin: 0;
+  text-align: center;
 }
 
 #block-tallgrasschurch-account-menu ul {
@@ -1181,7 +1191,7 @@ form .preview {
   margin: 0;
   padding: 20px 0;
   background-color: #f5f5f5;
-  border-bottom: 1px solid #ddd;
+  border-top: 1px solid #ddd;
 }
 
 @media (min-width: 576px) {
@@ -1266,6 +1276,10 @@ form .preview {
   margin: 0;
 }
 
+#block-tallgrasschurch-content {
+  margin: 80px;
+}
+
 #block-tallgrasschurch-hero-home {
   min-height: 500px;
   margin: 0;
@@ -1336,7 +1350,7 @@ form .preview {
 #block-tallgrasschurch-latest-teaching {
   margin: 0;
   padding: 20px 0;
-  border-bottom: 1px solid #ddd;
+  border-top: 1px solid #ddd;
 }
 
 @media (min-width: 576px) {
@@ -1669,7 +1683,7 @@ form .preview {
 #block-tallgrasschurch-upcoming-events {
   margin: 0;
   padding: 20px 0;
-  border-bottom: 1px solid #ddd;
+  border-top: 1px solid #ddd;
 }
 
 @media (min-width: 576px) {
@@ -1700,6 +1714,7 @@ form .preview {
 #block-tallgrasschurch-upcoming-events .views-row a {
   position: relative;
   display: block;
+  height: 100%;
   min-height: calc(1.2rem + 2.4rem + (5px * 2 * 2) + (20px * 2));
   padding: 20px 20px 20px 100px;
   color: inherit;
