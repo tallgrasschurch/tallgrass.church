@@ -705,6 +705,7 @@ form .preview {
 .media-group {
   margin: 0 0 40px;
   padding: 20px;
+  background-color: white;
   border: 1px solid #ddd;
 }
 
@@ -1853,7 +1854,7 @@ form .preview {
 .field--field-tags ul li a {
   display: inline-block;
   padding: 5px 10px;
-  background-color: #f5f5f5;
+  background-color: white;
   border-radius: 1em;
   text-decoration: none;
 }
