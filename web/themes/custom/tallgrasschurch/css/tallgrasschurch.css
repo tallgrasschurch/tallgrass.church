@@ -642,6 +642,7 @@ form .preview {
   display: grid;
   grid-gap: 20px;
   grid-template-columns: 1fr;
+  margin-bottom: 2.4rem;
 }
 
 @media (min-width: 768px) {
@@ -955,6 +956,18 @@ form .preview {
 .article--full .article-wrapper {
   grid-column-start: 3;
   grid-column-end: span 8;
+}
+
+.article--full .article-wrapper > *:first-child,
+.article--full .article-wrapper > *:first-child > *:first-child,
+.article--full .article-wrapper > *:first-child > *:first-child > *:first-child {
+  margin-top: 0;
+}
+
+.article--full .article-wrapper > *:last-child,
+.article--full .article-wrapper > *:last-child > *:last-child,
+.article--full .article-wrapper > *:last-child > *:last-child > *:last-child {
+  margin-bottom: 0;
 }
 
 .article--full.article--teaching .article-wrapper {
@@ -1648,6 +1661,8 @@ form .preview {
 
 #block-tallgrasschurch-subnav {
   margin: 20px 0;
+  background-color: white;
+  border-bottom: 1px solid #ddd;
 }
 
 @media (min-width: 576px) {
@@ -1678,7 +1693,6 @@ form .preview {
   display: block;
   margin-right: -1px;
   padding: 10px 20px;
-  border: 1px solid #ddd;
   text-decoration: none;
 }
 

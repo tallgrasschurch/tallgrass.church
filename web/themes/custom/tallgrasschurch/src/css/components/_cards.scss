@@ -45,6 +45,7 @@
   display: grid;
   grid-gap: $grid-gutter-width;
   grid-template-columns: 1fr;
+  margin-bottom: $line-height-computed;
 
   @media (min-width: $screen-md) {
     grid-template-columns: 1fr 1fr;
