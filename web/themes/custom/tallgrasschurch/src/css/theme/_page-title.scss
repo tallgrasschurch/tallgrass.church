@@ -5,7 +5,10 @@
 
 // TODO: Move to _block-page-title.scss file?
 .page-title {
-  margin: ($grid-gutter-width * 4) 0;
+  margin-bottom: ($grid-gutter-width * 4);
+  padding: ($grid-gutter-width * 4) 0;
+  color: white;
+  background-color: $brand-primary;
   text-align: center;
 
   .container {

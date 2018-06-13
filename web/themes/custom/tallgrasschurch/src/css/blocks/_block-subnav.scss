@@ -7,7 +7,7 @@
   margin: $grid-gutter-width 0;
 
   @media (min-width: $screen-sm) {
-    margin: ($grid-gutter-width * 2) 0;
+    margin: (-$grid-gutter-width * 4) 0 ($grid-gutter-width * 4);
   }
 
   ul {
