@@ -19,7 +19,8 @@
   .article {
     display: flex;
     flex-direction: column;
-    padding: $grid-gutter-width;
+    padding: ($grid-gutter-width / 2);
+    background-color: white;
     border: 1px solid $grey-lighter;
 
     @media (min-width: $screen-md) {

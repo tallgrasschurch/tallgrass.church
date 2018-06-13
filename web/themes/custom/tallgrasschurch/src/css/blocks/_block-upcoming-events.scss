@@ -40,9 +40,10 @@
       position: relative;
       display: block;
       height: 100%;
-      min-height: calc(#{$date-month-font-size} + #{$date-day-font-size} + (#{$date-padding-size} * 2 * 2) + (#{$grid-gutter-width} * 2));
-      padding: $grid-gutter-width $grid-gutter-width $grid-gutter-width ($grid-gutter-width + 80px);
+      min-height: calc(#{$date-month-font-size} + #{$date-day-font-size} + (#{$date-padding-size} * 2 * 2) + #{$grid-gutter-width});
+      padding: ($grid-gutter-width / 2) ($grid-gutter-width / 2) ($grid-gutter-width / 2) (($grid-gutter-width / 2) + 70px);
       color: inherit;
+      background-color: white;
       border: 1px solid $grey-lighter;
       text-decoration: none;
     }
@@ -57,8 +58,8 @@
 
       .views-row__date {
         position: absolute;
-        top: $grid-gutter-width;
-        left: $grid-gutter-width;
+        top: ($grid-gutter-width / 2);
+        left: ($grid-gutter-width / 2);
         width: 60px;
         overflow: hidden;
         color: white;
