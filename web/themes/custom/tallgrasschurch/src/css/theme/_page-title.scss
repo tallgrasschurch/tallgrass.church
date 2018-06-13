@@ -16,6 +16,10 @@
     flex-direction: column;
   }
 
+  a {
+    color: inherit;
+  }
+
   .page-title__title {
     order: 2;
     margin: 0;
@@ -45,7 +49,7 @@
       display: block;
       width: ($grid-gutter-width * 4);
       margin: 0 auto $grid-gutter-width;
-      border-top: 1px solid $grey-lighter;
+      border-top: 1px solid rgba(white, .5);
     }
 
     .page-title__meta-item {
@@ -56,7 +60,7 @@
         display: inline-block;
         margin-left: 5px;
         margin-right: 5px;
-        color: $grey-light;
+        color: rgba(white, .5);
       }
 
       &:last-child {

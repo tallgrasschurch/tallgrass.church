@@ -847,6 +847,10 @@ form .preview {
           flex-direction: column;
 }
 
+.page-title a {
+  color: inherit;
+}
+
 .page-title .page-title__title {
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
@@ -885,7 +889,7 @@ form .preview {
   display: block;
   width: 80px;
   margin: 0 auto 20px;
-  border-top: 1px solid #ddd;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 .page-title .page-title__meta .page-title__meta-item {
@@ -897,7 +901,7 @@ form .preview {
   display: inline-block;
   margin-left: 5px;
   margin-right: 5px;
-  color: #777;
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .page-title .page-title__meta .page-title__meta-item:last-child:after {
