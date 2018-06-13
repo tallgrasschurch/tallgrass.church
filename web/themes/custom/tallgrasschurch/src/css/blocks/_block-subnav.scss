@@ -5,6 +5,8 @@
 
 #block-tallgrasschurch-subnav {
   margin: $grid-gutter-width 0;
+  background-color: white;
+  border-bottom: 1px solid $grey-lighter;
 
   @media (min-width: $screen-sm) {
     margin: (-$grid-gutter-width * 4) 0 ($grid-gutter-width * 4);
@@ -24,7 +26,7 @@
         display: block;
         margin-right: -1px;
         padding: ($grid-gutter-width / 2) $grid-gutter-width;
-        border: 1px solid $grey-lighter;
+        //border: 1px solid $grey-lighter;
         text-decoration: none;
 
         &.is-active {
