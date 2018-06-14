@@ -789,7 +789,7 @@ form .preview {
 
 #header {
   margin: 0;
-  padding: 20px 0;
+  padding: 10px 0;
   background-color: white;
   border-bottom: 1px solid #ddd;
 }
@@ -1204,8 +1204,12 @@ form .preview {
 }
 
 #block-tallgrasschurch-branding .logo a {
-  display: inline-block;
   text-decoration: none;
+}
+
+#block-tallgrasschurch-branding .logo img {
+  width: auto;
+  height: 70px;
 }
 
 #block-tallgrasschurch-branding .logo--with-img {
