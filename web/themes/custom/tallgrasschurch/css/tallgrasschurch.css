@@ -445,7 +445,7 @@ textarea {
 
 input[readonly] {
   color: #777;
-  background-color: #f5f5f5;
+  background-color: #f8f8f8;
   cursor: not-allowed;
 }
 
@@ -458,7 +458,7 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover, input[type="submit"]:focus {
-  background-color: #f5f5f5;
+  background-color: #f8f8f8;
 }
 
 .form-item--checkbox {
@@ -500,7 +500,7 @@ form .description {
 form .preview {
   margin: 20px 0;
   padding: 20px;
-  background-color: #f5f5f5;
+  background-color: #f8f8f8;
   border: 1px solid #ddd;
 }
 
@@ -729,7 +729,7 @@ form .preview {
 .media-group .media-group__nav li button {
   padding: 10px 20px;
   color: #777;
-  background-color: #f5f5f5;
+  background-color: #f8f8f8;
   border: 1px solid #ddd;
   outline: none;
   cursor: pointer;
@@ -811,7 +811,7 @@ form .preview {
 }
 
 #main-content {
-  background-color: #f5f5f5;
+  background-color: #f8f8f8;
 }
 
 #content {
@@ -937,7 +937,7 @@ form .preview {
   display: block;
   padding: 10px 20px;
   color: inherit;
-  background-color: #f5f5f5;
+  background-color: #f8f8f8;
   border: 1px solid #ddd;
   text-decoration: none;
 }
@@ -1124,7 +1124,7 @@ form .preview {
 }
 
 .links li a:hover, .links li a:focus {
-  background-color: #f5f5f5;
+  background-color: #f8f8f8;
 }
 
 .region--content #block-tallgrasschurch-breadcrumbs {
@@ -1219,7 +1219,7 @@ form .preview {
 #block-tallgrasschurch-central-gathering {
   margin: 0;
   padding: 20px 0;
-  background-color: #f5f5f5;
+  background-color: #f8f8f8;
   border-top: 1px solid #ddd;
 }
 
@@ -1522,7 +1522,7 @@ form .preview {
 #block-tallgrasschurch-news-and-events {
   margin: 0;
   padding: 20px 0;
-  background-color: #f5f5f5;
+  background-color: #f8f8f8;
 }
 
 @media (min-width: 576px) {
@@ -1708,7 +1708,7 @@ form .preview {
 }
 
 #block-tallgrasschurch-subnav ul li a.is-active {
-  background-color: #f5f5f5;
+  background-color: #f8f8f8;
 }
 
 #block-tallgrasschurch-upcoming-events {
