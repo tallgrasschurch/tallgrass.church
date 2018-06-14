@@ -7,17 +7,17 @@
 // -------------------------
 
 // TODO: There is a need to have a grey somewhere between $grey-light and $grey-lighter
-$white:  #fff;
-$gray-1: #f5f5f5;
-$gray-2: #eee;
-$gray-3: #ddd;
-$gray-4: #ccc;
-$gray-5: #aaa;
-$gray-6: #777;
-$gray-7: #555;
-$gray-8: #333;
-$gray-9: #222;
-$black:  #000;
+$white:     #fff;
+$gray-100:  #f5f5f5;
+$gray-200:  #eee;
+$gray-300:  #ddd;
+$gray-400:  #ccc;
+$gray-500:  #aaa;
+$gray-600:  #777;
+$gray-700:  #555;
+$gray-800:  #333;
+$gray-900:  #222;
+$black:     #000;
 
 // Grays/greys
 $gray-darker:           #222;                   $grey-darker:           $gray-darker;
@@ -36,13 +36,13 @@ $gray-lighter-alpha:    rgba(0, 0, 0, 0.135);   $grey-lighter-alpha:    $gray-li
 $gray-lightest-alpha:   rgba(0, 0, 0, 0.04);    $grey-lightest-alpha:   $gray-lightest-alpha; // #f5f5f5
 
 // Custom colors
-$blue-light:            #37C9CF;
-$blue-medium:           #15819E;
-$blue-dark:             #476D83;
-$yellow:                #FED382;
+$blue-light:            #19bdc6; // Teal:       rgb(25, 189, 198)
+$blue-medium:           #05809e; // Blue-Green: rgb(5, 128,158)
+$blue-dark:             #2c5fb1; // Dark Blue:  rgb(44, 95, 177)
+$yellow:                #ffcb6d; // Yellow:     rgb(255, 203, 109)
 
 // Brand colors
-$brand-primary:         $blue-medium;
+$brand-primary:         $blue-dark;
 $brand-success:         #5cb85c;
 $brand-info:            $brand-primary;
 $brand-warning:         #f0ad4e;
