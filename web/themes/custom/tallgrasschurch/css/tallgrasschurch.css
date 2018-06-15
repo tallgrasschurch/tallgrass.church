@@ -354,7 +354,6 @@ body {
   font-size: 1.6rem;
   line-height: 1.5;
   color: #333;
-  background-color: #222;
 }
 
 a {
@@ -819,11 +818,26 @@ form .preview {
 }
 
 #footer {
-  padding: 80px 0;
-  color: white;
-  background-color: #222;
+  position: relative;
+  padding: calc((20px * 2) + 80px + 20px) 0 40px;
+  color: #777;
   font-size: 1.4rem;
   text-align: center;
+}
+
+#footer::before {
+  content: "";
+  position: absolute;
+  top: 40px;
+  left: calc(50% - (80px / 2));
+  display: block;
+  width: 80px;
+  height: 80px;
+  background-image: url("../img/logo-icon.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 80px 80px;
+  opacity: .5;
 }
 
 #footer a {
@@ -1172,26 +1186,46 @@ form .preview {
 }
 
 #block-tallgrasschurch-account-menu ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 0;
   list-style-type: none;
 }
 
 #block-tallgrasschurch-account-menu ul li {
-  display: inline-block;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  margin: 0 5px;
   white-space: nowrap;
 }
 
 #block-tallgrasschurch-account-menu ul li a {
   display: block;
-  padding: 2px 7px;
+  padding-top: 2px;
+  padding-bottom: 2px;
   color: inherit;
-  border: 1px solid #555;
+  border-bottom: 1px solid #ddd;
   font-size: 1.2rem;
   text-decoration: none;
 }
 
+#block-tallgrasschurch-account-menu ul li:last-child a {
+  padding-left: 7px;
+  padding-right: 7px;
+  border: 1px solid #ddd;
+}
+
 #block-tallgrasschurch-account-menu ul li a:hover, #block-tallgrasschurch-account-menu ul li a:focus {
-  border-color: #ddd;
+  color: #555;
+  border-color: #777;
 }
 
 #block-tallgrasschurch-branding {
