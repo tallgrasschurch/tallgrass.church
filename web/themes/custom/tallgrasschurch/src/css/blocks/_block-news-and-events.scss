@@ -6,7 +6,8 @@
 #block-tallgrasschurch-news-and-events {
   margin: 0;
   padding: $grid-gutter-width 0;
-  background-color: $grey-lightest;
+  background-color: white;
+  border-top: 1px solid $grey-lighter;
 
   @media (min-width: $screen-sm) {
     padding: ($grid-gutter-width * 4) 0;
@@ -41,31 +42,68 @@
     > .article-header {
       display: none;
     }
+
+    > .article-footer {
+
+      p {
+        text-align: left; // TODO: This is weird?
+
+        a {
+          @extend .btn;
+          @extend .btn-primary;
+        }
+      }
+    }
   }
 
-  .article--news {
+  .news-content-article {
+    position: relative;
+    clear: both;
+    min-height: 220px;
     margin-bottom: $grid-gutter-width;
     padding-bottom: $grid-gutter-width;
+    padding-right: 240px; // TODO: Get the propper padding
     border-bottom: 1px solid $grey-lighter;
 
     @media (min-width: $screen-md) {
       margin-right: $grid-gutter-width;
     }
 
-    .article-header {
+    .news-content-article-header {
+      display: flex;
+      flex-direction: column;
 
-      .article-header__title {}
+      .news-content-article-header__heading {
+        order: 2;
+        margin: 0 0 ($grid-gutter-width / 2);
+        font-size: $h4-font-size;
+      }
 
-      .article-header__date {}
+      .news-content-article-header__date {
+        order: 1;
+        margin: 0;
+        font-size: 1.4rem;
+      }
     }
 
-    .field--field-image {}
+    .news-content-article-img {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
 
-    .field--body {
+    .news-content-article-body,
+    .news-content-article-more {
       font-size: 1.4rem;
     }
 
-    .links {}
+    .news-content-article-body {
+      margin-bottom: ($grid-gutter-width / 2);
+    }
+
+    .news-content-article-more {
+      margin: 0;
+    }
   }
 
 
@@ -97,7 +135,7 @@
     }
 
     // TODO: Rename this class
-    .views-row {
+    .events-content-article {
 
       // Variables
       $date-month-font-size: 1.2rem;
@@ -109,55 +147,58 @@
       padding-left: 70px;
       margin-bottom: $grid-gutter-width;
 
-      .views-row__title {
-        margin: 0;
-        font-size: 1.6rem;
-        line-height: normal;
+      .events-content-article-header {
 
-        a {
-          text-decoration: none;
-        }
-      }
-
-      .views-row__date-and-time {
-
-        .views-row__date {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 60px;
-          overflow: hidden;
-          background-color: rgba(black, .2);
-          text-align: center;
-
-          .views-row__date-month,
-          .views-row__date-day {
-            display: block;
-            padding: $date-padding-size 0;
-            line-height: 1;
-          }
-
-          .views-row__date-month {
-            background-color: rgba(black, .2);
-            font-size: $date-month-font-size;
-            text-transform: uppercase;
-          }
-
-          .views-row__date-day {
-            font-size: $date-day-font-size;
-          }
-        }
-
-        .views-row__date-and-time-separator {
-          display: none;
-        }
-
-        .views-row__time {
-          display: block;
-          margin-top: 5px;
-          font-size: 1.4rem;
-          font-style: italic;
+        .events-content-article-header__heading {
+          margin: 0;
+          font-size: 1.6rem;
           line-height: normal;
+
+          a {
+            text-decoration: none;
+          }
+        }
+
+        .events-content-article-header__date-and-time {
+
+          .events-content-article-header__date {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 60px;
+            overflow: hidden;
+            background-color: rgba(black, .2);
+            text-align: center;
+
+            .events-content-article-header__date-month,
+            .events-content-article-header__date-day {
+              display: block;
+              padding: $date-padding-size 0;
+              line-height: 1;
+            }
+
+            .events-content-article-header__date-month {
+              background-color: rgba(black, .2);
+              font-size: $date-month-font-size;
+              text-transform: uppercase;
+            }
+
+            .events-content-article-header__date-day {
+              font-size: $date-day-font-size;
+            }
+          }
+
+          .events-content-article-header__date-and-time-separator {
+            display: none;
+          }
+
+          .events-content-article-header__time {
+            display: block;
+            margin-top: 5px;
+            font-size: 1.4rem;
+            font-style: italic;
+            line-height: normal;
+          }
         }
       }
     }
