@@ -34,6 +34,10 @@
   .news-content {
 
     @media (min-width: $screen-md) {
+      grid-column-end: span 7;
+    }
+
+    @media (min-width: $screen-lg) {
       grid-column-end: span 8;
     }
 
@@ -56,16 +60,22 @@
   }
 
   .news-content-article {
-    position: relative;
-    clear: both;
-    min-height: 220px;
+    @include clearfix();
     margin-bottom: $grid-gutter-width;
-    padding-bottom: $grid-gutter-width;
-    padding-right: 240px; // TODO: Get the propper padding
     border-bottom: 1px solid $grey-lighter;
 
     @media (min-width: $screen-md) {
       margin-right: $grid-gutter-width;
+    }
+
+    @media (min-width: $screen-lg) {
+      position: relative;
+      min-height: 220px;
+      padding-right: column-span(screen-lg, 3);
+    }
+
+    @media (min-width: $screen-xl) {
+      padding-right: column-span(screen-xl, 3);
     }
 
     .news-content-article-header {
@@ -86,9 +96,22 @@
     }
 
     .news-content-article-img {
-      position: absolute;
-      top: 0;
-      right: 0;
+      float: right;
+      max-width: calc(50% - #{$grid-gutter-width});
+      margin: 0 0 $grid-gutter-width $grid-gutter-width;
+      text-align: center;
+
+      @media (min-width: $screen-lg) {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: column-span(screen-lg, 3) - $grid-gutter-width;
+        margin: 0;
+      }
+
+      @media (min-width: $screen-xl) {
+        width: column-span(screen-xl, 3) - $grid-gutter-width;
+      }
     }
 
     .news-content-article-body,
@@ -101,7 +124,7 @@
     }
 
     .news-content-article-more {
-      margin: 0;
+      margin: 0 0 $grid-gutter-width;
     }
   }
 
@@ -111,9 +134,14 @@
 
   .events-content {
     align-self: start;
+    margin-top: ($grid-gutter-width * 2);
     padding: $grid-gutter-width;
     color: white;
     background-color: $brand-primary;
+
+    @media (min-width: $screen-md) {
+      margin-top: 0;
+    }
 
     .article-header {
       margin: (-$grid-gutter-width) (-$grid-gutter-width) $grid-gutter-width;
@@ -130,6 +158,10 @@
     }
 
     @media (min-width: $screen-md) {
+      grid-column-end: span 5;
+    }
+
+    @media (min-width: $screen-lg) {
       grid-column-end: span 4;
     }
 
