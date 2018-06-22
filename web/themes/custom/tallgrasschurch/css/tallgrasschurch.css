@@ -1258,6 +1258,8 @@ form .preview {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
 }
 
 @media (min-width: 576px) {
@@ -1277,7 +1279,9 @@ form .preview {
 #block-tallgrasschurch-central-gathering .wrapper {
   padding: 40px;
   background-color: rgba(255, 255, 255, 0.9);
-  border: 1px solid #ddd;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 
@@ -1416,7 +1420,6 @@ form .preview {
 #block-tallgrasschurch-latest-teaching {
   margin: 0;
   padding: 20px 0;
-  border-top: 1px solid #ddd;
 }
 
 @media (min-width: 576px) {
@@ -1435,7 +1438,9 @@ form .preview {
           flex-direction: column;
   padding: 10px;
   background-color: white;
-  border: 1px solid #ddd;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.1);
 }
 
 @media (min-width: 768px) {
@@ -1560,7 +1565,6 @@ form .preview {
   margin: 0;
   padding: 20px 0;
   background-color: white;
-  border-top: 1px solid #ddd;
 }
 
 @media (min-width: 576px) {
