@@ -1428,6 +1428,10 @@ form .preview {
   }
 }
 
+#block-tallgrasschurch-latest-teaching a {
+  text-decoration: none;
+}
+
 #block-tallgrasschurch-latest-teaching .article {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1468,6 +1472,7 @@ form .preview {
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
           order: 2;
+  margin: 0;
 }
 
 @media (min-width: 768px) {
@@ -1475,10 +1480,6 @@ form .preview {
     grid-column-start: 7;
     grid-column-end: span 6;
   }
-}
-
-#block-tallgrasschurch-latest-teaching .article .article-header a {
-  text-decoration: none;
 }
 
 #block-tallgrasschurch-latest-teaching .article .article-header .article-header__title {
@@ -1497,7 +1498,7 @@ form .preview {
   font-size: 1.4rem;
 }
 
-#block-tallgrasschurch-latest-teaching .article .article-header .field--field-scripture-reference {
+#block-tallgrasschurch-latest-teaching .article .article-header .article-header__scripture-reference {
   -webkit-box-ordinal-group: 4;
       -ms-flex-order: 3;
           order: 3;
@@ -1505,16 +1506,26 @@ form .preview {
   font-style: italic;
 }
 
-#block-tallgrasschurch-latest-teaching .article .article-header .field--field-speaker {
+#block-tallgrasschurch-latest-teaching .article .article-header .article-header__speaker {
   -webkit-box-ordinal-group: 5;
       -ms-flex-order: 4;
           order: 4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-top: 10px;
   font-size: 1.4rem;
 }
 
-#block-tallgrasschurch-latest-teaching .article .article-header .field--field-speaker dd {
-  margin: 0;
+#block-tallgrasschurch-latest-teaching .article .article-header .article-header__speaker .article-header__speaker-img {
+  width: 30px;
+  height: 30px;
+  margin-right: 5px;
+  overflow: hidden;
+  border-radius: 30px;
 }
 
 #block-tallgrasschurch-latest-teaching .article .field--field-image {
