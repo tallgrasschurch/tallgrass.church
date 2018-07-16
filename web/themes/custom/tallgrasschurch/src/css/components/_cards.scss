@@ -39,8 +39,14 @@
     margin: 0 0 ($grid-gutter-width / 2);
     line-height: 1;
     text-align: center;
+
+    img {}
   }
 }
+
+
+// Card deck
+// -------------------------
 
 .card-deck {
   display: grid;
