@@ -3,6 +3,9 @@
 // --------------------------------------------------
 
 
+// Default card
+// -------------------------
+
 .card {
   display: flex;
   flex-direction: column;
@@ -17,21 +20,23 @@
     flex: 0 1 auto;
   }
 
-  .card__title {
+  .card__body {
     order: 2;
-    margin: 0;
-    font-size: inherit;
-    line-height: 1.5;
 
-    a {
-      text-decoration: none;
+    .card__title {
+      margin: 0;
+      font-size: inherit;
+      line-height: 1.5;
+
+      a {
+        text-decoration: none;
+      }
     }
-  }
 
-  .card__subtitle {
-    order: 3;
-    margin: 0;
-    font-style: italic;
+    .card__subtitle {
+      margin: 0;
+      font-style: italic;
+    }
   }
 
   .card__img {
@@ -41,6 +46,40 @@
     text-align: center;
 
     img {}
+  }
+}
+
+
+// Feature card
+// -------------------------
+
+.card--feature {
+  @extend .card;
+
+  .card__body,
+  .card__img {
+    align-self: center;
+  }
+
+  @media (min-width: $screen-md) {
+    display: grid;
+    grid-template-columns: repeat(2, [col] 1fr);
+    grid-gap: $grid-gutter-width;
+  }
+
+  .card__body {
+
+    @media (min-width: $screen-md) {
+      grid-column-end: span 1;
+    }
+  }
+
+  .card__img {
+
+    @media (min-width: $screen-md) {
+      grid-column-end: span 1;
+      margin-bottom: 0;
+    }
   }
 }
 

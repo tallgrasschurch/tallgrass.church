@@ -14,12 +14,6 @@
   border-radius: $border-radius;
   box-shadow: 0 1px 3px 1px rgba(black, .1);
 
-  @media (min-width: $screen-md) {
-    display: grid;
-    grid-template-columns: repeat(12, [col] 1fr);
-    grid-gap: $grid-gutter-width;
-  }
-
   .card__body,
   .card__img {
     align-self: center;
@@ -30,11 +24,6 @@
     flex-direction: column;
     order: 2;
     margin: 0;
-
-    @media (min-width: $screen-md) {
-      grid-column-start: 7;
-      grid-column-end: span 6;
-    }
 
     .card__title {
       order: 2;
@@ -73,13 +62,62 @@
 
   .card__img {
     order: 1;
+    max-width: 100%;
     margin-bottom: $grid-gutter-width;
     line-height: 1;
+  }
+}
+
+
+// Single card
+// -------------------------
+
+.view.latest-teaching {
+
+  .card--teaching {
+    //@extend .card--teaching;
 
     @media (min-width: $screen-md) {
-      grid-column-start: 1;
-      grid-column-end: span 6;
-      margin-bottom: 0;
+      display: grid;
+      //grid-template-columns: repeat(2, [col] 1fr);
+      grid-template-columns: repeat(2, minmax(200px, 1fr));
+      grid-gap: $grid-gutter-width;
+    }
+
+    .card__body {
+
+      @media (min-width: $screen-md) {
+        grid-column-end: span 1;
+      }
+    }
+
+    .card__img {
+
+      @media (min-width: $screen-md) {
+        grid-column-end: span 1;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+
+
+// Teachings list
+// -------------------------
+
+.teachings-list {
+
+  .view__rows {
+
+    @media (min-width: $screen-lg) {
+      display: grid;
+      grid-template-columns: repeat(3, [col] 1fr);
+      grid-gap: $grid-gutter-width;
+
+      > * {
+        grid-column-end: span 1;
+      }
     }
   }
 }
