@@ -47,6 +47,26 @@
 }
 
 
+// Link wrapped around card
+// -------------------------
+
+.card-wrapping-link {
+  text-decoration: none;
+
+  .card--teaching {
+    transition: all .2s linear;
+  }
+
+  &:hover,
+  &:focus {
+
+    .card--teaching {
+      box-shadow: 0 1px 3px 1px rgba(black, .3);
+    }
+  }
+}
+
+
 // Single card
 // -------------------------
 
