@@ -587,7 +587,7 @@ form .preview {
   text-align: center;
 }
 
-.card, .card--feature {
+.card, .card--feature, .card--teaching {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -600,36 +600,39 @@ form .preview {
   padding: 10px;
   background-color: white;
   border: 1px solid #ddd;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.1);
 }
 
-.card > *, .card--feature > * {
+.card > *, .card--feature > *, .card--teaching > * {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 auto;
           flex: 0 1 auto;
 }
 
-.card .card__body, .card--feature .card__body {
+.card .card__body, .card--feature .card__body, .card--teaching .card__body {
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
           order: 2;
 }
 
-.card .card__body .card__title, .card--feature .card__body .card__title {
+.card .card__body .card__title, .card--feature .card__body .card__title, .card--teaching .card__body .card__title {
   margin: 0;
   font-size: inherit;
   line-height: 1.5;
 }
 
-.card .card__body .card__title a, .card--feature .card__body .card__title a {
+.card .card__body .card__title a, .card--feature .card__body .card__title a, .card--teaching .card__body .card__title a {
   text-decoration: none;
 }
 
-.card .card__body .card__subtitle, .card--feature .card__body .card__subtitle {
+.card .card__body .card__subtitle, .card--feature .card__body .card__subtitle, .card--teaching .card__body .card__subtitle {
   margin: 0;
   font-style: italic;
 }
 
-.card .card__img, .card--feature .card__img {
+.card .card__img, .card--feature .card__img, .card--teaching .card__img {
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;
@@ -679,7 +682,7 @@ form .preview {
 }
 
 @supports (display: grid) {
-  .card-deck .card, .card-deck .card--feature {
+  .card-deck .card, .card-deck .card--feature, .card-deck .card--teaching {
     margin: 0;
   }
 }
@@ -1152,27 +1155,6 @@ form .preview {
   background-color: #f8f8f8;
 }
 
-.card--teaching {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  padding: 10px;
-  background-color: white;
-  border-radius: 5px;
-  -webkit-box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.1);
-}
-
-.card--teaching .card__body,
-.card--teaching .card__img {
-  -ms-flex-item-align: center;
-      align-self: center;
-}
-
 .card--teaching .card__body {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1181,34 +1163,24 @@ form .preview {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-ordinal-group: 3;
-      -ms-flex-order: 2;
-          order: 2;
-  margin: 0;
 }
 
 .card--teaching .card__body .card__title {
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
           order: 2;
-  margin: 0;
-  font-size: 4.8rem;
-  line-height: normal;
-}
-
-.card--teaching .card__body .card__date {
-  -webkit-box-ordinal-group: 2;
-      -ms-flex-order: 1;
-          order: 1;
-  font-size: 1.4rem;
 }
 
 .card--teaching .card__body .card__scripture-reference {
   -webkit-box-ordinal-group: 4;
       -ms-flex-order: 3;
           order: 3;
-  font-size: 2.4rem;
-  font-style: italic;
+}
+
+.card--teaching .card__body .card__date {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
 }
 
 .card--teaching .card__body .card__speaker {
@@ -1221,8 +1193,7 @@ form .preview {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 10px;
-  font-size: 1.4rem;
+  margin-top: 20px;
 }
 
 .card--teaching .card__body .card__speaker .card__speaker-img {
@@ -1237,9 +1208,6 @@ form .preview {
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;
-  max-width: 100%;
-  margin-bottom: 20px;
-  line-height: 1;
 }
 
 @media (min-width: 768px) {
@@ -1248,6 +1216,27 @@ form .preview {
     grid-template-columns: repeat(2, minmax(200px, 1fr));
     grid-gap: 20px;
   }
+}
+
+.view.latest-teaching .card--teaching .card__body,
+.view.latest-teaching .card--teaching .card__img {
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+.view.latest-teaching .card--teaching .card__body .card__title {
+  font-size: 4.8rem;
+  line-height: normal;
+}
+
+.view.latest-teaching .card--teaching .card__body .card__date {
+  font-size: 1.4rem;
+  line-height: normal;
+}
+
+.view.latest-teaching .card--teaching .card__body .card__scripture-reference {
+  font-size: 2.4rem;
+  line-height: normal;
 }
 
 @media (min-width: 768px) {
