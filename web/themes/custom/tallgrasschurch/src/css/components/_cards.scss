@@ -3,40 +3,97 @@
 // --------------------------------------------------
 
 
+// Default card
+// -------------------------
+
 .card {
   display: flex;
   flex-direction: column;
   margin-top: $grid-gutter-width;
   margin-bottom: $grid-gutter-width;
   padding: ($grid-gutter-width / 2);
+  background-color: white;
   border: 1px solid $grey-lighter;
+  border-radius: $border-radius;
+  box-shadow: 0 1px 3px 1px rgba(black, .1);
 
 
   > * {
     flex: 0 1 auto;
   }
 
-  .card__title {
+  .card__body {
     order: 2;
-    margin: 0;
+
+    .card__title {
+      margin: 0;
+      font-size: inherit;
+      line-height: 1.5;
+
+      a {
+        text-decoration: none;
+      }
+    }
+
+    .card__subtitle {
+      margin: 0;
+      font-style: italic;
+    }
   }
 
-  .card__subtitle {
-    order: 3;
-    margin: 0;
-    font-style: italic;
-  }
-
-  img {
+  .card__img {
     order: 1;
     margin: 0 0 ($grid-gutter-width / 2);
+    line-height: 1;
+    text-align: center;
+
+    img {}
   }
 }
+
+
+// Feature card
+// -------------------------
+
+.card--feature {
+  @extend .card;
+
+  .card__body,
+  .card__img {
+    align-self: center;
+  }
+
+  @media (min-width: $screen-md) {
+    display: grid;
+    grid-template-columns: repeat(2, [col] 1fr);
+    grid-gap: $grid-gutter-width;
+  }
+
+  .card__body {
+
+    @media (min-width: $screen-md) {
+      grid-column-end: span 1;
+    }
+  }
+
+  .card__img {
+
+    @media (min-width: $screen-md) {
+      grid-column-end: span 1;
+      margin-bottom: 0;
+    }
+  }
+}
+
+
+// Card deck
+// -------------------------
 
 .card-deck {
   display: grid;
   grid-gap: $grid-gutter-width;
   grid-template-columns: 1fr;
+  margin-bottom: $line-height-computed;
 
   @media (min-width: $screen-md) {
     grid-template-columns: 1fr 1fr;

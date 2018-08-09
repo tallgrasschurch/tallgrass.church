@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100px" height="100px" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <title>logo-icon</title>
+  <style>
+    #top-left { fill: rgba(44, 95, 177, .8); }
+    #top-right { fill: rgba(5, 128, 158, .8); }
+    #bottom-right { fill: rgba(25, 189, 198, .8); }
+    #bottom-left { fill: rgba(255, 203, 109, .8); }
+  </style>
+  <defs>
+    <rect id="path-1" x="0" y="0" width="100" height="100" rx="20"></rect>
+  </defs>
+  <g id="logo-icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g id="icon">
+      <mask id="mask-2" fill="white">
+        <use xlink:href="#path-1"></use>
+      </mask>
+      <g id="mask"></g>
+      <g id="circles" mask="url(#mask-2)" opacity="0.800000012">
+        <g transform="translate(-40.000000, -40.000000)">
+          <circle id="bottom-left" fill="#FFCB6D" cx="50" cy="130" r="50"></circle>
+          <circle id="bottom-right" fill="#19BDC6" cx="130" cy="130" r="50"></circle>
+          <circle id="top-right" fill="#05809E" cx="130" cy="50" r="50"></circle>
+          <circle id="top-left" fill="#2C5FB1" cx="50" cy="50" r="50"></circle>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

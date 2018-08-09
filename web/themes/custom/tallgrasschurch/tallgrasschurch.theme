@@ -95,7 +95,6 @@ function tallgrasschurch_preprocess_page_title(&$variables) {
         $term = Term::load($tid);
         $variables['series']['name'] = $term->name->value;
         $variables['series']['link'] = Url::fromRoute('entity.taxonomy_term.canonical', ['taxonomy_term' => $tid]);
-        $key++;
       }
 
       // Get the primary scripture book field
@@ -123,6 +122,18 @@ function tallgrasschurch_preprocess_node(&$variables) {
   if ($node) {
     // Set up a variable for node type
     $variables['node_type'] = $node->getType();
+
+    if ($variables['node_type'] == 'teaching') {
+
+      // Get the series field
+      if (isset($node->field_series->target_id)) {
+        $tid = $node->field_series->target_id;
+        $term = Term::load($tid);
+        $variables['series']['name'] = $term->name->value;
+        $variables['series']['link'] = Url::fromRoute('entity.taxonomy_term.canonical', ['taxonomy_term' => $tid]);
+        $variables['series']['image_id'] = $term->field_image->target_id;
+      }
+    }
   }
 
   // TODO: Remove this, as it is no longer needed

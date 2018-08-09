@@ -354,11 +354,10 @@ body {
   font-size: 1.6rem;
   line-height: 1.5;
   color: #333;
-  background-color: #222;
 }
 
 a {
-  color: #337ab7;
+  color: #305696;
   text-decoration: underline;
   -webkit-transition: all .2s linear;
   transition: all .2s linear;
@@ -367,6 +366,43 @@ a {
 img {
   max-width: 100%;
   height: auto;
+}
+
+p,
+ul,
+ol,
+dl {
+  margin-top: 0;
+  margin-bottom: 2.4rem;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  margin: 2.4rem 0 1.2rem;
+}
+
+h1, .h1 {
+  font-size: 4.8rem;
+}
+
+h2, .h2 {
+  font-size: 3.2rem;
+}
+
+h3, .h3 {
+  font-size: 2.8rem;
+}
+
+h4, .h4 {
+  font-size: 2.4rem;
+}
+
+h5, .h5 {
+  font-size: 2rem;
+}
+
+h6, .h6 {
+  font-size: 1.6rem;
 }
 
 dl {
@@ -379,6 +415,7 @@ dl dt {
 
 dl dd {
   margin-left: 0;
+  margin-bottom: 1.2rem;
 }
 
 figure figcaption {
@@ -407,7 +444,7 @@ textarea {
 
 input[readonly] {
   color: #777;
-  background-color: #f5f5f5;
+  background-color: #f8f8f8;
   cursor: not-allowed;
 }
 
@@ -420,7 +457,7 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover, input[type="submit"]:focus {
-  background-color: #f5f5f5;
+  background-color: #f8f8f8;
 }
 
 .form-item--checkbox {
@@ -443,12 +480,12 @@ input[type="submit"]:hover, input[type="submit"]:focus {
 
 #edit-submit {
   color: white;
-  background-color: #337ab7;
+  background-color: #305696;
   border: none;
 }
 
 #edit-submit:hover, #edit-submit:focus {
-  background-color: #285f8f;
+  background-color: #24406f;
 }
 
 form .description {
@@ -462,11 +499,11 @@ form .description {
 form .preview {
   margin: 20px 0;
   padding: 20px;
-  background-color: #f5f5f5;
+  background-color: #f8f8f8;
   border: 1px solid #ddd;
 }
 
-.btn {
+.btn, #block-tallgrasschurch-news-and-events .news-content > .article-footer p a {
   display: inline-block;
   padding: .3125em .625em;
   border: 1px solid transparent;
@@ -486,17 +523,17 @@ form .preview {
   transition: color .2s ease-in-out, background-color .2s ease-in-out, border-color .2s ease-in-out, box-shadow .2s ease-in-out, -webkit-box-shadow .2s ease-in-out;
 }
 
-.btn:focus {
+.btn:focus, #block-tallgrasschurch-news-and-events .news-content > .article-footer p a:focus {
   outline: 0;
 }
 
-.btn-primary {
+.btn-primary, #block-tallgrasschurch-news-and-events .news-content > .article-footer p a {
   color: white;
-  background-color: #337ab7;
+  background-color: #305696;
 }
 
-.btn-primary:hover, .btn-primary:focus {
-  background-color: #285f8f;
+.btn-primary:hover, #block-tallgrasschurch-news-and-events .news-content > .article-footer p a:hover, .btn-primary:focus, #block-tallgrasschurch-news-and-events .news-content > .article-footer p a:focus {
+  background-color: #24406f;
 }
 
 .btn-lg {
@@ -508,14 +545,18 @@ form .preview {
   width: 100%;
 }
 
-.alert, .status-message {
+.alert, .status-messages {
   padding: 20px;
 }
 
-.alert--primary, .status-message {
-  color: #1d4567;
-  background-color: #c7ddef;
-  border: 1px solid #9fc4e4;
+.alert--primary, .status-messages {
+  color: #24406f;
+  background-color: #fafcfe;
+  border: 1px solid #d4dff1;
+}
+
+.alert--primary a, .status-messages a {
+  color: inherit;
 }
 
 .alignright,
@@ -546,7 +587,7 @@ form .preview {
   text-align: center;
 }
 
-.card {
+.card, .card--feature, .card--teaching {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -557,41 +598,81 @@ form .preview {
   margin-top: 20px;
   margin-bottom: 20px;
   padding: 10px;
+  background-color: white;
   border: 1px solid #ddd;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.1);
 }
 
-.card > * {
+.card > *, .card--feature > *, .card--teaching > * {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 auto;
           flex: 0 1 auto;
 }
 
-.card .card__title {
+.card .card__body, .card--feature .card__body, .card--teaching .card__body {
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
           order: 2;
-  margin: 0;
 }
 
-.card .card__subtitle {
-  -webkit-box-ordinal-group: 4;
-      -ms-flex-order: 3;
-          order: 3;
+.card .card__body .card__title, .card--feature .card__body .card__title, .card--teaching .card__body .card__title {
+  margin: 0;
+  font-size: inherit;
+  line-height: 1.5;
+}
+
+.card .card__body .card__title a, .card--feature .card__body .card__title a, .card--teaching .card__body .card__title a {
+  text-decoration: none;
+}
+
+.card .card__body .card__subtitle, .card--feature .card__body .card__subtitle, .card--teaching .card__body .card__subtitle {
   margin: 0;
   font-style: italic;
 }
 
-.card img {
+.card .card__img, .card--feature .card__img, .card--teaching .card__img {
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;
   margin: 0 0 10px;
+  line-height: 1;
+  text-align: center;
+}
+
+.card--feature .card__body,
+.card--feature .card__img {
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+@media (min-width: 768px) {
+  .card--feature {
+    display: grid;
+    grid-template-columns: repeat(2, [col] 1fr);
+    grid-gap: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  .card--feature .card__body {
+    grid-column-end: span 1;
+  }
+}
+
+@media (min-width: 768px) {
+  .card--feature .card__img {
+    grid-column-end: span 1;
+    margin-bottom: 0;
+  }
 }
 
 .card-deck {
   display: grid;
   grid-gap: 20px;
   grid-template-columns: 1fr;
+  margin-bottom: 2.4rem;
 }
 
 @media (min-width: 768px) {
@@ -601,7 +682,7 @@ form .preview {
 }
 
 @supports (display: grid) {
-  .card-deck .card {
+  .card-deck .card, .card-deck .card--feature, .card-deck .card--teaching {
     margin: 0;
   }
 }
@@ -651,10 +732,10 @@ form .preview {
 }
 
 .media-group {
-  margin: 40px 0;
+  margin: 0 0 40px;
   padding: 20px;
-  color: white;
-  background-color: #333;
+  background-color: white;
+  border: 1px solid #ddd;
 }
 
 .media-group .media-group__nav {
@@ -676,9 +757,9 @@ form .preview {
 
 .media-group .media-group__nav li button {
   padding: 10px 20px;
-  color: #807f7f;
-  background: none;
-  border: 1px solid #4d4c4c;
+  color: #777;
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
   outline: none;
   cursor: pointer;
 }
@@ -688,8 +769,8 @@ form .preview {
 }
 
 .media-group .media-group__nav li.active button {
-  color: white;
-  background-color: #4d4c4c;
+  color: #333;
+  background-color: white;
 }
 
 .media-group audio {
@@ -737,7 +818,7 @@ form .preview {
 
 #header {
   margin: 0;
-  padding: 20px 0;
+  padding: 10px 0;
   background-color: white;
   border-bottom: 1px solid #ddd;
 }
@@ -758,61 +839,50 @@ form .preview {
   }
 }
 
+#main-content {
+  background-color: #f8f8f8;
+}
+
 #content {
-  padding: 40px 0;
-  background-color: white;
+  margin: 0;
 }
 
 #footer {
-  padding: 80px 0;
-  color: white;
-  background-color: #222;
+  position: relative;
+  padding: calc((20px * 2) + 80px + 20px) 0 40px;
+  color: #777;
   font-size: 1.4rem;
   text-align: center;
+}
+
+#footer::before {
+  content: "";
+  position: absolute;
+  top: 40px;
+  left: calc(50% - (80px / 2));
+  display: block;
+  width: 80px;
+  height: 80px;
+  background-image: url("../img/logo-icon.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 80px 80px;
+  opacity: .5;
 }
 
 #footer a {
   color: inherit;
 }
 
-.menu-local-tasks {
-  margin: 20px 0 0;
-  font-size: 1.4rem;
-  line-height: 1.5;
-}
-
-.menu-local-tasks .menu-local-tasks__list {
-  margin: 0;
-  padding: 0 10px;
-  list-style-type: none;
-  border-bottom: 1px solid #ddd;
-}
-
-.menu-local-tasks .menu-local-tasks__list .menu-local-tasks__list-item {
-  display: inline-block;
-  margin: 0 5px -1px 0;
-  white-space: nowrap;
-}
-
-.menu-local-tasks .menu-local-tasks__list .menu-local-tasks__list-item a {
-  display: block;
-  padding: 10px 20px;
-  color: inherit;
-  background-color: #f5f5f5;
-  border: 1px solid #ddd;
-  text-decoration: none;
-}
-
-.menu-local-tasks .menu-local-tasks__list .menu-local-tasks__list-item a:hover, .menu-local-tasks .menu-local-tasks__list .menu-local-tasks__list-item a:focus {
-  text-decoration: underline;
-}
-
-.menu-local-tasks .menu-local-tasks__list .menu-local-tasks__list-item a.is-active {
-  background-color: white;
-  border-bottom-color: white;
-}
-
 .page-title {
+  margin-bottom: 80px;
+  padding: 80px 0;
+  color: white;
+  background-color: #172a49;
+  text-align: center;
+}
+
+.page-title .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -820,7 +890,10 @@ form .preview {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-bottom: 2.4rem;
+}
+
+.page-title a {
+  color: inherit;
 }
 
 .page-title .page-title__title {
@@ -828,7 +901,8 @@ form .preview {
       -ms-flex-order: 2;
           order: 2;
   margin: 0;
-  line-height: 1.2;
+  font-size: 6.4rem;
+  line-height: normal;
 }
 
 .page-title .page-title__subtitle {
@@ -846,8 +920,6 @@ form .preview {
       -ms-flex-order: 1;
           order: 1;
   margin-bottom: 10px;
-  font-size: 0.8em;
-  line-height: 1.5;
 }
 
 .page-title .page-title__meta {
@@ -855,8 +927,124 @@ form .preview {
       -ms-flex-order: 4;
           order: 4;
   margin-top: 20px;
-  font-size: 0.8em;
+}
+
+.page-title .page-title__meta:before {
+  content: "";
+  display: block;
+  width: 80px;
+  margin: 0 auto 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.page-title .page-title__meta .page-title__meta-item {
+  display: inline-block;
+}
+
+.page-title .page-title__meta .page-title__meta-item:after {
+  content: " / ";
+  display: inline-block;
+  margin-left: 5px;
+  margin-right: 5px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.page-title .page-title__meta .page-title__meta-item:last-child:after {
+  content: "";
+}
+
+.menu-local-tasks {
+  margin: 0;
+  font-size: 1.4rem;
   line-height: 1.5;
+  text-align: center;
+}
+
+.menu-local-tasks .menu-local-tasks__list {
+  margin: 0;
+  padding: 0 10px;
+  list-style-type: none;
+  border-bottom: 1px solid #ddd;
+}
+
+.menu-local-tasks .menu-local-tasks__list .menu-local-tasks__list-item {
+  display: inline-block;
+  margin: 0 5px -1px 0;
+  white-space: nowrap;
+}
+
+.menu-local-tasks .menu-local-tasks__list .menu-local-tasks__list-item:last-child {
+  margin-right: 0;
+}
+
+.menu-local-tasks .menu-local-tasks__list .menu-local-tasks__list-item a {
+  display: block;
+  padding: 10px 20px;
+  color: inherit;
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  text-decoration: none;
+}
+
+.menu-local-tasks .menu-local-tasks__list .menu-local-tasks__list-item a:hover, .menu-local-tasks .menu-local-tasks__list .menu-local-tasks__list-item a:focus {
+  text-decoration: underline;
+}
+
+.menu-local-tasks .menu-local-tasks__list .menu-local-tasks__list-item a.is-active {
+  background-color: white;
+  border-bottom-color: white;
+}
+
+@media (min-width: 992px) {
+  .article--full {
+    display: grid;
+    grid-template-columns: repeat(12, [col] 1fr);
+    grid-gap: 20px;
+  }
+}
+
+.article--full .article-wrapper {
+  grid-column-start: 3;
+  grid-column-end: span 8;
+  /*
+    & > *:first-child,
+    & > *:first-child > *:first-child,
+    & > *:first-child > *:first-child > *:first-child {
+      margin-top: 0;
+    }
+
+    & > *:last-child,
+    & > *:last-child > *:last-child,
+    & > *:last-child > *:last-child > *:last-child {
+      margin-bottom: 0;
+    }
+    */
+}
+
+.article--full.article--teaching .article-wrapper {
+  grid-column-start: 2;
+  grid-column-end: span 10;
+}
+
+@media (min-width: 992px) {
+  .article--full.article--teaching .layout--sidebar-right {
+    display: grid;
+    grid-template-columns: repeat(10, [col] 1fr);
+    grid-gap: 20px;
+  }
+  .article--full.article--teaching .layout--sidebar-right .layout__top {
+    grid-column-end: span 10;
+  }
+  .article--full.article--teaching .layout--sidebar-right .layout__main {
+    grid-column-end: span 7;
+  }
+  .article--full.article--teaching .layout--sidebar-right .layout__sidebar {
+    grid-column-end: span 3;
+    padding-left: 20px;
+  }
+  .article--full.article--teaching .layout--sidebar-right .layout__bottom {
+    grid-column-end: span 10;
+  }
 }
 
 .article-header {
@@ -940,8 +1128,11 @@ form .preview {
           order: 5;
 }
 
-.status-message {
-  margin-bottom: 2.4rem;
+.status-messages {
+  margin: -1px 0 0;
+  border-left: none;
+  border-right: none;
+  text-align: center;
 }
 
 .links {
@@ -961,39 +1152,216 @@ form .preview {
 }
 
 .links li a:hover, .links li a:focus {
-  background-color: #f5f5f5;
+  background-color: #f8f8f8;
+}
+
+.card--teaching .card__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.card--teaching .card__body .card__title {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+
+.card--teaching .card__body .card__scripture-reference {
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
+}
+
+.card--teaching .card__body .card__date {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+
+.card--teaching .card__body .card__speaker {
+  -webkit-box-ordinal-group: 5;
+      -ms-flex-order: 4;
+          order: 4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 20px;
+}
+
+.card--teaching .card__body .card__speaker .card__speaker-img {
+  width: 30px;
+  height: 30px;
+  margin-right: 5px;
+  overflow: hidden;
+  border-radius: 30px;
+}
+
+.card--teaching .card__img {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+
+.card-wrapping-link {
+  text-decoration: none;
+}
+
+.card-wrapping-link .card--teaching {
+  -webkit-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+.card-wrapping-link:hover .card--teaching, .card-wrapping-link:focus .card--teaching {
+  -webkit-box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.3);
+}
+
+@media (min-width: 768px) {
+  .view.latest-teaching .card--teaching {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+    grid-gap: 20px;
+  }
+}
+
+.view.latest-teaching .card--teaching .card__body,
+.view.latest-teaching .card--teaching .card__img {
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+.view.latest-teaching .card--teaching .card__body .card__title {
+  font-size: 4.8rem;
+  line-height: normal;
+}
+
+.view.latest-teaching .card--teaching .card__body .card__date {
+  font-size: 1.4rem;
+  line-height: normal;
+}
+
+.view.latest-teaching .card--teaching .card__body .card__scripture-reference {
+  font-size: 2.4rem;
+  line-height: normal;
+}
+
+@media (min-width: 768px) {
+  .view.latest-teaching .card--teaching .card__body {
+    grid-column-end: span 1;
+  }
+}
+
+@media (min-width: 768px) {
+  .view.latest-teaching .card--teaching .card__img {
+    grid-column-end: span 1;
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .teachings-list .view__rows {
+    display: grid;
+    grid-template-columns: repeat(3, [col] 1fr);
+    grid-gap: 20px;
+  }
+  .teachings-list .view__rows > * {
+    grid-column-end: span 1;
+  }
+}
+
+.region--content #block-tallgrasschurch-breadcrumbs {
+  margin: 80px 0 -60px;
+  font-size: 1.4rem;
+}
+
+.region--content #block-tallgrasschurch-breadcrumbs ol {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-align: center;
+}
+
+.region--content #block-tallgrasschurch-breadcrumbs ol li {
+  display: inline-block;
+}
+
+.region--content #block-tallgrasschurch-breadcrumbs ol li:after {
+  content: " / ";
+}
+
+.region--content #block-tallgrasschurch-breadcrumbs ol li:last-child:after {
+  content: "";
 }
 
 .block {
-  margin-bottom: 20px;
+  clear: both;
 }
 
-.block__label {
+.region--content-bottom .block .block__label {
   margin-top: 0;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
+  font-size: 4.8rem;
+  text-align: center;
+}
+
+.region--content-bottom .block .article-footer {
+  margin: 20px 0 0 0;
+}
+
+.region--content-bottom .block .article-footer > * {
+  margin: 0;
+  text-align: center;
 }
 
 #block-tallgrasschurch-account-menu ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 0;
   list-style-type: none;
 }
 
 #block-tallgrasschurch-account-menu ul li {
-  display: inline-block;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  margin: 0 5px;
   white-space: nowrap;
 }
 
 #block-tallgrasschurch-account-menu ul li a {
   display: block;
-  padding: 2px 7px;
+  padding-top: 2px;
+  padding-bottom: 2px;
   color: inherit;
-  border: 1px solid #555;
+  border-bottom: 1px solid #ddd;
   font-size: 1.2rem;
   text-decoration: none;
 }
 
+#block-tallgrasschurch-account-menu ul li:last-child a {
+  padding-left: 7px;
+  padding-right: 7px;
+  border: 1px solid #ddd;
+}
+
 #block-tallgrasschurch-account-menu ul li a:hover, #block-tallgrasschurch-account-menu ul li a:focus {
-  border-color: #ddd;
+  color: #555;
+  border-color: #777;
 }
 
 #block-tallgrasschurch-branding {
@@ -1006,8 +1374,12 @@ form .preview {
 }
 
 #block-tallgrasschurch-branding .logo a {
-  display: inline-block;
   text-decoration: none;
+}
+
+#block-tallgrasschurch-branding .logo img {
+  width: auto;
+  height: 70px;
 }
 
 #block-tallgrasschurch-branding .logo--with-img {
@@ -1018,6 +1390,12 @@ form .preview {
   margin: 0;
   padding: 20px 0;
   background-color: #ddd;
+  background-image: url("../img/map-color.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
 }
 
 @media (min-width: 576px) {
@@ -1037,6 +1415,9 @@ form .preview {
 #block-tallgrasschurch-central-gathering .wrapper {
   padding: 40px;
   background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 5px;
+  -webkit-box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 
@@ -1056,18 +1437,53 @@ form .preview {
 
 #block-tallgrasschurch-central-gathering .field--field-block-title {
   margin: 0 0 20px;
+  font-size: 3.2rem;
 }
 
-@media (min-width: 992px) {
-  #block-tallgrasschurch-content .wrapper {
+#block-tallgrasschurch-contact {
+  margin: 0;
+  padding: 20px 0;
+  color: white;
+  background-color: #305696;
+  font-size: 1.4rem;
+}
+
+#block-tallgrasschurch-contact a {
+  color: inherit;
+}
+
+@media (min-width: 576px) {
+  #block-tallgrasschurch-contact {
+    padding: 40px 0;
+  }
+}
+
+@media (min-width: 768px) {
+  #block-tallgrasschurch-contact .field--body {
     display: grid;
     grid-template-columns: repeat(12, [col] 1fr);
     grid-gap: 20px;
   }
-  #block-tallgrasschurch-content .wrapper > * {
-    grid-column-start: 3;
-    grid-column-end: span 8;
+}
+
+@media (min-width: 768px) {
+  #block-tallgrasschurch-contact .field--body section {
+    grid-column-end: span 4;
   }
+}
+
+#block-tallgrasschurch-contact .field--body section h2 {
+  margin: 0 0 10px;
+  font-size: 1.6rem;
+  line-height: normal;
+}
+
+#block-tallgrasschurch-contact .field--body section .more {
+  margin: 0;
+}
+
+#block-tallgrasschurch-content {
+  margin: 80px;
 }
 
 #block-tallgrasschurch-hero-home {
@@ -1075,11 +1491,11 @@ form .preview {
   margin: 0;
   padding: 80px 0;
   color: white;
-  background: radial-gradient(ellipse at top left, rgba(51, 122, 183, 0.5) 0%, rgba(51, 122, 183, 0.2) 100%) center, -webkit-gradient(linear, left top, right top, from(rgba(51, 122, 183, 0.5)), to(rgba(51, 122, 183, 0.2))) center, url("../img/DSC_3673-1800x700.jpg") top left;
-  background: radial-gradient(ellipse at top left, rgba(51, 122, 183, 0.5) 0%, rgba(51, 122, 183, 0.2) 100%) center, linear-gradient(to right, rgba(51, 122, 183, 0.5) 0%, rgba(51, 122, 183, 0.2) 100%) center, url("../img/DSC_3673-1800x700.jpg") top left;
+  background: radial-gradient(ellipse at top left, rgba(48, 86, 150, 0.5) 0%, rgba(48, 86, 150, 0.2) 100%) center, -webkit-gradient(linear, left top, right top, from(rgba(48, 86, 150, 0.5)), to(rgba(48, 86, 150, 0.2))) center, url("../img/DSC_3673-1800x500.jpg") top center;
+  background: radial-gradient(ellipse at top left, rgba(48, 86, 150, 0.5) 0%, rgba(48, 86, 150, 0.2) 100%) center, linear-gradient(to right, rgba(48, 86, 150, 0.5) 0%, rgba(48, 86, 150, 0.2) 100%) center, url("../img/DSC_3673-1800x500.jpg") top center;
   background-size: auto, auto, cover;
   background-repeat: no-repeat;
-  background-color: #337ab7;
+  background-color: #305696;
   text-shadow: 0px 1px 2px black;
 }
 
@@ -1093,7 +1509,7 @@ form .preview {
 
 #block-tallgrasschurch-hero-home .field--field-block-title {
   margin: 0 0 20px;
-  font-size: 3.6rem;
+  font-size: 4.8rem;
   line-height: normal;
 }
 
@@ -1126,7 +1542,7 @@ form .preview {
 
 @media (min-width: 768px) {
   #block-tallgrasschurch-hero-home .field--body {
-    font-size: 3.6rem;
+    font-size: 3.2rem;
   }
 }
 
@@ -1138,13 +1554,22 @@ form .preview {
 }
 
 #block-tallgrasschurch-latest-teaching {
-  margin: 20px 0;
+  margin: 0;
+  padding: 20px 0;
 }
 
 @media (min-width: 576px) {
   #block-tallgrasschurch-latest-teaching {
-    margin: 80px 0;
+    padding: 80px 0;
   }
+}
+
+#block-tallgrasschurch-latest-teaching a {
+  text-decoration: none;
+}
+
+#block-tallgrasschurch-local-tasks {
+  margin: 20px 0;
 }
 
 #block-tallgrasschurch-main-menu {
@@ -1171,13 +1596,390 @@ form .preview {
   }
 }
 
-#block-tallgrasschurch-events-home {
-  margin: 20px 0;
+#block-tallgrasschurch-news-and-events {
+  margin: 0;
+  padding: 20px 0;
+  background-color: white;
 }
 
 @media (min-width: 576px) {
-  #block-tallgrasschurch-events-home {
-    margin: 80px 0;
+  #block-tallgrasschurch-news-and-events {
+    padding: 80px 0;
+  }
+}
+
+#block-tallgrasschurch-news-and-events .news-and-events-content {
+  padding-top: 20px;
+  border-top: 1px solid #ddd;
+}
+
+@media (min-width: 768px) {
+  #block-tallgrasschurch-news-and-events .news-and-events-content {
+    display: grid;
+    grid-template-columns: repeat(12, [col] 1fr);
+    grid-gap: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  #block-tallgrasschurch-news-and-events .news-content {
+    grid-column-end: span 7;
+  }
+}
+
+@media (min-width: 992px) {
+  #block-tallgrasschurch-news-and-events .news-content {
+    grid-column-end: span 8;
+  }
+}
+
+#block-tallgrasschurch-news-and-events .news-content > .article-header {
+  display: none;
+}
+
+#block-tallgrasschurch-news-and-events .news-content > .article-footer p {
+  text-align: left;
+}
+
+#block-tallgrasschurch-news-and-events .news-content-article {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+#block-tallgrasschurch-news-and-events .news-content-article::after {
+  display: block;
+  clear: both;
+  content: "";
+}
+
+@media (min-width: 768px) {
+  #block-tallgrasschurch-news-and-events .news-content-article {
+    margin-right: 20px;
+  }
+}
+
+@media (min-width: 992px) {
+  #block-tallgrasschurch-news-and-events .news-content-article {
+    position: relative;
+    min-height: 220px;
+    padding-right: 215px;
+  }
+}
+
+@media (min-width: 1200px) {
+  #block-tallgrasschurch-news-and-events .news-content-article {
+    padding-right: 265px;
+  }
+}
+
+#block-tallgrasschurch-news-and-events .news-content-article .news-content-article-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#block-tallgrasschurch-news-and-events .news-content-article .news-content-article-header .news-content-article-header__heading {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  margin: 0 0 10px;
+  font-size: 2.4rem;
+}
+
+#block-tallgrasschurch-news-and-events .news-content-article .news-content-article-header .news-content-article-header__date {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+#block-tallgrasschurch-news-and-events .news-content-article .news-content-article-img {
+  float: right;
+  max-width: calc(50% - 20px);
+  margin: 0 0 20px 20px;
+  text-align: center;
+}
+
+@media (min-width: 992px) {
+  #block-tallgrasschurch-news-and-events .news-content-article .news-content-article-img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 195px;
+    margin: 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  #block-tallgrasschurch-news-and-events .news-content-article .news-content-article-img {
+    width: 245px;
+  }
+}
+
+#block-tallgrasschurch-news-and-events .news-content-article .news-content-article-body,
+#block-tallgrasschurch-news-and-events .news-content-article .news-content-article-more {
+  font-size: 1.4rem;
+}
+
+#block-tallgrasschurch-news-and-events .news-content-article .news-content-article-body {
+  margin-bottom: 10px;
+}
+
+#block-tallgrasschurch-news-and-events .news-content-article .news-content-article-more {
+  margin: 0 0 20px;
+}
+
+#block-tallgrasschurch-news-and-events .events-content {
+  -ms-flex-item-align: start;
+      align-self: start;
+  margin-top: 40px;
+  padding: 20px;
+  color: white;
+  background-color: #305696;
+}
+
+@media (min-width: 768px) {
+  #block-tallgrasschurch-news-and-events .events-content {
+    margin-top: 0;
+  }
+}
+
+#block-tallgrasschurch-news-and-events .events-content .article-header {
+  margin: -20px -20px 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+#block-tallgrasschurch-news-and-events .events-content .article-header .article-header__title {
+  padding: 10px 20px;
+}
+
+#block-tallgrasschurch-news-and-events .events-content a {
+  color: inherit;
+}
+
+@media (min-width: 768px) {
+  #block-tallgrasschurch-news-and-events .events-content {
+    grid-column-end: span 5;
+  }
+}
+
+@media (min-width: 992px) {
+  #block-tallgrasschurch-news-and-events .events-content {
+    grid-column-end: span 4;
+  }
+}
+
+#block-tallgrasschurch-news-and-events .events-content .events-content-article {
+  position: relative;
+  min-height: calc(1.2rem + 2.4rem + (5px * 2 * 2));
+  padding-left: 70px;
+  margin-bottom: 20px;
+}
+
+#block-tallgrasschurch-news-and-events .events-content .events-content-article .events-content-article-header .events-content-article-header__heading {
+  margin: 0;
+  font-size: 1.6rem;
+  line-height: normal;
+}
+
+#block-tallgrasschurch-news-and-events .events-content .events-content-article .events-content-article-header .events-content-article-header__heading a {
+  text-decoration: none;
+}
+
+#block-tallgrasschurch-news-and-events .events-content .events-content-article .events-content-article-header .events-content-article-header__date-and-time .events-content-article-header__date {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+#block-tallgrasschurch-news-and-events .events-content .events-content-article .events-content-article-header .events-content-article-header__date-and-time .events-content-article-header__date .events-content-article-header__date-month,
+#block-tallgrasschurch-news-and-events .events-content .events-content-article .events-content-article-header .events-content-article-header__date-and-time .events-content-article-header__date .events-content-article-header__date-day {
+  display: block;
+  padding: 5px 0;
+  line-height: 1;
+}
+
+#block-tallgrasschurch-news-and-events .events-content .events-content-article .events-content-article-header .events-content-article-header__date-and-time .events-content-article-header__date .events-content-article-header__date-month {
+  background-color: rgba(0, 0, 0, 0.2);
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+#block-tallgrasschurch-news-and-events .events-content .events-content-article .events-content-article-header .events-content-article-header__date-and-time .events-content-article-header__date .events-content-article-header__date-day {
+  font-size: 2.4rem;
+}
+
+#block-tallgrasschurch-news-and-events .events-content .events-content-article .events-content-article-header .events-content-article-header__date-and-time .events-content-article-header__date-and-time-separator {
+  display: none;
+}
+
+#block-tallgrasschurch-news-and-events .events-content .events-content-article .events-content-article-header .events-content-article-header__date-and-time .events-content-article-header__time {
+  display: block;
+  margin-top: 5px;
+  font-size: 1.4rem;
+  font-style: italic;
+  line-height: normal;
+}
+
+#block-tallgrasschurch-news-and-events .events-content .article-footer {
+  text-align: center;
+}
+
+#block-tallgrasschurch-news-and-events .events-content .article-footer p {
+  margin: 0;
+}
+
+#block-tallgrasschurch-news-and-events .events-content .article-footer a {
+  display: block;
+  margin: 0 -20px -20px;
+  padding: 10px 20px;
+  background-color: rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+}
+
+#block-tallgrasschurch-subnav {
+  margin: 20px 0;
+  background-color: white;
+  border-bottom: 1px solid #ddd;
+}
+
+@media (min-width: 576px) {
+  #block-tallgrasschurch-subnav {
+    margin: -80px 0 80px;
+  }
+}
+
+#block-tallgrasschurch-subnav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+#block-tallgrasschurch-subnav ul li {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
+}
+
+#block-tallgrasschurch-subnav ul li a {
+  display: block;
+  margin-right: -1px;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+#block-tallgrasschurch-subnav ul li a.is-active {
+  background-color: #f8f8f8;
+}
+
+#block-tallgrasschurch-upcoming-events {
+  margin: 0;
+  padding: 20px 0;
+  border-top: 1px solid #ddd;
+}
+
+@media (min-width: 576px) {
+  #block-tallgrasschurch-upcoming-events {
+    padding: 80px 0;
+  }
+}
+
+@media (min-width: 768px) {
+  #block-tallgrasschurch-upcoming-events .events-list {
+    display: grid;
+    grid-template-columns: repeat(12, [col] 1fr);
+    grid-gap: 20px;
+  }
+}
+
+#block-tallgrasschurch-upcoming-events .views-row {
+  margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+  #block-tallgrasschurch-upcoming-events .views-row {
+    grid-column-end: span 4;
+    margin-bottom: 0;
+  }
+}
+
+#block-tallgrasschurch-upcoming-events .views-row a {
+  position: relative;
+  display: block;
+  height: 100%;
+  min-height: calc(1.2rem + 2.4rem + (5px * 2 * 2) + 20px);
+  padding: 10px 10px 10px 80px;
+  color: inherit;
+  background-color: white;
+  border: 1px solid #ddd;
+  text-decoration: none;
+}
+
+#block-tallgrasschurch-upcoming-events .views-row .views-row__title {
+  margin: 0;
+  font-size: 1.6rem;
+  line-height: normal;
+}
+
+#block-tallgrasschurch-upcoming-events .views-row .views-row__date-and-time .views-row__date {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 60px;
+  overflow: hidden;
+  color: white;
+  background-color: #305696;
+  text-align: center;
+}
+
+#block-tallgrasschurch-upcoming-events .views-row .views-row__date-and-time .views-row__date .views-row__date-month,
+#block-tallgrasschurch-upcoming-events .views-row .views-row__date-and-time .views-row__date .views-row__date-day {
+  display: block;
+  padding: 5px 0;
+  line-height: 1;
+}
+
+#block-tallgrasschurch-upcoming-events .views-row .views-row__date-and-time .views-row__date .views-row__date-month {
+  background-color: rgba(0, 0, 0, 0.5);
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+#block-tallgrasschurch-upcoming-events .views-row .views-row__date-and-time .views-row__date .views-row__date-day {
+  font-size: 2.4rem;
+}
+
+#block-tallgrasschurch-upcoming-events .views-row .views-row__date-and-time .views-row__date-and-time-separator {
+  display: none;
+}
+
+#block-tallgrasschurch-upcoming-events .views-row .views-row__date-and-time .views-row__time {
+  display: block;
+  margin-top: 5px;
+  font-size: 1.4rem;
+  font-style: italic;
+  line-height: normal;
+}
+
+@media (min-width: 768px) {
+  #block-tallgrasschurch-upcoming-events .article-footer {
+    grid-column-end: span 12;
   }
 }
 
@@ -1185,7 +1987,7 @@ form .preview {
   margin: 0;
   padding: 10px 20px;
   color: white;
-  background-color: #337ab7;
+  background-color: #305696;
   border-bottom: 1px solid white;
   font-size: 1.6rem;
   line-height: 1.5;
@@ -1204,11 +2006,11 @@ form .preview {
 }
 
 .field--field-file-upload ul li:nth-child(odd) {
-  background-color: #eff5fa;
+  background-color: #d4dff1;
 }
 
 .field--field-file-upload ul li:nth-child(even) {
-  background-color: #dbe9f5;
+  background-color: #c1d0eb;
 }
 
 .field--field-tags {
@@ -1233,7 +2035,7 @@ form .preview {
 .field--field-tags ul li a {
   display: inline-block;
   padding: 5px 10px;
-  background-color: #f5f5f5;
+  background-color: white;
   border-radius: 1em;
   text-decoration: none;
 }

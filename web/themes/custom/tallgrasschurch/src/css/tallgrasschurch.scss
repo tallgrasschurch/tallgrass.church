@@ -5,6 +5,7 @@
 
 // Variables and mixins
 @import 'variables';
+@import 'functions';
 @import 'mixins';
 
 // Reset and dependencies
@@ -26,8 +27,10 @@
 
 // Theme
 @import 'theme/layout';
+@import 'theme/page-title';
 @import 'theme/menu-local-tasks';
 @import 'theme/misc'; // TODO: Moved these styles somewhere else
+@import 'theme/teachings';
 
 // Drupal regions
 @import 'regions/region';
@@ -39,11 +42,15 @@
 @import 'blocks/block-account-menu';
 @import 'blocks/block-branding';
 @import 'blocks/block-central-gathering';
+@import 'blocks/block-contact';
 @import 'blocks/block-content';
 @import 'blocks/block-footer-content';
 @import 'blocks/block-hero';
 @import 'blocks/block-latest-teaching';
+@import 'blocks/block-local-tasks';
 @import 'blocks/block-main-menu';
+@import 'blocks/block-news-and-events';
+@import 'blocks/block-subnav';
 @import 'blocks/block-upcoming-events';
 
 // Drupal fields

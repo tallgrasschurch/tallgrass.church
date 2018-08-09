@@ -15,11 +15,15 @@
       text-decoration: none;
     }
 
-    img {}
+    img {
+      display: block;
+      width: auto;
+      height: 80px;
+    }
   }
 
   .logo--with-img {
-    line-height: 1;
+    line-height: 0;
   }
 
   .logo--no-img {}

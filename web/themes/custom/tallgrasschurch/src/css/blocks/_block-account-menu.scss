@@ -6,24 +6,42 @@
 #block-tallgrasschurch-account-menu {
 
   ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 0;
     list-style-type: none;
 
     li {
-      display: inline-block;
+      flex: 0 0 auto;
+      margin: 0 5px;
       white-space: nowrap;
 
       a {
         display: block;
-        padding: 2px 7px;
+        padding-top: 2px;
+        padding-bottom: 2px;
         color: inherit;
-        border: 1px solid $grey;
+        border-bottom: 1px solid $gray-lighter;
         font-size: 1.2rem;
         text-decoration: none;
+      }
+
+      &:last-child {
+
+        a {
+          padding-left: 7px;
+          padding-right: 7px;
+          border: 1px solid $grey-lighter;
+        }
+      }
+
+      a {
 
         &:hover,
         &:focus {
-          border-color: $grey-lighter;
+          color: $grey;
+          border-color: $grey-light;
         }
       }
     }

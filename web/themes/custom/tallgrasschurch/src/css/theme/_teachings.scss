@@ -1,0 +1,141 @@
+//
+// Teachings
+// --------------------------------------------------
+
+
+// Card
+// -------------------------
+
+.card--teaching {
+  @extend .card;
+
+  .card__body {
+    display: flex;
+    flex-direction: column;
+
+    .card__title {
+      order: 2;
+    }
+
+    .card__scripture-reference {
+      order: 3;
+    }
+
+    .card__date {
+      order: 1;
+    }
+
+    .card__speaker {
+      order: 4;
+      display: flex;
+      align-items: center;
+      margin-top: $grid-gutter-width;
+
+      .card__speaker-img {
+        width: 30px;
+        height: 30px;
+        margin-right: 5px;
+        overflow: hidden;
+        border-radius: 30px;
+      }
+    }
+  }
+
+  .card__img {
+    order: 1;
+  }
+}
+
+
+// Link wrapped around card
+// -------------------------
+
+.card-wrapping-link {
+  text-decoration: none;
+
+  .card--teaching {
+    transition: all .2s linear;
+  }
+
+  &:hover,
+  &:focus {
+
+    .card--teaching {
+      box-shadow: 0 1px 3px 1px rgba(black, .3);
+    }
+  }
+}
+
+
+// Single card
+// -------------------------
+
+.view.latest-teaching {
+
+  .card--teaching {
+    //@extend .card--teaching;
+
+    @media (min-width: $screen-md) {
+      display: grid;
+      //grid-template-columns: repeat(2, [col] 1fr);
+      grid-template-columns: repeat(2, minmax(200px, 1fr));
+      grid-gap: $grid-gutter-width;
+    }
+
+    .card__body,
+    .card__img {
+      align-self: center;
+    }
+
+    .card__body {
+
+      .card__title {
+        font-size: 4.8rem;
+        line-height: normal;
+      }
+
+      .card__date {
+        font-size: 1.4rem;
+        line-height: normal;
+      }
+
+      .card__scripture-reference {
+        font-size: 2.4rem;
+        line-height: normal;
+      }
+
+      @media (min-width: $screen-md) {
+        grid-column-end: span 1;
+      }
+    }
+
+    .card__img {
+
+      @media (min-width: $screen-md) {
+        grid-column-end: span 1;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+
+
+// Teachings list
+// -------------------------
+
+.teachings-list {
+
+  .view__rows {
+
+    @media (min-width: $screen-lg) {
+      display: grid;
+      grid-template-columns: repeat(3, [col] 1fr);
+      grid-gap: $grid-gutter-width;
+
+      > * {
+        grid-column-end: span 1;
+      }
+    }
+  }
+}

@@ -4,18 +4,9 @@
 
 
 #block-tallgrasschurch-content {
+  margin: ($grid-gutter-width * 4);
 
-  .wrapper {
+  .container {}
 
-    @media (min-width: $screen-lg) {
-      display: grid;
-      grid-template-columns: repeat(12, [col] 1fr);
-      grid-gap: $grid-gutter-width;
-
-      > * {
-        grid-column-start: 3;
-        grid-column-end: span 8;
-      }
-    }
-  }
+  .wrapper {}
 }

@@ -31,13 +31,13 @@
  */
 #}
 
-{%
+{#
   set classes = [
     dom_id ? 'js-view-dom-id-' ~ dom_id,
   ]
-%}
+#}
 
-<div{{ attributes.addClass(classes) }}>
+<section{{ attributes.addClass(classes) }}>
   {{ title_prefix }}
   {{ title }}
   {{ title_suffix }}
@@ -46,7 +46,9 @@
     <header class="article-header">
       {{ header }}
 
+      {# TODO: Remove this section (eventually)
       {{ drupal_block('local_tasks_block') }}
+      #}
     </header>
   {% endif %}
 
@@ -61,10 +63,10 @@
   {{ more }}
 
   {% if footer %}
-    <footer>
+    <footer class="article-footer">
       {{ footer }}
     </footer>
   {% endif %}
 
   {{ feed_icons }}
-</div>
+</section>

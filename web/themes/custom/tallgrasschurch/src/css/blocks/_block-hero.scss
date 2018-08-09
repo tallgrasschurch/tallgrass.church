@@ -6,12 +6,13 @@
 // TODO: Adjust text sizes
 // TODO: Optimize image size (700px tall is maybe too much)
 
-// Variables
-$hero-bg-overlay-color:          $brand-primary;
-$hero-bg-overlay-opacity-start:  .5;
-$hero-bg-overlay-opacity-end:    .2;
-
 #block-tallgrasschurch-hero-home {
+
+  // Variables
+  $hero-bg-overlay-color:          $brand-primary;
+  $hero-bg-overlay-opacity-start:  .5;
+  $hero-bg-overlay-opacity-end:    .2;
+
   min-height: 500px;
   margin: 0;
   padding: ($grid-gutter-width * 4) 0;
@@ -19,7 +20,7 @@ $hero-bg-overlay-opacity-end:    .2;
   background:
     radial-gradient(ellipse at top left, rgba($hero-bg-overlay-color, $hero-bg-overlay-opacity-start) 0%, rgba($hero-bg-overlay-color, $hero-bg-overlay-opacity-end) 100%) center,
     linear-gradient(to right, rgba($hero-bg-overlay-color, $hero-bg-overlay-opacity-start) 0%,rgba($hero-bg-overlay-color, $hero-bg-overlay-opacity-end) 100%) center,
-    url('../img/DSC_3673-1800x700.jpg') top left;
+    url('../img/DSC_3673-1800x500.jpg') top center;
   background-size:
     auto,
     auto,
@@ -41,7 +42,7 @@ $hero-bg-overlay-opacity-end:    .2;
 
   .field--field-block-title {
     margin: 0 0 $grid-gutter-width;
-    font-size: 3.6rem;
+    font-size: $display2-font-size;
     line-height: normal;
 
     @media (min-width: $screen-md) {
@@ -52,7 +53,7 @@ $hero-bg-overlay-opacity-end:    .2;
       grid-row-start: 1;
       grid-column-end: span 12;
       margin: 0;
-      font-size: 6.4rem;
+      font-size: $display1-font-size;
       line-height: normal;
     }
   }
@@ -68,7 +69,7 @@ $hero-bg-overlay-opacity-end:    .2;
     }
 
     @media (min-width: $screen-md) {
-      font-size: 3.6rem;
+      font-size: $display3-font-size;
     }
 
     @media (min-width: $screen-lg) {

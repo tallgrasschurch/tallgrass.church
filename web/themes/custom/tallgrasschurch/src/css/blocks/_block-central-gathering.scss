@@ -6,7 +6,13 @@
 #block-tallgrasschurch-central-gathering {
   margin: 0;
   padding: $grid-gutter-width 0;
-  background-color: $grey-lighter;
+  background-color: $grey-300;
+  background-image: url('../img/map-color.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-top: 1px solid $grey-lighter;
+  border-bottom: 1px solid $grey-lighter;
 
   @media (min-width: $screen-sm) {
     padding: ($grid-gutter-width * 4) 0;
@@ -24,6 +30,8 @@
   .wrapper {
     padding: ($grid-gutter-width * 2);
     background-color: rgba(white, .9);
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
     text-align: center;
 
     @media (min-width: $screen-md) {
@@ -39,6 +47,7 @@
 
   .field--field-block-title {
     margin: 0 0 $grid-gutter-width;
+    font-size: $display3-font-size;
   }
 
   .field--body {}

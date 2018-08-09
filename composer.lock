@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "ab51ca634a749b275c4c9a63fc348a31",
+    "content-hash": "793b16a4ee909b0037229b2efd7a144c",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -1929,7 +1929,8 @@
                     "merge-extra": false
                 },
                 "patches_applied": {
-                    "Views integration for datetime range fields": "https://www.drupal.org/files/issues/2786577-270_0.patch"
+                    "Views integration for datetime range fields": "https://www.drupal.org/files/issues/2786577-270_0.patch",
+                    "Add option to show only start or end date in the DateTime Range custom formatter": "https://www.drupal.org/files/issues/2018-05-23/drupal-display-one-date-formatter-2827055-25.patch"
                 }
             },
             "autoload": {

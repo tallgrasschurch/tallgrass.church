@@ -3,53 +3,92 @@
 // --------------------------------------------------
 
 
-// TODO: Remove/merge?
-.page-title {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: $line-height-computed;
+.article--teaching {}
 
-  .page-title__title {
-    order: 2;
-    margin: 0;
-    line-height: 1.2;
+
+.article--full {
+
+  @media (min-width: $screen-lg) {
+    display: grid;
+    grid-template-columns: repeat(12, [col] 1fr);
+    grid-gap: $grid-gutter-width;
   }
 
-  .page-title__subtitle {
-    order: 3;
-    margin: 0;
-    font-size: 1.2em;
-    font-style: italic;
-    line-height: 1.2;
-  }
+  .article-wrapper {
+    grid-column-start: 3;
+    grid-column-end: span 8;
 
-  .page-title__date {
-    order: 1;
-    margin-bottom: 10px;
-    font-size: 0.8em;
-    line-height: $line-height-base;
-  }
-
-  .page-title__meta {
-    order: 4;
-    //display: flex;
-    //justify-content: space-between;
-    //flex-wrap: wrap;
-    margin-top: 20px;
-    font-size: 0.8em;
-    line-height: $line-height-base;
-
-    div {
-      //flex: 0 0 auto;
+    & > *:first-child,
+    & > *:first-child > *:first-child,
+    & > *:first-child > *:first-child > *:first-child {
+      margin-top: 0;
     }
 
-    .page-title__speaker {}
-
-    .page-title__scripture {}
-
-    .page-title__series {}
+    & > *:last-child,
+    & > *:last-child > *:last-child,
+    & > *:last-child > *:last-child > *:last-child {
+      margin-bottom: 0;
+    }
   }
 }
+
+.article--full.article--teaching {
+
+  .article-wrapper {
+    grid-column-start: 2;
+    grid-column-end: span 10;
+  }
+
+  .layout {}
+
+  .layout--sidebar-right {
+
+    @media (min-width: $screen-lg) {
+      display: grid;
+      grid-template-columns: repeat(10, [col] 1fr);
+      grid-gap: $grid-gutter-width;
+
+      .layout__top {
+        grid-column-end: span 10;
+      }
+
+      .layout__main {
+        grid-column-end: span 7;
+      }
+
+      .layout__sidebar {
+        grid-column-end: span 3;
+        padding-left: $grid-gutter-width;
+      }
+
+      .layout__bottom {
+        grid-column-end: span 10;
+      }
+    }
+  }
+}
+
+
+.teachings-list {
+
+  @media (min-width: $screen-lg) {
+    display: grid;
+    grid-template-columns: repeat(12, [col] 1fr);
+    grid-gap: $grid-gutter-width;
+
+    > .article-header,
+    > .article-footer {
+      grid-column-end: span 12;
+    }
+
+    .article {
+      grid-column-end: span 4;
+      padding: $grid-gutter-width;
+      border: 1px solid $grey-lighter;
+    }
+  }
+}
+
 
 // TODO: Some of these styles should only apply to specific content types
 .article-header {
@@ -131,11 +170,24 @@
   }
 }
 
-.status-message {
+
+// Status messages
+// -------------------------
+
+// TODO: Finish these styles
+.status-messages {
   @extend .alert;
   @extend .alert--primary;
-  margin-bottom: $line-height-computed;
+  margin: -1px 0 0;
+  border-left: none;
+  border-right: none;
+  text-align: center;
+
+  .container {}
+
+  .status-message {}
 }
+
 
 // TODO: Re-name this class to something more specific
 // TODO: Make these styles more re-usable

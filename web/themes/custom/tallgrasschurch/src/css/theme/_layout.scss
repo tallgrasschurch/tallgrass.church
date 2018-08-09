@@ -43,7 +43,7 @@
 
 #header {
   margin: 0;
-  padding: $grid-gutter-width 0;
+  padding: ($grid-gutter-width / 2) 0;
   background-color: white;
   border-bottom: 1px solid $grey-lighter;
 }
@@ -63,6 +63,14 @@
 }
 
 
+// Main
+// -------------------------
+
+#main-content {
+  background-color: $grey-lightest;
+}
+
+
 // Content top
 // -------------------------
 
@@ -73,8 +81,7 @@
 // -------------------------
 
 #content {
-  padding: ($grid-gutter-width * 2) 0;
-  background-color: white;
+  margin: 0;
 }
 
 
@@ -88,11 +95,28 @@
 // -------------------------
 
 #footer {
-  padding: ($grid-gutter-width * 4) 0;
-  color: white;
-  background-color: $grey-darker;
+  $bg-img-size: 80px;
+
+  position: relative;
+  padding: calc((#{$grid-gutter-width} * 2) + #{$bg-img-size} + #{$grid-gutter-width}) 0 ($grid-gutter-width * 2);
+  color: $grey-light;
   font-size: 1.4rem;
   text-align: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: ($grid-gutter-width * 2);
+    left: calc(50% - (#{$bg-img-size} / 2));
+    display: block;
+    width: $bg-img-size;
+    height: $bg-img-size;
+    background-image: url('../img/logo-icon.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: $bg-img-size $bg-img-size;
+    opacity: .5;
+  }
 
   a {
     color: inherit;
