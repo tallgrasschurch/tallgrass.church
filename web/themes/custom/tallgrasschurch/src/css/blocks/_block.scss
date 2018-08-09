@@ -8,6 +8,12 @@
 }
 
 .region--content-bottom .block {
+  margin: 0;
+  padding: $grid-gutter-width 0;
+
+  @media (min-width: $screen-sm) {
+    padding: ($grid-gutter-width * 4) 0;
+  }
 
   .block__label {
     margin-top: 0;

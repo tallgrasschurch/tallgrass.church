@@ -1318,6 +1318,17 @@ form .preview {
   clear: both;
 }
 
+.region--content-bottom .block {
+  margin: 0;
+  padding: 20px 0;
+}
+
+@media (min-width: 576px) {
+  .region--content-bottom .block {
+    padding: 80px 0;
+  }
+}
+
 .region--content-bottom .block .block__label {
   margin-top: 0;
   margin-bottom: 40px;
@@ -1402,8 +1413,6 @@ form .preview {
 }
 
 #block-tallgrasschurch-central-gathering {
-  margin: 0;
-  padding: 20px 0;
   background-color: #ddd;
   background-image: url("../img/map-color.png");
   background-position: center;
@@ -1411,12 +1420,6 @@ form .preview {
   background-size: cover;
   border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
-}
-
-@media (min-width: 576px) {
-  #block-tallgrasschurch-central-gathering {
-    padding: 80px 0;
-  }
 }
 
 @media (min-width: 768px) {
@@ -1566,21 +1569,6 @@ form .preview {
     grid-row-start: 2;
     grid-column-end: span 6;
   }
-}
-
-#block-tallgrasschurch-latest-teaching {
-  margin: 0;
-  padding: 20px 0;
-}
-
-@media (min-width: 576px) {
-  #block-tallgrasschurch-latest-teaching {
-    padding: 80px 0;
-  }
-}
-
-#block-tallgrasschurch-latest-teaching a {
-  text-decoration: none;
 }
 
 #block-tallgrasschurch-local-tasks {

@@ -4,8 +4,6 @@
 
 
 #block-tallgrasschurch-central-gathering {
-  margin: 0;
-  padding: $grid-gutter-width 0;
   background-color: $grey-300;
   background-image: url('../img/map-color.png');
   background-position: center;
@@ -13,10 +11,6 @@
   background-size: cover;
   border-top: 1px solid $grey-lighter;
   border-bottom: 1px solid $grey-lighter;
-
-  @media (min-width: $screen-sm) {
-    padding: ($grid-gutter-width * 4) 0;
-  }
 
   .container {
 
