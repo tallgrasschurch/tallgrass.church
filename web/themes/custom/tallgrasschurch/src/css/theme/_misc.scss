@@ -18,6 +18,8 @@
     grid-column-start: 3;
     grid-column-end: span 8;
 
+    // TODO: This is messing up .card when it's at the bottom of the page
+    /*
     & > *:first-child,
     & > *:first-child > *:first-child,
     & > *:first-child > *:first-child > *:first-child {
@@ -29,6 +31,7 @@
     & > *:last-child > *:last-child > *:last-child {
       margin-bottom: 0;
     }
+    */
   }
 }
 
@@ -64,27 +67,6 @@
       .layout__bottom {
         grid-column-end: span 10;
       }
-    }
-  }
-}
-
-
-.teachings-list {
-
-  @media (min-width: $screen-lg) {
-    display: grid;
-    grid-template-columns: repeat(12, [col] 1fr);
-    grid-gap: $grid-gutter-width;
-
-    > .article-header,
-    > .article-footer {
-      grid-column-end: span 12;
-    }
-
-    .article {
-      grid-column-end: span 4;
-      padding: $grid-gutter-width;
-      border: 1px solid $grey-lighter;
     }
   }
 }
