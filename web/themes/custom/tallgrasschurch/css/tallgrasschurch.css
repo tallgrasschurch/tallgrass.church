@@ -1613,15 +1613,7 @@ form .preview {
 }
 
 #block-tallgrasschurch-news-and-events {
-  margin: 0;
-  padding: 20px 0;
   background-color: white;
-}
-
-@media (min-width: 576px) {
-  #block-tallgrasschurch-news-and-events {
-    padding: 80px 0;
-  }
 }
 
 #block-tallgrasschurch-news-and-events .news-and-events-content {

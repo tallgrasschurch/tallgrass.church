@@ -4,13 +4,7 @@
 
 
 #block-tallgrasschurch-news-and-events {
-  margin: 0;
-  padding: $grid-gutter-width 0;
   background-color: white;
-
-  @media (min-width: $screen-sm) {
-    padding: ($grid-gutter-width * 4) 0;
-  }
 
   .container {}
 
