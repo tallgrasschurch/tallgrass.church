@@ -6,7 +6,8 @@
 // Card
 // -------------------------
 
-.card--teaching {
+.card--teaching,
+.card--series {
   @extend .card;
 
   .card__body {
@@ -124,7 +125,8 @@
 // Teachings list
 // -------------------------
 
-.teachings-list {
+.teachings-list,
+.series-list {
 
   .view__rows {
 
