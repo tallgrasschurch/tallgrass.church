@@ -61,9 +61,11 @@
   {{ exposed }}
   {{ attachment_before }}
 
-  <div class="view__rows">
-    {{ rows }}
-  </div>
+  {% if rows %}
+    <div class="view__rows">
+      {{ rows }}
+    </div>
+  {% endif %}
   {{ empty }}
   {{ pager }}
 
