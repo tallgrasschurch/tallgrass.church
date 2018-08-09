@@ -1235,6 +1235,10 @@ form .preview {
           box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.3);
 }
 
+.view.latest-teaching .card--teaching {
+  margin: 0;
+}
+
 @media (min-width: 768px) {
   .view.latest-teaching .card--teaching {
     display: grid;
@@ -1275,6 +1279,15 @@ form .preview {
     grid-column-end: span 1;
     margin-bottom: 0;
   }
+}
+
+.view.latest-teaching .view__footer {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.view.latest-teaching .view__footer > * {
+  margin: 0;
 }
 
 @media (min-width: 992px) {

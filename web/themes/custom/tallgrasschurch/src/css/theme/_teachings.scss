@@ -68,13 +68,15 @@
 }
 
 
-// Single card
+// Latest teaching
 // -------------------------
 
 .view.latest-teaching {
 
   .card--teaching {
+    // TODO: Clean this up
     //@extend .card--teaching;
+    margin: 0; // TODO: Clean this up
 
     @media (min-width: $screen-md) {
       display: grid;
@@ -116,6 +118,15 @@
         grid-column-end: span 1;
         margin-bottom: 0;
       }
+    }
+  }
+
+  .view__footer {
+    margin-top: ($grid-gutter-width * 2);
+    text-align: center;
+
+    > * {
+      margin: 0;
     }
   }
 }
