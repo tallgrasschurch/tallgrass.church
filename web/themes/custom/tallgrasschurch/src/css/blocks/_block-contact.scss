@@ -10,12 +10,12 @@
   background-color: $brand-primary;
   font-size: 1.4rem;
 
-  a {
-    color: inherit;
-  }
-
   @media (min-width: $screen-sm) {
     padding: ($grid-gutter-width * 2) 0;
+  }
+
+  a {
+    color: inherit;
   }
 
   .container {}
@@ -30,6 +30,11 @@
 
     // TODO: Add a classes to the selectors
     section {
+
+      @media (max-width: $screen-sm-max) {
+        // TODO: Remove this bottom margin from the last section
+        margin-bottom: $grid-gutter-width;
+      }
 
       @media (min-width: $screen-md) {
         grid-column-end: span 4;
