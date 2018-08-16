@@ -1318,7 +1318,7 @@ form .preview {
 
 .region--content-bottom .block {
   margin: 0;
-  padding: 20px 0;
+  padding: 40px 0;
 }
 
 @media (min-width: 576px) {
