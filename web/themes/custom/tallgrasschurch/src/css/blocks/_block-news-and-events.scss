@@ -126,17 +126,20 @@
     padding: $grid-gutter-width;
     color: white;
     background-color: $brand-primary;
+    border-radius: $border-radius;
+    overflow: hidden;
 
     @media (min-width: $screen-md) {
       margin-top: 0;
     }
 
-    .article-header {
+    .view__header {
       margin: (-$grid-gutter-width) (-$grid-gutter-width) $grid-gutter-width;
       background-color: rgba(black, .5);
       text-align: center;
 
-      .article-header__title {
+      .events-content__title {
+        margin: 0;
         padding: ($grid-gutter-width / 2) $grid-gutter-width;
       }
     }
@@ -187,6 +190,7 @@
             width: 60px;
             overflow: hidden;
             background-color: rgba(black, .2);
+            border-radius: $border-radius;
             text-align: center;
 
             .events-content-article-header__date-month,
@@ -223,7 +227,7 @@
     }
 
     // TODO: Add class names to this section
-    .article-footer {
+    .view__footer {
       text-align: center;
 
       p {
