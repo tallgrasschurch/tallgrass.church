@@ -853,25 +853,10 @@ form .preview {
 
 #footer {
   position: relative;
-  padding: calc((20px * 2) + 80px + 20px) 0 40px;
+  padding: 40px 0;
   color: #777;
   font-size: 1.4rem;
   text-align: center;
-}
-
-#footer::before {
-  content: "";
-  position: absolute;
-  top: 40px;
-  left: calc(50% - (80px / 2));
-  display: block;
-  width: 80px;
-  height: 80px;
-  background-image: url("../img/logo-icon.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 80px 80px;
-  opacity: .5;
 }
 
 #footer a {
