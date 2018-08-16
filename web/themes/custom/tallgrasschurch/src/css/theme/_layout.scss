@@ -43,9 +43,14 @@
 
 #header {
   margin: 0;
-  padding: ($grid-gutter-width / 2) 0;
+  padding: $grid-gutter-width 0;
   background-color: white;
   border-bottom: 1px solid $grey-lighter;
+
+  @media (min-width: $screen-md) {
+    padding-top: ($grid-gutter-width / 2);
+    padding-bottom: ($grid-gutter-width / 2);
+  }
 }
 
 #header .container {}

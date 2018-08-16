@@ -822,9 +822,16 @@ form .preview {
 
 #header {
   margin: 0;
-  padding: 10px 0;
+  padding: 20px 0;
   background-color: white;
   border-bottom: 1px solid #ddd;
+}
+
+@media (min-width: 768px) {
+  #header {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
 }
 
 @media (min-width: 768px) {
