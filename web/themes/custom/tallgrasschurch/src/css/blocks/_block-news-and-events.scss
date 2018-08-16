@@ -35,20 +35,14 @@
       grid-column-end: span 8;
     }
 
-    // TODO: Get a better selector for this
-    > .article-header {
-      display: none;
+    .news-content__title {
+      margin-top: 0;
     }
 
-    > .article-footer {
+    .view__footer {
 
       p {
-        text-align: left; // TODO: This is weird?
-
-        a {
-          @extend .btn;
-          @extend .btn-primary;
-        }
+        margin-bottom: 0;
       }
     }
   }

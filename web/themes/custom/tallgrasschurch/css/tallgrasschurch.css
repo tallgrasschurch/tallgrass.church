@@ -503,7 +503,7 @@ form .preview {
   border: 1px solid #ddd;
 }
 
-.btn, #block-tallgrasschurch-news-and-events .news-content > .article-footer p a {
+.btn {
   display: inline-block;
   padding: 5px 10px;
   border: 1px solid transparent;
@@ -524,16 +524,16 @@ form .preview {
   transition: color .2s ease-in-out, background-color .2s ease-in-out, border-color .2s ease-in-out, box-shadow .2s ease-in-out, -webkit-box-shadow .2s ease-in-out;
 }
 
-.btn:focus, #block-tallgrasschurch-news-and-events .news-content > .article-footer p a:focus {
+.btn:focus {
   outline: 0;
 }
 
-.btn-primary, #block-tallgrasschurch-news-and-events .news-content > .article-footer p a {
+.btn-primary {
   color: white;
   background-color: #305696;
 }
 
-.btn-primary:hover, #block-tallgrasschurch-news-and-events .news-content > .article-footer p a:hover, .btn-primary:focus, #block-tallgrasschurch-news-and-events .news-content > .article-footer p a:focus {
+.btn-primary:hover, .btn-primary:focus {
   background-color: #24406f;
 }
 
@@ -1626,12 +1626,12 @@ form .preview {
   }
 }
 
-#block-tallgrasschurch-news-and-events .news-content > .article-header {
-  display: none;
+#block-tallgrasschurch-news-and-events .news-content .news-content__title {
+  margin-top: 0;
 }
 
-#block-tallgrasschurch-news-and-events .news-content > .article-footer p {
-  text-align: left;
+#block-tallgrasschurch-news-and-events .news-content .view__footer p {
+  margin-bottom: 0;
 }
 
 #block-tallgrasschurch-news-and-events .news-content-article {
