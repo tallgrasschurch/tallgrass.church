@@ -5,6 +5,32 @@
 
 .region {}
 
+
+// Header region
+// -------------------------
+
+.region--header {
+
+  @media (min-width: $screen-md) {
+    display: flex;
+    align-items: center;
+
+    .block {
+      flex: 1 1 auto;
+    }
+  }
+}
+
+
+// Content top region
+// -------------------------
+
+.region--content-top {}
+
+
+// Content region
+// -------------------------
+
 // TODO: Organize this stuff in one file or multiple files
 .region--content {
   //display: flex;
@@ -57,3 +83,15 @@
     //order: 5;
   }
 }
+
+
+// Content bottom region
+// -------------------------
+
+.region--content-bottom {}
+
+
+// Footer region
+// -------------------------
+
+.region--footer {}

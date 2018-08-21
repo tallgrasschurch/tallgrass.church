@@ -785,10 +785,6 @@ form .preview {
   margin: 0;
 }
 
-.page {
-  background-color: white;
-}
-
 .container {
   padding-left: 20px;
   padding-right: 20px;
@@ -820,6 +816,10 @@ form .preview {
   }
 }
 
+.page {
+  background-color: white;
+}
+
 #header {
   margin: 0;
   padding: 20px 0;
@@ -831,22 +831,6 @@ form .preview {
   #header {
     padding-top: 10px;
     padding-bottom: 10px;
-  }
-}
-
-@media (min-width: 768px) {
-  .region--header {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .region--header .block {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 1 auto;
-            flex: 1 1 auto;
   }
 }
 
@@ -870,125 +854,44 @@ form .preview {
   color: inherit;
 }
 
-.page-title {
-  margin-bottom: 80px;
-  padding: 80px 0;
-  color: white;
-  background-color: #172a49;
-  text-align: center;
+@media (min-width: 768px) {
+  .region--header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .region--header .block {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+  }
 }
 
-.page-title .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.page-title a {
-  color: inherit;
-}
-
-.page-title .page-title__title {
-  -webkit-box-ordinal-group: 3;
-      -ms-flex-order: 2;
-          order: 2;
-  margin: 0;
-  font-size: 6.4rem;
-  line-height: normal;
-}
-
-.page-title .page-title__subtitle {
-  -webkit-box-ordinal-group: 4;
-      -ms-flex-order: 3;
-          order: 3;
-  margin: 0;
-  font-size: 1.2em;
-  font-style: italic;
-  line-height: 1.2;
-}
-
-.page-title .page-title__date {
-  -webkit-box-ordinal-group: 2;
-      -ms-flex-order: 1;
-          order: 1;
-  margin-bottom: 10px;
-}
-
-.page-title .page-title__meta {
-  -webkit-box-ordinal-group: 5;
-      -ms-flex-order: 4;
-          order: 4;
-  margin-top: 20px;
-}
-
-.page-title .page-title__meta:before {
-  content: "";
-  display: block;
-  width: 80px;
-  margin: 0 auto 20px;
-  border-top: 1px solid rgba(255, 255, 255, 0.5);
-}
-
-.page-title .page-title__meta .page-title__meta-item {
-  display: inline-block;
-}
-
-.page-title .page-title__meta .page-title__meta-item:after {
-  content: " / ";
-  display: inline-block;
-  margin-left: 5px;
-  margin-right: 5px;
-  color: rgba(255, 255, 255, 0.5);
-}
-
-.page-title .page-title__meta .page-title__meta-item:last-child:after {
-  content: "";
-}
-
-.menu-local-tasks {
-  margin: 0;
+.region--content #block-tallgrasschurch-breadcrumbs {
+  margin: 80px 0 -60px;
   font-size: 1.4rem;
-  line-height: 1.5;
+}
+
+.region--content #block-tallgrasschurch-breadcrumbs ol {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
   text-align: center;
 }
 
-.menu-local-tasks .menu-local-tasks__list {
-  margin: 0;
-  padding: 0 10px;
-  list-style-type: none;
-  border-bottom: 1px solid #ddd;
-}
-
-.menu-local-tasks .menu-local-tasks__list .menu-local-tasks__list-item {
+.region--content #block-tallgrasschurch-breadcrumbs ol li {
   display: inline-block;
-  margin: 0 5px -1px 0;
-  white-space: nowrap;
 }
 
-.menu-local-tasks .menu-local-tasks__list .menu-local-tasks__list-item:last-child {
-  margin-right: 0;
+.region--content #block-tallgrasschurch-breadcrumbs ol li:after {
+  content: " / ";
 }
 
-.menu-local-tasks .menu-local-tasks__list .menu-local-tasks__list-item a {
-  display: block;
-  padding: 10px 20px;
-  color: inherit;
-  background-color: #f8f8f8;
-  border: 1px solid #ddd;
-  text-decoration: none;
-}
-
-.menu-local-tasks .menu-local-tasks__list .menu-local-tasks__list-item a:hover, .menu-local-tasks .menu-local-tasks__list .menu-local-tasks__list-item a:focus {
-  text-decoration: underline;
-}
-
-.menu-local-tasks .menu-local-tasks__list .menu-local-tasks__list-item a.is-active {
-  background-color: white;
-  border-bottom-color: white;
+.region--content #block-tallgrasschurch-breadcrumbs ol li:last-child:after {
+  content: "";
 }
 
 @media (min-width: 992px) {
@@ -1006,19 +909,6 @@ form .preview {
 .view .view-wrapper {
   grid-column-start: 3;
   grid-column-end: span 8;
-  /*
-    & > *:first-child,
-    & > *:first-child > *:first-child,
-    & > *:first-child > *:first-child > *:first-child {
-      margin-top: 0;
-    }
-
-    & > *:last-child,
-    & > *:last-child > *:last-child,
-    & > *:last-child > *:last-child > *:last-child {
-      margin-bottom: 0;
-    }
-    */
 }
 
 .content--full-width .node-wrapper,
@@ -1027,28 +917,28 @@ form .preview {
   grid-column-end: span 12;
 }
 
-.node--full.article--teaching .article-wrapper {
+.node--full.node--teaching .node-wrapper {
   grid-column-start: 2;
   grid-column-end: span 10;
 }
 
 @media (min-width: 992px) {
-  .node--full.article--teaching .layout--sidebar-right {
+  .node--full.node--teaching .layout--sidebar-right {
     display: grid;
     grid-template-columns: repeat(10, [col] 1fr);
     grid-gap: 20px;
   }
-  .node--full.article--teaching .layout--sidebar-right .layout__top {
+  .node--full.node--teaching .layout--sidebar-right .layout__top {
     grid-column-end: span 10;
   }
-  .node--full.article--teaching .layout--sidebar-right .layout__main {
+  .node--full.node--teaching .layout--sidebar-right .layout__main {
     grid-column-end: span 7;
   }
-  .node--full.article--teaching .layout--sidebar-right .layout__sidebar {
+  .node--full.node--teaching .layout--sidebar-right .layout__sidebar {
     grid-column-end: span 3;
     padding-left: 20px;
   }
-  .node--full.article--teaching .layout--sidebar-right .layout__bottom {
+  .node--full.node--teaching .layout--sidebar-right .layout__bottom {
     grid-column-end: span 10;
   }
 }
@@ -1132,33 +1022,6 @@ form .preview {
   -webkit-box-ordinal-group: 6;
       -ms-flex-order: 5;
           order: 5;
-}
-
-.status-messages {
-  margin: -1px 0 0;
-  border-left: none;
-  border-right: none;
-  text-align: center;
-}
-
-.links {
-  padding: 0;
-  list-style-type: none;
-}
-
-.links li {
-  display: inline-block;
-}
-
-.links li a {
-  display: inline-block;
-  padding: 5px 10px;
-  border: 1px solid #ddd;
-  text-decoration: none;
-}
-
-.links li a:hover, .links li a:focus {
-  background-color: #f8f8f8;
 }
 
 .card--teaching .card__body,
@@ -1303,30 +1166,6 @@ form .preview {
   .series-list .view-rows > * {
     grid-column-end: span 1;
   }
-}
-
-.region--content #block-tallgrasschurch-breadcrumbs {
-  margin: 80px 0 -60px;
-  font-size: 1.4rem;
-}
-
-.region--content #block-tallgrasschurch-breadcrumbs ol {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-  text-align: center;
-}
-
-.region--content #block-tallgrasschurch-breadcrumbs ol li {
-  display: inline-block;
-}
-
-.region--content #block-tallgrasschurch-breadcrumbs ol li:after {
-  content: " / ";
-}
-
-.region--content #block-tallgrasschurch-breadcrumbs ol li:last-child:after {
-  content: "";
 }
 
 .block {
@@ -1867,6 +1706,85 @@ form .preview {
   text-decoration: none;
 }
 
+.page-title {
+  margin-bottom: 80px;
+  padding: 80px 0;
+  color: white;
+  background-color: #172a49;
+  text-align: center;
+}
+
+.page-title .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.page-title a {
+  color: inherit;
+}
+
+.page-title .page-title__title {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  margin: 0;
+  font-size: 6.4rem;
+  line-height: normal;
+}
+
+.page-title .page-title__subtitle {
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
+  margin: 0;
+  font-size: 1.2em;
+  font-style: italic;
+  line-height: 1.2;
+}
+
+.page-title .page-title__date {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  margin-bottom: 10px;
+}
+
+.page-title .page-title__meta {
+  -webkit-box-ordinal-group: 5;
+      -ms-flex-order: 4;
+          order: 4;
+  margin-top: 20px;
+}
+
+.page-title .page-title__meta:before {
+  content: "";
+  display: block;
+  width: 80px;
+  margin: 0 auto 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.page-title .page-title__meta .page-title__meta-item {
+  display: inline-block;
+}
+
+.page-title .page-title__meta .page-title__meta-item:after {
+  content: " / ";
+  display: inline-block;
+  margin-left: 5px;
+  margin-right: 5px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.page-title .page-title__meta .page-title__meta-item:last-child:after {
+  content: "";
+}
+
 #block-tallgrasschurch-subnav {
   margin: 20px 0;
   background-color: white;
@@ -2058,4 +1976,73 @@ form .preview {
   background-color: white;
   border-radius: 1em;
   text-decoration: none;
+}
+
+.links {
+  padding: 0;
+  list-style-type: none;
+}
+
+.links li {
+  display: inline-block;
+}
+
+.links li a {
+  display: inline-block;
+  padding: 5px 10px;
+  border: 1px solid #ddd;
+  text-decoration: none;
+}
+
+.links li a:hover, .links li a:focus {
+  background-color: #f8f8f8;
+}
+
+.menu-local-tasks {
+  margin: 0;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.menu-local-tasks .menu-local-tasks__list {
+  margin: 0;
+  padding: 0 10px;
+  list-style-type: none;
+  border-bottom: 1px solid #ddd;
+}
+
+.menu-local-tasks .menu-local-tasks__list .menu-local-tasks__list-item {
+  display: inline-block;
+  margin: 0 5px -1px 0;
+  white-space: nowrap;
+}
+
+.menu-local-tasks .menu-local-tasks__list .menu-local-tasks__list-item:last-child {
+  margin-right: 0;
+}
+
+.menu-local-tasks .menu-local-tasks__list .menu-local-tasks__list-item a {
+  display: block;
+  padding: 10px 20px;
+  color: inherit;
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  text-decoration: none;
+}
+
+.menu-local-tasks .menu-local-tasks__list .menu-local-tasks__list-item a:hover, .menu-local-tasks .menu-local-tasks__list .menu-local-tasks__list-item a:focus {
+  text-decoration: underline;
+}
+
+.menu-local-tasks .menu-local-tasks__list .menu-local-tasks__list-item a.is-active {
+  background-color: white;
+  border-bottom-color: white;
+}
+
+.status-messages {
+  margin: -1px 0 0;
+  border-left: none;
+  border-right: none;
+  text-align: center;
 }

@@ -3,9 +3,6 @@
 // --------------------------------------------------
 
 
-.article--teaching {}
-
-
 .node--full,
 .view {
 
@@ -19,21 +16,6 @@
   .view-wrapper {
     grid-column-start: 3;
     grid-column-end: span 8;
-
-    // TODO: This is messing up .card when it's at the bottom of the page
-    /*
-    & > *:first-child,
-    & > *:first-child > *:first-child,
-    & > *:first-child > *:first-child > *:first-child {
-      margin-top: 0;
-    }
-
-    & > *:last-child,
-    & > *:last-child > *:last-child,
-    & > *:last-child > *:last-child > *:last-child {
-      margin-bottom: 0;
-    }
-    */
   }
 }
 
@@ -46,9 +28,9 @@
   }
 }
 
-.node--full.article--teaching {
+.node--full.node--teaching {
 
-  .article-wrapper {
+  .node-wrapper {
     grid-column-start: 2;
     grid-column-end: span 10;
   }
@@ -160,47 +142,5 @@
 
   > *:not(.node-header__title):not(.node-header__subtitle):not(.node-header__date):not(.node-header__meta) {
     order: 5;
-  }
-}
-
-
-// Status messages
-// -------------------------
-
-// TODO: Finish these styles
-.status-messages {
-  @extend .alert;
-  @extend .alert--primary;
-  margin: -1px 0 0;
-  border-left: none;
-  border-right: none;
-  text-align: center;
-
-  .container {}
-
-  .status-message {}
-}
-
-
-// TODO: Re-name this class to something more specific
-// TODO: Make these styles more re-usable
-.links {
-  padding: 0;
-  list-style-type: none;
-
-  li {
-    display: inline-block;
-
-    a {
-      display: inline-block;
-      padding: 5px 10px;
-      border: 1px solid $grey-lighter;
-      text-decoration: none;
-
-      &:hover,
-      &:focus {
-        background-color: $grey-lightest;
-      }
-    }
   }
 }
