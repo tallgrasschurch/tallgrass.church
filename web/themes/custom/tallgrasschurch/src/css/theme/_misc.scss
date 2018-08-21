@@ -6,7 +6,7 @@
 .article--teaching {}
 
 
-.article--full,
+.node--full,
 .view {
 
   @media (min-width: $screen-lg) {
@@ -15,7 +15,7 @@
     grid-gap: $grid-gutter-width;
   }
 
-  .article-wrapper,
+  .node-wrapper,
   .view-wrapper {
     grid-column-start: 3;
     grid-column-end: span 8;
@@ -39,14 +39,14 @@
 
 .content--full-width {
 
-  .article-wrapper,
+  .node-wrapper,
   .view-wrapper {
     grid-column-start: 1;
     grid-column-end: span 12;
   }
 }
 
-.article--full.article--teaching {
+.node--full.article--teaching {
 
   .article-wrapper {
     grid-column-start: 2;
@@ -84,18 +84,18 @@
 
 
 // TODO: Some of these styles should only apply to specific content types
-.article-header {
+.node-header {
   display: flex;
   flex-direction: column;
   margin-bottom: $grid-gutter-width;
 
-  .article-header__title {
+  .node-header__title {
     order: 2;
     margin: 0;
     line-height: 1.2;
   }
 
-  .article-header__subtitle {
+  .node-header__subtitle {
     order: 3;
     margin: 0;
     font-size: 1.2em;
@@ -103,7 +103,7 @@
     line-height: 1.2;
   }
 
-  .article-header__date {
+  .node-header__date {
     order: 1;
     margin-top: 0;
     margin-bottom: 10px;
@@ -111,7 +111,7 @@
     line-height: $line-height-base;
   }
 
-  .article-header__meta {
+  .node-header__meta {
     order: 4;
     //display: flex;
     //justify-content: space-between;
@@ -125,9 +125,9 @@
     }
   }
 
-  .article-header__speaker,
-  .article-header__scripture,
-  .article-header__series {
+  .node-header__speaker,
+  .node-header__scripture,
+  .node-header__series {
     margin: 0;
 
     dt,
@@ -152,13 +152,13 @@
     }
   }
 
-  .article-header__speaker {}
+  .node-header__speaker {}
 
-  .article-header__scripture {}
+  .node-header__scripture {}
 
-  .article-header__series {}
+  .node-header__series {}
 
-  > *:not(.article-header__title):not(.article-header__subtitle):not(.article-header__date):not(.article-header__meta) {
+  > *:not(.node-header__title):not(.node-header__subtitle):not(.node-header__date):not(.node-header__meta) {
     order: 5;
   }
 }

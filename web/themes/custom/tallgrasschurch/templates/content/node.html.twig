@@ -73,26 +73,26 @@
 
 {%
   set classes = [
-    'article',
-    'article--' ~ view_mode,
-    'article--' ~ node_type,
+    'node',
+    'node--' ~ view_mode,
+    'node--' ~ node_type,
   ]
 %}
 
 {% if not page %}<article{{ attributes.addClass(classes) }}>{% else %}<div{{ attributes.addClass(classes) }}>{% endif %}
-  {% if page %}<div class="article-wrapper">{% endif %}
+  {% if page %}<div class="node-wrapper">{% endif %}
     {{ title_prefix }}
     {% if not page %}
-      <header class="article-header">
-        <h2{{ title_attributes.addClass('article-header__title') }}>
+      <header class="node-header">
+        <h2{{ title_attributes.addClass('node-header__title') }}>
           <a href="{{ url }}" rel="bookmark">{{ label }}</a>
         </h2>
         {% if node_type == 'teaching' %}
-          <p class="article-header__date">{{ node.getCreatedTime|format_date('custom', 'F j, Y') }}</p>
+          <p class="node-header__date">{{ node.getCreatedTime|format_date('custom', 'F j, Y') }}</p>
           {{ content.field_speaker }}
           {{ content.field_scripture_reference }}
         {% endif %}
-      </header><!-- .article-header -->
+      </header><!-- .node-header -->
       {% if series.image_id %}
         <div class="field--field-image">
           {{ drupal_image(series.image_id, 'large') }}
@@ -130,5 +130,5 @@
     {% else %}
       {{ content }}
     {% endif %}
-  {% if page %}</div>{% endif %}
+  {% if page %}</div><!-- end .node-wrapper -->{% endif %}
 {% if not page %}</article>{% else %}</div>{% endif %}
