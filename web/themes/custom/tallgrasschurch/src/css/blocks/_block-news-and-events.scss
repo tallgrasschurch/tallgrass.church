@@ -39,7 +39,7 @@
       margin-top: 0;
     }
 
-    .view__footer {
+    .view-footer {
 
       p {
         margin-bottom: 0;
@@ -133,7 +133,7 @@
       margin-top: 0;
     }
 
-    .view__header {
+    .view-header {
       margin: (-$grid-gutter-width) (-$grid-gutter-width) $grid-gutter-width;
       background-color: rgba(black, .5);
       text-align: center;
@@ -227,7 +227,7 @@
     }
 
     // TODO: Add class names to this section
-    .view__footer {
+    .view-footer {
       text-align: center;
 
       p {

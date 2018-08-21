@@ -1283,24 +1283,24 @@ form .preview {
   }
 }
 
-.view.latest-teaching .view__footer {
+.view.latest-teaching .view-footer {
   margin-top: 40px;
   text-align: center;
 }
 
-.view.latest-teaching .view__footer > * {
+.view.latest-teaching .view-footer > * {
   margin: 0;
 }
 
 @media (min-width: 992px) {
-  .teachings-list .view__rows,
-  .series-list .view__rows {
+  .teachings-list .view-rows,
+  .series-list .view-rows {
     display: grid;
     grid-template-columns: repeat(3, [col] 1fr);
     grid-gap: 20px;
   }
-  .teachings-list .view__rows > *,
-  .series-list .view__rows > * {
+  .teachings-list .view-rows > *,
+  .series-list .view-rows > * {
     grid-column-end: span 1;
   }
 }
@@ -1653,7 +1653,7 @@ form .preview {
   margin-top: 0;
 }
 
-#block-tallgrasschurch-news-and-events .news-content .view__footer p {
+#block-tallgrasschurch-news-and-events .news-content .view-footer p {
   margin-bottom: 0;
 }
 
@@ -1767,13 +1767,13 @@ form .preview {
   }
 }
 
-#block-tallgrasschurch-news-and-events .events-content .view__header {
+#block-tallgrasschurch-news-and-events .events-content .view-header {
   margin: -20px -20px 20px;
   background-color: rgba(0, 0, 0, 0.5);
   text-align: center;
 }
 
-#block-tallgrasschurch-news-and-events .events-content .view__header .events-content__title {
+#block-tallgrasschurch-news-and-events .events-content .view-header .events-content__title {
   margin: 0;
   padding: 10px 20px;
 }
@@ -1851,15 +1851,15 @@ form .preview {
   line-height: normal;
 }
 
-#block-tallgrasschurch-news-and-events .events-content .view__footer {
+#block-tallgrasschurch-news-and-events .events-content .view-footer {
   text-align: center;
 }
 
-#block-tallgrasschurch-news-and-events .events-content .view__footer p {
+#block-tallgrasschurch-news-and-events .events-content .view-footer p {
   margin: 0;
 }
 
-#block-tallgrasschurch-news-and-events .events-content .view__footer a {
+#block-tallgrasschurch-news-and-events .events-content .view-footer a {
   display: block;
   margin: 0 -20px -20px;
   padding: 10px 20px;

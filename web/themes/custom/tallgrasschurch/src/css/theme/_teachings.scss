@@ -121,7 +121,7 @@
     }
   }
 
-  .view__footer {
+  .view-footer {
     margin-top: ($grid-gutter-width * 2);
     text-align: center;
 
@@ -139,7 +139,7 @@
 .teachings-list,
 .series-list {
 
-  .view__rows {
+  .view-rows {
 
     @media (min-width: $screen-lg) {
       display: grid;
