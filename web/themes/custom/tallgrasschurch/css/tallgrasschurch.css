@@ -992,14 +992,18 @@ form .preview {
 }
 
 @media (min-width: 992px) {
-  .article--full {
+  .article--full,
+  .view {
     display: grid;
     grid-template-columns: repeat(12, [col] 1fr);
     grid-gap: 20px;
   }
 }
 
-.article--full .article-wrapper {
+.article--full .article-wrapper,
+.article--full .view-wrapper,
+.view .article-wrapper,
+.view .view-wrapper {
   grid-column-start: 3;
   grid-column-end: span 8;
   /*
@@ -1015,6 +1019,12 @@ form .preview {
       margin-bottom: 0;
     }
     */
+}
+
+.content--full-width .article-wrapper,
+.content--full-width .view-wrapper {
+  grid-column-start: 1;
+  grid-column-end: span 12;
 }
 
 .article--full.article--teaching .article-wrapper {

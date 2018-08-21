@@ -6,7 +6,8 @@
 .article--teaching {}
 
 
-.article--full {
+.article--full,
+.view {
 
   @media (min-width: $screen-lg) {
     display: grid;
@@ -14,7 +15,8 @@
     grid-gap: $grid-gutter-width;
   }
 
-  .article-wrapper {
+  .article-wrapper,
+  .view-wrapper {
     grid-column-start: 3;
     grid-column-end: span 8;
 
@@ -32,6 +34,15 @@
       margin-bottom: 0;
     }
     */
+  }
+}
+
+.content--full-width {
+
+  .article-wrapper,
+  .view-wrapper {
+    grid-column-start: 1;
+    grid-column-end: span 12;
   }
 }
 
