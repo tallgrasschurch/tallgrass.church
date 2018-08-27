@@ -21,13 +21,7 @@
 %}
 
 {% if content %}
-  {% if region == 'content' %}
-    <article{{ attributes.addclass(classes) }}>
-      {{ content }}
-    </article>
-  {% else %}
-    <div{{ attributes.addclass(classes) }}>
-      {{ content }}
-    </div>
-  {% endif %}
+  <div{{ attributes.addclass(classes) }}>
+    {{ content }}
+  </div>
 {% endif %}
