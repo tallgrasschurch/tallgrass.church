@@ -44,42 +44,44 @@
   ]
 %}
 
-<section{{ attributes.addClass(classes) }}>
-  <div class="view-wrapper">
-    {{ title_prefix }}
-    {{ title }}
-    {{ title_suffix }}
+{% if title or header or attachment_before or rows or empty or attachment_after or footer %}
+  <section{{ attributes.addClass(classes) }}>
+    <div class="view-wrapper">
+      {{ title_prefix }}
+      {{ title }}
+      {{ title_suffix }}
 
-    {% if header %}
-      <header class="view-header">
-        {{ header }}
+      {% if header %}
+        <header class="view-header">
+          {{ header }}
 
-        {# TODO: Remove this section (eventually)
-        {{ drupal_block('local_tasks_block') }}
-        #}
-      </header>
-    {% endif %}
+          {# TODO: Remove this section (eventually)
+          {{ drupal_block('local_tasks_block') }}
+          #}
+        </header>
+      {% endif %}
 
-    {{ exposed }}
-    {{ attachment_before }}
+      {{ exposed }}
+      {{ attachment_before }}
 
-    {% if rows %}
-      <div class="view-rows">
-        {{ rows }}
-      </div>
-    {% endif %}
-    {{ empty }}
-    {{ pager }}
+      {% if rows %}
+        <div class="view-rows">
+          {{ rows }}
+        </div>
+      {% endif %}
+      {{ empty }}
+      {{ pager }}
 
-    {{ attachment_after }}
-    {{ more }}
+      {{ attachment_after }}
+      {{ more }}
 
-    {% if footer %}
-      <footer class="view-footer">
-        {{ footer }}
-      </footer>
-    {% endif %}
+      {% if footer %}
+        <footer class="view-footer">
+          {{ footer }}
+        </footer>
+      {% endif %}
 
-    {{ feed_icons }}
-  </div><!-- .view-wrapper -->
-</section>
+      {{ feed_icons }}
+    </div><!-- .view-wrapper -->
+  </section>
+{% endif %}
