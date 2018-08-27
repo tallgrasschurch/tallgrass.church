@@ -1411,6 +1411,16 @@ form .preview {
   list-style-type: none;
 }
 
+#block-tallgrasschurch-main-menu ul li a {
+  color: #333;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#block-tallgrasschurch-main-menu ul li a:hover, #block-tallgrasschurch-main-menu ul li a:active {
+  text-decoration: underline;
+}
+
 @media (min-width: 768px) {
   #block-tallgrasschurch-main-menu {
     margin: 0;
