@@ -838,10 +838,6 @@ form .preview {
   background-color: #f8f8f8;
 }
 
-#content {
-  margin: 0;
-}
-
 #footer {
   position: relative;
   padding: 40px 0;
@@ -870,75 +866,23 @@ form .preview {
   }
 }
 
-.region--content #block-tallgrasschurch-breadcrumbs {
-  margin: 80px 0 -60px;
-  font-size: 1.4rem;
-}
-
-.region--content #block-tallgrasschurch-breadcrumbs ol {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-  text-align: center;
-}
-
-.region--content #block-tallgrasschurch-breadcrumbs ol li {
-  display: inline-block;
-}
-
-.region--content #block-tallgrasschurch-breadcrumbs ol li:after {
-  content: " / ";
-}
-
-.region--content #block-tallgrasschurch-breadcrumbs ol li:last-child:after {
-  content: "";
-}
-
 @media (min-width: 992px) {
-  .node--full,
-  .view {
-    display: grid;
-    grid-template-columns: repeat(12, [col] 1fr);
-    grid-gap: 20px;
-  }
-}
-
-.node--full .node-wrapper,
-.node--full .view-wrapper,
-.view .node-wrapper,
-.view .view-wrapper {
-  grid-column-start: 3;
-  grid-column-end: span 8;
-}
-
-.content--full-width .node-wrapper,
-.content--full-width .view-wrapper {
-  grid-column-start: 1;
-  grid-column-end: span 12;
-}
-
-.node--full.node--teaching .node-wrapper {
-  grid-column-start: 2;
-  grid-column-end: span 10;
-}
-
-@media (min-width: 992px) {
-  .node--full.node--teaching .layout--sidebar-right {
+  .layout--sidebar-right {
     display: grid;
     grid-template-columns: repeat(10, [col] 1fr);
     grid-gap: 20px;
   }
-  .node--full.node--teaching .layout--sidebar-right .layout__top {
+  .layout--sidebar-right .layout__top {
     grid-column-end: span 10;
   }
-  .node--full.node--teaching .layout--sidebar-right .layout__main {
+  .layout--sidebar-right .layout__main {
     grid-column-end: span 7;
   }
-  .node--full.node--teaching .layout--sidebar-right .layout__sidebar {
+  .layout--sidebar-right .layout__sidebar {
     grid-column-end: span 3;
     padding-left: 20px;
   }
-  .node--full.node--teaching .layout--sidebar-right .layout__bottom {
+  .layout--sidebar-right .layout__bottom {
     grid-column-end: span 10;
   }
 }
@@ -1172,29 +1116,29 @@ form .preview {
   clear: both;
 }
 
-.region--content-bottom .block {
+.region--content-below .block {
   margin: 0;
   padding: 40px 0;
 }
 
 @media (min-width: 576px) {
-  .region--content-bottom .block {
+  .region--content-below .block {
     padding: 80px 0;
   }
 }
 
-.region--content-bottom .block .block__label {
+.region--content-below .block .block__label {
   margin-top: 0;
   margin-bottom: 40px;
   font-size: 4.8rem;
   text-align: center;
 }
 
-.region--content-bottom .block .article-footer {
+.region--content-below .block .article-footer {
   margin: 20px 0 0 0;
 }
 
-.region--content-bottom .block .article-footer > * {
+.region--content-below .block .article-footer > * {
   margin: 0;
   text-align: center;
 }
@@ -1284,7 +1228,7 @@ form .preview {
   }
 }
 
-#block-tallgrasschurch-central-gathering .wrapper {
+#block-tallgrasschurch-central-gathering .block-wrapper {
   padding: 40px;
   background-color: rgba(255, 255, 255, 0.9);
   border-radius: 5px;
@@ -1294,14 +1238,14 @@ form .preview {
 }
 
 @media (min-width: 768px) {
-  #block-tallgrasschurch-central-gathering .wrapper {
+  #block-tallgrasschurch-central-gathering .block-wrapper {
     grid-column-start: 2;
     grid-column-end: span 10;
   }
 }
 
 @media (min-width: 992px) {
-  #block-tallgrasschurch-central-gathering .wrapper {
+  #block-tallgrasschurch-central-gathering .block-wrapper {
     grid-column-start: 3;
     grid-column-end: span 8;
   }
@@ -1360,8 +1304,30 @@ form .preview {
   margin: 0;
 }
 
-#block-tallgrasschurch-content {
+.block--block-tallgrasschurch-content {
   margin: 80px 0;
+}
+
+@media (min-width: 992px) {
+  .block--block-tallgrasschurch-content .container {
+    display: grid;
+    grid-template-columns: repeat(12, [col] 1fr);
+    grid-gap: 20px;
+  }
+}
+
+@media (min-width: 992px) {
+  .block--block-tallgrasschurch-content .block-wrapper {
+    grid-column-start: 3;
+    grid-column-end: span 8;
+  }
+}
+
+@media (min-width: 992px) {
+  .page--teaching .block--block-tallgrasschurch-content .block-wrapper {
+    grid-column-start: 2;
+    grid-column-end: span 10;
+  }
 }
 
 #block-tallgrasschurch-hero-home {
@@ -1378,7 +1344,7 @@ form .preview {
 }
 
 @media (min-width: 992px) {
-  #block-tallgrasschurch-hero-home .wrapper {
+  #block-tallgrasschurch-hero-home .block-wrapper {
     display: grid;
     grid-template-columns: repeat(12, [col] 1fr);
     grid-gap: 20px;

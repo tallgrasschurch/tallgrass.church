@@ -3,10 +3,38 @@
 // --------------------------------------------------
 
 
-#block-tallgrasschurch-content {
+.block--block-tallgrasschurch-content {
   margin: ($grid-gutter-width * 4) 0;
 
-  .container {}
+  .container {
 
-  .wrapper {}
+    @media (min-width: $screen-lg) {
+      display: grid;
+      grid-template-columns: repeat(12, [col] 1fr);
+      grid-gap: $grid-gutter-width;
+    }
+  }
+
+  .block-wrapper {
+
+    @media (min-width: $screen-lg) {
+      grid-column-start: 3;
+      grid-column-end: span 8;
+    }
+  }
+}
+
+
+// Teaching
+// -------------------------
+
+.page--teaching .block--block-tallgrasschurch-content {
+
+  .block-wrapper {
+
+    @media (min-width: $screen-lg) {
+      grid-column-start: 2;
+      grid-column-end: span 10;
+    }
+  }
 }

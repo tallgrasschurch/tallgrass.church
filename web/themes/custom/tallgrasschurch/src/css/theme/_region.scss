@@ -22,6 +22,12 @@
 }
 
 
+// Above the content region
+// -------------------------
+
+.region--content-above {}
+
+
 // Content top region
 // -------------------------
 
@@ -31,64 +37,19 @@
 // Content region
 // -------------------------
 
-// TODO: Organize this stuff in one file or multiple files
-.region--content {
-  //display: flex;
-  //flex-direction: column;
-
-  #block-tallgrasschurch-page-title {
-    //order: 2;
-  }
-
-  // TODO: This is in the wrong place
-  #block-tallgrasschurch-breadcrumbs {
-    //order: 1;
-    margin: ($grid-gutter-width * 4) 0 (-$grid-gutter-width * 3);
-    font-size: 1.4rem;
-
-    ol {
-      margin: 0;
-      padding: 0;
-      list-style-type: none;
-      text-align: center;
-
-      li {
-        display: inline-block;
-
-        &:after {
-          content: " / ";
-        }
-
-        &:last-child {
-
-          &:after {
-            content: "";
-          }
-        }
-
-        a {}
-      }
-    }
-  }
-
-  #block-tallgrasschurch-subnav {
-    //order: 3;
-  }
-
-  #block-tallgrasschurch-subnav-2 {
-    //order: 4;
-  }
-
-  #block-tallgrasschurch-content {
-    //order: 5;
-  }
-}
+.region--content {}
 
 
 // Content bottom region
 // -------------------------
 
 .region--content-bottom {}
+
+
+// Below the content region
+// -------------------------
+
+.region--content-below {}
 
 
 // Footer region
