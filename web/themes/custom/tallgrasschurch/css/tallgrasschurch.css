@@ -1090,12 +1090,15 @@ form .preview {
   text-decoration: none;
 }
 
-.card-wrapping-link .card--teaching {
+.card-wrapping-link .card--teaching,
+.card-wrapping-link .card--series {
   -webkit-transition: all .2s linear;
   transition: all .2s linear;
 }
 
-.card-wrapping-link:hover .card--teaching, .card-wrapping-link:focus .card--teaching {
+.card-wrapping-link:hover .card--teaching,
+.card-wrapping-link:hover .card--series, .card-wrapping-link:focus .card--teaching,
+.card-wrapping-link:focus .card--series {
   -webkit-box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.3);
           box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.3);
 }

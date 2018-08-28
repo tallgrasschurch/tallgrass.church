@@ -52,17 +52,20 @@
 // Link wrapped around card
 // -------------------------
 
+// TODO: Move this to the card component?
 .card-wrapping-link {
   text-decoration: none;
 
-  .card--teaching {
+  .card--teaching,
+  .card--series {
     transition: all .2s linear;
   }
 
   &:hover,
   &:focus {
 
-    .card--teaching {
+    .card--teaching,
+    .card--series {
       box-shadow: 0 1px 3px 1px rgba(black, .3);
     }
   }
