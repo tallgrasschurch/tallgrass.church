@@ -830,7 +830,7 @@ form .preview {
 
 .pagination .pagination__items .pagination__item.disabled .pagination__link {
   cursor: default;
-  color: #aaa;
+  color: #777;
 }
 
 .pagination .pagination__items .pagination__item.disabled .pagination__link:hover, .pagination .pagination__items .pagination__item.disabled .pagination__link:focus {
