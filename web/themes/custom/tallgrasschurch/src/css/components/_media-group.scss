@@ -3,11 +3,10 @@
 // --------------------------------------------------
 
 
+// TODO: This could use some work to make it more consistent with other card styles
 .media-group {
-  margin: 0 0 ($grid-gutter-width * 2);
+  @extend .card;
   padding: $grid-gutter-width;
-  background-color: white;
-  border: 1px solid $grey-lighter;
 
   .media-group__nav {
     display: flex;

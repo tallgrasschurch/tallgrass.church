@@ -589,7 +589,7 @@ form .preview {
   text-align: center;
 }
 
-.card, .card--feature, .card--teaching,
+.card, .card--feature, .media-group, .card--teaching,
 .card--series {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -608,34 +608,34 @@ form .preview {
           box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.1);
 }
 
-.card > *, .card--feature > *, .card--teaching > *, .card--series > * {
+.card > *, .card--feature > *, .media-group > *, .card--teaching > *, .card--series > * {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 auto;
           flex: 0 1 auto;
 }
 
-.card .card__body, .card--feature .card__body, .card--teaching .card__body, .card--series .card__body {
+.card .card__body, .card--feature .card__body, .media-group .card__body, .card--teaching .card__body, .card--series .card__body {
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
           order: 2;
 }
 
-.card .card__body .card__title, .card--feature .card__body .card__title, .card--teaching .card__body .card__title, .card--series .card__body .card__title {
+.card .card__body .card__title, .card--feature .card__body .card__title, .media-group .card__body .card__title, .card--teaching .card__body .card__title, .card--series .card__body .card__title {
   margin: 0;
   font-size: inherit;
   line-height: 1.5;
 }
 
-.card .card__body .card__title a, .card--feature .card__body .card__title a, .card--teaching .card__body .card__title a, .card--series .card__body .card__title a {
+.card .card__body .card__title a, .card--feature .card__body .card__title a, .media-group .card__body .card__title a, .card--teaching .card__body .card__title a, .card--series .card__body .card__title a {
   text-decoration: none;
 }
 
-.card .card__body .card__subtitle, .card--feature .card__body .card__subtitle, .card--teaching .card__body .card__subtitle, .card--series .card__body .card__subtitle {
+.card .card__body .card__subtitle, .card--feature .card__body .card__subtitle, .media-group .card__body .card__subtitle, .card--teaching .card__body .card__subtitle, .card--series .card__body .card__subtitle {
   margin: 0;
   font-style: italic;
 }
 
-.card .card__img, .card--feature .card__img, .card--teaching .card__img, .card--series .card__img {
+.card .card__img, .card--feature .card__img, .media-group .card__img, .card--teaching .card__img, .card--series .card__img {
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;
@@ -685,7 +685,7 @@ form .preview {
 }
 
 @supports (display: grid) {
-  .card-deck .card, .card-deck .card--feature, .card-deck .card--teaching,
+  .card-deck .card, .card-deck .card--feature, .card-deck .media-group, .card-deck .card--teaching,
   .card-deck .card--series {
     margin: 0;
   }
@@ -736,10 +736,7 @@ form .preview {
 }
 
 .media-group {
-  margin: 0 0 40px;
   padding: 20px;
-  background-color: white;
-  border: 1px solid #ddd;
 }
 
 .media-group .media-group__nav {
