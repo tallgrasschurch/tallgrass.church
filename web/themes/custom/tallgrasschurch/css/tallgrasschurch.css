@@ -782,6 +782,61 @@ form .preview {
   margin: 0;
 }
 
+.pagination {
+  margin-top: 40px;
+}
+
+.pagination .pagination__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.pagination .pagination__items .pagination__item .pagination__link {
+  position: relative;
+  display: block;
+  padding: 5px 10px;
+  margin-left: -1px;
+  background-color: white;
+  border: 1px solid #ddd;
+  text-decoration: none;
+}
+
+.pagination .pagination__items .pagination__item .pagination__link:hover, .pagination .pagination__items .pagination__item .pagination__link:focus {
+  background-color: #eee;
+}
+
+.pagination .pagination__items .pagination__item:first-child .pagination__link {
+  margin-left: 0;
+  border-radius: 5px 0 0 5px;
+}
+
+.pagination .pagination__items .pagination__item:last-child .pagination__link {
+  border-radius: 0 5px 5px 0;
+}
+
+.pagination .pagination__items .pagination__item.is-active .pagination__link {
+  z-index: 1;
+  color: white;
+  background-color: #305696;
+  border-color: #305696;
+}
+
+.pagination .pagination__items .pagination__item.disabled .pagination__link {
+  cursor: default;
+  color: #aaa;
+}
+
+.pagination .pagination__items .pagination__item.disabled .pagination__link:hover, .pagination .pagination__items .pagination__item.disabled .pagination__link:focus {
+  background-color: white;
+}
+
 .container {
   padding-left: 20px;
   padding-right: 20px;

@@ -1,0 +1,78 @@
+//
+// Pagination
+// --------------------------------------------------
+
+
+.pagination {
+  margin-top: ($grid-gutter-width * 2);
+
+  .pagination__items {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    .pagination__item {
+
+      .pagination__link {
+        position: relative;
+        display: block;
+        padding: 5px 10px;
+        margin-left: -1px;
+        background-color: white;
+        border: 1px solid $grey-300;
+        text-decoration: none;
+
+        &:hover,
+        &:focus {
+          background-color: $grey-200;
+        }
+      }
+
+      &:first-child {
+
+        .pagination__link {
+          margin-left: 0;
+          border-radius: $border-radius 0 0 $border-radius;
+        }
+      }
+
+      &:last-child {
+
+        .pagination__link {
+          border-radius: 0 $border-radius $border-radius 0;
+        }
+      }
+
+      &.is-active {
+
+        .pagination__link {
+          z-index: 1;
+          color: white;
+          background-color: $brand-primary;
+          border-color: $brand-primary;
+        }
+      }
+
+      &.disabled {
+
+        .pagination__link {
+          cursor:  default;
+          color: $grey-500;
+
+          &:hover,
+          &:focus {
+            background-color: white;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+// Mini pager
+// -------------------------
+
+.pagination--mini {}
