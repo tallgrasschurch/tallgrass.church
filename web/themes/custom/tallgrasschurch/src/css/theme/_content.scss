@@ -30,6 +30,14 @@
     .layout__sidebar {
       grid-column-end: span 3;
       padding-left: $grid-gutter-width;
+
+      // TODO: Better way to do this
+      .field {
+
+        .field__label {
+          margin-top: 0;
+        }
+      }
     }
 
     .layout__bottom {
