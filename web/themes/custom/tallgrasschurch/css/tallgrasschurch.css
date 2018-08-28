@@ -1052,6 +1052,7 @@ form .preview {
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;
+  font-size: 80%;
 }
 
 .card--teaching .card__body .card__speaker,
@@ -1070,6 +1071,7 @@ form .preview {
 
 .card--teaching .card__body .card__speaker .card__speaker-img,
 .card--series .card__body .card__speaker .card__speaker-img {
+  display: none;
   width: 30px;
   height: 30px;
   margin-right: 5px;
