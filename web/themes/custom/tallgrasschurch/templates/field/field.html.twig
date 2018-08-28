@@ -58,7 +58,11 @@
   {% endblock %}
   {% block content %}
     {% for item in items %}
-      <div{{ item.attributes }}>{{ item.content }}</div>
+      {% if item.attributes is not empty %}
+        <div{{ item.attributes }}>{{ item.content }}</div>
+      {% else %}
+        {{ item.content }}
+      {% endif %}
     {% endfor %}
   {% endblock %}
 </div>
