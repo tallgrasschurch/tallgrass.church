@@ -114,10 +114,11 @@
         {{ content.group_media }}
       </div>
       <div class="layout__main">
-        {{ content|without('field_subtitle', 'field_speaker', 'field_scripture_book', 'field_scripture_reference', 'group_media', 'field_series', 'field_tags') }}
+        {{ content|without('field_subtitle', 'field_speaker', 'field_scripture_book', 'field_scripture_reference', 'group_media', 'field_series', 'field_scripture_book_additional', 'field_tags') }}
       </div>
       <div class="layout__sidebar">
         {{ content.field_series }}
+        {{ content.field_scripture_book_additional }}
         {{ content.field_tags }}
       </div>
     </div>
