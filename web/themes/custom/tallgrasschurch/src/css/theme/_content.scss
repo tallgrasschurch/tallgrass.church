@@ -33,9 +33,14 @@
 
       // TODO: Better way to do this
       .field {
+        margin-bottom: $grid-gutter-width * 2;
 
         .field__label {
           margin-top: 0;
+        }
+
+        &:last-child {
+          margin-bottom: 0;
         }
       }
     }
