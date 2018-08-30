@@ -50,8 +50,8 @@
   </div>
   <div class="page-title__meta">
     {% if speaker is defined and speaker is not empty %}
-      <div class="page-title__speaker">
-        Speaker{% if speaker|length > 1 %}s{% endif %}:
+      <div class="page-title__meta-item page-title__speaker">
+        <b>Speaker{% if speaker|length > 1 %}s{% endif %}:</b>
         {% for item in speaker %}
           <a href="{{ item.link }}">{{ item.name }}</a>{% if speaker|length > 2 and not loop.last %},{% endif %}
           {% if speaker|length > 1 and loop.index == (loop.length - 1) %}and{% endif %}
@@ -59,21 +59,24 @@
       </div>
     {% endif %}
     {% if scripture_book is defined and scripture_book is not empty %}
-      <div class="page-title__scripture">
-        Scripture:
+      <div class="page-title__meta-item page-title__scripture">
+        <b>Scripture:</b>
+        {# TODO: Is there any way to fix the spacing problems without using a &nbsp? #}
         <a href="{{ scripture_book.link }}">
-          {{ scripture_book.name }}
-          {% if scripture_reference is defined and scripture_reference is not empty %}
+          {{ scripture_book.name }}&nbsp;
+          {%- if scripture_reference is defined and scripture_reference is not empty -%}
             {{ scripture_reference }}
-          {% endif %}
+          {%- endif -%}
         </a>
       </div>
     {% endif %}
+    {# TODO: Remove this section
     {% if series is defined and series is not empty %}
       <div class="page-title__series">
         Series: <a href="{{ series.link }}">{{ series.name }}</a>
       </div>
     {% endif %}
+    #}
   </div><!-- .page-title__meta -->
 {% endif %}
 {{ title_suffix }}

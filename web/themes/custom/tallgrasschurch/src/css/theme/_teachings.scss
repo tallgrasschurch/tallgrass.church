@@ -1,0 +1,158 @@
+//
+// Teachings
+// --------------------------------------------------
+
+
+// Card
+// -------------------------
+
+.card--teaching,
+.card--series {
+  @extend .card;
+
+  .card__body {
+    display: flex;
+    flex-direction: column;
+
+    .card__title {
+      order: 2;
+    }
+
+    .card__scripture-reference {
+      order: 3;
+    }
+
+    .card__date {
+      order: 1;
+      font-size: 80%;
+    }
+
+    .card__speaker {
+      order: 4;
+      display: flex;
+      align-items: center;
+      margin-top: $grid-gutter-width;
+
+      .card__speaker-img { display: none; // TODO
+        width: 30px;
+        height: 30px;
+        margin-right: 5px;
+        overflow: hidden;
+        border-radius: 30px;
+      }
+    }
+  }
+
+  .card__img {
+    order: 1;
+  }
+}
+
+
+// Link wrapped around card
+// -------------------------
+
+// TODO: Move this to the card component?
+.card-wrapping-link {
+  text-decoration: none;
+
+  .card--teaching,
+  .card--series {
+    transition: all .2s linear;
+  }
+
+  &:hover,
+  &:focus {
+
+    .card--teaching,
+    .card--series {
+      box-shadow: 0 1px 3px 1px rgba(black, .3);
+    }
+  }
+}
+
+
+// Latest teaching
+// -------------------------
+
+.view.latest-teaching {
+
+  .card--teaching {
+    // TODO: Clean this up
+    //@extend .card--teaching;
+    margin: 0; // TODO: Clean this up
+
+    @media (min-width: $screen-md) {
+      display: grid;
+      //grid-template-columns: repeat(2, [col] 1fr);
+      grid-template-columns: repeat(2, minmax(200px, 1fr));
+      grid-gap: $grid-gutter-width;
+    }
+
+    .card__body,
+    .card__img {
+      align-self: center;
+    }
+
+    .card__body {
+
+      .card__title {
+        font-size: 4.8rem;
+        line-height: normal;
+      }
+
+      .card__date {
+        font-size: 1.4rem;
+        line-height: normal;
+      }
+
+      .card__scripture-reference {
+        font-size: 2.4rem;
+        line-height: normal;
+      }
+
+      @media (min-width: $screen-md) {
+        grid-column-end: span 1;
+      }
+    }
+
+    .card__img {
+
+      @media (min-width: $screen-md) {
+        grid-column-end: span 1;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .view-footer {
+    margin-top: ($grid-gutter-width * 2);
+    text-align: center;
+
+    > * {
+      margin: 0;
+    }
+  }
+}
+
+
+
+// Teachings list
+// -------------------------
+
+.teachings-list,
+.series-list {
+
+  .view-rows {
+
+    @media (min-width: $screen-lg) {
+      display: grid;
+      grid-template-columns: repeat(3, [col] 1fr);
+      grid-gap: $grid-gutter-width;
+
+      > * {
+        grid-column-end: span 1;
+      }
+    }
+  }
+}

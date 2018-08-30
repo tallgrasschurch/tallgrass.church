@@ -3,40 +3,10 @@
 // --------------------------------------------------
 
 
-// TODO: Currently not in use
-// TODO: Could use a refactor
-// TODO: Probably needs to be renamed
-@mixin get-width($size-xs: $grid-columns, $size-sm: $size-xs, $size-md: $size-sm, $size-lg: $size-md, $size-xl: $size-lg, $columns: $grid-columns) {
-
-  @media (min-width: $screen-sm) {
-    $container-width: $container-sm - ($grid-gutter-width * 2);
-    $column-width: ($container-width - ($grid-gutter-width * ($grid-columns - 1))) / $grid-columns;
-    $total-column-width: $column-width * $size-sm;
-    $total-gutter-width: $grid-gutter-width * ($size-sm - 1);
-    width: $total-column-width + $total-gutter-width;
-  }
-
-  @media (min-width: $screen-md) {
-    $container-width: $container-md - ($grid-gutter-width * 2);
-    $column-width: ($container-width - ($grid-gutter-width * ($grid-columns - 1))) / $grid-columns;
-    $total-column-width: $column-width * $size-md;
-    $total-gutter-width: $grid-gutter-width * ($size-md - 1);
-    width: $total-column-width + $total-gutter-width;
-  }
-
-  @media (min-width: $screen-lg) {
-    $container-width: $container-lg - ($grid-gutter-width * 2);
-    $column-width: ($container-width - ($grid-gutter-width * ($grid-columns - 1))) / $grid-columns;
-    $total-column-width: $column-width * $size-lg;
-    $total-gutter-width: $grid-gutter-width * ($size-lg - 1);
-    width: $total-column-width + $total-gutter-width;
-  }
-
-  @media (min-width: $screen-xl) {
-    $container-width: $container-xl - ($grid-gutter-width * 2);
-    $column-width: ($container-width - ($grid-gutter-width * ($grid-columns - 1))) / $grid-columns;
-    $total-column-width: $column-width * $size-xl;
-    $total-gutter-width: $grid-gutter-width * ($size-xl - 1);
-    width: $total-column-width + $total-gutter-width;
+@mixin clearfix() {
+  &::after {
+    display: block;
+    clear: both;
+    content: "";
   }
 }

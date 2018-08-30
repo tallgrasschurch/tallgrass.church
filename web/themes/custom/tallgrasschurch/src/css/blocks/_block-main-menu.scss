@@ -14,9 +14,14 @@
     li {
 
       a {
+        color: $body-color;
+        font-weight: bold;
+        text-decoration: none;
 
         &:hover,
-        &:active {}
+        &:active {
+          text-decoration: underline;
+        }
       }
     }
   }

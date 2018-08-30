@@ -5,14 +5,17 @@ core: 8.x
 libraries:
   - tallgrasschurch/global-css
   - tallgrasschurch/global-js
+# TODO: Disable libraries
 libraries-override:
   #system/base: false
 base theme: stable
 regions:
   header: 'Header'
+  content_above: 'Above the content'
   content_top: 'Content top'
   content: 'Content'
   content_bottom: 'Content bottom'
+  content_below: 'Below the content'
   footer: 'Footer'
 # TODO: Disable features
 #features:

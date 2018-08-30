@@ -46,6 +46,15 @@ function tallgrasschurch_preprocess_block(&$variables) {
 }
 
 
+function tallgrasschurch_preprocess_page(&$variables) {
+
+  // https://drupal.stackexchange.com/questions/234848/how-to-get-page-type-in-page-html-twig
+  //$variables['route_name'] = \Drupal::routeMatch()->getRouteName();
+  $variables['view_id'] = \Drupal::routeMatch()->getParameter('view_id');
+  $variables['display_id'] = \Drupal::routeMatch()->getParameter('display_id');
+}
+
+
 /**
  * template_preprocess_page_title
  * Implements hook_preprocess_HOOK() for page templates.
@@ -95,7 +104,6 @@ function tallgrasschurch_preprocess_page_title(&$variables) {
         $term = Term::load($tid);
         $variables['series']['name'] = $term->name->value;
         $variables['series']['link'] = Url::fromRoute('entity.taxonomy_term.canonical', ['taxonomy_term' => $tid]);
-        $key++;
       }
 
       // Get the primary scripture book field
@@ -123,6 +131,18 @@ function tallgrasschurch_preprocess_node(&$variables) {
   if ($node) {
     // Set up a variable for node type
     $variables['node_type'] = $node->getType();
+
+    if ($variables['node_type'] == 'teaching') {
+
+      // Get the series field
+      if (isset($node->field_series->target_id)) {
+        $tid = $node->field_series->target_id;
+        $term = Term::load($tid);
+        $variables['series']['name'] = $term->name->value;
+        $variables['series']['link'] = Url::fromRoute('entity.taxonomy_term.canonical', ['taxonomy_term' => $tid]);
+        $variables['series']['image_id'] = $term->field_image->target_id;
+      }
+    }
   }
 
   // TODO: Remove this, as it is no longer needed

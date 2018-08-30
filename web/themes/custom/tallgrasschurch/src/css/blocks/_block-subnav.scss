@@ -1,0 +1,34 @@
+//
+// Sub-navigation block
+// --------------------------------------------------
+
+
+#block-tallgrasschurch-subnav {
+  margin: (-$grid-gutter-width * 4) 0 ($grid-gutter-width * 4);
+  background-color: white;
+  border-bottom: 1px solid $grey-lighter;
+
+  ul {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    li {
+      flex: 0 1 auto;
+
+      a {
+        display: block;
+        margin-right: -1px;
+        padding: ($grid-gutter-width / 2) $grid-gutter-width;
+        //border: 1px solid $grey-lighter;
+        text-decoration: none;
+
+        &.is-active {
+          background-color: $grey-200;
+        }
+      }
+    }
+  }
+}

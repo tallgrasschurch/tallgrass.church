@@ -5,8 +5,9 @@
 
 .btn {
   display: inline-block;
-  padding: .3125em .625em;
+  padding: 5px 10px;
   border: 1px solid transparent;
+  border-radius: $border-radius;
   font-weight: bold;
   text-align: center;
   text-decoration: none;
@@ -27,11 +28,12 @@
 
   &:hover,
   &:focus {
-    background-color: darken($brand-primary, 10%);
+    background-color: darken($brand-primary, 10%); // TODO: Make this a variable
   }
 }
 
 .btn-lg {
+  padding: 10px 20px;
   font-size: 2.1rem;
 }
 
