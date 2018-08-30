@@ -45,7 +45,8 @@
     },
     "patches": {
       "drupal/core": {
-        "Views integration for datetime range fields": "https://www.drupal.org/files/issues/2786577-270_0.patch"
+        "Views integration for datetime range fields": "https://www.drupal.org/files/issues/2786577-270_0.patch",
+        "Add option to show only start or end date in the DateTime Range custom formatter": "https://www.drupal.org/files/issues/2018-05-23/drupal-display-one-date-formatter-2827055-25.patch"
       }
     }
   }

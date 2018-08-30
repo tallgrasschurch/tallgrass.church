@@ -4,9 +4,8 @@
 
 
 #block-tallgrasschurch-latest-teaching {
-  margin: $grid-gutter-width 0;
 
-  @media (min-width: $screen-sm) {
-    margin: ($grid-gutter-width * 4) 0;
-  }
+  .container {}
+
+  .block__label {}
 }

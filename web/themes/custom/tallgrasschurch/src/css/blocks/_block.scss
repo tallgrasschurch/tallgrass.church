@@ -4,10 +4,37 @@
 
 
 .block {
-  margin-bottom: $grid-gutter-width;
+  clear: both;
 }
 
-.block__label {
-  margin-top: 0;
-  margin-bottom: $grid-gutter-width;
+.region--content-bottom .block {
+  margin-bottom: $grid-gutter-width * 4;
+}
+
+.region--content-below .block {
+  margin: 0;
+  padding: ($grid-gutter-width * 2) 0;
+
+  @media (min-width: $screen-sm) {
+    padding: ($grid-gutter-width * 4) 0;
+  }
+
+  .block__label {
+    margin-top: 0;
+    margin-bottom: ($grid-gutter-width * 2);
+    font-size: $display2-font-size;
+    text-align: center;
+  }
+
+  // TODO: Are these article styles needed anymore?
+  .article {}
+
+  .article-footer {
+    margin: $grid-gutter-width 0 0 0;
+
+    > * {
+      margin: 0;
+      text-align: center;
+    }
+  }
 }

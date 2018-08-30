@@ -4,7 +4,6 @@
 
 
 .field--field-tags {
-  margin: ($grid-gutter-width * 2) 0;
   font-size: .7em;
   line-height: $line-height-base;
 
@@ -22,9 +21,15 @@
       a {
         display: inline-block;
         padding: 5px 10px;
-        background-color: $grey-lightest;
+        background-color: white;
+        border: 1px solid $grey-200;
         border-radius: 1em;
         text-decoration: none;
+
+        &:hover,
+        &:focus {
+          border-color: $grey-400;
+        }
       }
     }
   }

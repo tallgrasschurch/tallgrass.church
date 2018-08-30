@@ -3,11 +3,10 @@
 // --------------------------------------------------
 
 
+// TODO: This could use some work to make it more consistent with other card styles
 .media-group {
-  margin: ($grid-gutter-width * 2) 0;
+  @extend .card;
   padding: $grid-gutter-width;
-  color: white;
-  background-color: #333;
 
   .media-group__nav {
     display: flex;
@@ -20,11 +19,12 @@
     li {
       margin-left: -1px;
 
+      // TODO: Button colors need some work
       button {
         padding: 10px 20px;
-        color: darken(white, 50%);
-        background: none;
-        border: 1px solid darken(white, 70%);
+        color: $grey-light;
+        background-color: $grey-lightest;
+        border: 1px solid $grey-lighter;
         outline: none;
         cursor: pointer;
       }
@@ -36,8 +36,8 @@
       &.active {
 
         button {
-          color: white;
-          background-color: darken(white, 70%);
+          color: $body-color;
+          background-color: white;
         }
       }
     }
