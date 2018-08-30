@@ -4,13 +4,9 @@
 
 
 #block-tallgrasschurch-subnav {
-  margin: $grid-gutter-width 0;
+  margin: (-$grid-gutter-width * 4) 0 ($grid-gutter-width * 4);
   background-color: white;
   border-bottom: 1px solid $grey-lighter;
-
-  @media (min-width: $screen-sm) {
-    margin: (-$grid-gutter-width * 4) 0 ($grid-gutter-width * 4);
-  }
 
   ul {
     display: flex;
