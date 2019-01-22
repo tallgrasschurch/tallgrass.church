@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "34adb93ccb0f85d831d0e5cee6cf1fd3",
+    "content-hash": "e36bb5bda76cd7698f0d5ecc1f3e5c84",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -2048,7 +2048,8 @@
                     "merge-extra": false
                 },
                 "patches_applied": {
-                    "Add option to show only start or end date in the DateTime Range custom formatter": "https://www.drupal.org/files/issues/2018-05-23/drupal-display-one-date-formatter-2827055-25.patch"
+                    "Add option to show only start or end date in the DateTime Range custom formatter": "https://www.drupal.org/files/issues/2018-05-23/drupal-display-one-date-formatter-2827055-25.patch",
+                    "RSS view with fields give wrong URL from path field": "https://www.drupal.org/files/issues/2019-01-18/2673980-87.views-rss-fields-link.functional-test-only.patch"
                 }
             },
             "autoload": {
