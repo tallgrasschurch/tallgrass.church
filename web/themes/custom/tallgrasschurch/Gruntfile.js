@@ -1,5 +1,7 @@
 module.exports = function(grunt) {
 
+  const sass = require('sass');
+
   // Display the elapsed execution time of Grunt tasks
   require('time-grunt')(grunt);
 
@@ -13,6 +15,7 @@ module.exports = function(grunt) {
     // Sass command
     sass: {
       options: {
+        implementation: sass,
         sourceMap: true,
         outputStyle: 'expanded',
       },
