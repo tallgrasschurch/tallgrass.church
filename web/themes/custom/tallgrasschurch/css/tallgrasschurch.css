@@ -189,9 +189,9 @@ select {
  * Correct the inability to style clickable types in iOS and Safari.
  */
 button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
+[type=button],
+[type=reset],
+[type=submit] {
   -webkit-appearance: button;
 }
 
@@ -199,9 +199,9 @@ button,
  * Remove the inner border and padding in Firefox.
  */
 button::-moz-focus-inner,
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner {
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
@@ -210,9 +210,9 @@ button::-moz-focus-inner,
  * Restore the focus styles unset by the previous rule.
  */
 button:-moz-focusring,
-[type="button"]:-moz-focusring,
-[type="reset"]:-moz-focusring,
-[type="submit"]:-moz-focusring {
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
 
@@ -263,8 +263,8 @@ textarea {
  * 1. Add the correct box sizing in IE 10.
  * 2. Remove the padding in IE 10.
  */
-[type="checkbox"],
-[type="radio"] {
+[type=checkbox],
+[type=radio] {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   /* 1 */
@@ -275,8 +275,8 @@ textarea {
 /**
  * Correct the cursor style of increment and decrement buttons in Chrome.
  */
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
   height: auto;
 }
 
@@ -284,7 +284,7 @@ textarea {
  * 1. Correct the odd appearance in Chrome and Safari.
  * 2. Correct the outline style in Safari.
  */
-[type="search"] {
+[type=search] {
   -webkit-appearance: textfield;
   /* 1 */
   outline-offset: -2px;
@@ -294,7 +294,7 @@ textarea {
 /**
  * Remove the inner padding in Chrome and Safari on macOS.
  */
-[type="search"]::-webkit-search-decoration {
+[type=search]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
@@ -366,10 +366,9 @@ body {
 a {
   color: #305696;
   text-decoration: underline;
-  -webkit-transition: all .2s linear;
-  transition: all .2s linear;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
 }
-
 img {
   max-width: 100%;
   height: auto;
@@ -415,11 +414,9 @@ h6, .h6 {
 dl {
   margin-bottom: 2.4rem;
 }
-
 dl dt {
   font-weight: bold;
 }
-
 dl dd {
   margin-left: 0;
   margin-bottom: 1.2rem;
@@ -438,7 +435,7 @@ label {
   font-weight: bold;
 }
 
-input:not([type="checkbox"]),
+input:not([type=checkbox]),
 textarea {
   display: block;
   width: 100%;
@@ -455,15 +452,14 @@ input[readonly] {
   cursor: not-allowed;
 }
 
-input[type="submit"] {
+input[type=submit] {
   display: inline-block;
   width: auto;
   cursor: pointer;
   -webkit-transition: all 0.2s linear;
   transition: all 0.2s linear;
 }
-
-input[type="submit"]:hover, input[type="submit"]:focus {
+input[type=submit]:hover, input[type=submit]:focus {
   background-color: #f8f8f8;
 }
 
@@ -473,13 +469,11 @@ input[type="submit"]:hover, input[type="submit"]:focus {
   margin-bottom: 1.5rem;
   padding-left: 2rem;
 }
-
 .form-item--checkbox input {
   position: absolute;
-  margin-top: .5rem;
+  margin-top: 0.5rem;
   margin-left: -2rem;
 }
-
 .form-item--checkbox label {
   margin-bottom: 0;
   font-weight: normal;
@@ -490,7 +484,6 @@ input[type="submit"]:hover, input[type="submit"]:focus {
   background-color: #305696;
   border: none;
 }
-
 #edit-submit:hover, #edit-submit:focus {
   background-color: #24406f;
 }
@@ -525,12 +518,11 @@ form .preview {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  -webkit-transition: color .2s ease-in-out, background-color .2s ease-in-out, border-color .2s ease-in-out, -webkit-box-shadow .2s ease-in-out;
-  transition: color .2s ease-in-out, background-color .2s ease-in-out, border-color .2s ease-in-out, -webkit-box-shadow .2s ease-in-out;
-  transition: color .2s ease-in-out, background-color .2s ease-in-out, border-color .2s ease-in-out, box-shadow .2s ease-in-out;
-  transition: color .2s ease-in-out, background-color .2s ease-in-out, border-color .2s ease-in-out, box-shadow .2s ease-in-out, -webkit-box-shadow .2s ease-in-out;
+  -webkit-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, -webkit-box-shadow 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, -webkit-box-shadow 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, -webkit-box-shadow 0.2s ease-in-out;
 }
-
 .btn:focus {
   outline: 0;
 }
@@ -539,7 +531,6 @@ form .preview {
   color: white;
   background-color: #305696;
 }
-
 .btn-primary:hover, .btn-primary:focus {
   background-color: #24406f;
 }
@@ -563,7 +554,6 @@ form .preview {
   background-color: #fafcfe;
   border: 1px solid #d4dff1;
 }
-
 .alert--primary a, .status-messages a {
   color: inherit;
 }
@@ -588,16 +578,16 @@ form .preview {
 
 .aligncenter,
 .align-center,
-.field--field-image-center,
-.field--field-image-full {
+.field--field-image-full,
+.field--field-image-center {
   clear: both;
   display: block;
   margin: 20px auto;
   text-align: center;
 }
 
-.card, .card--feature, .media-group, .card--teaching,
-.card--series {
+.card, .card--teaching,
+.card--series, .media-group, .card--feature {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -614,35 +604,35 @@ form .preview {
   -webkit-box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.1);
           box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.1);
 }
-
-.card > *, .card--feature > *, .media-group > *, .card--teaching > *, .card--series > * {
+.card > *, .card--teaching > *,
+.card--series > *, .media-group > *, .card--feature > * {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 auto;
           flex: 0 1 auto;
 }
-
-.card .card__body, .card--feature .card__body, .media-group .card__body, .card--teaching .card__body, .card--series .card__body {
+.card .card__body, .card--teaching .card__body,
+.card--series .card__body, .media-group .card__body, .card--feature .card__body {
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
           order: 2;
 }
-
-.card .card__body .card__title, .card--feature .card__body .card__title, .media-group .card__body .card__title, .card--teaching .card__body .card__title, .card--series .card__body .card__title {
+.card .card__body .card__title, .card--teaching .card__body .card__title,
+.card--series .card__body .card__title, .media-group .card__body .card__title, .card--feature .card__body .card__title {
   margin: 0;
   font-size: inherit;
   line-height: 1.5;
 }
-
-.card .card__body .card__title a, .card--feature .card__body .card__title a, .media-group .card__body .card__title a, .card--teaching .card__body .card__title a, .card--series .card__body .card__title a {
+.card .card__body .card__title a, .card--teaching .card__body .card__title a,
+.card--series .card__body .card__title a, .media-group .card__body .card__title a, .card--feature .card__body .card__title a {
   text-decoration: none;
 }
-
-.card .card__body .card__subtitle, .card--feature .card__body .card__subtitle, .media-group .card__body .card__subtitle, .card--teaching .card__body .card__subtitle, .card--series .card__body .card__subtitle {
+.card .card__body .card__subtitle, .card--teaching .card__body .card__subtitle,
+.card--series .card__body .card__subtitle, .media-group .card__body .card__subtitle, .card--feature .card__body .card__subtitle {
   margin: 0;
   font-style: italic;
 }
-
-.card .card__img, .card--feature .card__img, .media-group .card__img, .card--teaching .card__img, .card--series .card__img {
+.card .card__img, .card--teaching .card__img,
+.card--series .card__img, .media-group .card__img, .card--feature .card__img {
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;
@@ -650,13 +640,11 @@ form .preview {
   line-height: 1;
   text-align: center;
 }
-
 .card--feature .card__body,
 .card--feature .card__img {
   -ms-flex-item-align: center;
       align-self: center;
 }
-
 @media (min-width: 768px) {
   .card--feature {
     display: grid;
@@ -664,13 +652,11 @@ form .preview {
     grid-gap: 20px;
   }
 }
-
 @media (min-width: 768px) {
   .card--feature .card__body {
     grid-column-end: span 1;
   }
 }
-
 @media (min-width: 768px) {
   .card--feature .card__img {
     grid-column-end: span 1;
@@ -684,16 +670,14 @@ form .preview {
   grid-template-columns: 1fr;
   margin-bottom: 2.4rem;
 }
-
 @media (min-width: 768px) {
   .card-deck {
     grid-template-columns: 1fr 1fr;
   }
 }
-
 @supports (display: grid) {
-  .card-deck .card, .card-deck .card--feature, .card-deck .media-group, .card-deck .card--teaching,
-  .card-deck .card--series {
+  .card-deck .card, .card-deck .card--teaching,
+.card-deck .card--series, .card-deck .media-group, .card-deck .card--feature {
     margin: 0;
   }
 }
@@ -706,12 +690,10 @@ form .preview {
   padding: 0;
   overflow: hidden;
 }
-
 .embed-responsive::before {
   display: block;
   content: "";
 }
-
 .embed-responsive .embed-responsive-item,
 .embed-responsive iframe,
 .embed-responsive embed,
@@ -745,7 +727,6 @@ form .preview {
 .media-group {
   padding: 20px;
 }
-
 .media-group .media-group__nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -756,13 +737,11 @@ form .preview {
   margin: 0 0 20px;
   padding: 0;
   list-style-type: none;
-  font-size: .8em;
+  font-size: 0.8em;
 }
-
 .media-group .media-group__nav li {
   margin-left: -1px;
 }
-
 .media-group .media-group__nav li button {
   padding: 10px 20px;
   color: #777;
@@ -771,20 +750,16 @@ form .preview {
   outline: none;
   cursor: pointer;
 }
-
 .media-group .media-group__nav li:first-child {
   margin-left: 0;
 }
-
 .media-group .media-group__nav li.active button {
   color: #333;
   background-color: white;
 }
-
 .media-group audio {
   width: 100%;
 }
-
 .media-group .embed-responsive {
   margin: 0;
 }
@@ -792,7 +767,6 @@ form .preview {
 .pagination {
   margin-top: 40px;
 }
-
 .pagination .pagination__items {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -804,7 +778,6 @@ form .preview {
   padding: 0;
   list-style-type: none;
 }
-
 .pagination .pagination__items .pagination__item .pagination__link {
   position: relative;
   display: block;
@@ -814,32 +787,26 @@ form .preview {
   border: 1px solid #ddd;
   text-decoration: none;
 }
-
 .pagination .pagination__items .pagination__item .pagination__link:hover, .pagination .pagination__items .pagination__item .pagination__link:focus {
   background-color: #eee;
 }
-
 .pagination .pagination__items .pagination__item:first-child .pagination__link {
   margin-left: 0;
   border-radius: 5px 0 0 5px;
 }
-
 .pagination .pagination__items .pagination__item:last-child .pagination__link {
   border-radius: 0 5px 5px 0;
 }
-
 .pagination .pagination__items .pagination__item.is-active .pagination__link {
   z-index: 1;
   color: white;
   background-color: #305696;
   border-color: #305696;
 }
-
 .pagination .pagination__items .pagination__item.disabled .pagination__link {
   cursor: default;
   color: #777;
 }
-
 .pagination .pagination__items .pagination__item.disabled .pagination__link:hover, .pagination .pagination__items .pagination__item.disabled .pagination__link:focus {
   background-color: white;
 }
@@ -848,7 +815,6 @@ form .preview {
   padding-left: 20px;
   padding-right: 20px;
 }
-
 @media (min-width: 576px) {
   .container {
     width: 560px;
@@ -856,19 +822,16 @@ form .preview {
     margin-right: auto;
   }
 }
-
 @media (min-width: 768px) {
   .container {
     width: 740px;
   }
 }
-
 @media (min-width: 992px) {
   .container {
     width: 960px;
   }
 }
-
 @media (min-width: 1200px) {
   .container {
     width: 1160px;
@@ -885,14 +848,12 @@ form .preview {
   background-color: white;
   border-bottom: 1px solid #ddd;
 }
-
 @media (min-width: 768px) {
   #header {
     padding-top: 10px;
     padding-bottom: 10px;
   }
 }
-
 #main-content {
   background-color: #f8f8f8;
 }
@@ -904,7 +865,6 @@ form .preview {
   font-size: 1.4rem;
   text-align: center;
 }
-
 #footer a {
   color: inherit;
 }
@@ -965,7 +925,6 @@ form .preview {
           flex-direction: column;
   margin-bottom: 20px;
 }
-
 .node-header .node-header__title {
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
@@ -973,7 +932,6 @@ form .preview {
   margin: 0 0 10px;
   line-height: 1.2;
 }
-
 .node-header .node-header__subtitle {
   -webkit-box-ordinal-group: 4;
       -ms-flex-order: 3;
@@ -983,7 +941,6 @@ form .preview {
   font-style: italic;
   line-height: 1.2;
 }
-
 .node-header .node-header__date {
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
@@ -992,7 +949,6 @@ form .preview {
   font-size: 0.8em;
   line-height: 1.5;
 }
-
 .node-header .node-header__meta {
   -webkit-box-ordinal-group: 5;
       -ms-flex-order: 4;
@@ -1001,13 +957,11 @@ form .preview {
   font-size: 0.8em;
   line-height: 1.5;
 }
-
 .node-header .node-header__speaker,
 .node-header .node-header__scripture,
 .node-header .node-header__series {
   margin: 0;
 }
-
 .node-header .node-header__speaker dt,
 .node-header .node-header__speaker dd,
 .node-header .node-header__scripture dt,
@@ -1016,19 +970,16 @@ form .preview {
 .node-header .node-header__series dd {
   display: inline;
 }
-
 .node-header .node-header__speaker dd:after,
 .node-header .node-header__scripture dd:after,
 .node-header .node-header__series dd:after {
   content: ",";
 }
-
 .node-header .node-header__speaker dd:last-child:after,
 .node-header .node-header__scripture dd:last-child:after,
 .node-header .node-header__series dd:last-child:after {
   content: "";
 }
-
 .node-header > *:not(.node-header__title):not(.node-header__subtitle):not(.node-header__date):not(.node-header__meta) {
   -webkit-box-ordinal-group: 6;
       -ms-flex-order: 5;
@@ -1045,21 +996,18 @@ form .preview {
       -ms-flex-direction: column;
           flex-direction: column;
 }
-
 .card--teaching .card__body .card__title,
 .card--series .card__body .card__title {
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
           order: 2;
 }
-
 .card--teaching .card__body .card__scripture-reference,
 .card--series .card__body .card__scripture-reference {
   -webkit-box-ordinal-group: 4;
       -ms-flex-order: 3;
           order: 3;
 }
-
 .card--teaching .card__body .card__date,
 .card--series .card__body .card__date {
   -webkit-box-ordinal-group: 2;
@@ -1067,7 +1015,6 @@ form .preview {
           order: 1;
   font-size: 80%;
 }
-
 .card--teaching .card__body .card__speaker,
 .card--series .card__body .card__speaker {
   -webkit-box-ordinal-group: 5;
@@ -1081,7 +1028,6 @@ form .preview {
           align-items: center;
   margin-top: 20px;
 }
-
 .card--teaching .card__body .card__speaker .card__speaker-img,
 .card--series .card__body .card__speaker .card__speaker-img {
   display: none;
@@ -1091,7 +1037,6 @@ form .preview {
   overflow: hidden;
   border-radius: 30px;
 }
-
 .card--teaching .card__img,
 .card--series .card__img {
   -webkit-box-ordinal-group: 2;
@@ -1102,13 +1047,11 @@ form .preview {
 .card-wrapping-link {
   text-decoration: none;
 }
-
 .card-wrapping-link .card--teaching,
 .card-wrapping-link .card--series {
-  -webkit-transition: all .2s linear;
-  transition: all .2s linear;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
 }
-
 .card-wrapping-link:hover .card--teaching,
 .card-wrapping-link:hover .card--series, .card-wrapping-link:focus .card--teaching,
 .card-wrapping-link:focus .card--series {
@@ -1119,7 +1062,6 @@ form .preview {
 .view.latest-teaching .card--teaching {
   margin: 0;
 }
-
 @media (min-width: 768px) {
   .view.latest-teaching .card--teaching {
     display: grid;
@@ -1127,59 +1069,51 @@ form .preview {
     grid-gap: 20px;
   }
 }
-
 .view.latest-teaching .card--teaching .card__body,
 .view.latest-teaching .card--teaching .card__img {
   -ms-flex-item-align: center;
       align-self: center;
 }
-
 .view.latest-teaching .card--teaching .card__body .card__title {
   font-size: 4.8rem;
   line-height: normal;
 }
-
 .view.latest-teaching .card--teaching .card__body .card__date {
   font-size: 1.4rem;
   line-height: normal;
 }
-
 .view.latest-teaching .card--teaching .card__body .card__scripture-reference {
   font-size: 2.4rem;
   line-height: normal;
 }
-
 @media (min-width: 768px) {
   .view.latest-teaching .card--teaching .card__body {
     grid-column-end: span 1;
   }
 }
-
 @media (min-width: 768px) {
   .view.latest-teaching .card--teaching .card__img {
     grid-column-end: span 1;
     margin-bottom: 0;
   }
 }
-
 .view.latest-teaching .view-footer {
   margin-top: 40px;
   text-align: center;
 }
-
 .view.latest-teaching .view-footer > * {
   margin: 0;
 }
 
 @media (min-width: 992px) {
   .teachings-list .view-rows,
-  .series-list .view-rows {
+.series-list .view-rows {
     display: grid;
     grid-template-columns: repeat(3, [col] 1fr);
     grid-gap: 20px;
   }
   .teachings-list .view-rows > *,
-  .series-list .view-rows > * {
+.series-list .view-rows > * {
     grid-column-end: span 1;
   }
 }
@@ -1196,24 +1130,20 @@ form .preview {
   margin: 0;
   padding: 40px 0;
 }
-
 @media (min-width: 576px) {
   .region--content-below .block {
     padding: 80px 0;
   }
 }
-
 .region--content-below .block .block__label {
   margin-top: 0;
   margin-bottom: 40px;
   font-size: 4.8rem;
   text-align: center;
 }
-
 .region--content-below .block .article-footer {
   margin: 20px 0 0 0;
 }
-
 .region--content-below .block .article-footer > * {
   margin: 0;
   text-align: center;
@@ -1232,7 +1162,6 @@ form .preview {
   padding: 0;
   list-style-type: none;
 }
-
 #block-tallgrasschurch-account-menu ul li {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 auto;
@@ -1240,7 +1169,6 @@ form .preview {
   margin: 0 5px;
   white-space: nowrap;
 }
-
 #block-tallgrasschurch-account-menu ul li a {
   display: block;
   padding-top: 2px;
@@ -1250,13 +1178,11 @@ form .preview {
   font-size: 1.2rem;
   text-decoration: none;
 }
-
 #block-tallgrasschurch-account-menu ul li:last-child a {
   padding-left: 7px;
   padding-right: 7px;
   border: 1px solid #ddd;
 }
-
 #block-tallgrasschurch-account-menu ul li a:hover, #block-tallgrasschurch-account-menu ul li a:focus {
   color: #555;
   border-color: #777;
@@ -1265,27 +1191,22 @@ form .preview {
 #block-tallgrasschurch-branding {
   margin: 0;
 }
-
 #block-tallgrasschurch-branding .logo {
   display: block;
   margin: 0;
 }
-
 #block-tallgrasschurch-branding .logo a {
   display: inline-block;
   text-decoration: none;
 }
-
 #block-tallgrasschurch-branding .logo img {
   display: block;
   width: auto;
   height: 80px;
 }
-
 #block-tallgrasschurch-branding .logo--with-img {
   line-height: 0;
 }
-
 #block-tallgrasschurch-central-gathering {
   background-color: #ddd;
   background-image: url("../img/map-color.png");
@@ -1295,7 +1216,6 @@ form .preview {
   border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
 }
-
 @media (min-width: 768px) {
   #block-tallgrasschurch-central-gathering .container {
     display: grid;
@@ -1303,7 +1223,6 @@ form .preview {
     grid-gap: 20px;
   }
 }
-
 #block-tallgrasschurch-central-gathering .block-wrapper {
   padding: 40px;
   background-color: rgba(255, 255, 255, 0.9);
@@ -1312,26 +1231,22 @@ form .preview {
           box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
-
 @media (min-width: 768px) {
   #block-tallgrasschurch-central-gathering .block-wrapper {
     grid-column-start: 2;
     grid-column-end: span 10;
   }
 }
-
 @media (min-width: 992px) {
   #block-tallgrasschurch-central-gathering .block-wrapper {
     grid-column-start: 3;
     grid-column-end: span 8;
   }
 }
-
 #block-tallgrasschurch-central-gathering .field--field-block-title {
   margin: 0 0 20px;
   font-size: 3.2rem;
 }
-
 #block-tallgrasschurch-contact {
   margin: 0;
   padding: 20px 0;
@@ -1339,17 +1254,14 @@ form .preview {
   background-color: #305696;
   font-size: 1.4rem;
 }
-
 @media (min-width: 576px) {
   #block-tallgrasschurch-contact {
     padding: 40px 0;
   }
 }
-
 #block-tallgrasschurch-contact a {
   color: inherit;
 }
-
 @media (min-width: 768px) {
   #block-tallgrasschurch-contact .field--body {
     display: grid;
@@ -1357,33 +1269,27 @@ form .preview {
     grid-gap: 20px;
   }
 }
-
 @media (max-width: 767px) {
   #block-tallgrasschurch-contact .field--body section {
     margin-bottom: 20px;
   }
 }
-
 @media (min-width: 768px) {
   #block-tallgrasschurch-contact .field--body section {
     grid-column-end: span 4;
   }
 }
-
 #block-tallgrasschurch-contact .field--body section h2 {
   margin: 0 0 10px;
   font-size: 1.6rem;
   line-height: normal;
 }
-
 #block-tallgrasschurch-contact .field--body section .more {
   margin: 0;
 }
-
 .block--block-tallgrasschurch-content {
   margin: 80px 0;
 }
-
 @media (min-width: 992px) {
   .block--block-tallgrasschurch-content .container {
     display: grid;
@@ -1391,7 +1297,6 @@ form .preview {
     grid-gap: 20px;
   }
 }
-
 @media (min-width: 992px) {
   .block--block-tallgrasschurch-content .block-wrapper {
     grid-column-start: 3;
@@ -1418,7 +1323,6 @@ form .preview {
   background-color: #305696;
   text-shadow: 0px 1px 2px black;
 }
-
 @media (min-width: 992px) {
   #block-tallgrasschurch-hero-home .block-wrapper {
     display: grid;
@@ -1426,19 +1330,16 @@ form .preview {
     grid-gap: 20px;
   }
 }
-
 #block-tallgrasschurch-hero-home .field--field-block-title {
   margin: 0 0 20px;
   font-size: 4.8rem;
   line-height: normal;
 }
-
 @media (min-width: 768px) {
   #block-tallgrasschurch-hero-home .field--field-block-title {
     font-size: 4.8rem;
   }
 }
-
 @media (min-width: 992px) {
   #block-tallgrasschurch-hero-home .field--field-block-title {
     grid-row-start: 1;
@@ -1448,24 +1349,20 @@ form .preview {
     line-height: normal;
   }
 }
-
 #block-tallgrasschurch-hero-home .field--body {
   margin: 0;
   font-size: 2.4rem;
   font-weight: lighter;
   line-height: normal;
 }
-
 #block-tallgrasschurch-hero-home .field--body > * {
   margin: 0;
 }
-
 @media (min-width: 768px) {
   #block-tallgrasschurch-hero-home .field--body {
     font-size: 3.2rem;
   }
 }
-
 @media (min-width: 992px) {
   #block-tallgrasschurch-hero-home .field--body {
     grid-row-start: 2;
@@ -1476,27 +1373,22 @@ form .preview {
 #block-tallgrasschurch-local-tasks {
   margin: 20px 0;
 }
-
 #block-tallgrasschurch-main-menu {
   margin: 20px 0 0;
 }
-
 #block-tallgrasschurch-main-menu ul {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
-
 #block-tallgrasschurch-main-menu ul li a {
   color: #333;
   font-weight: bold;
   text-decoration: none;
 }
-
 #block-tallgrasschurch-main-menu ul li a:hover, #block-tallgrasschurch-main-menu ul li a:active {
   text-decoration: underline;
 }
-
 @media (min-width: 768px) {
   #block-tallgrasschurch-main-menu {
     margin: 0;
@@ -1514,12 +1406,10 @@ form .preview {
 #block-tallgrasschurch-news-and-events {
   background-color: white;
 }
-
 #block-tallgrasschurch-news-and-events .news-and-events-content {
   padding-top: 20px;
   border-top: 1px solid #ddd;
 }
-
 @media (min-width: 768px) {
   #block-tallgrasschurch-news-and-events .news-and-events-content {
     display: grid;
@@ -1527,44 +1417,36 @@ form .preview {
     grid-gap: 20px;
   }
 }
-
 @media (min-width: 768px) {
   #block-tallgrasschurch-news-and-events .news-content {
     grid-column-end: span 7;
   }
 }
-
 @media (min-width: 992px) {
   #block-tallgrasschurch-news-and-events .news-content {
     grid-column-end: span 8;
   }
 }
-
 #block-tallgrasschurch-news-and-events .news-content .news-content__title {
   margin-top: 0;
 }
-
 #block-tallgrasschurch-news-and-events .news-content .view-footer p {
   margin-bottom: 0;
 }
-
 #block-tallgrasschurch-news-and-events .news-content-article {
   margin-bottom: 20px;
   border-bottom: 1px solid #ddd;
 }
-
 #block-tallgrasschurch-news-and-events .news-content-article::after {
   display: block;
   clear: both;
   content: "";
 }
-
 @media (min-width: 768px) {
   #block-tallgrasschurch-news-and-events .news-content-article {
     margin-right: 20px;
   }
 }
-
 @media (min-width: 992px) {
   #block-tallgrasschurch-news-and-events .news-content-article {
     position: relative;
@@ -1572,13 +1454,11 @@ form .preview {
     padding-right: 215px;
   }
 }
-
 @media (min-width: 1200px) {
   #block-tallgrasschurch-news-and-events .news-content-article {
     padding-right: 265px;
   }
 }
-
 #block-tallgrasschurch-news-and-events .news-content-article .news-content-article-header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1588,7 +1468,6 @@ form .preview {
       -ms-flex-direction: column;
           flex-direction: column;
 }
-
 #block-tallgrasschurch-news-and-events .news-content-article .news-content-article-header .news-content-article-header__heading {
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
@@ -1596,7 +1475,6 @@ form .preview {
   margin: 0 0 10px;
   font-size: 2.4rem;
 }
-
 #block-tallgrasschurch-news-and-events .news-content-article .news-content-article-header .news-content-article-header__date {
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
@@ -1604,14 +1482,12 @@ form .preview {
   margin: 0;
   font-size: 1.4rem;
 }
-
 #block-tallgrasschurch-news-and-events .news-content-article .news-content-article-img {
   float: right;
   max-width: calc(50% - 20px);
   margin: 0 0 20px 20px;
   text-align: center;
 }
-
 @media (min-width: 992px) {
   #block-tallgrasschurch-news-and-events .news-content-article .news-content-article-img {
     position: absolute;
@@ -1621,26 +1497,21 @@ form .preview {
     margin: 0;
   }
 }
-
 @media (min-width: 1200px) {
   #block-tallgrasschurch-news-and-events .news-content-article .news-content-article-img {
     width: 245px;
   }
 }
-
 #block-tallgrasschurch-news-and-events .news-content-article .news-content-article-body,
 #block-tallgrasschurch-news-and-events .news-content-article .news-content-article-more {
   font-size: 1.4rem;
 }
-
 #block-tallgrasschurch-news-and-events .news-content-article .news-content-article-body {
   margin-bottom: 10px;
 }
-
 #block-tallgrasschurch-news-and-events .news-content-article .news-content-article-more {
   margin: 0 0 20px;
 }
-
 #block-tallgrasschurch-news-and-events .events-content {
   -ms-flex-item-align: start;
       align-self: start;
@@ -1651,57 +1522,47 @@ form .preview {
   border-radius: 5px;
   overflow: hidden;
 }
-
 @media (min-width: 768px) {
   #block-tallgrasschurch-news-and-events .events-content {
     margin-top: 0;
   }
 }
-
 #block-tallgrasschurch-news-and-events .events-content .view-header {
   margin: -20px -20px 20px;
   background-color: rgba(0, 0, 0, 0.5);
   text-align: center;
 }
-
 #block-tallgrasschurch-news-and-events .events-content .view-header .events-content__title {
   margin: 0;
   padding: 10px 20px;
 }
-
 #block-tallgrasschurch-news-and-events .events-content a {
   color: inherit;
 }
-
 @media (min-width: 768px) {
   #block-tallgrasschurch-news-and-events .events-content {
     grid-column-end: span 5;
   }
 }
-
 @media (min-width: 992px) {
   #block-tallgrasschurch-news-and-events .events-content {
     grid-column-end: span 4;
   }
 }
-
 #block-tallgrasschurch-news-and-events .events-content .events-content-article {
   position: relative;
   min-height: calc(1.2rem + 2.4rem + (5px * 2 * 2));
   padding-left: 70px;
   margin-bottom: 20px;
 }
-
 #block-tallgrasschurch-news-and-events .events-content .events-content-article .events-content-article-header .events-content-article-header__heading {
   margin: 0;
   font-size: 1.6rem;
   line-height: normal;
 }
-
 #block-tallgrasschurch-news-and-events .events-content .events-content-article .events-content-article-header .events-content-article-header__heading a {
   text-decoration: none;
 }
-
 #block-tallgrasschurch-news-and-events .events-content .events-content-article .events-content-article-header .events-content-article-header__date-and-time .events-content-article-header__date {
   position: absolute;
   top: 0;
@@ -1712,28 +1573,23 @@ form .preview {
   border-radius: 5px;
   text-align: center;
 }
-
 #block-tallgrasschurch-news-and-events .events-content .events-content-article .events-content-article-header .events-content-article-header__date-and-time .events-content-article-header__date .events-content-article-header__date-month,
 #block-tallgrasschurch-news-and-events .events-content .events-content-article .events-content-article-header .events-content-article-header__date-and-time .events-content-article-header__date .events-content-article-header__date-day {
   display: block;
   padding: 5px 0;
   line-height: 1;
 }
-
 #block-tallgrasschurch-news-and-events .events-content .events-content-article .events-content-article-header .events-content-article-header__date-and-time .events-content-article-header__date .events-content-article-header__date-month {
   background-color: rgba(0, 0, 0, 0.2);
   font-size: 1.2rem;
   text-transform: uppercase;
 }
-
 #block-tallgrasschurch-news-and-events .events-content .events-content-article .events-content-article-header .events-content-article-header__date-and-time .events-content-article-header__date .events-content-article-header__date-day {
   font-size: 2.4rem;
 }
-
 #block-tallgrasschurch-news-and-events .events-content .events-content-article .events-content-article-header .events-content-article-header__date-and-time .events-content-article-header__date-and-time-separator {
   display: none;
 }
-
 #block-tallgrasschurch-news-and-events .events-content .events-content-article .events-content-article-header .events-content-article-header__date-and-time .events-content-article-header__time {
   display: block;
   margin-top: 5px;
@@ -1741,15 +1597,12 @@ form .preview {
   font-style: italic;
   line-height: normal;
 }
-
 #block-tallgrasschurch-news-and-events .events-content .view-footer {
   text-align: center;
 }
-
 #block-tallgrasschurch-news-and-events .events-content .view-footer p {
   margin: 0;
 }
-
 #block-tallgrasschurch-news-and-events .events-content .view-footer a {
   display: block;
   margin: 0 -20px -20px;
@@ -1765,7 +1618,6 @@ form .preview {
   background-color: #172a49;
   text-align: center;
 }
-
 .page-title .container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1775,11 +1627,9 @@ form .preview {
       -ms-flex-direction: column;
           flex-direction: column;
 }
-
 .page-title a {
   color: inherit;
 }
-
 .page-title .page-title__title {
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
@@ -1788,7 +1638,6 @@ form .preview {
   font-size: 6.4rem;
   line-height: normal;
 }
-
 .page-title .page-title__subtitle {
   -webkit-box-ordinal-group: 4;
       -ms-flex-order: 3;
@@ -1798,21 +1647,18 @@ form .preview {
   font-style: italic;
   line-height: 1.2;
 }
-
 .page-title .page-title__date {
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;
   margin-bottom: 10px;
 }
-
 .page-title .page-title__meta {
   -webkit-box-ordinal-group: 5;
       -ms-flex-order: 4;
           order: 4;
   margin-top: 20px;
 }
-
 .page-title .page-title__meta:before {
   content: "";
   display: block;
@@ -1820,11 +1666,9 @@ form .preview {
   margin: 0 auto 20px;
   border-top: 1px solid rgba(255, 255, 255, 0.5);
 }
-
 .page-title .page-title__meta .page-title__meta-item {
   display: inline-block;
 }
-
 .page-title .page-title__meta .page-title__meta-item:after {
   content: " / ";
   display: inline-block;
@@ -1832,17 +1676,14 @@ form .preview {
   margin-right: 5px;
   color: rgba(255, 255, 255, 0.5);
 }
-
 .page-title .page-title__meta .page-title__meta-item:last-child:after {
   content: "";
 }
-
 #block-tallgrasschurch-subnav {
   margin: -80px 0 80px;
   background-color: white;
   border-bottom: 1px solid #ddd;
 }
-
 #block-tallgrasschurch-subnav ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1854,20 +1695,17 @@ form .preview {
   padding: 0;
   list-style-type: none;
 }
-
 #block-tallgrasschurch-subnav ul li {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 auto;
           flex: 0 1 auto;
 }
-
 #block-tallgrasschurch-subnav ul li a {
   display: block;
   margin-right: -1px;
   padding: 10px 20px;
   text-decoration: none;
 }
-
 #block-tallgrasschurch-subnav ul li a.is-active {
   background-color: #eee;
 }
@@ -1877,13 +1715,11 @@ form .preview {
   padding: 20px 0;
   border-top: 1px solid #ddd;
 }
-
 @media (min-width: 576px) {
   #block-tallgrasschurch-upcoming-events {
     padding: 80px 0;
   }
 }
-
 @media (min-width: 768px) {
   #block-tallgrasschurch-upcoming-events .events-list {
     display: grid;
@@ -1891,18 +1727,15 @@ form .preview {
     grid-gap: 20px;
   }
 }
-
 #block-tallgrasschurch-upcoming-events .views-row {
   margin-bottom: 20px;
 }
-
 @media (min-width: 768px) {
   #block-tallgrasschurch-upcoming-events .views-row {
     grid-column-end: span 4;
     margin-bottom: 0;
   }
 }
-
 #block-tallgrasschurch-upcoming-events .views-row a {
   position: relative;
   display: block;
@@ -1914,13 +1747,11 @@ form .preview {
   border: 1px solid #ddd;
   text-decoration: none;
 }
-
 #block-tallgrasschurch-upcoming-events .views-row .views-row__title {
   margin: 0;
   font-size: 1.6rem;
   line-height: normal;
 }
-
 #block-tallgrasschurch-upcoming-events .views-row .views-row__date-and-time .views-row__date {
   position: absolute;
   top: 10px;
@@ -1931,28 +1762,23 @@ form .preview {
   background-color: #305696;
   text-align: center;
 }
-
 #block-tallgrasschurch-upcoming-events .views-row .views-row__date-and-time .views-row__date .views-row__date-month,
 #block-tallgrasschurch-upcoming-events .views-row .views-row__date-and-time .views-row__date .views-row__date-day {
   display: block;
   padding: 5px 0;
   line-height: 1;
 }
-
 #block-tallgrasschurch-upcoming-events .views-row .views-row__date-and-time .views-row__date .views-row__date-month {
   background-color: rgba(0, 0, 0, 0.5);
   font-size: 1.2rem;
   text-transform: uppercase;
 }
-
 #block-tallgrasschurch-upcoming-events .views-row .views-row__date-and-time .views-row__date .views-row__date-day {
   font-size: 2.4rem;
 }
-
 #block-tallgrasschurch-upcoming-events .views-row .views-row__date-and-time .views-row__date-and-time-separator {
   display: none;
 }
-
 #block-tallgrasschurch-upcoming-events .views-row .views-row__date-and-time .views-row__time {
   display: block;
   margin-top: 5px;
@@ -1960,7 +1786,6 @@ form .preview {
   font-style: italic;
   line-height: normal;
 }
-
 @media (min-width: 768px) {
   #block-tallgrasschurch-upcoming-events .article-footer {
     grid-column-end: span 12;
@@ -1976,45 +1801,38 @@ form .preview {
   font-size: 1.6rem;
   line-height: 1.5;
 }
-
 .field--field-file-upload ul {
   margin-top: 0;
   padding: 0;
   list-style-type: none;
 }
-
 .field--field-file-upload ul li {
   display: block;
   padding: 10px 20px;
   border-bottom: 1px solid white;
 }
-
 .field--field-file-upload ul li:nth-child(odd) {
   background-color: #d4dff1;
 }
-
 .field--field-file-upload ul li:nth-child(even) {
   background-color: #c1d0eb;
 }
 
 .field--field-tags {
-  font-size: .7em;
+  font-size: 0.7em;
   line-height: 1.5;
 }
-
 .field--field-tags ul {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
-
 .field--field-tags ul li {
   display: inline-block;
   margin-right: 5px;
   margin-bottom: 10px;
   white-space: nowrap;
 }
-
 .field--field-tags ul li a {
   display: inline-block;
   padding: 5px 10px;
@@ -2023,7 +1841,6 @@ form .preview {
   border-radius: 1em;
   text-decoration: none;
 }
-
 .field--field-tags ul li a:hover, .field--field-tags ul li a:focus {
   border-color: #ccc;
 }
@@ -2032,18 +1849,15 @@ form .preview {
   padding: 0;
   list-style-type: none;
 }
-
 .links li {
   display: inline-block;
 }
-
 .links li a {
   display: inline-block;
   padding: 5px 10px;
   border: 1px solid #ddd;
   text-decoration: none;
 }
-
 .links li a:hover, .links li a:focus {
   background-color: #f8f8f8;
 }
@@ -2054,24 +1868,20 @@ form .preview {
   line-height: 1.5;
   text-align: center;
 }
-
 .menu-local-tasks .menu-local-tasks__list {
   margin: 0;
   padding: 0 10px;
   list-style-type: none;
   border-bottom: 1px solid #ddd;
 }
-
 .menu-local-tasks .menu-local-tasks__list .menu-local-tasks__list-item {
   display: inline-block;
   margin: 0 5px -1px 0;
   white-space: nowrap;
 }
-
 .menu-local-tasks .menu-local-tasks__list .menu-local-tasks__list-item:last-child {
   margin-right: 0;
 }
-
 .menu-local-tasks .menu-local-tasks__list .menu-local-tasks__list-item a {
   display: block;
   padding: 10px 20px;
@@ -2080,11 +1890,9 @@ form .preview {
   border: 1px solid #ddd;
   text-decoration: none;
 }
-
 .menu-local-tasks .menu-local-tasks__list .menu-local-tasks__list-item a:hover, .menu-local-tasks .menu-local-tasks__list .menu-local-tasks__list-item a:focus {
   text-decoration: underline;
 }
-
 .menu-local-tasks .menu-local-tasks__list .menu-local-tasks__list-item a.is-active {
   background-color: white;
   border-bottom-color: white;
