@@ -32,7 +32,8 @@
     "drupal/twig_tweak": "^2.0",
     "drupal/captcha": "^1.0-beta1",
     "drupal/recaptcha": "^2.3",
-    "drupal/convert_bundles": "^1.0"
+    "drupal/convert_bundles": "^1.0",
+    "drupal/podcast": "^1.0"
   },
   "minimum-stability": "dev",
   "prefer-stable": true,
