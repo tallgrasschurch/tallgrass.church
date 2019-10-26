@@ -51,6 +51,10 @@
       "drupal/core": {
         "Add option to show only start or end date in the DateTime Range custom formatter": "https://www.drupal.org/files/issues/2018-05-23/drupal-display-one-date-formatter-2827055-25.patch",
         "RSS view with fields give wrong URL from path field": "https://www.drupal.org/files/issues/2019-01-18/2673980-87.views-rss-fields-link.functional-test-only.patch"
+      },
+      "drupal/podcast": {
+        "itunes:image should be output as an href attribute": "https://www.drupal.org/files/issues/2019-05-06/podcast-setup_image-3034933-3.patch",
+        "iTunes Category with ampersand outputs extra 'amp;' text": "https://www.drupal.org/files/issues/2019-03-27/3029877-2.patch"
       }
     }
   }
