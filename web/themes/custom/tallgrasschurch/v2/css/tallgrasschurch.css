@@ -22,3 +22,21 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+.card {
+  background-color: #F9F9F9;
+}
+
+.card__top {}
+
+.card__top img {}
+
+.card__body {
+  padding: 40px;
+}
+
+.card__title {
+  margin: 0;
+}
+
+.card__text {}
