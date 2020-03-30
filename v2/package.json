@@ -1,0 +1,22 @@
+{
+  "name": "eleventy-boilerplate",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx eleventy --serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/natedillon/eleventy-boilerplate.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/natedillon/eleventy-boilerplate/issues"
+  },
+  "homepage": "https://github.com/natedillon/eleventy-boilerplate#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.10.0"
+  }
+}
