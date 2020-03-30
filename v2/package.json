@@ -1,6 +1,6 @@
 {
-  "name": "eleventy-boilerplate",
-  "description": "",
+  "name": "tallgrass.church-v2",
+  "description": "Tallgrass Community Church website v2.",
   "main": "index.js",
   "scripts": {
     "start": "npx eleventy --serve"
