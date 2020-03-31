@@ -3,7 +3,8 @@
   "description": "Tallgrass Community Church website v2.",
   "main": "index.js",
   "scripts": {
-    "start": "npx eleventy --serve"
+    "start": "npx eleventy --serve",
+    "css-compile": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 src/css -o _site/css"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,7 @@
   },
   "homepage": "https://github.com/natedillon/eleventy-boilerplate#readme",
   "devDependencies": {
-    "@11ty/eleventy": "^0.10.0"
+    "@11ty/eleventy": "^0.10.0",
+    "node-sass": "^4.13.1"
   }
 }
