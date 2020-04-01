@@ -3,84 +3,20 @@
 // --------------------------------------------------
 
 
-// Scaffolding
-// -------------------------
+// Variables and mixins
+@import 'variables';
+@import 'mixins';
 
-html {
-  box-sizing: border-box;
-  font-size: 62.5%;
-  background-color: white;
-}
+// Reset
+@import '../../node_modules/normalize.css/normalize';
 
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-}
+// Core CSS
+@import 'scaffolding';
+@import 'type';
+@import 'images';
 
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
-  font-size: 1.8rem;
-  line-height: 1.5;
-  color: black;
-  background-color: white;
-}
+// Reusable components
+@import 'components/cards';
 
-
-// Images
-// -------------------------
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-
-// Cards
-// -------------------------
-
-.card {
-  background-color: #F9F9F9;
-
-  .card__header {
-
-    img {}
-  }
-
-  .card__body {
-    padding: 20px;
-  }
-
-  .card__title {
-    margin: 0;
-  }
-
-  .card__text {}
-
-  .card__footer {}
-}
-
-// Horizontal cards
-.card--h {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-
-  .card__body {
-    padding: 40px;
-  }
-}
-
-
-// Resources
-// -------------------------
-
-.featured-series {}
-
-.latest-resources {
-
-  .card-wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-column-gap: 40px;
-  }
-}
+// Theme
+@import 'theme/theme';

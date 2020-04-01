@@ -1,0 +1,38 @@
+//
+// Cards
+// --------------------------------------------------
+
+
+.card {
+  background-color: #F9F9F9;
+
+  .card__header {
+
+    img {}
+  }
+
+  .card__body {
+    padding: 20px;
+  }
+
+  .card__title {
+    margin: 0;
+  }
+
+  .card__text {}
+
+  .card__footer {}
+}
+
+
+// Horizontal cards
+// -------------------------
+
+.card--h {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  .card__body {
+    padding: 40px;
+  }
+}
