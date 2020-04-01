@@ -41,18 +41,46 @@ img {
 
 .card {
   background-color: #F9F9F9;
+
+  .card__header {
+
+    img {}
+  }
+
+  .card__body {
+    padding: 20px;
+  }
+
+  .card__title {
+    margin: 0;
+  }
+
+  .card__text {}
+
+  .card__footer {}
 }
 
-.card__top {}
+// Horizontal cards
+.card--h {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 
-.card__top img {}
-
-.card__body {
-  padding: 40px;
+  .card__body {
+    padding: 40px;
+  }
 }
 
-.card__title {
-  margin: 0;
-}
 
-.card__text {}
+// Resources
+// -------------------------
+
+.featured-series {}
+
+.latest-resources {
+
+  .card-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 40px;
+  }
+}
