@@ -4,11 +4,13 @@
 
 
 .card {
-  background-color: #F9F9F9;
+  background-color: $grey-100;
 
   .card__header {
 
-    img {}
+    img {
+      display: block;
+    }
   }
 
   .card__body {

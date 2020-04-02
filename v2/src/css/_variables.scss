@@ -129,6 +129,12 @@ $screen-lg-max: ($screen-xl - 1);
 $grid-columns: 12;
 $grid-gutter-width: 20px;
 
+$grid-gutter-width-xs: $grid-gutter-width / 4;
+$grid-gutter-width-sm: $grid-gutter-width / 2;
+$grid-gutter-width-md: $grid-gutter-width;
+$grid-gutter-width-lg: $grid-gutter-width * 2;
+$grid-gutter-width-xl: $grid-gutter-width * 4;
+
 
 // Container
 // -------------------------
