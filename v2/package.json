@@ -4,13 +4,15 @@
   "main": "index.js",
   "scripts": {
     "start": "npm-run-all build --parallel serve watch livereload",
-    "build": "npm-run-all clean css-compile",
+    "build": "npm-run-all clean html:build css:*",
     "clean": "del-cli --force _site",
-    "css-compile": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 src/css -o _site/css",
-    "livereload": "livereload ./_site/css/**/*",
+    "css:compile": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 src/css -o _site/css",
+    "css:prefix": "npx postcss _site/css/*.css --use autoprefixer -d _site/css/",
+    "html:build": "npx eleventy",
+    "livereload": "livereload ./_site/css/**/*.css",
     "serve": "npx eleventy --serve",
-    "watch": "npm-run-all --parallel watch-*",
-    "watch-css": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 src/css -o _site/css --watch"
+    "watch": "npm-run-all --parallel watch:*",
+    "watch:css": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 src/css -o _site/css --watch"
   },
   "repository": {
     "type": "git",
@@ -25,10 +27,12 @@
   "homepage": "https://github.com/natedillon/eleventy-boilerplate#readme",
   "devDependencies": {
     "@11ty/eleventy": "^0.10.0",
+    "autoprefixer": "^9.7.5",
     "del-cli": "^3.0.0",
     "livereload": "^0.9.1",
     "node-sass": "^4.13.1",
     "normalize.css": "^8.0.1",
-    "npm-run-all": "^4.1.5"
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^7.1.0"
   }
 }
