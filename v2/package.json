@@ -2,17 +2,24 @@
   "name": "tallgrass.church-v2",
   "description": "Tallgrass Community Church website v2.",
   "main": "index.js",
+  "config": {
+    "path_src": "src",
+    "path_src_css": "src/css",
+    "path_build": "_site",
+    "path_build_css": "_site/css",
+    "sass_settings": "--output-style expanded --source-map true --source-map-contents true --precision 6"
+  },
   "scripts": {
     "start": "npm-run-all build --parallel serve watch livereload",
     "build": "npm-run-all build:*",
-    "build:clean": "del-cli --force _site",
+    "build:clean": "del-cli --force $npm_package_config_path_build",
     "build:html": "npx eleventy",
-    "build:css": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 src/css -o _site/css",
-    "build:postcss": "npx postcss _site/css/*.css --use autoprefixer -d _site/css/",
-    "livereload": "livereload ./_site/css/**/*.css",
+    "build:css": "node-sass $npm_package_config_sass_settings $npm_package_config_path_src_css -o $npm_package_config_path_build_css",
+    "build:postcss": "npx postcss $npm_package_config_path_build_css/*.css --use autoprefixer -d $npm_package_config_path_build_css",
+    "livereload": "livereload $npm_package_config_path_build_css/**/*.css",
     "serve": "npx eleventy --serve",
     "watch": "npm-run-all --parallel watch:*",
-    "watch:css": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 src/css -o _site/css --watch"
+    "watch:css": "node-sass $npm_package_config_sass_settings $npm_package_config_path_src_css -o $npm_package_config_path_build_css --watch"
   },
   "repository": {
     "type": "git",
