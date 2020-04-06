@@ -68,7 +68,7 @@ $red-700:             #6c0f17;
 $red-800:             #5d0d14;
 $red-900:             #4d0a10;
 
-$brand-primary:       $blue-500;
+$brand-primary:       black;
 $brand-success:       $green-500;
 $brand-info:          $blue-500;
 $brand-warning:       $yellow-700;
@@ -143,3 +143,9 @@ $container-sm: 540px + $grid-gutter-width;
 $container-md: 720px + $grid-gutter-width;
 $container-lg: 940px + $grid-gutter-width;
 $container-xl: 1140px + $grid-gutter-width;
+
+
+// Components
+// -------------------------
+
+$border-radius: 15px;

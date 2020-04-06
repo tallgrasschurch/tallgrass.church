@@ -5,9 +5,17 @@
 
 .btn {
   display: inline-block;
+  padding: $grid-gutter-width-sm $grid-gutter-width-md;
   color: $body-color;
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: $border-radius;
+  line-height: $line-height-base;
   text-decoration: none;
   cursor: pointer;
 }
 
-.btn--primary {}
+.btn--primary {
+  color: white;
+  background-color: $brand-primary;
+}
