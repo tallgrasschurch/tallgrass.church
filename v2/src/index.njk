@@ -1,0 +1,57 @@
+---
+layout: default
+---
+
+<section class="featured-series">
+  <header>
+    <h2>Featured Series</h2>
+    <p><a href="#">More</a></p>
+  </header>
+
+  <article class="card card--h">
+    <div class="card__top">
+      <img src="https://placeimg.com/640/360/animals?q=featured-series" alt="" />
+    </div>
+    <div class="card__body">
+      <header class="card__header">
+        <h3 class="card__title"><a href="#">The Acts of Jesus Continued</a></h3>
+      </header><!-- .card__header -->
+      <div class="card__content">
+        <p>A study through the book of Acts with an eye for the continued work of Jesus from the time of the Apostles to present day as he continues to build the upside down Kingdom of God right in our midst.</p>
+      </div><!-- .card__content -->
+      <footer class="card__footer">
+        <div><a href="#" class="btn btn--primary">View series</a></div>
+      </footer><!-- .card__footer -->
+    </div><!-- .card__body -->
+  </article><!-- .card -->
+</section><!-- .featured-series -->
+
+<section class="latest-resources">
+  <header>
+    <h2>Latest Resources</h2>
+    <p><a href="#">More</a></p>
+  </header>
+
+  <div class="card-wrapper">
+    {% for item in home.latest_resources %}
+      <article class="card">
+        <div class="card__top">
+          <img src="https://placeimg.com/640/360/animals?q=latest-resources-{{ loop.index }}" alt="" />
+        </div><!-- .card__top -->
+        <div class="card__body">
+          <header class="card__header">
+            <h3 class="card__title"><a href="#">{{ item.title }}</a></h3>
+            <p class="card__date"><time datetime="">{{ item.date }}</time></p>
+            <p class="card__label">Teaching</p>
+          </header><!-- .card__header -->
+          <div class="card__content">
+            <p>{{ item.content }}</p>
+          </div><!-- .card__content -->
+          <footer class="card__footer">
+            <p><a href="#">Ben Deaver</a></p>
+          </footer><!-- .card__footer -->
+        </div><!-- .card__body -->
+      </article><!-- .card -->
+    {% endfor %}
+  </div><!-- .card-wrapper -->
+</section><!-- .featured-series -->
