@@ -18,4 +18,9 @@
 .btn--primary {
   color: white;
   background-color: $brand-primary;
+
+  &:hover,
+  &:focus {
+    color: white;
+  }
 }
