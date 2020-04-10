@@ -1,6 +1,10 @@
 # System files
 .DS_Store
 
+# npm
+node_modules
+
+
 # Server-generated files
 /favicon.ico
 /favicon.gif
