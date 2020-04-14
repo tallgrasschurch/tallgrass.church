@@ -61,6 +61,32 @@
     margin-top: auto;
     padding-top: $grid-gutter-width-md;
   }
+
+  .card__author {
+    display: flex;
+    font-size: 1.4rem;
+  }
+
+  .card__author-link {
+    display: inline-block;
+  }
+
+  .card__author-img {
+    margin-right: $grid-gutter-width-sm;
+    border: 1px solid $grey-200;
+    border-radius: 50%;
+    overflow: hidden;
+
+    img {
+      display: block;
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  .card__author-name {
+    align-self: center;
+  }
 }
 
 

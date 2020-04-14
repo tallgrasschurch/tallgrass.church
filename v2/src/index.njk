@@ -48,7 +48,12 @@ layout: default
             <p>{{ item.content }}</p>
           </div><!-- .card__content -->
           <footer class="card__footer">
-            <p><a href="#">Ben Deaver</a></p>
+            <a href="#" class="card__author-link">
+              <div class="card__author">
+                <div class="card__author-img"><img src="https://placeimg.com/60/60/people?q=latest-resources-{{ loop.index }}" alt="" /></div>
+                <div class="card__author-name">Ben Deaver</div>
+              </div>
+            </a>
           </footer><!-- .card__footer -->
         </div><!-- .card__body -->
       </article><!-- .card -->
