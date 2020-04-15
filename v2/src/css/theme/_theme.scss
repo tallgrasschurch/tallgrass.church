@@ -113,4 +113,17 @@
 // Upcoming events
 // -------------------------
 
-.upcoming-events {}
+.upcoming-events {
+
+  .card-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: $grid-gutter-width-lg;
+  }
+
+  .card {
+    margin-bottom: 0;
+    color: white;
+    background-color: $grey-600;
+  }
+}
