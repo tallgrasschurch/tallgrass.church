@@ -18,7 +18,7 @@
 // -------------------------
 
 .home-section {
-  padding: $grid-gutter-width-lg 0;
+  margin: $grid-gutter-width-xl 0;
 }
 
 .home-section__header {
@@ -47,7 +47,12 @@
 // Resources
 // -------------------------
 
-.featured-series {}
+.featured-series {
+
+  .card {
+    margin-bottom: 0;
+  }
+}
 
 .latest-resources {
 
@@ -56,4 +61,33 @@
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 40px;
   }
+
+  .card {
+    margin-bottom: 0;
+  }
+}
+
+
+// Central Gathering
+// -------------------------
+
+.central-gathering {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: $grid-gutter-width-lg;
+  color: white;
+  background: $grey-700;
+
+  > * {
+    align-self: center;
+  }
+}
+
+.central-gathering__text {
+  padding: $grid-gutter-width-lg;
+}
+
+.central-gathering__img {
+  background-color: black;
+  height: 400px;
 }
