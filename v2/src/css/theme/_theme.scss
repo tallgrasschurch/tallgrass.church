@@ -118,7 +118,7 @@
   .card-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-column-gap: $grid-gutter-width-lg;
+    grid-column-gap: $grid-gutter-width-md;
   }
 
   .card {
