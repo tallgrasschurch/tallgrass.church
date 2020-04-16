@@ -33,17 +33,20 @@
 
   .nav-list__item {
     margin: 0 $grid-gutter-width-sm;
-
-    a {
-      display: block;
-    }
   }
 
   .nav-list__item--visit {}
   .nav-list__item--ministries {}
   .nav-list__item--resources {}
   .nav-list__item--about {}
-  .nav-list__item--give {}
+
+  .nav-list__item--give {
+
+    a {
+      padding: $grid-gutter-width-xs $grid-gutter-width-sm;
+      background-color: $grey-400;
+    }
+  }
 
   .search {
     flex: 0;
