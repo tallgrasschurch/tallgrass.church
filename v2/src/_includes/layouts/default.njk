@@ -13,16 +13,30 @@
 
   <body>
     <div class="container">
-      <header role="banner" id="header">
-        <h1><a href="/">Tallgrass Community Church</a></h1>
+      <header role="banner" id="site-header">
+        <h1 class="logo"><a href="/">Tallgrass Community Church</a></h1>
+
+        <nav class="nav">
+          <ul class="nav-list">
+            <li class="nav-list__item"><a href="#">Visit</a></li>
+            <li class="nav-list__item"><a href="#">Ministries</a></li>
+            <li class="nav-list__item"><a href="#">Resources</a></li>
+            <li class="nav-list__item"><a href="#">About</a></li>
+            <li class="nav-list__item"><a href="#">Give</a></li>
+          </ul>
+        </nav>
+
+        <div class="search">
+          <a href="#">Search</a>
+        </div>
       </header><!-- #header -->
 
-      <main role="main" id="main">
+      <main role="main" id="main-content">
         {{ content | safe }}
       </main><!-- #main -->
     </body>
 
-    <footer id="footer">
+    <footer id="site-footer">
       <p>Copyright &copy; 2018-2020 Tallgrass Community Church</p>
       <p><a href="/style-guide">Style Guide</a></p>
     </footer><!-- #footer -->
