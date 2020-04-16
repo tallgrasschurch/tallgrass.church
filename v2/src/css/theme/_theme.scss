@@ -3,11 +3,62 @@
 // --------------------------------------------------
 
 
+// Site header
+// -------------------------
+
 #site-header {
+  display: flex;
   margin-bottom: $grid-gutter-width-xl;
+
+  > * {
+    align-self: center;
+  }
+
+  .logo {
+    flex: 0;
+    margin: 0;
+  }
+
+  .nav {
+    flex: 1;
+  }
+
+  .nav-list {
+    display: flex;
+    margin: 0 $grid-gutter-width-sm;
+    padding: 0;
+    list-style-type: none;
+    justify-content: flex-end;
+  }
+
+  .nav-list__item {
+    margin: 0 $grid-gutter-width-sm;
+
+    a {
+      display: block;
+    }
+  }
+
+  .nav-list__item--visit {}
+  .nav-list__item--ministries {}
+  .nav-list__item--resources {}
+  .nav-list__item--about {}
+  .nav-list__item--give {}
+
+  .search {
+    flex: 0;
+  }
 }
 
+
+// Main content
+// -------------------------
+
 #main-content {}
+
+
+// Site footer
+// -------------------------
 
 #site-footer {
   margin-top: $grid-gutter-width-xl;
