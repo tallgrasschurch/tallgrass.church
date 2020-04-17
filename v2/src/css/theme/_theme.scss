@@ -10,6 +10,7 @@
   display: flex;
   margin-bottom: $grid-gutter-width-xl;
   padding: $grid-gutter-width-md 0;
+  border-bottom: 1px solid $grey-300;
 
   > * {
     align-self: center;
@@ -63,7 +64,37 @@
 
   .search {
     flex: 0;
+    white-space: nowrap;
+
+    a {
+      padding: $grid-gutter-width-xs $grid-gutter-width-sm;
+    }
   }
+
+  .search__icon {
+    display: inline-block;
+    width: 1.8rem;
+    height: 1.8rem;
+    margin-top: (1.8rem * .25);
+  }
+
+  .search__text {
+    //@extend .visually-hidden;
+  }
+}
+
+
+.visually-hidden {
+  position: absolute;
+  width: .0625rem;
+  height: .0625rem;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  clip-path: inset(50%);
+  border: 0;
+  pointer-events: none;
+  opacity: 0;
 }
 
 
