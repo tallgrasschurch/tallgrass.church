@@ -12,7 +12,6 @@
   </head>
 
   <body>
-    <div class="container">
       <header role="banner" id="site-header">
         <h1 class="logo"><a href="/"><img src="/img/logo.svg" width="410" height="100" alt="Tallgrass Community Church" /></a></h1>
 
@@ -35,13 +34,16 @@
       </header><!-- #header -->
 
       <main role="main" id="main-content">
-        {{ content | safe }}
+        <div class="container">
+          {{ content | safe }}
+        </div><!-- .container -->
       </main><!-- #main -->
     </body>
 
     <footer id="site-footer">
-      <p>Copyright &copy; 2018-2020 Tallgrass Community Church</p>
-      <p><a href="/style-guide">Style Guide</a></p>
+      <div class="container">
+        <p>Copyright &copy; 2018-2020 Tallgrass Community Church</p>
+        <p><a href="/style-guide">Style Guide</a></p>
+      </div><!-- .container -->
     </footer><!-- #footer -->
-  </div><!-- .container -->
 </html>

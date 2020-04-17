@@ -9,7 +9,7 @@
 #site-header {
   display: flex;
   margin-bottom: $grid-gutter-width-xl;
-  padding: $grid-gutter-width-md 0;
+  padding: $grid-gutter-width-md;
   border-bottom: 1px solid $grey-300;
 
   > * {
