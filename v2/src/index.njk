@@ -15,7 +15,7 @@ layout: default
 
   <article class="card card--h">
     <div class="card__top">
-      <img src="https://placeimg.com/640/360/animals?q=featured-series" alt="" />
+      <img src="https://placeimg.com/640/360/animals?q=featured-series" alt="">
     </div>
     <div class="card__body">
       <header class="card__header">
@@ -41,11 +41,11 @@ layout: default
     {% for item in home.latest_resources %}
       <article class="card">
         <div class="card__top">
-          <img src="https://placeimg.com/640/360/animals?q=latest-resources-{{ loop.index }}" alt="" />
+          <img src="https://placeimg.com/640/360/animals?q=latest-resources-{{ loop.index }}" alt="">
         </div><!-- .card__top -->
         <div class="card__body">
           <header class="card__header">
-            <h3 class="card__title"><a href="#">{{ item.title }}</a></h3>
+            <h3 class="card__title"><a href="/teaching">{{ item.title }}</a></h3>
             <p class="card__date"><time datetime="">{{ item.date }}</time></p>
             <p class="card__label">Teaching</p>
           </header><!-- .card__header -->
@@ -55,7 +55,7 @@ layout: default
           <footer class="card__footer">
             <a href="#" class="card__author-link">
               <div class="card__author">
-                <div class="card__author-img"><img src="https://placeimg.com/60/60/people?q=latest-resources-{{ loop.index }}" alt="" /></div>
+                <div class="card__author-img"><img src="https://placeimg.com/60/60/people?q=latest-resources-{{ loop.index }}" alt=""></div>
                 <div class="card__author-name">Ben Deaver</div>
               </div>
             </a>
@@ -88,7 +88,7 @@ layout: default
     {% for item in home.latest_news %}
       <article class="card">
         <div class="card__top">
-          <img src="https://placeimg.com/640/360/animals?q=latest-news-{{ loop.index }}" alt="" />
+          <img src="https://placeimg.com/640/360/animals?q=latest-news-{{ loop.index }}" alt="">
         </div><!-- .card__top -->
         <div class="card__body">
           <header class="card__header">
