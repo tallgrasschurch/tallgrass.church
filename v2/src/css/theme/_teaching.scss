@@ -1,0 +1,175 @@
+//
+// Teaching
+// --------------------------------------------------
+
+
+// Page header
+// -------------------------
+
+.page-header {
+  display: flex;
+  flex-direction: column;
+}
+
+.page-header__title {
+  order: 2;
+  margin-bottom: $grid-gutter-width-lg;
+  font-size: 6.0rem;
+}
+
+.page-header-meta {
+  order: 3;
+
+  .page-header-meta__author {}
+
+  .page-header-meta__date {}
+
+  .page-header-meta__scripture {}
+}
+
+.breadcrumbs {
+  order: 1;
+  margin-bottom: $grid-gutter-width-md;
+  font-size: 1.4rem;
+}
+
+.breadcrumbs-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  .breadcrumbs-list__item {
+
+    &::after {
+      content: "/";
+      margin: 0 $grid-gutter-width-sm;
+      color: $grey-400;
+    }
+
+    &:last-child {
+
+      &::after {
+        content: "";
+        margin: 0;
+      }
+    }
+
+    a {}
+  }
+}
+
+
+// Media
+// -------------------------
+
+.media {
+  display: flex;
+  flex-direction: column;
+  margin: $grid-gutter-width-xl 0;
+  background-color: $grey-100;
+
+  .media__title {
+    @extend .visually-hidden;
+  }
+
+  .media__links {
+    order: 2;
+    padding: $grid-gutter-width-md;
+  }
+
+  .media__player {
+    order: 1;
+  }
+}
+
+.media-select {
+
+  .media-select__item {}
+
+  .media-select__item--video {}
+  .media-select__item--audio {}
+}
+
+.media-download {}
+
+
+// Teaching content
+// -------------------------
+
+.teaching-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-column-gap: $grid-gutter-width-lg;
+  margin: $grid-gutter-width-xl 0;
+
+  .teaching-content__main {}
+
+  .teaching-content__sidebar {}
+}
+
+
+// Files
+// -------------------------
+
+.files {
+  margin: $line-height-computed 0;
+  border: 1px solid $grey-200;
+
+  .files__title {
+    margin: 0;
+    padding: $grid-gutter-width-sm $grid-gutter-width-md;
+    border-bottom: 1px solid $grey-200;
+    font-size: $font-size-base;
+  }
+}
+
+.files-list {
+  margin: 0;
+  padding: 0 $grid-gutter-width-md;
+  list-style-type: none;
+
+  .files-list__item {
+    margin: 0;
+    padding: $grid-gutter-width-sm 0;
+    border-bottom: 1px solid $grey-200;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}
+
+
+// Tags
+// -------------------------
+
+.tags {
+  margin: $line-height-computed 0;
+
+  .tags__title {
+    @extend .visually-hidden;
+  }
+}
+
+.tags-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  list-style-type: none;
+  font-size: 1.4rem;
+
+  .tags-list__item {
+    margin: 0 $grid-gutter-width-sm $grid-gutter-width-sm 0;
+    background-color: $grey-200;
+    padding: $grid-gutter-width-xs $grid-gutter-width-sm;
+    border-radius: $border-radius;
+
+    a {
+
+      &::before {
+        content: "#";
+      }
+    }
+  }
+}

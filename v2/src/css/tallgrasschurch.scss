@@ -17,8 +17,10 @@
 
 // Reusable components
 @import 'components/buttons';
+@import 'components/container';
 @import 'components/card';
 
 // Theme
-@import 'theme/container';
 @import 'theme/theme';
+@import 'theme/home';
+@import 'theme/teaching';

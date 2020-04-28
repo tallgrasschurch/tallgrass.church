@@ -1,0 +1,127 @@
+//
+// Home
+// --------------------------------------------------
+
+
+// Hero
+// -------------------------
+
+.hero {
+  padding: $grid-gutter-width-xl 0;
+  text-align: center;
+}
+
+
+// Home sections
+// -------------------------
+
+.home-section {
+  margin: $grid-gutter-width-xl 0;
+}
+
+.home-section__header {
+  display: flex;
+
+  > * {
+    flex: 1;
+  }
+}
+
+.home-section__header-title {
+  margin: 0 ($grid-gutter-width-lg / 2) 0 0;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 2.5rem;
+}
+
+.home-section__header-more {
+  margin: 0 0 0 ($grid-gutter-width-lg / 2);
+  font-size: 1.4rem;
+  line-height: 2.5rem;
+  text-align: right;
+}
+
+
+// Resources
+// -------------------------
+
+.featured-series {
+
+  .card {
+    margin-bottom: 0;
+  }
+}
+
+.latest-resources {
+
+  .card-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: $grid-gutter-width-lg;
+  }
+
+  .card {
+    margin-bottom: 0;
+  }
+}
+
+
+// Central Gathering
+// -------------------------
+
+.central-gathering {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: $grid-gutter-width-lg;
+  color: white;
+  background: $grey-700;
+
+  > * {
+    align-self: center;
+  }
+}
+
+.central-gathering__text {
+  padding: $grid-gutter-width-lg;
+}
+
+.central-gathering__img {
+  background-color: black;
+  height: 400px;
+}
+
+
+// Latest news
+// -------------------------
+
+.latest-news {
+
+  .card-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: $grid-gutter-width-lg;
+  }
+
+  .card {
+    margin-bottom: 0;
+  }
+}
+
+
+// Upcoming events
+// -------------------------
+
+.upcoming-events {
+
+  .card-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: $grid-gutter-width-md;
+  }
+
+  .card {
+    margin-bottom: 0;
+    color: white;
+    background-color: $grey-600;
+  }
+}
