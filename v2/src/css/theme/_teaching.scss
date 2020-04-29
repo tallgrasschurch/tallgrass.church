@@ -173,3 +173,28 @@
     }
   }
 }
+
+
+// Signpost
+// -------------------------
+
+.signpost {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .signpost__item {}
+
+  .signpost__item--prev {}
+
+  .signpost__item--next {
+    text-align: right;
+  }
+
+  .signpost__label {
+    margin-bottom: $grid-gutter-width-xs;
+    font-size: 1.2rem;
+  }
+
+  .signpost__title {}
+}
