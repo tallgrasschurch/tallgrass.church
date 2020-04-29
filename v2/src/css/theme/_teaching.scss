@@ -31,6 +31,7 @@
   order: 1;
   margin-bottom: $grid-gutter-width-md;
   font-size: 1.4rem;
+  text-transform: uppercase;
 }
 
 .breadcrumbs-list {
@@ -40,6 +41,7 @@
   list-style-type: none;
 
   .breadcrumbs-list__item {
+    white-space: nowrap;
 
     &::after {
       content: "/";
@@ -161,11 +163,13 @@
 
   .tags-list__item {
     margin: 0 $grid-gutter-width-sm $grid-gutter-width-sm 0;
-    background-color: $grey-200;
-    padding: $grid-gutter-width-xs $grid-gutter-width-sm;
-    border-radius: $border-radius;
 
     a {
+      @include undo-link-styles;
+      display: inline-block;
+      background-color: $grey-200;
+      padding: $grid-gutter-width-xs $grid-gutter-width-sm;
+      border-radius: $border-radius;
 
       &::before {
         content: "#";
@@ -183,6 +187,11 @@
   justify-content: space-between;
   align-items: center;
 
+  a {
+    @include undo-link-styles;
+    display: block;
+  }
+
   .signpost__item {}
 
   .signpost__item--prev {}
@@ -194,6 +203,7 @@
   .signpost__label {
     margin-bottom: $grid-gutter-width-xs;
     font-size: 1.2rem;
+    text-transform: uppercase;
   }
 
   .signpost__title {}

@@ -1,3 +1,27 @@
 //
 // Mixins
 // --------------------------------------------------
+
+
+// Links
+// -------------------------
+
+@mixin link-styles {
+  color: $link-color;
+  text-decoration: underline;
+
+  &:hover,
+  &:focus {
+    color: $link-color-hover;
+  }
+}
+
+@mixin undo-link-styles {
+  color: inherit;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: inherit;
+  }
+}
