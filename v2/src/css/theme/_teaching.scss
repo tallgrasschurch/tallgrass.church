@@ -7,8 +7,30 @@
 // -------------------------
 
 .page-header {
-  display: flex;
-  flex-direction: column;
+  position: relative;
+  z-index: 1;
+  margin-bottom: $grid-gutter-width-xxl;
+  padding: $grid-gutter-width-xl 0 $grid-gutter-width-xl;
+  background-color: $grey-100;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    display: block;
+    width: 100%;
+    height: 50%;
+    background: $grey-100;
+    transform: skewY(-2.5deg);
+    transform-origin: 100%;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .page-header__title {
@@ -100,10 +122,13 @@
 // -------------------------
 
 .teaching-content {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  grid-column-gap: $grid-gutter-width-lg;
   margin: $grid-gutter-width-xl 0;
+
+  .container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-column-gap: $grid-gutter-width-lg;
+  }
 
   .teaching-content__main {}
 

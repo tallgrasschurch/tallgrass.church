@@ -7,7 +7,7 @@
 // -------------------------
 
 $white:               #fff;
-$gray-100:            #f8f8f8;                $grey-100:            $gray-100;
+$gray-100:            #f9f9f9;                $grey-100:            $gray-100;
 $gray-200:            #eee;                   $grey-200:            $gray-200;
 $gray-300:            #ddd;                   $grey-300:            $gray-300;
 $gray-400:            #ccc;                   $grey-400:            $gray-400;
@@ -18,7 +18,7 @@ $gray-800:            #333;                   $grey-800:            $gray-800;
 $gray-900:            #222;                   $grey-900:            $gray-900;
 $black:               #000;
 
-$gray-100-alpha:      rgba(0, 0, 0, 0.028);   $grey-100-alpha:      $gray-100-alpha;
+$gray-100-alpha:      rgba(0, 0, 0, 0.024);   $grey-100-alpha:      $gray-100-alpha;
 $gray-200-alpha:      rgba(0, 0, 0, 0.065);   $grey-200-alpha:      $gray-200-alpha;
 $gray-300-alpha:      rgba(0, 0, 0, 0.135);   $grey-300-alpha:      $gray-300-alpha;
 $gray-400-alpha:      rgba(0, 0, 0, 0.2);     $grey-400-alpha:      $gray-400-alpha;
@@ -134,6 +134,7 @@ $grid-gutter-width-sm: $grid-gutter-width / 2;
 $grid-gutter-width-md: $grid-gutter-width;
 $grid-gutter-width-lg: $grid-gutter-width * 2;
 $grid-gutter-width-xl: $grid-gutter-width * 4;
+$grid-gutter-width-xxl: $grid-gutter-width * 8;
 
 
 // Container

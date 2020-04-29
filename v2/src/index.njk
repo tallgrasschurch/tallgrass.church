@@ -2,124 +2,126 @@
 layout: default
 ---
 
-<section class="hero">
-  <h2>Reclaiming Neighboring</h2>
-  <p>Because God first loved us, we exist to love God and love our neighbors.</p>
-</section><!-- .hero -->
+<div class="container">
+  <section class="hero">
+    <h2>Reclaiming Neighboring</h2>
+    <p>Because God first loved us, we exist to love God and love our neighbors.</p>
+  </section><!-- .hero -->
 
-<section class="home-section featured-series">
-  <header class="home-section__header">
-    <h2 class="home-section__header-title">Featured Series</h2>
-    <p class="home-section__header-more"><a href="#">More</a></p>
-  </header>
-
-  <article class="card card--h">
-    <div class="card__top">
-      <img src="https://placeimg.com/640/360/animals?q=featured-series" alt="">
-    </div>
-    <div class="card__body">
-      <header class="card__header">
-        <h3 class="card__title"><a href="#">The Acts of Jesus Continued</a></h3>
-      </header><!-- .card__header -->
-      <div class="card__content">
-        <p>A study through the book of Acts with an eye for the continued work of Jesus from the time of the Apostles to present day as he continues to build the upside down Kingdom of God right in our midst.</p>
-      </div><!-- .card__content -->
-      <footer class="card__footer">
-        <div><a href="#" class="btn btn--primary">View series</a></div>
-      </footer><!-- .card__footer -->
-    </div><!-- .card__body -->
-  </article><!-- .card -->
-</section><!-- .featured-series -->
-
-<section class="home-section latest-resources">
-  <header class="home-section__header">
-    <h2 class="home-section__header-title">Latest Resources</h2>
-    <p class="home-section__header-more"><a href="#">More</a></p>
-  </header>
-
-  <div class="card-wrapper">
-    {% for item in home.latest_resources %}
-      <article class="card">
-        <div class="card__top">
-          <img src="https://placeimg.com/640/360/animals?q=latest-resources-{{ loop.index }}" alt="">
-        </div><!-- .card__top -->
-        <div class="card__body">
-          <header class="card__header">
-            <h3 class="card__title"><a href="/teaching">{{ item.title }}</a></h3>
-            <p class="card__date"><time datetime="">{{ item.date }}</time></p>
-            <p class="card__label">Teaching</p>
-          </header><!-- .card__header -->
-          <div class="card__content">
-            <p>{{ item.content }}</p>
-          </div><!-- .card__content -->
-          <footer class="card__footer">
-            <a href="#" class="card__author-link">
-              <div class="card__author">
-                <div class="card__author-img"><img src="https://placeimg.com/60/60/people?q=latest-resources-{{ loop.index }}" alt=""></div>
-                <div class="card__author-name">Ben Deaver</div>
-              </div>
-            </a>
-          </footer><!-- .card__footer -->
-        </div><!-- .card__body -->
-      </article><!-- .card -->
-    {% endfor %}
-  </div><!-- .card-wrapper -->
-</section><!-- .latest-resources -->
-
-<section class="home-section central-gathering">
-  <div class="central-gathering__text">
-    <header>
-      <h2>Join us for our central gathering online</h2>
+  <section class="home-section featured-series">
+    <header class="home-section__header">
+      <h2 class="home-section__header-title">Featured Series</h2>
+      <p class="home-section__header-more"><a href="#">More</a></p>
     </header>
-    <p>Sundays at 10:00 AM</p>
-  </div>
 
-  <div class="central-gathering__img">
-  </div>
-</section><!-- .central-gathering -->
+    <article class="card card--h">
+      <div class="card__top">
+        <img src="https://placeimg.com/640/360/animals?q=featured-series" alt="">
+      </div>
+      <div class="card__body">
+        <header class="card__header">
+          <h3 class="card__title"><a href="#">The Acts of Jesus Continued</a></h3>
+        </header><!-- .card__header -->
+        <div class="card__content">
+          <p>A study through the book of Acts with an eye for the continued work of Jesus from the time of the Apostles to present day as he continues to build the upside down Kingdom of God right in our midst.</p>
+        </div><!-- .card__content -->
+        <footer class="card__footer">
+          <div><a href="#" class="btn btn--primary">View series</a></div>
+        </footer><!-- .card__footer -->
+      </div><!-- .card__body -->
+    </article><!-- .card -->
+  </section><!-- .featured-series -->
 
-<section class="home-section latest-news">
-  <header class="home-section__header">
-    <h2 class="home-section__header-title">Latest News</h2>
-    <p class="home-section__header-more"><a href="#">More</a></p>
-  </header>
+  <section class="home-section latest-resources">
+    <header class="home-section__header">
+      <h2 class="home-section__header-title">Latest Resources</h2>
+      <p class="home-section__header-more"><a href="#">More</a></p>
+    </header>
 
-  <div class="card-wrapper">
-    {% for item in home.latest_news %}
-      <article class="card">
-        <div class="card__top">
-          <img src="https://placeimg.com/640/360/animals?q=latest-news-{{ loop.index }}" alt="">
-        </div><!-- .card__top -->
-        <div class="card__body">
-          <header class="card__header">
-            <h3 class="card__title"><a href="#">{{ item.title }}</a></h3>
-            <p class="card__date"><time datetime="">{{ item.date }}</time></p>
-          </header><!-- .card__header -->
-          <div class="card__content">
-            <p>{{ item.content }}</p>
-          </div><!-- .card__content -->
-        </div><!-- .card__body -->
-      </article><!-- .card -->
-    {% endfor %}
-  </div><!-- .card-wrapper -->
-</section><!-- .latest-news -->
+    <div class="card-wrapper">
+      {% for item in home.latest_resources %}
+        <article class="card">
+          <div class="card__top">
+            <img src="https://placeimg.com/640/360/animals?q=latest-resources-{{ loop.index }}" alt="">
+          </div><!-- .card__top -->
+          <div class="card__body">
+            <header class="card__header">
+              <h3 class="card__title"><a href="/teaching">{{ item.title }}</a></h3>
+              <p class="card__date"><time datetime="">{{ item.date }}</time></p>
+              <p class="card__label">Teaching</p>
+            </header><!-- .card__header -->
+            <div class="card__content">
+              <p>{{ item.content }}</p>
+            </div><!-- .card__content -->
+            <footer class="card__footer">
+              <a href="#" class="card__author-link">
+                <div class="card__author">
+                  <div class="card__author-img"><img src="https://placeimg.com/60/60/people?q=latest-resources-{{ loop.index }}" alt=""></div>
+                  <div class="card__author-name">Ben Deaver</div>
+                </div>
+              </a>
+            </footer><!-- .card__footer -->
+          </div><!-- .card__body -->
+        </article><!-- .card -->
+      {% endfor %}
+    </div><!-- .card-wrapper -->
+  </section><!-- .latest-resources -->
 
-<section class="home-section upcoming-events">
-  <header class="home-section__header">
-    <h2 class="home-section__header-title">Upcoming Events</h2>
-    <p class="home-section__header-more"><a href="#">More</a></p>
-  </header>
+  <section class="home-section central-gathering">
+    <div class="central-gathering__text">
+      <header>
+        <h2>Join us for our central gathering online</h2>
+      </header>
+      <p>Sundays at 10:00 AM</p>
+    </div>
 
-  <div class="card-wrapper">
-    {% for item in home.upcoming_events %}
-      <article class="card">
-        <div class="card__body">
-          <header class="card__header">
-            <h3 class="card__title"><a href="#">{{ item.title }}</a></h3>
-            <p class="card__date"><time datetime="">{{ item.date }}</time></p>
-          </header><!-- .card__header -->
-        </div><!-- .card__body -->
-      </article><!-- .card -->
-    {% endfor %}
-  </div><!-- .card-wrapper -->
-</section><!-- .upcoming-events -->
+    <div class="central-gathering__img">
+    </div>
+  </section><!-- .central-gathering -->
+
+  <section class="home-section latest-news">
+    <header class="home-section__header">
+      <h2 class="home-section__header-title">Latest News</h2>
+      <p class="home-section__header-more"><a href="#">More</a></p>
+    </header>
+
+    <div class="card-wrapper">
+      {% for item in home.latest_news %}
+        <article class="card">
+          <div class="card__top">
+            <img src="https://placeimg.com/640/360/animals?q=latest-news-{{ loop.index }}" alt="">
+          </div><!-- .card__top -->
+          <div class="card__body">
+            <header class="card__header">
+              <h3 class="card__title"><a href="#">{{ item.title }}</a></h3>
+              <p class="card__date"><time datetime="">{{ item.date }}</time></p>
+            </header><!-- .card__header -->
+            <div class="card__content">
+              <p>{{ item.content }}</p>
+            </div><!-- .card__content -->
+          </div><!-- .card__body -->
+        </article><!-- .card -->
+      {% endfor %}
+    </div><!-- .card-wrapper -->
+  </section><!-- .latest-news -->
+
+  <section class="home-section upcoming-events">
+    <header class="home-section__header">
+      <h2 class="home-section__header-title">Upcoming Events</h2>
+      <p class="home-section__header-more"><a href="#">More</a></p>
+    </header>
+
+    <div class="card-wrapper">
+      {% for item in home.upcoming_events %}
+        <article class="card">
+          <div class="card__body">
+            <header class="card__header">
+              <h3 class="card__title"><a href="#">{{ item.title }}</a></h3>
+              <p class="card__date"><time datetime="">{{ item.date }}</time></p>
+            </header><!-- .card__header -->
+          </div><!-- .card__body -->
+        </article><!-- .card -->
+      {% endfor %}
+    </div><!-- .card-wrapper -->
+  </section><!-- .upcoming-events -->
+</div><!-- .container -->

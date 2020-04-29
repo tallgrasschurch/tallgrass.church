@@ -8,9 +8,11 @@
 
 #site-header {
   display: flex;
-  margin-bottom: $grid-gutter-width-xl;
+  //margin-bottom: $grid-gutter-width-xl;
   padding: $grid-gutter-width-md;
-  border-bottom: 1px solid $grey-300;
+  //border-bottom: 1px solid $grey-300;
+
+  background-color: $grey-100;
 
   > * {
     align-self: center;
