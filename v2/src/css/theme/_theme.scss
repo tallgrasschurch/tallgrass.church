@@ -49,6 +49,10 @@
 
   .nav-list__item {
     margin: 0 $grid-gutter-width-sm;
+
+    a {
+      @include undo-link-styles;
+    }
   }
 
   .nav-list__item--visit {}
@@ -69,6 +73,7 @@
     white-space: nowrap;
 
     a {
+      @include undo-link-styles;
       padding: $grid-gutter-width-xs $grid-gutter-width-sm;
     }
   }

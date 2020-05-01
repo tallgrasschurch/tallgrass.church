@@ -42,11 +42,11 @@
 .page-header-meta {
   order: 3;
 
-  .page-header-meta__author {}
+  .page-header-meta__item {}
 
-  .page-header-meta__date {}
-
-  .page-header-meta__scripture {}
+  .page-header-meta__item--author {}
+  .page-header-meta__item--date {}
+  .page-header-meta__item--scripture {}
 }
 
 .breadcrumbs {
