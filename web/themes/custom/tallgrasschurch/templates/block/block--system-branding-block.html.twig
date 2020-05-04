@@ -1,0 +1,15 @@
+{% extends "block.html.twig" %}
+
+{% set remove_container = true %}
+
+{% block content %}
+  <h1 class="logo {% if site_logo %}logo--with-img{% else %}logo--no-img{% endif %}">
+    <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home">
+      {% if site_logo %}
+        <img src="{{ site_logo }}" alt="{% if site_name %}{{ site_name }}{% else %}Logo{% endif %}">
+      {% else %}
+        {{ site_name }}
+      {% endif %}
+    </a>
+  </h1><!-- .logo -->
+{% endblock %}
