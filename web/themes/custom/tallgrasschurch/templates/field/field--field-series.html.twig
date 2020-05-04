@@ -1,8 +1,0 @@
-{% extends "field.html.twig" %}
-
-{% block label %}
-  {% set label_classes = label_classes|merge(['h6']) %}
-  {% if not label_hidden %}
-    <h2{{ title_attributes.addClass(label_classes) }}>{{ label }}</h2>
-  {% endif %}
-{% endblock %}
