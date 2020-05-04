@@ -1,0 +1,85 @@
+//
+// Forms
+// --------------------------------------------------
+
+
+label {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+input:not([type="checkbox"]),
+textarea {
+  display: block;
+  width: 100%;
+  margin-bottom: 1.5rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid $grey-lighter;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+}
+
+input[readonly] {
+  color: $grey-light;
+  background-color: $grey-lightest;
+  cursor: not-allowed;
+}
+
+input[type="submit"] {
+  display: inline-block;
+  width: auto;
+  cursor: pointer;
+  transition: all 0.2s linear;
+
+  &:hover,
+  &:focus {
+    background-color: $grey-lightest;
+  }
+}
+
+.form-item--checkbox {
+  position: relative;
+  display: block;
+  margin-bottom: 1.5rem;
+  padding-left: 2rem;
+
+  input {
+    position: absolute;
+    margin-top: .5rem;
+    margin-left: -2rem;
+  }
+
+  label {
+    margin-bottom: 0;
+    font-weight: normal;
+  }
+}
+
+// TODO: This should be moved to theme
+#edit-submit {
+  color: white;
+  background-color: $brand-primary;
+  border: none;
+
+  &:hover,
+  &:focus {
+    background-color: darken($brand-primary, 10%);
+  }
+}
+
+// TODO: This should be moved to theme
+form .description {
+  margin-top: -1rem;
+  margin-bottom: 1.5rem;
+  color: $grey-light;
+  font-size: 1.4rem;
+  line-height: $line-height-base;
+}
+
+form .preview {
+  margin: $grid-gutter-width 0;
+  padding: $grid-gutter-width;
+  background-color: $grey-lightest;
+  border: 1px solid $grey-lighter;
+}

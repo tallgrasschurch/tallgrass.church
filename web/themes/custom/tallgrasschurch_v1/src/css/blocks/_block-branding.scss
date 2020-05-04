@@ -1,0 +1,30 @@
+//
+// Branding block
+// --------------------------------------------------
+
+
+#block-tallgrasschurch-v1-branding {
+  margin: 0;
+
+  .logo {
+    display: block;
+    margin: 0;
+
+    a {
+      display: inline-block;
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      width: auto;
+      height: 80px;
+    }
+  }
+
+  .logo--with-img {
+    line-height: 0;
+  }
+
+  .logo--no-img {}
+}

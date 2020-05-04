@@ -1,0 +1,28 @@
+//
+// Text alignment
+// --------------------------------------------------
+
+
+.alignright,
+.align-right {
+  position: relative;
+  float: right;
+  max-width: 50%;
+  margin: 0 0 20px 20px;
+}
+
+.alignleft,
+.align-left {
+  position: relative;
+  float: left;
+  max-width: 50%;
+  margin: 0 20px 20px 0;
+}
+
+.aligncenter,
+.align-center {
+  clear: both;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+}

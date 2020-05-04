@@ -1,0 +1,36 @@
+//
+// Tags field
+// --------------------------------------------------
+
+
+.field--field-tags {
+  font-size: .7em;
+  line-height: $line-height-base;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    li {
+      display: inline-block;
+      margin-right: 5px;
+      margin-bottom: 10px;
+      white-space: nowrap;
+
+      a {
+        display: inline-block;
+        padding: 5px 10px;
+        background-color: white;
+        border: 1px solid $grey-200;
+        border-radius: 1em;
+        text-decoration: none;
+
+        &:hover,
+        &:focus {
+          border-color: $grey-400;
+        }
+      }
+    }
+  }
+}

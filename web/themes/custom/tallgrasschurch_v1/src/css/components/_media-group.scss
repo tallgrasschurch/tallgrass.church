@@ -1,0 +1,53 @@
+//
+// Media group
+// --------------------------------------------------
+
+
+// TODO: This could use some work to make it more consistent with other card styles
+.media-group {
+  @extend .card;
+  padding: $grid-gutter-width;
+
+  .media-group__nav {
+    display: flex;
+    justify-content: center;
+    margin: 0 0 $grid-gutter-width;
+    padding: 0;
+    list-style-type: none;
+    font-size: .8em;
+
+    li {
+      margin-left: -1px;
+
+      // TODO: Button colors need some work
+      button {
+        padding: 10px 20px;
+        color: $grey-light;
+        background-color: $grey-lightest;
+        border: 1px solid $grey-lighter;
+        outline: none;
+        cursor: pointer;
+      }
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &.active {
+
+        button {
+          color: $body-color;
+          background-color: white;
+        }
+      }
+    }
+  }
+
+  audio {
+    width: 100%;
+  }
+
+  .embed-responsive {
+    margin: 0;
+  }
+}

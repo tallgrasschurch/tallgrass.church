@@ -1,0 +1,22 @@
+name: Tallgrass Community Church v1
+type: theme
+description: 'Custom Drupal theme for Tallgrass Community Church in Manhattan, Kansas.'
+core: 8.x
+libraries:
+  - tallgrasschurch_v1/global-css
+  - tallgrasschurch_v1/global-js
+# TODO: Disable libraries
+libraries-override:
+  #system/base: false
+base theme: stable
+regions:
+  header: 'Header'
+  content_above: 'Above the content'
+  content_top: 'Content top'
+  content: 'Content'
+  content_bottom: 'Content bottom'
+  content_below: 'Below the content'
+  footer: 'Footer'
+# TODO: Disable features
+#features:
+#  -

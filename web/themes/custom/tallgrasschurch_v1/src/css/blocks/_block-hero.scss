@@ -1,0 +1,80 @@
+//
+// Hero block
+// --------------------------------------------------
+
+
+// TODO: Adjust text sizes
+// TODO: Optimize image size (700px tall is maybe too much)
+
+#block-tallgrasschurch-v1-hero-home {
+
+  // Variables
+  $hero-bg-overlay-color:          $brand-primary;
+  $hero-bg-overlay-opacity-start:  .5;
+  $hero-bg-overlay-opacity-end:    .2;
+
+  min-height: 500px;
+  margin: 0;
+  padding: ($grid-gutter-width * 4) 0;
+  color: white;
+  background:
+    radial-gradient(ellipse at top left, rgba($hero-bg-overlay-color, $hero-bg-overlay-opacity-start) 0%, rgba($hero-bg-overlay-color, $hero-bg-overlay-opacity-end) 100%) center,
+    linear-gradient(to right, rgba($hero-bg-overlay-color, $hero-bg-overlay-opacity-start) 0%,rgba($hero-bg-overlay-color, $hero-bg-overlay-opacity-end) 100%) center,
+    url('../img/DSC_3673-1800x500.jpg') top center;
+  background-size:
+    auto,
+    auto,
+    cover;
+  background-repeat: no-repeat;
+  background-color: $hero-bg-overlay-color;
+  text-shadow: 0px 1px 2px black;
+
+  .container {}
+
+  .block-wrapper {
+
+    @media (min-width: $screen-lg) {
+      display: grid;
+      grid-template-columns: repeat(12, [col] 1fr);
+      grid-gap: $grid-gutter-width;
+    }
+  }
+
+  .field--field-block-title {
+    margin: 0 0 $grid-gutter-width;
+    font-size: $display2-font-size;
+    line-height: normal;
+
+    @media (min-width: $screen-md) {
+      font-size: 4.8rem;
+    }
+
+    @media (min-width: $screen-lg) {
+      grid-row-start: 1;
+      grid-column-end: span 12;
+      margin: 0;
+      font-size: $display1-font-size;
+      line-height: normal;
+    }
+  }
+
+  .field--body {
+    margin: 0;
+    font-size: 2.4rem;
+    font-weight: lighter;
+    line-height: normal;
+
+    > * {
+      margin: 0;
+    }
+
+    @media (min-width: $screen-md) {
+      font-size: $display3-font-size;
+    }
+
+    @media (min-width: $screen-lg) {
+      grid-row-start: 2;
+      grid-column-end: span 6;
+    }
+  }
+}

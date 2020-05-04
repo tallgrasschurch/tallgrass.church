@@ -1,0 +1,64 @@
+//
+// Contact us block
+// --------------------------------------------------
+
+
+#block-tallgrasschurch-v1-contact {
+  margin: 0;
+  padding: $grid-gutter-width 0;
+  color: white;
+  background-color: $brand-primary;
+  font-size: 1.4rem;
+
+  @media (min-width: $screen-sm) {
+    padding: ($grid-gutter-width * 2) 0;
+  }
+
+  a {
+    color: inherit;
+  }
+
+  .container {}
+
+  .field--body {
+
+    @media (min-width: $screen-md) {
+      display: grid;
+      grid-template-columns: repeat(12, [col] 1fr);
+      grid-gap: $grid-gutter-width;
+    }
+
+    // TODO: Add a classes to the selectors
+    section {
+
+      @media (max-width: $screen-sm-max) {
+        // TODO: Remove this bottom margin from the last section
+        margin-bottom: $grid-gutter-width;
+      }
+
+      @media (min-width: $screen-md) {
+        grid-column-end: span 4;
+      }
+
+      h2 {
+        margin: 0 0 ($grid-gutter-width / 2);
+        font-size: 1.6rem;
+        line-height: normal;
+      }
+
+      .more {
+        margin: 0;
+
+        a {}
+      }
+
+      ul {
+
+        li {
+
+          a {}
+        }
+      }
+    }
+  }
+}

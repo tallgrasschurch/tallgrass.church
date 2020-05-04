@@ -1,0 +1,23 @@
+{% extends "field.html.twig" %}
+
+{%
+  set label_classes = [
+    'field__label',
+  ]
+%}
+
+{% block label %}
+  <h2{{ title_attributes.addClass(label_classes) }}>Audio</h2>
+{% endblock %}
+{% block content %}
+  {% for item in items %}
+    {% if element['#formatter'] == 'file_default' %}
+      <audio{{ item.attributes }} controls>
+        Your browser does not support the <code>audio</code> element.
+        <source src="{{ file_url(item.content['#file'].uri.value) }}" type="{{ item.content['#file'].filemime.value }}">
+      </audio>
+    {% else %}
+      <div{{ item.attributes }}>{{ item.content }}</div>
+    {% endif %}
+  {% endfor %}
+{% endblock %}
