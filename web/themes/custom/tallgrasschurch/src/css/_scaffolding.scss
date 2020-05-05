@@ -1,0 +1,32 @@
+//
+// Scaffolding
+// --------------------------------------------------
+
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  background-color: $html-bg;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  color: $body-color;
+  background-color: $body-bg;
+}
+
+
+// Links
+// -------------------------
+
+a {
+  @include link-styles;
+}

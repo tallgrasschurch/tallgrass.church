@@ -1,0 +1,26 @@
+//
+// Tallgrass Community Church
+// --------------------------------------------------
+
+
+// Variables and mixins
+@import 'variables';
+@import 'mixins';
+
+// Reset
+@import '../../node_modules/normalize.css/normalize';
+
+// Core CSS
+@import 'scaffolding';
+@import 'type';
+@import 'images';
+
+// Reusable components
+@import 'components/buttons';
+@import 'components/container';
+@import 'components/card';
+
+// Theme
+//@import 'theme/theme';
+//@import 'theme/home';
+//@import 'theme/teaching';

@@ -1,0 +1,121 @@
+//
+// Theme
+// --------------------------------------------------
+
+
+// Site header
+// -------------------------
+
+#site-header {
+  display: flex;
+  //margin-bottom: $grid-gutter-width-xl;
+  padding: $grid-gutter-width-md;
+  //border-bottom: 1px solid $grey-300;
+
+  background-color: $grey-100;
+
+  > * {
+    align-self: center;
+  }
+
+  .logo {
+    flex: 0;
+    margin: 0;
+    line-height: 1;
+
+    a {
+      display: block;
+    }
+
+    img {
+      display: block;
+      width: auto;
+      height: 80px;
+      max-width: none;
+    }
+  }
+
+  .nav {
+    flex: 1;
+  }
+
+  .nav-list {
+    display: flex;
+    margin: 0 $grid-gutter-width-sm;
+    padding: 0;
+    list-style-type: none;
+    justify-content: flex-end;
+  }
+
+  .nav-list__item {
+    margin: 0 $grid-gutter-width-sm;
+
+    a {
+      @include undo-link-styles;
+    }
+  }
+
+  .nav-list__item--visit {}
+  .nav-list__item--ministries {}
+  .nav-list__item--resources {}
+  .nav-list__item--about {}
+
+  .nav-list__item--give {
+
+    a {
+      padding: $grid-gutter-width-xs $grid-gutter-width-sm;
+      background-color: $grey-400;
+    }
+  }
+
+  .search {
+    flex: 0;
+    white-space: nowrap;
+
+    a {
+      @include undo-link-styles;
+      padding: $grid-gutter-width-xs $grid-gutter-width-sm;
+    }
+  }
+
+  .search__icon {
+    display: inline-block;
+    width: 1.8rem;
+    height: 1.8rem;
+    margin-top: (1.8rem * .25);
+  }
+
+  .search__text {
+    //@extend .visually-hidden;
+  }
+}
+
+
+.visually-hidden {
+  position: absolute;
+  width: .0625rem;
+  height: .0625rem;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  clip-path: inset(50%);
+  border: 0;
+  pointer-events: none;
+  opacity: 0;
+}
+
+
+// Main content
+// -------------------------
+
+#main-content {}
+
+
+// Site footer
+// -------------------------
+
+#site-footer {
+  margin-top: $grid-gutter-width-xl;
+  padding-top: $grid-gutter-width-md;
+  border-top: 1px solid $grey-300;
+}
