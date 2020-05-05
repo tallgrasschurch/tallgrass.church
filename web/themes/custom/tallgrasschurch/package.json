@@ -1,0 +1,28 @@
+{
+  "name": "@tallgrasschurch/tallgrass.church",
+  "description": "Drupal theme for Tallgrass Community Church in Manhattan, Kansas.",
+  "homepage": "https://tallgrass.church/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tallgrasschurch/tallgrass.church.git"
+  },
+  "private": true,
+  "scripts": {
+    "start": "npm-run-all build --parallel watch livereload",
+    "build": "npm-run-all build:*",
+    "build:clean": "del-cli --force ./css/*",
+    "build:css": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 ./src/css -o ./css",
+    "build:postcss": "npx postcss css/*.css --use autoprefixer -d ./css",
+    "livereload": "livereload ./css/**/*.css",
+    "watch": "npm-run-all --parallel watch:*",
+    "watch:css": "npm run build:css -- --watch"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.7.6",
+    "del-cli": "^3.0.0",
+    "livereload": "^0.9.1",
+    "node-sass": "^4.14.1",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^7.1.1"
+  }
+}
