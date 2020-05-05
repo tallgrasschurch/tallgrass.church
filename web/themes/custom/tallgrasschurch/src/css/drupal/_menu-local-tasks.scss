@@ -1,0 +1,81 @@
+//
+// Drupal local tasks menu (tabs)
+// --------------------------------------------------
+
+
+.menu-local-tasks {
+  margin: 0 0 $line-height-computed;
+  font-size: 1.4rem;
+  line-height: $line-height-base;
+  text-align: center;
+}
+
+.menu-local-tasks-title {}
+
+.menu-local-tasks-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  border: 1px solid $grey-300;
+  border-radius: $border-radius-sm;
+  overflow: hidden;
+
+  .menu-local-tasks-list__item {
+
+    a {
+      @include undo-link-styles;
+      display: block;
+      padding: $grid-gutter-width-sm $grid-gutter-width-md;
+      background-color: $grey-100;
+
+      &:hover,
+      &:focus {
+        text-decoration: underline;
+      }
+
+      &.is-active {
+        background-color: white;
+      }
+    }
+  }
+
+  .menu-local-tasks-list__item + .menu-local-tasks-list__item {
+
+    a {
+      border-top: 1px solid $grey-300;
+    }
+  }
+}
+
+@media (min-width: $screen-md) {
+
+  .menu-local-tasks-list {
+    padding: 0 10px;
+    border: none;
+    border-bottom: 1px solid $grey-300;
+    border-radius: 0;
+    overflow: visible;
+
+    .menu-local-tasks-list__item {
+      display: inline-block;
+      margin: 0 5px -1px 0;
+      white-space: nowrap;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      a {
+        border: 1px solid $grey-300;
+        border-radius: $border-radius-sm $border-radius-sm 0 0;
+
+        &.is-active {
+          border-bottom-color: white;
+        }
+      }
+    }
+  }
+}
+
+.menu-local-tasks-list--primary {}
+.menu-local-tasks-list--secondary {}

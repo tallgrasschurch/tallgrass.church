@@ -564,4 +564,69 @@ img {
   padding-top: 40px;
 }
 
+.menu-local-tasks {
+  margin: 0 0 2.7rem;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.menu-local-tasks-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.menu-local-tasks-list .menu-local-tasks-list__item a {
+  color: inherit;
+  text-decoration: none;
+  display: block;
+  padding: 10px 20px;
+  background-color: #f9f9f9;
+}
+
+.menu-local-tasks-list .menu-local-tasks-list__item a:hover, .menu-local-tasks-list .menu-local-tasks-list__item a:focus {
+  color: inherit;
+}
+
+.menu-local-tasks-list .menu-local-tasks-list__item a:hover, .menu-local-tasks-list .menu-local-tasks-list__item a:focus {
+  text-decoration: underline;
+}
+
+.menu-local-tasks-list .menu-local-tasks-list__item a.is-active {
+  background-color: white;
+}
+
+.menu-local-tasks-list .menu-local-tasks-list__item + .menu-local-tasks-list__item a {
+  border-top: 1px solid #ddd;
+}
+
+@media (min-width: 768px) {
+  .menu-local-tasks-list {
+    padding: 0 10px;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    border-radius: 0;
+    overflow: visible;
+  }
+  .menu-local-tasks-list .menu-local-tasks-list__item {
+    display: inline-block;
+    margin: 0 5px -1px 0;
+    white-space: nowrap;
+  }
+  .menu-local-tasks-list .menu-local-tasks-list__item:last-child {
+    margin-right: 0;
+  }
+  .menu-local-tasks-list .menu-local-tasks-list__item a {
+    border: 1px solid #ddd;
+    border-radius: 5px 5px 0 0;
+  }
+  .menu-local-tasks-list .menu-local-tasks-list__item a.is-active {
+    border-bottom-color: white;
+  }
+}
+
 /*# sourceMappingURL=tallgrasschurch.css.map */

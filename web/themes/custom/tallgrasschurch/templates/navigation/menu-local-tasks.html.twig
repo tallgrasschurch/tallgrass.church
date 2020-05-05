@@ -1,0 +1,14 @@
+<nav class="menu-local-tasks">
+  {% if primary %}
+    <h2 class="menu-local-tasks-title visually-hidden">{{ 'Primary tabs'|t }}</h2>
+    <ul class="menu-local-tasks-list menu-local-tasks-list--primary">
+      {{ primary }}
+    </ul>
+  {% endif %}
+  {% if secondary %}
+    <h2 class="menu-local-tasks-title visually-hidden">{{ 'Secondary tabs'|t }}</h2>
+    <ul class="menu-local-tasks-list menu-local-tasks-list--secondary">
+      {{ secondary }}
+    </ul>
+  {% endif %}
+</nav>
