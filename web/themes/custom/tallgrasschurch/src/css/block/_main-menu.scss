@@ -1,0 +1,23 @@
+//
+// Main menu block
+// --------------------------------------------------
+
+
+.block--block-tallgrasschurch-main-menu {
+
+  .menu--main {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    .menu__item {
+      margin-left: $grid-gutter-width-md;
+
+      a {
+        @include undo-link-styles;
+      }
+    }
+  }
+}

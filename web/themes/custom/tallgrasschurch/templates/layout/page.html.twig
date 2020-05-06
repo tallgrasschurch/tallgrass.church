@@ -1,7 +1,7 @@
 <div class="page{% if node.getType %} page--{{ node.getType }}{% endif %}{% if view_id %} page--view-{{ view_id }} page--view-{{ view_id }}-{{ display_id }}{% endif %}">
 
   {% if page.header %}
-    <header role="banner" id="header">
+    <header role="banner" id="site-header">
       {{ page.header }}
     </header><!-- #header -->
   {% endif %}
@@ -46,7 +46,7 @@
   </main><!-- #main-content -->
 
   {% if page.footer %}
-    <footer role="contentinfo" id="footer">
+    <footer role="contentinfo" id="site-footer">
       {{ page.footer }}
     </footer><!-- #footer -->
   {% endif %}

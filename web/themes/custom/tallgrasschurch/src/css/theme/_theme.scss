@@ -7,58 +7,7 @@
 // -------------------------
 
 #site-header {
-  display: flex;
-  //margin-bottom: $grid-gutter-width-xl;
-  padding: $grid-gutter-width-md;
-  //border-bottom: 1px solid $grey-300;
-
   background-color: $grey-100;
-
-  > * {
-    align-self: center;
-  }
-
-  .logo {
-    flex: 0;
-    margin: 0;
-    line-height: 1;
-
-    a {
-      display: block;
-    }
-
-    img {
-      display: block;
-      width: auto;
-      height: 80px;
-      max-width: none;
-    }
-  }
-
-  .nav {
-    flex: 1;
-  }
-
-  .nav-list {
-    display: flex;
-    margin: 0 $grid-gutter-width-sm;
-    padding: 0;
-    list-style-type: none;
-    justify-content: flex-end;
-  }
-
-  .nav-list__item {
-    margin: 0 $grid-gutter-width-sm;
-
-    a {
-      @include undo-link-styles;
-    }
-  }
-
-  .nav-list__item--visit {}
-  .nav-list__item--ministries {}
-  .nav-list__item--resources {}
-  .nav-list__item--about {}
 
   .nav-list__item--give {
 

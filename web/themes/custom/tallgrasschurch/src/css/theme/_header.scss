@@ -1,0 +1,17 @@
+//
+// Site header
+// --------------------------------------------------
+
+
+#site-header {
+  padding: $grid-gutter-width-md;
+}
+
+.region--header {
+  display: flex;
+  justify-content: space-between;
+
+  > * {
+    align-self: center;
+  }
+}

@@ -564,6 +564,56 @@ img {
   padding-top: 40px;
 }
 
+#site-header {
+  padding: 20px;
+}
+
+.region--header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.region--header > * {
+  align-self: center;
+}
+
+.block--block-tallgrasschurch-branding .logo {
+  margin: 0;
+  line-height: 1;
+}
+
+.block--block-tallgrasschurch-branding .logo a {
+  display: block;
+}
+
+.block--block-tallgrasschurch-branding .logo img {
+  display: block;
+  width: auto;
+  height: 80px;
+  max-width: none;
+}
+
+.block--block-tallgrasschurch-main-menu .menu--main {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.block--block-tallgrasschurch-main-menu .menu--main .menu__item {
+  margin-left: 20px;
+}
+
+.block--block-tallgrasschurch-main-menu .menu--main .menu__item a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.block--block-tallgrasschurch-main-menu .menu--main .menu__item a:hover, .block--block-tallgrasschurch-main-menu .menu--main .menu__item a:focus {
+  color: inherit;
+}
+
 .menu-local-tasks {
   margin: 0 0 2.7rem;
   font-size: 1.4rem;

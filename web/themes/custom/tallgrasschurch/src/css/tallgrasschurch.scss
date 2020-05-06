@@ -22,8 +22,14 @@
 
 // Theme
 //@import 'theme/theme';
+@import 'theme/header';
 //@import 'theme/home';
 //@import 'theme/teaching';
+
+// Drupal blocks
+@import 'block/block';
+@import 'block/branding';
+@import 'block/main-menu';
 
 // Drupal
 @import 'drupal/menu-local-tasks';
