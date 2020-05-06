@@ -1,0 +1,53 @@
+<div class="page{% if node.getType %} page--{{ node.getType }}{% endif %}{% if view_id %} page--view-{{ view_id }} page--view-{{ view_id }}-{{ display_id }}{% endif %}">
+
+  {% if page.header %}
+    <header role="banner" id="header">
+      {{ page.header }}
+    </header><!-- #header -->
+  {% endif %}
+
+  {{ page.primary_menu }}
+  {{ page.secondary_menu }}
+
+  {{ page.breadcrumb }}
+
+  {{ page.highlighted }}
+
+  {{ page.help }}
+
+  <main role="main" id="main-content">
+    {% if page.content_above %}
+      <div id="content-above">
+        {{ page.content_above }}
+      </div><!-- #content-above -->
+    {% endif %}
+
+    {% if page.content_top or page.content or page.content_bottom %}
+      <article id="content">
+        {% if page.content_top %}
+          {{ page.content_top }}
+        {% endif %}
+
+        {% if page.content and not is_front %}
+          {{ page.content }}
+        {% endif %}
+
+        {% if page.content_bottom %}
+          {{ page.content_bottom }}
+        {% endif %}
+      </article><!-- #content -->
+    {% endif %}
+
+    {% if page.content_below %}
+      <div id="content-below">
+        {{ page.content_below }}
+      </div><!-- #content-below -->
+    {% endif %}
+  </main><!-- #main-content -->
+
+  {% if page.footer %}
+    <footer role="contentinfo" id="footer">
+      {{ page.footer }}
+    </footer><!-- #footer -->
+  {% endif %}
+</div><!-- .page -->
