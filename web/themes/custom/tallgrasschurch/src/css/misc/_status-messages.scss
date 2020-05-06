@@ -1,0 +1,25 @@
+//
+// Drupal status messages
+// --------------------------------------------------
+
+
+.status-messages {
+
+  .container {}
+
+  .status-messages__message {
+    @extend .alert;
+  }
+
+  .status-messages__message--status {
+    @extend .alert--info;
+  }
+
+  .status-messages__message--error {
+    @extend .alert--danger;
+  }
+
+  .status-messages__message--warning {
+    @extend .alert--warning;
+  }
+}

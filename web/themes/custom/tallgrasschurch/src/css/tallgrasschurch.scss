@@ -16,6 +16,7 @@
 @import 'images';
 
 // Reusable components
+@import 'components/alerts';
 @import 'components/buttons';
 @import 'components/container';
 @import 'components/card';
@@ -29,10 +30,13 @@
 @import 'layout/page';
 @import 'layout/region';
 
+// Navigation
+@import 'navigation/menu-local-tasks';
+
+// Misc
+@import 'misc/status-messages';
+
 // Blocks
 @import 'block/block';
 @import 'block/branding';
 @import 'block/main-menu';
-
-// Navigation
-@import 'navigation/menu-local-tasks';

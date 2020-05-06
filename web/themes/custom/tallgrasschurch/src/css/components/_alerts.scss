@@ -1,0 +1,40 @@
+//
+// Alerts
+// --------------------------------------------------
+
+
+.alert {
+  margin: $grid-gutter-width-lg 0;
+  padding: $grid-gutter-width-md;
+  border: 1px solid transparent;
+
+  a {
+    @include undo-link-styles;
+    color: inherit;
+    text-decoration: underline;
+  }
+}
+
+.alert--success {
+  color: $green-900;
+  background-color: $green-100;
+  border-color: $green-300;
+}
+
+.alert--danger {
+  color: $red-900;
+  background-color: $red-100;
+  border-color: $red-300;
+}
+
+.alert--warning {
+  color: $yellow-900;
+  background-color: $yellow-100;
+  border-color: $yellow-300;
+}
+
+.alert--info {
+  color: $blue-900;
+  background-color: $blue-100;
+  border-color: $blue-300;
+}
