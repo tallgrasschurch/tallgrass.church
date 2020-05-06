@@ -1,0 +1,55 @@
+//
+// Region
+// --------------------------------------------------
+
+
+.region {}
+
+
+// Header region
+// -------------------------
+
+.region--header {
+  display: flex;
+  justify-content: space-between;
+
+  > * {
+    align-self: center;
+  }
+}
+
+
+// Above the content region
+// -------------------------
+
+.region--content-above {}
+
+
+// Content top region
+// -------------------------
+
+.region--content-top {}
+
+
+// Content region
+// -------------------------
+
+.region--content {}
+
+
+// Content bottom region
+// -------------------------
+
+.region--content-bottom {}
+
+
+// Below the content region
+// -------------------------
+
+.region--content-below {}
+
+
+// Footer region
+// -------------------------
+
+.region--footer {}

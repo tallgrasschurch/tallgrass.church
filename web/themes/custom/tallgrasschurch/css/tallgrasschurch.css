@@ -565,7 +565,15 @@ img {
 }
 
 #site-header {
+  margin-bottom: 80px;
   padding: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+#site-footer {
+  margin-top: 80px;
+  padding: 20px;
+  border-top: 1px solid #ddd;
 }
 
 .region--header {
