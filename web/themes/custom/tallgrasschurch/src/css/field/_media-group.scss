@@ -1,0 +1,86 @@
+//
+// Media group
+// --------------------------------------------------
+
+
+// TODO: Is this in the correct directory?
+
+
+.media-group {
+  display: flex;
+  flex-direction: column;
+  margin: $grid-gutter-width-xl 0;
+  background-color: $grey-100;
+
+  .media-group__label {
+    display: none;
+  }
+
+  .media-group__nav {
+    order: 2;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: $grid-gutter-width-md;
+    list-style-type: none;
+
+    li {
+
+      button {
+        display: block;
+        padding: $grid-gutter-width-sm $grid-gutter-width-md;
+        background-color: $grey-200;
+        border: none;
+        cursor: pointer;
+      }
+
+      &.is-active {
+
+        button {
+          background-color: $grey-300;
+        }
+      }
+
+      &:first-child {
+
+        button {
+          border-radius: $border-radius 0 0 $border-radius;
+        }
+      }
+
+      &:last-child {
+
+        button {
+          border-radius: 0 $border-radius $border-radius 0;
+        }
+      }
+    }
+  }
+
+  .field {
+    order: 1;
+  }
+
+  .field__label {
+    display: none;
+  }
+
+  .field--field-audio {
+
+    audio {
+      display: block;
+      width: 100%;
+    }
+  }
+}
+
+
+// JavaScript disabled
+// -------------------------
+
+.no-js .media-group {
+
+  .field--field-video-url {
+    display: none;
+  }
+}

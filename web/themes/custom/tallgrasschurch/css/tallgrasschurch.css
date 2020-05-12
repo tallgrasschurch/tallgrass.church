@@ -729,4 +729,61 @@ img {
   color: inherit;
 }
 
+.media-group {
+  display: flex;
+  flex-direction: column;
+  margin: 80px 0;
+  background-color: #f9f9f9;
+}
+
+.media-group .media-group__label {
+  display: none;
+}
+
+.media-group .media-group__nav {
+  order: 2;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 20px;
+  list-style-type: none;
+}
+
+.media-group .media-group__nav li button {
+  display: block;
+  padding: 10px 20px;
+  background-color: #eee;
+  border: none;
+  cursor: pointer;
+}
+
+.media-group .media-group__nav li.is-active button {
+  background-color: #ddd;
+}
+
+.media-group .media-group__nav li:first-child button {
+  border-radius: 15px 0 0 15px;
+}
+
+.media-group .media-group__nav li:last-child button {
+  border-radius: 0 15px 15px 0;
+}
+
+.media-group .field {
+  order: 1;
+}
+
+.media-group .field__label {
+  display: none;
+}
+
+.media-group .field--field-audio audio {
+  display: block;
+  width: 100%;
+}
+
+.no-js .media-group .field--field-video-url {
+  display: none;
+}
+
 /*# sourceMappingURL=tallgrasschurch.css.map */

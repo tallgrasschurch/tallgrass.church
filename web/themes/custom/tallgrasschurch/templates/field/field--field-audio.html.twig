@@ -7,17 +7,12 @@
 %}
 
 {% block label %}
-  <h2{{ title_attributes.addClass(label_classes) }}>Audio</h2>
+  <h3{{ title_attributes.addClass(label_classes) }}>Audio</h3>
 {% endblock %}
 {% block content %}
   {% for item in items %}
-    {% if element['#formatter'] == 'file_default' %}
-      <audio{{ item.attributes }} controls>
-        Your browser does not support the <code>audio</code> element.
-        <source src="{{ file_url(item.content['#file'].uri.value) }}" type="{{ item.content['#file'].filemime.value }}">
-      </audio>
-    {% else %}
-      <div{{ item.attributes }}>{{ item.content }}</div>
-    {% endif %}
+    <div{{ item.attributes.addClass('field__content') }}>
+      {{ item.content }}
+    </div><!-- .field__content -->
   {% endfor %}
 {% endblock %}

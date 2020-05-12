@@ -64,7 +64,9 @@
   {% endblock %}
   {% block content %}
     {% for item in items %}
-      <div{{ item.attributes.addClass(content_classes) }}>{{ item.content }}</div>
+      <div{{ item.attributes.addClass(content_classes) }}>
+        {{ item.content }}
+      </div>
     {% endfor %}
   {% endblock %}
 </div>
