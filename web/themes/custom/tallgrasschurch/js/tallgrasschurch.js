@@ -3,6 +3,13 @@
 // --------------------------------------------------
 
 
+// Initialization
+// -------------------------
+
+// Remove .no-js class to indicate JavaScript is enabled (the .js class is added by Drupal)
+document.documentElement.classList.remove('no-js')
+
+
 // Media group
 // -------------------------
 
