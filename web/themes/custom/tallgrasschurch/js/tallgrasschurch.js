@@ -59,7 +59,7 @@ mediaGroup.forEach( function(group) {
       }
 
       // Make this button active
-      nav[0].querySelectorAll('.active')[0].classList.remove('is-active')
+      nav[0].querySelectorAll('.is-active')[0].classList.remove('is-active')
       item.classList.add('is-active')
 
       // Hide all sections
