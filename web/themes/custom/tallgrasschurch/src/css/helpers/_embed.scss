@@ -1,0 +1,38 @@
+//
+// Embeds
+// --------------------------------------------------
+
+
+// From Bootstrap (https://getbootstrap.com)
+
+.embed-responsive {
+  position: relative;
+  width: 100%;
+
+  &::before {
+    content: "";
+    display: block;
+  }
+
+  .embed-responsive__item,
+  iframe,
+  embed,
+  object,
+  video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@each $key, $ratio in $embed-responsive-aspect-ratios {
+
+  .embed-responsive-#{$key} {
+
+    &::before {
+      padding-top: percentage(map-get($ratio, y) / map-get($ratio, x));
+    }
+  }
+}
