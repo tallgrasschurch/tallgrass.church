@@ -6,6 +6,46 @@
 // Colors
 // -------------------------
 
+$brand-1-100:         #f0f5ff;
+$brand-1-200:         #d2e1f9;
+$brand-1-300:         #9bb8e9;
+$brand-1-400:         #5684d2;
+$brand-1-500:         #305696;
+$brand-1-600:         #264478;
+$brand-1-700:         #213c68;
+$brand-1-800:         #1c335a;
+$brand-1-900:         #172a4a;
+
+$brand-2-100:         #f0ffff;
+$brand-2-200:         #cffcfc;
+$brand-2-300:         #a4f3f4;
+$brand-2-400:         #69e1e2;
+$brand-2-500:         #31b5b7;
+$brand-2-600:         #279092;
+$brand-2-700:         #227e7f;
+$brand-2-800:         #1d6c6d;
+$brand-2-900:         #185a5b;
+
+$brand-3-100:         #f0fcff;
+$brand-3-200:         #a4e3f4;
+$brand-3-300:         #1fa4c7;
+$brand-3-400:         #1f90ad;
+$brand-3-500:         #1b778f;
+$brand-3-600:         #155f72;
+$brand-3-700:         #125363;
+$brand-3-800:         #104755;
+$brand-3-900:         #0d3b47;
+
+$brand-4-100:         #fff6e5;
+$brand-4-200:         #feebc8;
+$brand-4-300:         #fcdda6;
+$brand-4-400:         #fad289;
+$brand-4-500:         #f8c76e;
+$brand-4-600:         #f5b638;
+$brand-4-700:         #eaa30b;
+$brand-4-800:         #b48108;
+$brand-4-900:         #6d4612;
+
 $white:               #fff;
 $gray-100:            #f9f9f9;                $grey-100:            $gray-100;
 $gray-200:            #eee;                   $grey-200:            $gray-200;
@@ -50,7 +90,7 @@ $green-900:           #2d5529;
 
 $yellow-100:          #fff6e5;
 $yellow-200:          #feebc8;
-$yellow-300:          #feebc8;
+$yellow-300:          #fcdda6;
 $yellow-400:          #fad289;
 $yellow-500:          #f8c76e;
 $yellow-600:          #f5b638;
@@ -68,7 +108,7 @@ $red-700:             #6c0f17;
 $red-800:             #5d0d14;
 $red-900:             #4d0a10;
 
-$brand-primary:       black;
+$brand-primary:       $blue-500;
 $brand-success:       $green-500;
 $brand-info:          $blue-500;
 $brand-warning:       $yellow-700;
