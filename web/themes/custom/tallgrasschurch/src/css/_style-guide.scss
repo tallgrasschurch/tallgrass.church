@@ -1,0 +1,95 @@
+//
+// Style guide
+// --------------------------------------------------
+
+
+.sg-color-list {
+  display: flex;
+  padding: 0;
+  list-style-type: none;
+
+  .sg-color-list__item {}
+
+  .sg-color-list__name {
+    display: block;
+  }
+}
+
+.color-wrapper {
+  display: flex;
+}
+
+.color {
+  flex: 1;
+  height: 80px;
+}
+
+.grey-100 { background-color: $grey-100; }
+.grey-200 { background-color: $grey-200; }
+.grey-300 { background-color: $grey-300; }
+.grey-400 { background-color: $grey-400; }
+.grey-500 { background-color: $grey-500; }
+.grey-600 { background-color: $grey-600; }
+.grey-700 { background-color: $grey-700; }
+.grey-800 { background-color: $grey-800; }
+.grey-900 { background-color: $grey-900; }
+
+.blue-100 { background-color: $blue-100; }
+.blue-200 { background-color: $blue-200; }
+.blue-300 { background-color: $blue-300; }
+.blue-400 { background-color: $blue-400; }
+.blue-500 { background-color: $blue-500; }
+.blue-600 { background-color: $blue-600; }
+.blue-700 { background-color: $blue-700; }
+.blue-800 { background-color: $blue-800; }
+.blue-900 { background-color: $blue-900; }
+
+.teal-100 { background-color: $teal-100; }
+.teal-200 { background-color: $teal-200; }
+.teal-300 { background-color: $teal-300; }
+.teal-400 { background-color: $teal-400; }
+.teal-500 { background-color: $teal-500; }
+.teal-600 { background-color: $teal-600; }
+.teal-700 { background-color: $teal-700; }
+.teal-800 { background-color: $teal-800; }
+.teal-900 { background-color: $teal-900; }
+
+.cyan-100 { background-color: $cyan-100; }
+.cyan-200 { background-color: $cyan-200; }
+.cyan-300 { background-color: $cyan-300; }
+.cyan-400 { background-color: $cyan-400; }
+.cyan-500 { background-color: $cyan-500; }
+.cyan-600 { background-color: $cyan-600; }
+.cyan-700 { background-color: $cyan-700; }
+.cyan-800 { background-color: $cyan-800; }
+.cyan-900 { background-color: $cyan-900; }
+
+.yellow-100 { background-color: $yellow-100; }
+.yellow-200 { background-color: $yellow-200; }
+.yellow-300 { background-color: $yellow-300; }
+.yellow-400 { background-color: $yellow-400; }
+.yellow-500 { background-color: $yellow-500; }
+.yellow-600 { background-color: $yellow-600; }
+.yellow-700 { background-color: $yellow-700; }
+.yellow-800 { background-color: $yellow-800; }
+.yellow-900 { background-color: $yellow-900; }
+
+.red-100 { background-color: $red-100; }
+.red-200 { background-color: $red-200; }
+.red-300 { background-color: $red-300; }
+.red-400 { background-color: $red-400; }
+.red-500 { background-color: $red-500; }
+.red-600 { background-color: $red-600; }
+.red-700 { background-color: $red-700; }
+.red-800 { background-color: $red-800; }
+.red-900 { background-color: $red-900; }
+
+.green-100 { background-color: $green-100; }
+.green-200 { background-color: $green-200; }
+.green-300 { background-color: $green-300; }
+.green-400 { background-color: $green-400; }
+.green-500 { background-color: $green-500; }
+.green-600 { background-color: $green-600; }
+.green-700 { background-color: $green-700; }
+.green-800 { background-color: $green-800; }
+.green-900 { background-color: $green-900; }

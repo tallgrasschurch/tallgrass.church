@@ -6,46 +6,6 @@
 // Colors
 // -------------------------
 
-$brand-1-100:         #f0f5ff;
-$brand-1-200:         #d2e1f9;
-$brand-1-300:         #9bb8e9;
-$brand-1-400:         #5684d2;
-$brand-1-500:         #305696;
-$brand-1-600:         #264478;
-$brand-1-700:         #213c68;
-$brand-1-800:         #1c335a;
-$brand-1-900:         #172a4a;
-
-$brand-2-100:         #f0ffff;
-$brand-2-200:         #cffcfc;
-$brand-2-300:         #a4f3f4;
-$brand-2-400:         #69e1e2;
-$brand-2-500:         #31b5b7;
-$brand-2-600:         #279092;
-$brand-2-700:         #227e7f;
-$brand-2-800:         #1d6c6d;
-$brand-2-900:         #185a5b;
-
-$brand-3-100:         #f0fcff;
-$brand-3-200:         #a4e3f4;
-$brand-3-300:         #1fa4c7;
-$brand-3-400:         #1f90ad;
-$brand-3-500:         #1b778f;
-$brand-3-600:         #155f72;
-$brand-3-700:         #125363;
-$brand-3-800:         #104755;
-$brand-3-900:         #0d3b47;
-
-$brand-4-100:         #fff6e5;
-$brand-4-200:         #feebc8;
-$brand-4-300:         #fcdda6;
-$brand-4-400:         #fad289;
-$brand-4-500:         #f8c76e;
-$brand-4-600:         #f5b638;
-$brand-4-700:         #eaa30b;
-$brand-4-800:         #b48108;
-$brand-4-900:         #6d4612;
-
 $white:               #fff;
 $gray-100:            #f9f9f9;                $grey-100:            $gray-100;
 $gray-200:            #eee;                   $grey-200:            $gray-200;
@@ -68,51 +28,126 @@ $gray-700-alpha:      rgba(0, 0, 0, 0.665);   $grey-700-alpha:      $gray-700-al
 $gray-800-alpha:      rgba(0, 0, 0, 0.8);     $grey-800-alpha:      $gray-800-alpha;
 $gray-900-alpha:      rgba(0, 0, 0, 0.865);   $grey-900-alpha:      $gray-900-alpha;
 
-$blue-100:            #f5f9ff;
-$blue-200:            #dbecff;
-$blue-300:            #9ec8fa;
-$blue-400:            #6eadf7;
-$blue-500:            #2684f3;
-$blue-600:            #1e6bc2;
-$blue-700:            #1a5ca9;
-$blue-800:            #164f91;
-$blue-900:            #124179;
 
-$green-100:           #f1fff0;
-$green-200:           #f1fff0; // TODO
-$green-300:           #f1fff0; // TODO
-$green-400:           #f1fff0; // TODO
-$green-500:           #5bac53;
-$green-600:           #488942;
-$green-700:           #3f7839;
-$green-800:           #366731;
-$green-900:           #2d5529;
+// Set a specific jump point for requesting color jumps
+$theme-color-interval: 10%;
 
-$yellow-100:          #fff6e5;
-$yellow-200:          #feebc8;
-$yellow-300:          #fcdda6;
-$yellow-400:          #fad289;
-$yellow-500:          #f8c76e;
-$yellow-600:          #f5b638;
-$yellow-700:          #eaa30b;
-$yellow-800:          #b48108;
-$yellow-900:          #6d4612;
+// Base colors
+$blue:    hsl(218, 52, 39); // #305696
+$indigo:  #6610f2;
+$purple:  #6f42c1;
+$pink:    #d63384;
+$red:     hsl(355, 75, 35); // #9c1622
+$orange:  #fd7e14;
+$yellow:  hsl( 39, 91, 70); // #f8c76e
+$green:   hsl(134, 61, 41); // #28a745
+$teal:    hsl(181, 58, 45); // #31b5b7
+$cyan:    hsl(192, 68, 33); // #1b778f
 
-$red-100:             #fff0f1;
-$red-200:             #fff0f1; // TODO
-$red-300:             #fff0f1; // TODO
-$red-400:             #fff0f1; // TODO
-$red-500:             #9c1622;
-$red-600:             #7c111b;
-$red-700:             #6c0f17;
-$red-800:             #5d0d14;
-$red-900:             #4d0a10;
+$blue-100: hsl(218, 90, 98);
+$blue-200: hsl(218, 80, 90);
+$blue-300: hsl(218, 70, 75);
+$blue-400: hsl(218, 60, 60);
+$blue-500: $blue;
+$blue-600: hsl(218, 60, 35);
+$blue-700: hsl(218, 70, 30);
+$blue-800: hsl(218, 80, 25);
+$blue-900: hsl(218, 90, 20);
 
-$brand-primary:       $blue-500;
-$brand-success:       $green-500;
-$brand-info:          $blue-500;
-$brand-warning:       $yellow-700;
-$brand-danger:        $red-500;
+$indigo-100: tint-color($indigo, 9);
+$indigo-200: tint-color($indigo, 8);
+$indigo-300: tint-color($indigo, 6);
+$indigo-400: tint-color($indigo, 4);
+$indigo-500: $indigo;
+$indigo-600: shade-color($indigo, 2);
+$indigo-700: shade-color($indigo, 4);
+$indigo-800: shade-color($indigo, 6);
+$indigo-900: shade-color($indigo, 8);
+
+$purple-100: tint-color($purple, 9);
+$purple-200: tint-color($purple, 8);
+$purple-300: tint-color($purple, 6);
+$purple-400: tint-color($purple, 4);
+$purple-500: $purple;
+$purple-600: shade-color($purple, 2);
+$purple-700: shade-color($purple, 4);
+$purple-800: shade-color($purple, 6);
+$purple-900: shade-color($purple, 8);
+
+$pink-100: tint-color($pink, 9);
+$pink-200: tint-color($pink, 8);
+$pink-300: tint-color($pink, 6);
+$pink-400: tint-color($pink, 4);
+$pink-500: $pink;
+$pink-600: shade-color($pink, 2);
+$pink-700: shade-color($pink, 4);
+$pink-800: shade-color($pink, 6);
+$pink-900: shade-color($pink, 8);
+
+$red-100: tint-color($red, 9);
+$red-200: tint-color($red, 8);
+$red-300: tint-color($red, 6);
+$red-400: tint-color($red, 4);
+$red-500: $red;
+$red-600: shade-color($red, 2);
+$red-700: shade-color($red, 4);
+$red-800: shade-color($red, 6);
+$red-900: shade-color($red, 8);
+
+$orange-100: tint-color($orange, 9);
+$orange-200: tint-color($orange, 8);
+$orange-300: tint-color($orange, 6);
+$orange-400: tint-color($orange, 4);
+$orange-500: $orange;
+$orange-600: shade-color($orange, 2);
+$orange-700: shade-color($orange, 4);
+$orange-800: shade-color($orange, 6);
+$orange-900: shade-color($orange, 8);
+
+$yellow-100: hsl( 39, 91, 98);
+$yellow-200: hsl( 39, 91, 90);
+$yellow-300: hsl( 39, 91, 85);
+$yellow-400: hsl( 39, 91, 80);
+$yellow-500: $yellow;
+$yellow-600: hsl( 39, 91, 60);
+$yellow-700: hsl( 39, 91, 50);
+$yellow-800: hsl( 39, 91, 40);
+$yellow-900: hsl( 39, 91, 30);
+
+$green-100: tint-color($green, 9);
+$green-200: tint-color($green, 8);
+$green-300: tint-color($green, 6);
+$green-400: tint-color($green, 4);
+$green-500: $green;
+$green-600: shade-color($green, 2);
+$green-700: shade-color($green, 4);
+$green-800: shade-color($green, 6);
+$green-900: shade-color($green, 8);
+
+$teal-100: hsl(181, 90, 98);
+$teal-200: hsl(181, 80, 90);
+$teal-300: hsl(181, 70, 75);
+$teal-400: hsl(181, 60, 60);
+$teal-500: $teal;
+$teal-600: hsl(181, 60, 35);
+$teal-700: hsl(181, 70, 30);
+$teal-800: hsl(181, 80, 25);
+$teal-900: hsl(181, 90, 20);
+
+$cyan-100: hsl(192, 90, 98);
+$cyan-200: hsl(192, 75, 90);
+$cyan-300: hsl(192, 80, 75);
+$cyan-400: hsl(192, 75, 60);
+$cyan-500: $cyan;
+$cyan-600: hsl(192, 75, 25);
+$cyan-700: hsl(192, 80, 20);
+$cyan-800: hsl(192, 85, 15);
+$cyan-900: hsl(192, 90, 10);
+
+$brand-primary:       $blue;
+$brand-secondary:     $yellow;
+$brand-tertiary:      $teal;
+$brand-quaternary:    $cyan;
 
 
 // Typography

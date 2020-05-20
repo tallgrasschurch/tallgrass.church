@@ -4,6 +4,7 @@
 
 
 // Variables and mixins
+@import 'functions';
 @import 'variables';
 @import 'mixins';
 
@@ -39,7 +40,7 @@
 // Navigation
 @import 'navigation/menu-local-tasks';
 
-// Misc
+// Misc.
 @import 'misc/status-messages';
 
 // Block
@@ -50,3 +51,7 @@
 // Field
 @import 'field/field';
 @import 'field/media-group'; // TODO: Is this in the correct directory?
+
+
+// Style guide
+@import 'style-guide';
