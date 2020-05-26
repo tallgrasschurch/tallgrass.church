@@ -767,6 +767,42 @@ img {
   color: inherit;
 }
 
+.field--field-file-upload {
+  margin: 40px 0;
+  border: 1px solid #ddd;
+}
+
+.field--field-file-upload .field__label {
+  margin: 0;
+  padding: 10px 20px;
+  border-bottom: 1px solid #ddd;
+  font-size: inherit;
+  text-transform: uppercase;
+}
+
+.file-upload-list {
+  margin: 0;
+  padding: 0 20px;
+  list-style-type: none;
+}
+
+.file-upload-list .file-upload-list__item {
+  padding: 10px 0;
+}
+
+.file-upload-list .file-upload-list__item a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.file-upload-list .file-upload-list__item a:hover, .file-upload-list .file-upload-list__item a:focus {
+  color: inherit;
+}
+
+.file-upload-list .file-upload-list__item + .file-upload-list__item {
+  border-top: 1px solid #ddd;
+}
+
 .media-group {
   display: flex;
   flex-direction: column;

@@ -1,0 +1,24 @@
+{% extends "field.html.twig" %}
+
+{%
+  set label_classes = [
+    'field__label',
+  ]
+%}
+
+{%
+  set item_classes = [
+    'file-upload-list__item',
+  ]
+%}
+
+{% block label %}
+  <h2{{ title_attributes.addClass(label_classes) }}>Files</h2>
+{% endblock label %}
+{% block content %}
+  <ul class="file-upload-list">
+    {% for item in items %}
+      <li{{ item.attributes.addClass(item_classes) }}>{{ item.content }}</li>
+    {% endfor %}
+  </ul>
+{% endblock content %}

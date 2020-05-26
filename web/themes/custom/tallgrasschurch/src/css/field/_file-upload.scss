@@ -1,0 +1,35 @@
+//
+// File upload
+// --------------------------------------------------
+
+
+.field--field-file-upload {
+  margin: $grid-gutter-width-lg 0;
+  border: 1px solid $grey-300;
+
+  .field__label {
+    margin: 0;
+    padding: $grid-gutter-width-sm $grid-gutter-width-md;
+    border-bottom: 1px solid $grey-300;
+    font-size: inherit;
+    text-transform: uppercase;
+  }
+}
+
+.file-upload-list {
+  margin: 0;
+  padding: 0 $grid-gutter-width-md;
+  list-style-type: none;
+
+  .file-upload-list__item {
+    padding: $grid-gutter-width-sm 0;
+
+    a {
+      @include undo-link-styles;
+    }
+  }
+
+  .file-upload-list__item + .file-upload-list__item {
+    border-top: 1px solid $grey-300;
+  }
+}
