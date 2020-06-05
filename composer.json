@@ -21,7 +21,7 @@
     "drupal-composer/drupal-scaffold": "^2.2",
     "cweagans/composer-patches": "^1.6",
     "drupal/console": "~1.0",
-    "drupal/core": "~8.8.0",
+    "drupal/core": "~8.8",
     "drush/drush": "~9.0",
     "drupal/devel": "^2.1",
     "drupal/pathauto": "^1.0",
@@ -51,10 +51,6 @@
     "patches": {
       "drupal/core": {
         "Add option to show only start or end date in the DateTime Range custom formatter": "https://www.drupal.org/files/issues/2018-05-23/drupal-display-one-date-formatter-2827055-25.patch"
-      },
-      "drupal/podcast": {
-        "itunes:image should be output as an href attribute": "https://www.drupal.org/files/issues/2019-05-06/podcast-setup_image-3034933-3.patch",
-        "iTunes Category with ampersand outputs extra 'amp;' text": "https://www.drupal.org/files/issues/2019-03-27/3029877-2.patch"
       }
     }
   }
