@@ -18,7 +18,7 @@
     "watch:css": "npm run build:css -- --watch"
   },
   "devDependencies": {
-    "autoprefixer": "^9.7.6",
+    "autoprefixer": "^9.8.0",
     "del-cli": "^3.0.1",
     "livereload": "^0.9.1",
     "node-sass": "^4.14.1",
