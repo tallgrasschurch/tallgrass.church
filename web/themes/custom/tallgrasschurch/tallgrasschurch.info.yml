@@ -8,6 +8,18 @@ libraries:
 # TODO: Disable libraries
 libraries-override:
   #system/base: false
+  layout_builder/twocol_section:
+    css:
+      theme:
+        layouts/twocol_section/twocol_section.css: false
+  layout_builder/threecol_section:
+    css:
+      theme:
+        layouts/threecol_section/threecol_section.css: false
+  layout_builder/fourcol_section:
+    css:
+      theme:
+        layouts/fourcol_section/fourcol_section.css: false
 base theme: stable
 regions:
   header: 'Header'
