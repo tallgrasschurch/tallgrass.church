@@ -665,7 +665,9 @@ img {
   align-self: center;
 }
 
-.layout--twocol-section {
+.layout--twocol-section,
+.layout--threecol-section,
+.layout--fourcol-section {
   display: flex;
   flex-wrap: wrap;
 }
@@ -697,11 +699,6 @@ img {
   }
 }
 
-.layout--threecol-section {
-  display: flex;
-  flex-wrap: wrap;
-}
-
 .layout--threecol-section > .layout__region {
   flex: 0 1 100%;
 }
@@ -727,11 +724,6 @@ img {
   .layout--threecol-section--33-34-33 > .layout__region--second {
     flex: 0 1 34%;
   }
-}
-
-.layout--fourcol-section {
-  display: flex;
-  flex-wrap: wrap;
 }
 
 .layout--fourcol-section > .layout__region {

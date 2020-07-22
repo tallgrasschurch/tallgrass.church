@@ -3,12 +3,18 @@
 // --------------------------------------------------
 
 
+.layout--twocol-section,
+.layout--threecol-section,
+.layout--fourcol-section {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
 // Two column section
 // -------------------------
 
 .layout--twocol-section {
-  display: flex;
-  flex-wrap: wrap;
 
   & > .layout__region {
     flex: 0 1 100%;
@@ -51,8 +57,6 @@
 // -------------------------
 
 .layout--threecol-section {
-  display: flex;
-  flex-wrap: wrap;
 
   & > .layout__region {
     flex: 0 1 100%;
@@ -91,8 +95,6 @@
 // -------------------------
 
 .layout--fourcol-section {
-  display: flex;
-  flex-wrap: wrap;
 
   & > .layout__region {
     flex: 0 1 100%;
