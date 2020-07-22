@@ -3,25 +3,12 @@
 // --------------------------------------------------
 
 
-.layout--twocol,
-.layout--twocol-section,
-.layout--threecol-33-34-33,
-.layout--threecol-25-50-25,
-.layout--threecol-section,
-.layout--fourcol-section {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-
 // One column
 // -------------------------
 
 .layout--onecol {
 
-  .layout__region {
-    width: 100%;
-  }
+  .layout__region {}
 }
 
 
@@ -30,16 +17,16 @@
 
 .layout--twocol {
 
-  & > .layout__region {
-    flex: 0 1 100%;
-  }
+  .layout__region {}
 
-  @media screen and (min-width: 40em) {
+  .layout__region--first {}
 
-    & > .layout__region--first,
-    & > .layout__region--second {
-      flex: 0 1 50%;
-    }
+  .layout__region--second {}
+
+  @media (min-width: $screen-lg) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: $grid-gutter-width;
   }
 }
 
@@ -49,38 +36,34 @@
 
 .layout--twocol-section {
 
-  & > .layout__region {
-    flex: 0 1 100%;
-  }
+  .layout__region {}
 
-  @media screen and (min-width: 40em) {
+  .layout__region--first {}
+
+  .layout__region--second {}
+
+  @media (min-width: $screen-lg) {
+    display: grid;
+    gap: $grid-gutter-width;
 
     &.layout--twocol-section--50-50 {
-
-      & > .layout__region--first,
-      & > .layout__region--second {
-        flex: 0 1 50%;
-      }
+      grid-template-columns: 1fr 1fr;
     }
 
-    &.layout--twocol-section--33-67 > .layout__region--first,
-    &.layout--twocol-section--67-33 > .layout__region--second {
-      flex: 0 1 33%;
+    &.layout--twocol-section--33-67 {
+      grid-template-columns: 1fr 2fr;
     }
 
-    &.layout--twocol-section--33-67 > .layout__region--second,
-    &.layout--twocol-section--67-33 > .layout__region--first {
-      flex: 0 1 67%;
+    &.layout--twocol-section--67-33 {
+      grid-template-columns: 2fr 1fr;
     }
 
-    &.layout--twocol-section--25-75 > .layout__region--first,
-    &.layout--twocol-section--75-25 > .layout__region--second {
-      flex: 0 1 25%;
+    &.layout--twocol-section--25-75 {
+      grid-template-columns: 1fr 3fr;
     }
 
-    &.layout--twocol-section--25-75 > .layout__region--second,
-    &.layout--twocol-section--75-25 > .layout__region--first {
-      flex: 0 1 75%;
+    &.layout--twocol-section--75-25 {
+      grid-template-columns: 3fr 1fr;
     }
   }
 }
@@ -91,40 +74,35 @@
 
 .layout--threecol-33-34-33 {
 
-  & > .layout__region {
-    flex: 0 1 100%;
-  }
+  .layout__region {}
 
-  @media screen and (min-width: 40em) {
+  .layout__region--first {}
 
-    & > .layout__region--first,
-    & > .layout__region--third {
-      flex: 0 1 33%;
-    }
+  .layout__region--second {}
 
-    & > .layout__region--second {
-      flex: 0 1 34%;
-    }
+  .layout__region--third {}
+
+  @media (min-width: $screen-lg) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: $grid-gutter-width;
   }
 }
 
 .layout--threecol-25-50-25 {
 
-  & > .layout__region,
-  & > .layout__region--second {
-    flex: 0 1 100%;
-  }
+  .layout__region {}
+
+  .layout__region--first {}
+
+  .layout__region--second {}
+
+  .layout__region--third {}
 
   @media screen and (min-width: 40em) {
-
-    & > .layout__region--first,
-    & > .layout__region--third {
-      flex: 0 1 25%;
-    }
-
-    & > .layout__region--second {
-      flex: 0 1 50%;
-    }
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: $grid-gutter-width;
   }
 }
 
@@ -134,35 +112,33 @@
 
 .layout--threecol-section {
 
-  & > .layout__region {
-    flex: 0 1 100%;
-  }
-}
+  .layout__region {}
 
-@media screen and (min-width: 40em) {
+  .layout__region--first {}
 
-  .layout--threecol-section--25-50-25 > .layout__region--first,
-  .layout--threecol-section--25-50-25 > .layout__region--third,
-  .layout--threecol-section--25-25-50 > .layout__region--first,
-  .layout--threecol-section--25-25-50 > .layout__region--second,
-  .layout--threecol-section--50-25-25 > .layout__region--second,
-  .layout--threecol-section--50-25-25 > .layout__region--third {
-    flex: 0 1 25%;
-  }
+  .layout__region--second {}
 
-  .layout--threecol-section--25-50-25 > .layout__region--second,
-  .layout--threecol-section--25-25-50 > .layout__region--third,
-  .layout--threecol-section--50-25-25 > .layout__region--first {
-    flex: 0 1 50%;
-  }
+  .layout__region--third {}
 
-  .layout--threecol-section--33-34-33 > .layout__region--first,
-  .layout--threecol-section--33-34-33 > .layout__region--third {
-    flex: 0 1 33%;
-  }
+  @media (min-width: $screen-lg) {
+    display: grid;
+    gap: $grid-gutter-width;
 
-  .layout--threecol-section--33-34-33 > .layout__region--second {
-    flex: 0 1 34%;
+    &.layout--threecol-section--33-34-33 {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    &.layout--threecol-section--50-25-25 {
+      grid-template-columns: 2fr 1fr 1fr;
+    }
+
+    &.layout--threecol-section--25-50-25 {
+      grid-template-columns: 1fr 2fr 1fr;
+    }
+
+    &.layout--threecol-section--25-25-50 {
+      grid-template-columns: 1fr 1fr 2fr;
+    }
   }
 }
 
@@ -172,14 +148,19 @@
 
 .layout--fourcol-section {
 
-  & > .layout__region {
-    flex: 0 1 100%;
-  }
+  .layout__region {}
 
-  @media screen and (min-width: 40em) {
+  .layout__region--first {}
 
-    & > .layout__region {
-      flex: 0 1 25%;
-    }
+  .layout__region--second {}
+
+  .layout__region--third {}
+
+  .layout__region--fourth {}
+
+  @media (min-width: $screen-lg) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: $grid-gutter-width;
   }
 }
