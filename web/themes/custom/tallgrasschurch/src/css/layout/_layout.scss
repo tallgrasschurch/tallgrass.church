@@ -15,7 +15,8 @@
 // Two column
 // -------------------------
 
-.layout--twocol {
+.layout--twocol,
+.layout--twocol-section {
 
   .layout__region {}
 
@@ -30,25 +31,11 @@
   }
 }
 
-
-// Two column section
-// -------------------------
-
 .layout--twocol-section {
 
-  .layout__region {}
-
-  .layout__region--first {}
-
-  .layout__region--second {}
-
   @media (min-width: $screen-lg) {
-    display: grid;
-    gap: $grid-gutter-width;
 
-    &.layout--twocol-section--50-50 {
-      grid-template-columns: 1fr 1fr;
-    }
+    &.layout--twocol-section--50-50 {}
 
     &.layout--twocol-section--33-67 {
       grid-template-columns: 1fr 2fr;
@@ -72,7 +59,9 @@
 // Three column
 // -------------------------
 
-.layout--threecol-33-34-33 {
+.layout--threecol-33-34-33,
+.layout--threecol-25-50-25,
+.layout--threecol-section {
 
   .layout__region {}
 
@@ -89,61 +78,33 @@
   }
 }
 
-.layout--threecol-25-50-25 {
+.layout--threecol-33-34-33,
+.layout--threecol-section--33-34-33 {}
 
-  .layout__region {}
-
-  .layout__region--first {}
-
-  .layout__region--second {}
-
-  .layout__region--third {}
-
-  @media screen and (min-width: 40em) {
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    gap: $grid-gutter-width;
-  }
-}
-
-
-// Three column section
-// -------------------------
-
-.layout--threecol-section {
-
-  .layout__region {}
-
-  .layout__region--first {}
-
-  .layout__region--second {}
-
-  .layout__region--third {}
+.layout--threecol-25-50-25,
+.layout--threecol-section--25-50-25 {
 
   @media (min-width: $screen-lg) {
-    display: grid;
-    gap: $grid-gutter-width;
+    grid-template-columns: 1fr 2fr 1fr;
+  }
+}
 
-    &.layout--threecol-section--33-34-33 {
-      grid-template-columns: 1fr 1fr 1fr;
-    }
+.layout--threecol-section--50-25-25 {
 
-    &.layout--threecol-section--50-25-25 {
-      grid-template-columns: 2fr 1fr 1fr;
-    }
+  @media (min-width: $screen-lg) {
+    grid-template-columns: 2fr 1fr 1fr;
+  }
+}
 
-    &.layout--threecol-section--25-50-25 {
-      grid-template-columns: 1fr 2fr 1fr;
-    }
+.layout--threecol-section--25-25-50 {
 
-    &.layout--threecol-section--25-25-50 {
-      grid-template-columns: 1fr 1fr 2fr;
-    }
+  @media (min-width: $screen-lg) {
+    grid-template-columns: 1fr 1fr 2fr;
   }
 }
 
 
-// Four column section
+// Four column
 // -------------------------
 
 .layout--fourcol-section {
