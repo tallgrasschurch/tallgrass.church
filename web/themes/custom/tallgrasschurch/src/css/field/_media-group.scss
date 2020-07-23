@@ -6,7 +6,7 @@
 // TODO: Is this in the correct directory?
 
 
-.media-group {
+.layout--media {
   display: flex;
   flex-direction: column;
   margin: $grid-gutter-width-xl 0;
@@ -16,7 +16,7 @@
     display: none;
   }
 
-  .media-group__nav {
+  .media-group-nav {
     order: 2;
     display: flex;
     justify-content: center;
