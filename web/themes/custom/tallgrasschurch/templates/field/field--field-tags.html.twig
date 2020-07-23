@@ -1,0 +1,16 @@
+{% extends "field.html.twig" %}
+
+{% block label %}
+  {% if not label_hidden %}
+    <h2{{ title_attributes.addClass(title_classes) }}>{{ label }}</h2>
+  {% endif %}
+{% endblock %}
+
+{% block content %}
+  <ul class="tag-list">
+    {% set content_classes = content_classes|merge(['tag-list__item', 'tag']) %}
+    {% for item in items %}
+      <li{{ item.attributes.addClass(content_classes) }}>{{ item.content }}</li>
+    {% endfor %}
+  </ul><!-- .tag-list -->
+{% endblock %}

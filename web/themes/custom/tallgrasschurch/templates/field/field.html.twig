@@ -45,8 +45,9 @@
 %}
 
 {%
-  set label_classes = [
+  set title_classes = [
     'field__label',
+    label_display == 'visually_hidden' ? 'visually-hidden',
   ]
 %}
 
@@ -59,9 +60,10 @@
 <div{{ attributes.addclass(classes) }}>
   {% block label %}
     {% if not label_hidden %}
-      <div{{ title_attributes.addClass(label_classes) }}>{{ label }}</div>
+      <div{{ title_attributes.addClass(title_classes) }}>{{ label }}</div>
     {% endif %}
   {% endblock %}
+
   {% block content %}
     {% for item in items %}
       <div{{ item.attributes.addClass(content_classes) }}>
