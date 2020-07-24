@@ -700,7 +700,7 @@ img {
   .layout--twocol-section {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    gap: 40px;
   }
 }
 
@@ -725,7 +725,7 @@ img {
   .layout--threecol-section {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px;
+    gap: 40px;
   }
 }
 
@@ -752,7 +752,7 @@ img {
   .layout--fourcol-section {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 20px;
+    gap: 40px;
   }
 }
 

@@ -29,7 +29,7 @@
   @media (min-width: $screen-lg) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: $grid-gutter-width;
+    gap: $grid-gutter-width-lg;
   }
 }
 
@@ -76,7 +76,7 @@
   @media (min-width: $screen-lg) {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: $grid-gutter-width;
+    gap: $grid-gutter-width-lg;
   }
 }
 
@@ -124,6 +124,6 @@
   @media (min-width: $screen-lg) {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: $grid-gutter-width;
+    gap: $grid-gutter-width-lg;
   }
 }
