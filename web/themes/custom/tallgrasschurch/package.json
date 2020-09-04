@@ -19,5 +19,7 @@
     "sass": "^1.22.7",
     "time-grunt": "^2.0.0"
   },
-  "dependencies": {}
+  "browserslist": [
+    "defaults"
+  ]
 }
