@@ -1232,12 +1232,17 @@ form .preview {
   min-height: 500px;
   margin: 0;
   padding: 80px 0;
-  color: white;
-  background: radial-gradient(ellipse at top left, rgba(48, 86, 150, 0.5) 0%, rgba(48, 86, 150, 0.2) 100%) center, linear-gradient(to right, rgba(48, 86, 150, 0.5) 0%, rgba(48, 86, 150, 0.2) 100%) center, url("../img/DSC_3673-1800x500.jpg") top center;
+  color: #305696;
+  background: url("../img/ChurchInThePark-TG-nowords-bannersize.jpg") top center;
   background-size: auto, auto, cover;
   background-repeat: no-repeat;
-  background-color: #305696;
-  text-shadow: 0px 1px 2px black;
+  background-color: #eee;
+  text-shadow: 0px 1px 2px white;
+}
+@media (min-width: 992px) {
+  #block-tallgrasschurch-hero-home {
+    background-position: top right;
+  }
 }
 @media (min-width: 992px) {
   #block-tallgrasschurch-hero-home .block-wrapper {
@@ -1247,8 +1252,8 @@ form .preview {
   }
 }
 #block-tallgrasschurch-hero-home .field--field-block-title {
-  margin: 0 0 20px;
-  font-size: 4.8rem;
+  margin: 0 0 10px;
+  font-size: 3.6rem;
   line-height: normal;
 }
 @media (min-width: 768px) {
@@ -1268,7 +1273,7 @@ form .preview {
 #block-tallgrasschurch-hero-home .field--body {
   margin: 0;
   font-size: 2.4rem;
-  font-weight: lighter;
+  font-weight: normal;
   line-height: normal;
 }
 #block-tallgrasschurch-hero-home .field--body > * {
