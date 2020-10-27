@@ -3,17 +3,35 @@
 use Drupal\node\Entity\Node;
 use Drupal\pathauto\PathautoState;
 
+
+/**
+ * Style guide pages
+ */
+
 Node::create([
   'uid' => 1,
   'title' => 'Style Guide',
   'status' => 1,
   'type' => 'page',
   'body' => [
-    'value' => 'Test page with a custom alias',
     'format' => 'full_html',
   ],
   'path' => [
     'alias' => '/style-guide',
+    'pathauto' => PathautoState::SKIP,
+  ],
+])->save();
+
+Node::create([
+  'uid' => 1,
+  'title' => 'Components',
+  'status' => 1,
+  'type' => 'page',
+  'body' => [
+    'format' => 'full_html',
+  ],
+  'path' => [
+    'alias' => '/style-guide/components',
     'pathauto' => PathautoState::SKIP,
   ],
 ])->save();

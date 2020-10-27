@@ -3,15 +3,17 @@
 // --------------------------------------------------
 
 
+// Base styles
+// -------------------------
+
 .card {
-  display: grid;
-  grid-auto-rows: minmax(min-content, max-content) 1fr;
+  display: flex;
+  flex-direction: column;
   margin-top: $line-height-computed;
   margin-bottom: $line-height-computed;
   background-color: $grey-100;
-  border: 1px solid $grey-100;
 
-  .card__top {
+  .card__img {
 
     img {
       display: block;
@@ -21,16 +23,44 @@
     }
   }
 
-  .card__body {
-    display: flex;
-    flex-direction: column;
-    padding: $grid-gutter-width-md;
-  }
+  .card__content {}
 
   .card__header {
-    display: flex;
-    flex-direction: column;
+    margin: $grid-gutter-width-md;
   }
+
+  .card__body {
+    margin: $grid-gutter-width-md;
+  }
+
+  .card__footer {
+    margin: $grid-gutter-width-md;
+  }
+}
+
+
+// Horizontal cards
+// -------------------------
+
+.card--h {
+  @extend .card;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  .card__content {}
+
+  .card__header {}
+
+  .card__body {}
+
+  .card__footer {}
+}
+
+
+// ???
+// -------------------------
+
+.card {
 
   .card__title {
     order: 2;
@@ -56,11 +86,6 @@
   }
 
   .card__content {}
-
-  .card__footer {
-    margin-top: auto;
-    padding-top: $grid-gutter-width-md;
-  }
 
   .card__author {
     display: flex;
@@ -89,23 +114,9 @@
   }
 }
 
-
-// Horizontal cards
-// -------------------------
-
 .card--h {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-
-  .card__body {
-    padding: $grid-gutter-width-lg;
-  }
 
   .card__title {
-    font-size: 2.4rem;
-  }
-
-  .card__footer {
-    padding-top: $grid-gutter-width-lg;
+    //font-size: 2.4rem;
   }
 }
