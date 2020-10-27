@@ -46,14 +46,21 @@
   @extend .card;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  column-gap: $grid-gutter-width;
 
   .card__content {}
 
-  .card__header {}
+  .card__header {
+    margin-left: 0;
+  }
 
-  .card__body {}
+  .card__body {
+    margin-left: 0;
+  }
 
-  .card__footer {}
+  .card__footer {
+    margin-left: 0;
+  }
 }
 
 
