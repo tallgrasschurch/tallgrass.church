@@ -70,6 +70,13 @@
 .card-deck {
   display: grid;
   gap: $grid-gutter-width-lg;
+  margin-top: $line-height-computed;
+  margin-bottom: $line-height-computed;
+
+  .card,
+  .card--h {
+    margin: 0;
+  }
 }
 
 .card-deck--2-col {

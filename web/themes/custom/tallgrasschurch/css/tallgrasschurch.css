@@ -594,6 +594,16 @@ img {
 .card-deck, .card-deck--2-col, .card-deck--3-col, .card-deck--4-col {
   display: grid;
   gap: 40px;
+  margin-top: 2.7rem;
+  margin-bottom: 2.7rem;
+}
+
+.card-deck .card, .card-deck--2-col .card, .card-deck--3-col .card, .card-deck--4-col .card, .card-deck .card--h, .card-deck--2-col .card--h, .card-deck--3-col .card--h, .card-deck--4-col .card--h,
+.card-deck .card--h,
+.card-deck--2-col .card--h,
+.card-deck--3-col .card--h,
+.card-deck--4-col .card--h {
+  margin: 0;
 }
 
 .card-deck--2-col {
