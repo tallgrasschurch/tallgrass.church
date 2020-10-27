@@ -64,6 +64,30 @@
 }
 
 
+// Card decks
+// -------------------------
+
+.card-deck {
+  display: grid;
+  gap: $grid-gutter-width-lg;
+}
+
+.card-deck--2-col {
+  @extend .card-deck;
+  grid-template-columns: 1fr 1fr;
+}
+
+.card-deck--3-col {
+  @extend .card-deck;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.card-deck--4-col {
+  @extend .card-deck;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+
 // ???
 // -------------------------
 
