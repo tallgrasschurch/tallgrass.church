@@ -1,0 +1,92 @@
+{#
+/**
+ * @file
+ * Theme override for page titles.
+ *
+ * Available variables:
+ * - title_attributes: HTML attributes for the page title element.
+ * - title_prefix: Additional output populated by modules, intended to be
+ *   displayed in front of the main title tag that appears in the template.
+ * - title: The page title, for use in the actual content.
+ * - title_suffix: Additional output populated by modules, intended to be
+ *   displayed after the main title tag that appears in the template.
+ */
+#}
+
+{#
+/**
+ * Custom variables:
+ * - node_type
+ * - subtitle
+ * - date ('teaching' node type only)
+ * - date_raw ('teaching' node type only)
+ * - speaker ('teaching' node type only)
+ *   - name
+ *   - link
+ * - scripture_book ('teaching' node type only)
+ *   - name
+ *   - link
+ * - scripture_reference ('teaching' node type only)
+ * - series ('teaching' node type only)
+ *   - name
+ *   - link
+ *
+ * Date formats (for use with the format_date filter on the raw date variable):
+ * - short
+ * - medium
+ * - long
+ * - html_datetime
+ * - html_date
+ * - html_time
+ * - html_yearless_date
+ * - html_week
+ * - html_month
+ * - html_year
+ * - custom: a PHP date format string
+ */
+#}
+
+{%
+  set classes = [
+    'page-title__title',
+  ]
+%}
+
+{{ title_prefix }}
+
+{% if title %}
+  <h1{{ title_attributes.addclass(classes) }}>{{ title }}</h1>
+{% endif %}
+
+{% if node_type == 'teaching' %}
+  <div class="page-title__meta">
+    <div class="page-title__meta-item--date">
+      <time datetime="{{ date_raw|format_date('html_datetime') }}">{{ date_raw|format_date('custom', 'F j, Y') }}</time>
+    </div>
+
+    {% if speaker is defined and speaker is not empty %}
+      <div class="page-title__meta-item--speaker">
+        <b>Speaker{% if speaker|length > 1 %}s{% endif %}:</b>
+        {% for item in speaker %}
+          <a href="{{ item.link }}">{{ item.name }}</a>
+          {%- if speaker|length > 2 and not loop.last -%},{%- endif -%}
+          {% if speaker|length > 1 and loop.index == (loop.length - 1) %} and{% endif %}
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    {% if scripture_book is defined and scripture_book is not empty %}
+      <div class="page-title__meta-item--scripture">
+        <b>Scripture:</b>
+        <a href="{{ scripture_book.link }}">
+          {{ scripture_book.name }}
+          {% if scripture_reference is defined and scripture_reference is not empty %}
+            {{ scripture_reference }}
+          {% endif %}
+        </a>
+      </div>
+    {% endif %}
+  </div><!-- .page-title__meta -->
+{% endif %}
+
+{{ title_suffix }}
