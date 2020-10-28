@@ -49,7 +49,12 @@
 // Block
 @import 'block/block';
 @import 'block/branding';
+@import 'block/breadcrumbs';
 @import 'block/main-menu';
+@import 'block/page-title';
+
+// Content
+@import 'content/page-title';
 
 // Field
 @import 'field/field';

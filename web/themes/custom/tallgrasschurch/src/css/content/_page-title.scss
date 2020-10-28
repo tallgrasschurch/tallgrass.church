@@ -1,0 +1,43 @@
+//
+// Block
+// --------------------------------------------------
+
+
+.page-title {
+  margin-bottom: $grid-gutter-width-lg;
+  font-size: 7.2rem;
+  line-height: 1;
+}
+
+.page-title-meta {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: $grid-gutter-width-lg;
+
+  .page-title-meta__item {
+    margin-right: $grid-gutter-width-sm;
+
+    &::after {
+      content: "/";
+      margin-left: $grid-gutter-width-sm;
+    }
+
+    &:last-child {
+      margin-right: 0;
+
+      &::after {
+        content: "";
+      }
+    }
+  }
+
+  .page-title-meta__item-label {
+    font-weight: normal;
+  }
+
+  .page-title-meta__item--date {}
+
+  .page-title-meta__item--speaker {}
+
+  .page-title-meta__item--scripture {}
+}

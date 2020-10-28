@@ -718,6 +718,12 @@ img {
   align-self: center;
 }
 
+.region--content-top {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+}
+
 @media (min-width: 992px) {
   .layout--twocol,
   .layout--twocol-section {
@@ -844,17 +850,29 @@ img {
   }
 }
 
+.breadcrumbs {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+}
+
 .breadcrumbs-list {
+  margin-bottom: 20px;
   padding: 0;
   list-style-type: none;
 }
 
 .breadcrumbs-list .breadcrumbs-list__item {
   display: inline-block;
+  margin-right: 10px;
 }
 
 .breadcrumbs-list .breadcrumbs-list__item::after {
   content: "/";
+  margin-left: 10px;
+}
+
+.breadcrumbs-list .breadcrumbs-list__item:last-child {
+  margin-right: 0;
 }
 
 .breadcrumbs-list .breadcrumbs-list__item:last-child::after {
@@ -877,6 +895,10 @@ img {
   max-width: none;
 }
 
+.block--block-breadcrumbs {
+  order: 1;
+}
+
 .block--block-tallgrasschurch-main-menu .menu--main {
   display: flex;
   justify-content: flex-end;
@@ -896,6 +918,43 @@ img {
 
 .block--block-tallgrasschurch-main-menu .menu--main .menu__item a:hover, .block--block-tallgrasschurch-main-menu .menu--main .menu__item a:focus {
   color: inherit;
+}
+
+.block--block-tallgrasschurch-page-title {
+  order: 2;
+}
+
+.page-title {
+  margin-bottom: 40px;
+  font-size: 7.2rem;
+  line-height: 1;
+}
+
+.page-title-meta {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.page-title-meta .page-title-meta__item {
+  margin-right: 10px;
+}
+
+.page-title-meta .page-title-meta__item::after {
+  content: "/";
+  margin-left: 10px;
+}
+
+.page-title-meta .page-title-meta__item:last-child {
+  margin-right: 0;
+}
+
+.page-title-meta .page-title-meta__item:last-child::after {
+  content: "";
+}
+
+.page-title-meta .page-title-meta__item-label {
+  font-weight: normal;
 }
 
 .field--field-file-upload {

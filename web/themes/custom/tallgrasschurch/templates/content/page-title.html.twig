@@ -48,7 +48,7 @@
 
 {%
   set classes = [
-    'page-title__title',
+    'page-title',
   ]
 %}
 
@@ -59,14 +59,14 @@
 {% endif %}
 
 {% if node_type == 'teaching' %}
-  <div class="page-title__meta">
-    <div class="page-title__meta-item--date">
+  <div class="page-title-meta">
+    <div class="page-title-meta__item page-title-meta__item--date">
       <time datetime="{{ date_raw|format_date('html_datetime') }}">{{ date_raw|format_date('custom', 'F j, Y') }}</time>
     </div>
 
     {% if speaker is defined and speaker is not empty %}
-      <div class="page-title__meta-item--speaker">
-        <b>Speaker{% if speaker|length > 1 %}s{% endif %}:</b>
+      <div class="page-title-meta__item page-title-meta__item--speaker">
+        <b class="page-title-meta__item-label">Speaker{% if speaker|length > 1 %}s{% endif %}:</b>
         {% for item in speaker %}
           <a href="{{ item.link }}">{{ item.name }}</a>
           {%- if speaker|length > 2 and not loop.last -%},{%- endif -%}
@@ -76,8 +76,8 @@
     {% endif %}
 
     {% if scripture_book is defined and scripture_book is not empty %}
-      <div class="page-title__meta-item--scripture">
-        <b>Scripture:</b>
+      <div class="page-title-meta__item page-title-meta__item--scripture">
+        <b class="page-title-meta__item-label">Scripture:</b>
         <a href="{{ scripture_book.link }}">
           {{ scripture_book.name }}
           {% if scripture_reference is defined and scripture_reference is not empty %}

@@ -28,7 +28,11 @@
 // Content top region
 // -------------------------
 
-.region--content-top {}
+.region--content-top {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: $grid-gutter-width-lg;
+}
 
 
 // Content region

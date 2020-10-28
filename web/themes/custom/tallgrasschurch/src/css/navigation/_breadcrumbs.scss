@@ -3,20 +3,27 @@
 // --------------------------------------------------
 
 
-.breadcrumbs {}
+.breadcrumbs {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+}
 
 .breadcrumbs-list {
+  margin-bottom: $grid-gutter-width;
   padding: 0;
   list-style-type: none;
 
   .breadcrumbs-list__item {
     display: inline-block;
+    margin-right: $grid-gutter-width-sm;
 
     &::after {
       content: "/";
+      margin-left: $grid-gutter-width-sm;
     }
 
     &:last-child {
+      margin-right: 0;
 
       &::after {
         content: "";
