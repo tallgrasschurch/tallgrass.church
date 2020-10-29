@@ -8,19 +8,19 @@
   },
   "private": true,
   "scripts": {
-    "start": "npm-run-all build --parallel watch livereload",
+    "start": "npm-run-all build --parallel watch browser-sync",
+    "browser-sync": "browser-sync start --no-open --files 'css' 'js' --proxy 'local.tallgrass.church'",
     "build": "npm-run-all build:*",
     "build:clean": "del-cli --force ./css/*",
     "build:css": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 ./src/css -o ./css",
     "build:postcss": "npx postcss css/*.css --use autoprefixer -d ./css",
-    "livereload": "livereload ./css/**/*.css",
     "watch": "npm-run-all --parallel watch:*",
     "watch:css": "npm run build:css -- --watch"
   },
   "devDependencies": {
     "autoprefixer": "^9.8.6",
+    "browser-sync": "^2.26.13",
     "del-cli": "^3.0.1",
-    "livereload": "^0.9.1",
     "node-sass": "^4.14.1",
     "normalize.css": "^8.0.1",
     "npm-run-all": "^4.1.5",
