@@ -787,11 +787,22 @@ img {
 }
 
 @media (min-width: 992px) {
+  .layout--onecol {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 40px;
+  }
+  .layout--onecol .layout__region--content {
+    grid-column: 3 / span 8;
+  }
+}
+
+@media (min-width: 992px) {
   .layout--twocol,
   .layout--twocol-section {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 40px;
+    column-gap: 40px;
   }
 }
 
@@ -816,7 +827,7 @@ img {
   .layout--threecol-section {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 40px;
+    column-gap: 40px;
   }
 }
 
@@ -843,7 +854,7 @@ img {
   .layout--fourcol-section {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 40px;
+    column-gap: 40px;
   }
 }
 
