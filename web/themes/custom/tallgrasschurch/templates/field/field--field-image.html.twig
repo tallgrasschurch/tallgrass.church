@@ -1,0 +1,45 @@
+{#
+/**
+ * Custom variables:
+ * - image_position
+ */
+#}
+
+{%
+  set classes = [
+    'field',
+    'field--' ~ field_name|clean_class,
+    'field--' ~ field_name|clean_class ~ '-' ~ image_position|clean_class,
+  ]
+%}
+
+{%
+  set title_classes = [
+    'field__label',
+    label_display == 'visually_hidden' ? 'visually-hidden',
+  ]
+%}
+
+{%
+  set content_classes = [
+    'field__content',
+  ]
+%}
+
+{% if image_position != 'hide' %}
+  <div{{ attributes.addclass(classes) }}>
+    {% if not label_hidden %}
+      <div{{ title_attributes.addClass(title_classes) }}>{{ label }}</div>
+    {% endif %}
+
+    {% for item in items|slice(0, 1) %}
+      {% if not item.attributes is empty %}
+        <div{{ item.attributes.addClass(content_classes) }}>
+          {{ item.content }}
+        </div>
+      {% else %}
+        {{ item.content }}
+      {% endif %}
+    {% endfor %}
+  </div>
+{% endif %}

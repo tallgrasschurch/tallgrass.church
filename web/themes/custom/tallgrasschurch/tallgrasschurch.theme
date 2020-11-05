@@ -119,6 +119,31 @@ function tallgrasschurch_preprocess_field(&$variables) {
   // Get the node
   $node = $variables['element']['#object'];
 
+  // Image field
+  if ($variables['field_name'] == 'field_image') {
+
+    if ($node) {
+      if (isset($node->field_image_position->value)) {
+        // Set the image_position variable to match field value
+        $variables['image_position'] = $node->field_image_position->value;
+      } else {
+        // Set the image_position variable when value is empty
+        $variables['image_position'] = 'right';
+      }
+
+      // Handle the full width image position
+      if ($variables['image_position'] == 'full') {
+        // Get full list of image styles
+        $styles = ImageStyle::loadMultiple();
+
+        // Set the image to the full width image style if it exists
+        if (array_key_exists('full_width', $styles)) {
+          $variables['items'][0]['content']['#image_style'] = 'full_width';
+        }
+      }
+    }
+  }
+
   // Video URL field
   if ($variables['field_name'] == 'field_video_url') {
 
