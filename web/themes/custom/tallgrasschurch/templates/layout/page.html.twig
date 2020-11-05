@@ -47,9 +47,13 @@
     </div><!-- .container -->
   </main><!-- #main-content -->
 
-  {% if page.footer %}
+  {% if page.footer or page.footer_top %}
     <footer role="contentinfo" id="site-footer">
-      {{ page.footer }}
+      <div class="container">
+        {{ page.footer_top }}
+
+        {{ page.footer }}
+      </div><!-- .container -->
     </footer><!-- #footer -->
   {% endif %}
 </div><!-- .page -->
