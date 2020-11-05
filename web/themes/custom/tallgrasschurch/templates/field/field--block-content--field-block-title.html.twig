@@ -1,0 +1,9 @@
+{% extends "field.html.twig" %}
+
+{% block content %}
+  {% for item in items %}
+    <h2{{ item.attributes.addClass(content_classes) }}>
+      {{ item.content }}
+    </h2>
+  {% endfor %}
+{% endblock %}

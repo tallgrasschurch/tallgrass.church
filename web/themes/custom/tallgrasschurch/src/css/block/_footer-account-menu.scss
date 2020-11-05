@@ -1,0 +1,25 @@
+//
+// Footer account menu
+// --------------------------------------------------
+
+
+.block--block-tallgrasschurch-account-menu {
+  grid-column: 1 / span 6;
+  grid-row-start: 2;
+}
+
+// TODO: Should this be moved?
+.block--block-tallgrasschurch-account-menu {
+
+  .menu--account {
+    display: flex;
+    padding: 0;
+    list-style-type: none;
+
+    .menu__item {
+      margin-right: $grid-gutter-width;
+
+      a {}
+    }
+  }
+}

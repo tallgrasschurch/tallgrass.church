@@ -28,21 +28,25 @@
 
 {% macro menu_links(menu_name, items, attributes, menu_level) %}
   {% import _self as menus %}
+
   {%
     set classes = [
       'menu',
       menu_name ? 'menu--' ~ menu_name|clean_class
     ]
   %}
+
   {% if items %}
     {% if menu_level == 0 %}<ul{{ attributes.addclass(classes) }}>{% else %}<ul>{% endif %}
       {% for item in items %}
         {%
           set classes = [
             'menu__item',
+            'menu__item--' ~ item.title|clean_class,
             item.in_active_trail ? 'is-active'
           ]
         %}
+
         <li{{ item.attributes.addclass(classes) }}>
           {{ link(item.title, item.url) }}
           {% if item.below %}

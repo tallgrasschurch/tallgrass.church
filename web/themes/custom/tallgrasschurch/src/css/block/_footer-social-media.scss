@@ -1,0 +1,56 @@
+//
+// Footer social media
+// --------------------------------------------------
+
+
+.block--block-social-media {
+  grid-column: 7 / span 6;
+  grid-row: 1 / span 2;
+}
+
+// TODO: Should this be moved?
+.block--block-social-media {
+
+  .menu--social-media {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0;
+    list-style-type: none;
+
+    .menu__item {
+      margin-left: $grid-gutter-width-sm;
+
+      a {
+        display: inline-flex;
+        align-self: center;
+        padding: 5px;
+        border: 1px solid $blue-200;
+        border-radius: 10px;
+
+        svg {
+          width: 24px;
+          height: 24px;
+
+          path {
+            fill: $blue-400;
+          }
+        }
+
+        span {}
+
+        &:hover,
+        &:focus {
+          background-color: $blue-100;
+          border-color: $blue-300;
+
+          svg {
+
+            path {
+              fill: $blue;
+            }
+          }
+        }
+      }
+    }
+  }
+}
