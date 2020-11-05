@@ -3,6 +3,7 @@
 use Drupal\node\Entity\Node;
 use Drupal\pathauto\PathautoState;
 use Drupal\Core\Url;
+use Drupal\image\Entity\ImageStyle;
 use Drupal\taxonomy\Entity\Term;
 
 
