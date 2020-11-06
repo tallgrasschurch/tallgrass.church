@@ -24,6 +24,7 @@
 
 // Reusable components
 @import 'components/alerts';
+@import 'components/align';
 @import 'components/buttons';
 @import 'components/container';
 @import 'components/card';
@@ -61,6 +62,7 @@
 
 // Field
 @import 'field/field';
+@import 'field/field-image';
 @import 'field/file-upload'; // TODO: Is this in the correct directory?
 @import 'field/media-group'; // TODO: Is this in the correct directory?
 
