@@ -687,13 +687,13 @@ img {
   display: inline-block;
   padding: 5px 10px;
   color: #305697;
-  background-color: #d1e0fa;
+  background-color: #f5f9fe;
   border-radius: 15px;
   text-decoration: none;
 }
 
 .tag a::before {
-  content: "#";
+  content: "# ";
   color: #5c89d6;
 }
 

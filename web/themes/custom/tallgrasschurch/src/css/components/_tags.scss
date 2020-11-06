@@ -22,12 +22,12 @@
     display: inline-block;
     padding: $grid-gutter-width-xs $grid-gutter-width-sm;
     color: $blue-500;
-    background-color: $blue-200;
+    background-color: $blue-100;
     border-radius: $border-radius;
     text-decoration: none;
 
     &::before {
-      content: "#";
+      content: "# ";
       color: $blue-400;
     }
   }
