@@ -70,8 +70,8 @@
 .card-deck {
   display: grid;
   gap: $grid-gutter-width-lg;
-  margin-top: $line-height-computed;
-  margin-bottom: $line-height-computed;
+  margin-top: $grid-gutter-width-lg;
+  margin-bottom: $grid-gutter-width-lg;
 
   .card,
   .card--h {
