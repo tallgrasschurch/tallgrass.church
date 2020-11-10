@@ -833,7 +833,7 @@ img {
     column-gap: 40px;
   }
   .layout--onecol .layout__region--content {
-    grid-column: 3 / span 8;
+    grid-column: 1 / span 8;
   }
 }
 
@@ -902,7 +902,6 @@ img {
   margin: 0 0 2.7rem;
   font-size: 1.4rem;
   line-height: 1.5;
-  text-align: center;
 }
 
 .menu-local-tasks-list {
