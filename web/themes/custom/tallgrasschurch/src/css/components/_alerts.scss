@@ -13,16 +13,26 @@
     color: inherit;
     text-decoration: underline;
   }
+
+  .alert__heading {
+    color: inherit;
+  }
+
+  > *:last-child,
+  > *:last-child > *:last-child,
+  > *:last-child > *:last-child > *:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .alert--success {
-  color: $green-900;
+  color: $green-800;
   background-color: $green-100;
   border-color: $green-300;
 }
 
 .alert--danger {
-  color: $red-900;
+  color: $red-700;
   background-color: $red-100;
   border-color: $red-300;
 }

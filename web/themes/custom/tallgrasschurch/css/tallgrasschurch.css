@@ -470,14 +470,26 @@ img {
   color: inherit;
 }
 
+.alert .alert__heading, .status-messages .status-messages__message .alert__heading {
+  color: inherit;
+}
+
+.alert > *:last-child, .status-messages .status-messages__message > *:last-child,
+.alert > *:last-child > *:last-child,
+.status-messages .status-messages__message > *:last-child > *:last-child,
+.alert > *:last-child > *:last-child > *:last-child,
+.status-messages .status-messages__message > *:last-child > *:last-child > *:last-child {
+  margin-bottom: 0;
+}
+
 .alert--success {
-  color: #08220e;
+  color: #10431c;
   background-color: #eaf6ed;
   border-color: #a9dcb5;
 }
 
 .alert--danger, .status-messages .status-messages__message--error {
-  color: #1f0407;
+  color: #5e0d14;
   background-color: #f5e8e9;
   border-color: #d7a2a6;
 }
