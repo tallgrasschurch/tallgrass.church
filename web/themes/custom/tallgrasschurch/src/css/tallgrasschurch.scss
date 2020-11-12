@@ -8,64 +8,51 @@
 @import 'variables';
 @import 'mixins';
 
-// Reset
-@import '../../node_modules/normalize.css/normalize';
-
-// Helpers
-@import 'helpers/embed';
-
 // Fonts
 @import 'fonts';
 
-// Core CSS
-@import 'scaffolding';
-@import 'type';
-@import 'images';
+// Reset
+@import '../../node_modules/normalize.css/normalize';
 
-// Reusable components
+// Base
+@import 'base/scaffolding';
+@import 'base/type';
+@import 'base/images';
+
+// Components
 @import 'components/alerts';
 @import 'components/align';
 @import 'components/buttons';
 @import 'components/container';
 @import 'components/card';
+@import 'components/embed';
 @import 'components/tags';
-
-// Theme
-//@import 'theme/theme';
-//@import 'theme/home';
-//@import 'theme/teaching';
 
 // Layout
 @import 'layout/page';
 @import 'layout/region';
 @import 'layout/layout';
 
-// Navigation
-@import 'navigation/menu-local-tasks';
-@import 'navigation/breadcrumbs';
-
-// Misc.
-@import 'misc/status-messages';
-
-// Block
-@import 'block/block';
-@import 'block/branding';
-@import 'block/breadcrumbs';
-@import 'block/footer-account-menu';
-@import 'block/footer-content';
-@import 'block/footer-social-media';
-@import 'block/main-menu';
-@import 'block/page-title';
-
-// Content
-@import 'content/page-title';
-
-// Field
-@import 'field/field';
-@import 'field/field-image';
-@import 'field/file-upload'; // TODO: Is this in the correct directory?
-@import 'field/media-group'; // TODO: Is this in the correct directory?
-
+// Theme
+@import 'theme/block';
+@import 'theme/block-branding';
+@import 'theme/block-breadcrumbs';
+@import 'theme/block-footer-account-menu';
+@import 'theme/block-footer-content';
+@import 'theme/block-footer-social-media';
+@import 'theme/block-main-menu';
+@import 'theme/block-page-title';
+@import 'theme/breadcrumbs';
+@import 'theme/field';
+@import 'theme/field-image';
+@import 'theme/field-file-upload'; // TODO: Is this in the correct directory?
+@import 'theme/media-group'; // TODO: Is this in the correct directory?
+@import 'theme/menu-local-tasks';
+@import 'theme/page-title';
+@import 'theme/status-messages';
+//@import 'theme/theme';
+//@import 'theme/home';
+//@import 'theme/teaching';
 
 // Style guide
 @import 'style-guide';
