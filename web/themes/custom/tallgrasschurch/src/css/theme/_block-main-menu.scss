@@ -16,7 +16,7 @@
       margin-left: $grid-gutter-width-md;
 
       a {
-        @include undo-link-styles;
+        @include remove-link-styles;
       }
     }
   }

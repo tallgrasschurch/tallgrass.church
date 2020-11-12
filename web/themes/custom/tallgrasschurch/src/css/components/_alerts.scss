@@ -9,7 +9,7 @@
   border: 1px solid transparent;
 
   a {
-    @include undo-link-styles;
+    @include remove-link-styles;
     color: inherit;
     text-decoration: underline;
   }

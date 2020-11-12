@@ -190,7 +190,7 @@
     margin: 0 $grid-gutter-width-sm $grid-gutter-width-sm 0;
 
     a {
-      @include undo-link-styles;
+      @include remove-link-styles;
       display: inline-block;
       background-color: $grey-200;
       padding: $grid-gutter-width-xs $grid-gutter-width-sm;
@@ -213,7 +213,7 @@
   align-items: center;
 
   a {
-    @include undo-link-styles;
+    @include remove-link-styles;
     display: block;
   }
 

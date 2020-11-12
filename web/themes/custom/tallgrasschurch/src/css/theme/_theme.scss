@@ -22,7 +22,7 @@
     white-space: nowrap;
 
     a {
-      @include undo-link-styles;
+      @include remove-link-styles;
       padding: $grid-gutter-width-xs $grid-gutter-width-sm;
     }
   }

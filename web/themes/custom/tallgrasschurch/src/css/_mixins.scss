@@ -6,7 +6,7 @@
 // Links
 // -------------------------
 
-@mixin link-styles {
+@mixin add-link-styles {
   color: $link-color;
   text-decoration: underline;
 
@@ -16,7 +16,7 @@
   }
 }
 
-@mixin undo-link-styles {
+@mixin remove-link-styles {
   color: inherit;
   text-decoration: none;
 

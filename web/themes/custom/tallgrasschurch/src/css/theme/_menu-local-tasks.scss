@@ -22,7 +22,7 @@
   .menu-local-tasks-list__item {
 
     a {
-      @include undo-link-styles;
+      @include remove-link-styles;
       display: block;
       padding: $grid-gutter-width-sm $grid-gutter-width-md;
       background-color: $grey-100;
