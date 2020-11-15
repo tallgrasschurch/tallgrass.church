@@ -4,7 +4,6 @@
 # npm
 node_modules
 
-
 # Server-generated files
 /favicon.ico
 /favicon.gif
@@ -13,6 +12,8 @@ node_modules
 /web/.well-known/
 
 # Drupal Composer files
+/.editorconfig
+/.gitattributes
 /vendor/
 /web/core/
 /web/modules/contrib/
