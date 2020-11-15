@@ -45,4 +45,8 @@
 
 #site-footer {
   margin-top: $grid-gutter-width-xl;
+
+  > .container {
+    @include add-container-styles;
+  }
 }

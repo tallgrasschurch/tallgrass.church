@@ -32,19 +32,33 @@
   display: flex;
   flex-direction: column;
   margin-bottom: $grid-gutter-width-lg;
+
+  > .block > .container {
+    @include add-container-styles;
+  }
 }
 
 
 // Content region
 // -------------------------
 
-.region--content {}
+.region--content {
+
+  > .block > .container {
+    @include add-container-styles;
+  }
+}
 
 
 // Content bottom region
 // -------------------------
 
-.region--content-bottom {}
+.region--content-bottom {
+
+  > .block > .container {
+    @include add-container-styles;
+  }
+}
 
 
 // Below the content region

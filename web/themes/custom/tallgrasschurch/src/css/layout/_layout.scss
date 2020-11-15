@@ -11,16 +11,6 @@
   .layout__region {}
 
   .layout__region--content {}
-
-  @media (min-width: $screen-lg) {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    column-gap: $grid-gutter-width-lg;
-
-    .layout__region--content {
-      grid-column: 1 / span 8;
-    }
-  }
 }
 
 

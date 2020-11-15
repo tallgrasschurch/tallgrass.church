@@ -8,44 +8,39 @@
 
   {{ page.primary_menu }}
   {{ page.secondary_menu }}
-
   {{ page.breadcrumb }}
-
   {{ page.highlighted }}
-
   {{ page.help }}
 
   <main role="main" id="site-content">
-    <div class="container">
-      {% if page.content_above %}
-        <div id="content-above">
-          {{ page.content_above }}
-        </div><!-- #content-above -->
-      {% endif %}
+    {% if page.content_above %}
+      <div id="content-above">
+        {{ page.content_above }}
+      </div><!-- #content-above -->
+    {% endif %}
 
-      {% if page.content_top or page.content or page.content_bottom %}
-        <article id="content">
-          {% if page.content_top %}
-            {{ page.content_top }}
-          {% endif %}
+    {% if page.content_top or page.content or page.content_bottom %}
+      <article id="content">
+        {% if page.content_top %}
+          {{ page.content_top }}
+        {% endif %}
 
-          {% if page.content and not is_front %}
-            {{ page.content }}
-          {% endif %}
+        {% if page.content and not is_front %}
+          {{ page.content }}
+        {% endif %}
 
-          {% if page.content_bottom %}
-            {{ page.content_bottom }}
-          {% endif %}
-        </article><!-- #content -->
-      {% endif %}
+        {% if page.content_bottom %}
+          {{ page.content_bottom }}
+        {% endif %}
+      </article><!-- #content -->
+    {% endif %}
 
-      {% if page.content_below %}
-        <div id="content-below">
-          {{ page.content_below }}
-        </div><!-- #content-below -->
-      {% endif %}
-    </div><!-- .container -->
-  </main><!-- #main-content -->
+    {% if page.content_below %}
+      <div id="content-below">
+        {{ page.content_below }}
+      </div><!-- #content-below -->
+    {% endif %}
+  </main><!-- #site-content -->
 
   {% if page.footer or page.footer_top %}
     <footer role="contentinfo" id="site-footer">
