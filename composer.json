@@ -29,7 +29,7 @@
     "drupal/address": "^1.9",
     "drupal/twig_tweak": "^2.0",
     "drupal/captcha": "^1.0",
-    "drupal/recaptcha": "^2.3",
+    "drupal/recaptcha": "^3.0",
     "drupal/convert_bundles": "^1.0",
     "drupal/podcast": "^1.0",
     "drupal/redirect": "^1.4",
