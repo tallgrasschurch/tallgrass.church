@@ -1,0 +1,44 @@
+//
+// Home page recent series block
+// --------------------------------------------------
+
+
+.block--block-home-recent-series {
+
+  > .container {
+    @include add-container-styles;
+  }
+}
+
+.view-recent-series {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: $grid-gutter-width;
+
+  .view-header {}
+
+  .view-content {
+    grid-column: 1 / span 2;
+  }
+
+  .view-footer {
+    grid-column-start: 2;
+    grid-row-start: 1;
+    align-self: center;
+    text-align: right;
+  }
+
+  .view-recent-series__title,
+  .view-recent-series__more {
+    margin: 0;
+  }
+
+  .view-recent-series__title {
+    font-size: 1.8rem;
+    font-weight: normal;
+  }
+
+  .view-recent-series__more {
+    font-size: 1.4rem;
+  }
+}

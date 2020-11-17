@@ -9,9 +9,13 @@
   set classes = [
     'field',
     'field--' ~ field_name|clean_class,
-    'field--' ~ field_name|clean_class ~ '-' ~ image_position|clean_class,
   ]
 %}
+
+{% set view_mode = element['#view_mode'] %}
+{% if view_mode != 'card' %}
+  {% set classes = classes|merge(['field--' ~ field_name|clean_class ~ '-' ~ image_position|clean_class]) %}
+{% endif %}
 
 {%
   set title_classes = [
