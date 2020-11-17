@@ -258,22 +258,3 @@ function tallgrasschurch_theme_suggestions_node_alter(array &$suggestions, array
     }
   }
 }
-
-
-/**
- * hook_theme_suggestions_HOOK_alter
- * Alters named suggestions for a specific theme hook.
- *
- * @param array $suggestions
- * @param array $variables
- */
-
-// https://drupal.stackexchange.com/questions/195970/custom-taxonomy-term-template
-
-function tallgrasschurch_theme_suggestions_taxonomy_term_alter(array &$suggestions, array $variables) {
-  $term = $variables['elements']['#taxonomy_term'];
-  $sanitized_view_mode = strtr($vars['elements']['#view_mode'], '.', '_');
-  $suggestions[] = 'taxonomy_term__' . $sanitized_view_mode;
-  $suggestions[] = 'taxonomy_term__' . $term->bundle() . '__' . $sanitized_view_mode;
-  $suggestions[] = 'taxonomy_term__' . $term->id() . '__' . $sanitized_view_mode;
-}

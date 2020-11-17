@@ -24,34 +24,60 @@
  */
 #}
 
-{%
-  set classes = [
-    'card--h',
-  ]
-%}
+{#
+  TODO: Get this working with view mode templates instead
+    I tried the solution here with no luck:
+    https://drupal.stackexchange.com/questions/195970/custom-taxonomy-term-template
+    https://www.drupal.org/project/drupal/issues/2767243#comment-12576785
+#}
+{% if view_mode == 'card' %}
 
-<article{{ attributes.addClass(classes) }}>
-  <div class="card__img">
-    {{ content.field_image }}
-  </div>
+  {%
+    set classes = [
+      'card--h',
+    ]
+  %}
 
-  <div class="card__content">
-    <header class="card__header">
-      {{ title_prefix }}
-      {% if name and not page %}
-        <h2 class="card__title">
-          <a href="{{ url }}">{{ name.0 }}</a>
-        </h2>
-      {% endif %}
-      {{ title_suffix }}
-    </header>
-
-    <div class="card__body">
-      {{ content|without('field_image') }}
+  <article{{ attributes.addClass(classes) }}>
+    <div class="card__img">
+      {{ content.field_image }}
     </div>
 
-    <div class="card__footer">
-      <a href="{{ url }}" class="btn btn--primary">View series &rarr;</a>
+    <div class="card__content">
+      <header class="card__header">
+        {{ title_prefix }}
+        {% if name and not page %}
+          <h2 class="card__title">
+            <a href="{{ url }}">{{ name.0 }}</a>
+          </h2>
+        {% endif %}
+        {{ title_suffix }}
+      </header>
+
+      <div class="card__body">
+        {{ content|without('field_image') }}
+      </div>
+
+      <div class="card__footer">
+        <a href="{{ url }}" class="btn btn--primary">View series &rarr;</a>
+      </div>
     </div>
+  </article>
+
+{% else %}
+
+  {#
+    TODO: This is a duplicate of the default taxonomy-term template code
+  #}
+  <div{{ attributes }}>
+    {{ title_prefix }}
+    {% if name and not page %}
+      <h2><a href="{{ url }}">{{ name }}</a></h2>
+    {% endif %}
+    {{ title_suffix }}
+
+    {{ content }}
   </div>
-</article>
+
+{% endif %}
+
