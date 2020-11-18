@@ -22,25 +22,22 @@
 
 .layout--onecol.constrain-by-1 {
 
-    .layout__region--content {
-      grid-column: 2 / span 10;
-    }
+  .layout__region--content {
+    grid-column: 2 / span 10;
   }
 }
 
 .layout--onecol.constrain-by-2 {
 
-    .layout__region--content {
-      grid-column: 3 / span 8;
-    }
+  .layout__region--content {
+    grid-column: 3 / span 8;
   }
 }
 
 .layout--onecol.constrain-by-3 {
 
-    .layout__region--content {
-      grid-column: 4 / span 6;
-    }
+  .layout__region--content {
+    grid-column: 4 / span 6;
   }
 }
 
