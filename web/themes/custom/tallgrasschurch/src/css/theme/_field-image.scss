@@ -19,4 +19,9 @@
 
 .field--field-image-full {
   @extend .align-center;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
 }
