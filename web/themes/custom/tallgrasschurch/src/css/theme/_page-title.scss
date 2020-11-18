@@ -7,11 +7,13 @@
   margin-bottom: $grid-gutter-width-lg;
   font-size: 7.2rem;
   line-height: 1;
+  text-align: center;
 }
 
 .page-title-meta {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   margin-bottom: $grid-gutter-width-lg;
 
   .page-title-meta__item {

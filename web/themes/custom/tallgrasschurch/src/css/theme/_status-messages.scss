@@ -5,7 +5,9 @@
 
 .status-messages {
 
-  .container {}
+  .container {
+    @include add-container-styles;
+  }
 
   .status-messages__message {
     @extend .alert;
