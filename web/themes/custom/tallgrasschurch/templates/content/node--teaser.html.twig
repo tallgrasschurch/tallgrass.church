@@ -14,10 +14,11 @@
     </h2>
     {{ title_suffix }}
 
-    {% if node_type == 'teaching' %}
+    {% if node_type in ['teaching', 'news'] %}
       <div class="node__meta">
         <div class="node__date"><time datetime="{{ node.createdtime|format_date('html_date') }}">{{ node.createdtime|format_date('long') }}</time></div>
-        {% if content.field_speaker %}
+
+        {% if (node_type == 'teaching') and (content.field_speaker) %}
           <div class="node__speaker">{{ content.field_speaker.0 }}</div>
         {% endif %}
       </div><!-- .node__meta -->
