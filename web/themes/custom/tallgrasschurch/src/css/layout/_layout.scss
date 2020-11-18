@@ -11,6 +11,37 @@
   .layout__region {}
 
   .layout__region--content {}
+
+  @media (min-width: $screen-lg) {
+
+    .layout__region--content {
+      grid-column: 1 / span 12;
+    }
+  }
+}
+
+.layout--onecol.constrain-by-1 {
+
+    .layout__region--content {
+      grid-column: 2 / span 10;
+    }
+  }
+}
+
+.layout--onecol.constrain-by-2 {
+
+    .layout__region--content {
+      grid-column: 3 / span 8;
+    }
+  }
+}
+
+.layout--onecol.constrain-by-3 {
+
+    .layout__region--content {
+      grid-column: 4 / span 6;
+    }
+  }
 }
 
 
@@ -28,7 +59,7 @@
 
   @media (min-width: $screen-lg) {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     column-gap: $grid-gutter-width-lg;
   }
 }
@@ -40,19 +71,19 @@
     &.layout--twocol-section--50-50 {}
 
     &.layout--twocol-section--33-67 {
-      grid-template-columns: 1fr 2fr;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
     }
 
     &.layout--twocol-section--67-33 {
-      grid-template-columns: 2fr 1fr;
+      grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
     }
 
     &.layout--twocol-section--25-75 {
-      grid-template-columns: 1fr 3fr;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 3fr);
     }
 
     &.layout--twocol-section--75-25 {
-      grid-template-columns: 3fr 1fr;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 1fr);
     }
   }
 }
@@ -75,7 +106,7 @@
 
   @media (min-width: $screen-lg) {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     column-gap: $grid-gutter-width-lg;
   }
 }
@@ -87,21 +118,21 @@
 .layout--threecol-section--25-50-25 {
 
   @media (min-width: $screen-lg) {
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr) minmax(0, 1fr);
   }
 }
 
 .layout--threecol-section--50-25-25 {
 
   @media (min-width: $screen-lg) {
-    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1fr) minmax(0, 1fr);
   }
 }
 
 .layout--threecol-section--25-25-50 {
 
   @media (min-width: $screen-lg) {
-    grid-template-columns: 1fr 1fr 2fr;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 2fr);
   }
 }
 
@@ -123,7 +154,7 @@
 
   @media (min-width: $screen-lg) {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     column-gap: $grid-gutter-width-lg;
   }
 }

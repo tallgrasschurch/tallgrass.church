@@ -3,22 +3,4 @@
 // --------------------------------------------------
 
 
-.block--block-content {
-
-  > .container {
-    //@include add-container-styles;
-  }
-
-  .layout--onecol {
-
-    @media (min-width: $screen-lg) {
-      display: grid;
-      grid-template-columns: repeat(12, minmax(0, 1fr));
-      column-gap: $grid-gutter-width;
-
-      .layout__region--content {
-        grid-column: 3 / span 8;
-      }
-    }
-  }
-}
+.block--block-content {}
