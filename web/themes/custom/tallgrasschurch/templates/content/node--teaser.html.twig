@@ -14,9 +14,15 @@
     </h2>
     {{ title_suffix }}
 
-    {% if node_type in ['teaching', 'news'] %}
+    {% if node_type in ['teaching', 'news', 'event'] %}
       <div class="node__meta">
-        <div class="node__date"><time datetime="{{ node.createdtime|format_date('html_date') }}">{{ node.createdtime|format_date('long') }}</time></div>
+        <div class="node__date">
+          {% if node_type == 'event' %}
+            {{ content.field_event_date.0 }}
+          {% else %}
+            <time datetime="{{ node.createdtime|format_date('html_date') }}">{{ node.createdtime|format_date('long') }}</time>
+          {% endif %}
+        </div>
 
         {% if (node_type == 'teaching') and (content.field_speaker) %}
           <div class="node__speaker">{{ content.field_speaker.0 }}</div>
@@ -34,6 +40,12 @@
   {% endif %}
 
   <div{{ content_attributes.addClass('node__content') }}>
-    {{ content|without('field_speaker') }}
+    {% if node_type == 'teaching' %}
+      {{ content|without('field_speaker') }}
+    {% elseif node_type == 'event' %}
+      {{ content|without('field_event_date') }}
+    {% else %}
+      {{ content }}
+    {% endif %}
   </div><!-- .node__content -->
 </article><!-- .node -->
