@@ -1,0 +1,68 @@
+//
+// Pager
+// --------------------------------------------------
+
+
+.pager {
+  margin: $grid-gutter-width-xl 0;
+  font-size: 1.6rem;
+}
+
+.pager-list {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  list-style-type: none;
+
+  .pager-list__item {
+    margin-right: -1px;
+
+    a,
+    > span {
+      display: inline-block;
+      padding: 5px 10px;
+      border: 1px solid $grey-300;
+    }
+  }
+
+  .pager-list__item--first {}
+
+  .pager-list__item--previous {}
+
+  .pager-list__item.is-active {}
+
+  .pager-list__item--next {}
+
+  .pager-list__item--last {}
+
+  .pager-list__item:first-child {
+
+    a,
+    > span {
+      border-radius: $border-radius-sm 0 0 $border-radius-sm;
+    }
+  }
+
+  .pager-list__item:last-child {
+    margin-right: 0;
+
+    a,
+    > span {
+      border-radius: 0 $border-radius-sm $border-radius-sm 0;
+    }
+  }
+}
+
+.pager--mini {}
+
+.pager-list--mini {
+
+  .pager-list__item {}
+
+  .pager-list__item--previous {}
+
+  .pager-list__item--current {}
+
+  .pager-list__item--next {}
+}
+
