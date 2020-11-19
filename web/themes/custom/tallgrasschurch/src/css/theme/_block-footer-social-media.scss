@@ -21,6 +21,7 @@
       margin-left: $grid-gutter-width-sm;
 
       a {
+        @include remove-link-styles;
         display: inline-flex;
         align-self: center;
         padding: 5px;

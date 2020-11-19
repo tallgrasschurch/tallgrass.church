@@ -1166,11 +1166,19 @@ img {
 }
 
 .block--block-social-media .menu--social-media .menu__item a {
+  color: inherit;
+  border-bottom: none;
+  box-shadow: none;
   display: inline-flex;
   align-self: center;
   padding: 5px;
   border: 1px solid #d1e0fa;
   border-radius: 10px;
+}
+
+.block--block-social-media .menu--social-media .menu__item a:hover, .block--block-social-media .menu--social-media .menu__item a:focus {
+  color: inherit;
+  box-shadow: none;
 }
 
 .block--block-social-media .menu--social-media .menu__item a svg {
