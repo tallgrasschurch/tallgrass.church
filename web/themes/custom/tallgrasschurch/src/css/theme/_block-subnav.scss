@@ -14,14 +14,29 @@
     list-style-type: none;
 
     .menu__item {
-      margin-right: $grid-gutter-width-sm;
-      margin-left: $grid-gutter-width-sm;
+      margin: 0 5px;
 
       a {
         @include remove-link-styles;
+        padding: .5em 1em;
+        color: $grey-600;
+        background-color: $grey-100;
+        border: 1px solid $grey-200;
+        border-radius: $border-radius;
 
         &.is-active {
-          border-bottom: 1px solid black;
+          color: $link-color;
+          background-color: white;
+        }
+
+        &:hover,
+        &:focus {
+          color: $grey-700;
+          border-color: $grey-400;
+
+          &.is-active {
+            color: $link-color;
+          }
         }
       }
     }
