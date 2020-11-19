@@ -19,6 +19,7 @@
 
     a,
     > span {
+      @include remove-link-styles;
       display: inline-block;
       padding: 5px 10px;
       border: 1px solid $grey-300;

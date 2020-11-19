@@ -736,9 +736,19 @@ img {
 
 .pager-list .pager-list__item a,
 .pager-list .pager-list__item > span {
+  color: inherit;
+  border-bottom: none;
+  box-shadow: none;
   display: inline-block;
   padding: 5px 10px;
   border: 1px solid #ddd;
+}
+
+.pager-list .pager-list__item a:hover, .pager-list .pager-list__item a:focus,
+.pager-list .pager-list__item > span:hover,
+.pager-list .pager-list__item > span:focus {
+  color: inherit;
+  box-shadow: none;
 }
 
 .pager-list .pager-list__item:first-child a,
