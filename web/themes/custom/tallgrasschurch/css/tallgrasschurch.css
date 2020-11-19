@@ -503,6 +503,9 @@ img {
 }
 
 .btn {
+  color: inherit;
+  border-bottom: none;
+  box-shadow: none;
   display: inline-block;
   padding: 10px 20px;
   color: #333;
@@ -512,6 +515,11 @@ img {
   line-height: 1.5;
   text-decoration: none;
   cursor: pointer;
+}
+
+.btn:hover, .btn:focus {
+  color: inherit;
+  box-shadow: none;
 }
 
 .btn--primary {

@@ -4,6 +4,7 @@
 
 
 .btn {
+  @include remove-link-styles;
   display: inline-block;
   padding: $grid-gutter-width-sm $grid-gutter-width-md;
   color: $body-color;
