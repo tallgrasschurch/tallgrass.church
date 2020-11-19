@@ -1272,6 +1272,10 @@ img {
   color: inherit;
 }
 
+.block--block-subnav .menu--main .menu__item a.is-active {
+  border-bottom: 1px solid black;
+}
+
 .breadcrumbs {
   font-size: 1.4rem;
   text-transform: uppercase;

@@ -49,14 +49,15 @@
 @import 'theme/field';
 @import 'theme/field-image';
 @import 'theme/field-file-upload'; // TODO: Is this in the correct directory?
+//@import 'theme/home';
 @import 'theme/media-group'; // TODO: Is this in the correct directory?
 @import 'theme/menu-local-tasks';
 @import 'theme/node';
 @import 'theme/page-title';
 @import 'theme/status-messages';
-//@import 'theme/theme';
-//@import 'theme/home';
 //@import 'theme/teaching';
+@import 'theme/teachings';
+//@import 'theme/theme';
 
 // Style guide
 @import 'style-guide';
