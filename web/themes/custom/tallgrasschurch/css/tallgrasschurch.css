@@ -1246,6 +1246,32 @@ img {
   order: 2;
 }
 
+.block--block-subnav {
+  order: 3;
+}
+
+.block--block-subnav .menu--main {
+  display: flex;
+  justify-content: center;
+  margin: 0 0 40px;
+  padding: 0;
+  list-style-type: none;
+}
+
+.block--block-subnav .menu--main .menu__item {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.block--block-subnav .menu--main .menu__item a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.block--block-subnav .menu--main .menu__item a:hover, .block--block-subnav .menu--main .menu__item a:focus {
+  color: inherit;
+}
+
 .breadcrumbs {
   font-size: 1.4rem;
   text-transform: uppercase;

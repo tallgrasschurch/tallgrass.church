@@ -1,0 +1,25 @@
+//
+// Subnav block
+// --------------------------------------------------
+
+
+.block--block-subnav {
+  order: 3;
+
+  .menu--main {
+    display: flex;
+    justify-content: center;
+    margin: 0 0 $grid-gutter-width-lg;
+    padding: 0;
+    list-style-type: none;
+
+    .menu__item {
+      margin-right: $grid-gutter-width-sm;
+      margin-left: $grid-gutter-width-sm;
+
+      a {
+        @include remove-link-styles;
+      }
+    }
+  }
+}
