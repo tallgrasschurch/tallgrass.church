@@ -3,6 +3,13 @@
 // --------------------------------------------------
 
 
+.style-guide-content {
+
+  > .container {
+    @include add-container-styles;
+  }
+}
+
 .sg-color-list {
   display: flex;
   padding: 0;

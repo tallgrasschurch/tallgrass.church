@@ -25,9 +25,11 @@
           {{ page.content_top }}
         {% endif %}
 
-        {% if page.content and not is_front %}
-          {{ page.content }}
-        {% endif %}
+        {% block content %}
+          {% if page.content and not is_front %}
+            {{ page.content }}
+          {% endif %}
+        {% endblock %}
 
         {% if page.content_bottom %}
           {{ page.content_bottom }}
