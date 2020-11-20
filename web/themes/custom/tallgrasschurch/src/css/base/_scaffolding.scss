@@ -30,3 +30,11 @@ body {
 a {
   @include add-link-styles;
 }
+
+// TODO: Move this code
+.contextual-links {
+
+  a {
+    @include remove-link-styles;
+  }
+}

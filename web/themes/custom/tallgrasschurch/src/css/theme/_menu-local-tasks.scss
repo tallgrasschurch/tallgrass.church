@@ -26,10 +26,12 @@
       @include remove-link-styles;
       display: block;
       padding: $grid-gutter-width-sm $grid-gutter-width-md;
+      color: inherit;
       background-color: $grey-100;
 
       &:hover,
       &:focus {
+        color: inherit;
         text-decoration: underline;
       }
 

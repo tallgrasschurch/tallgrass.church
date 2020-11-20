@@ -21,14 +21,14 @@
 }
 
 @mixin remove-link-styles {
-  color: inherit;
-  border-bottom: none;
-  box-shadow: none;
+  color: revert;
+  border-bottom: revert;
+  box-shadow: revert;
 
   &:hover,
   &:focus {
-    color: inherit;
-    box-shadow: none;
+    color: revert;
+    box-shadow: revert;
   }
 }
 

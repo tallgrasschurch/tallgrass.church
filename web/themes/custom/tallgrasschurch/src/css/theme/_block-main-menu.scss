@@ -17,6 +17,12 @@
 
       a {
         @include remove-link-styles;
+        color: inherit;
+
+        &:hover,
+        &:focus {
+          color: inherit;
+        }
       }
     }
   }

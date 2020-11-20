@@ -371,6 +371,17 @@ a:hover, a:focus {
   box-shadow: inset 0 -0.5em 0 #fce3b6;
 }
 
+.contextual-links a {
+  color: revert;
+  border-bottom: revert;
+  box-shadow: revert;
+}
+
+.contextual-links a:hover, .contextual-links a:focus {
+  color: revert;
+  box-shadow: revert;
+}
+
 p,
 ul, ol, dl,
 h1, h2, h3, h4, h5, h6 {
@@ -426,16 +437,16 @@ img {
 }
 
 .alert a, .status-messages .status-messages__message a {
-  color: inherit;
-  border-bottom: none;
-  box-shadow: none;
+  color: revert;
+  border-bottom: revert;
+  box-shadow: revert;
   color: inherit;
   text-decoration: underline;
 }
 
 .alert a:hover, .status-messages .status-messages__message a:hover, .alert a:focus, .status-messages .status-messages__message a:focus {
-  color: inherit;
-  box-shadow: none;
+  color: revert;
+  box-shadow: revert;
 }
 
 .alert .alert__heading, .status-messages .status-messages__message .alert__heading {
@@ -503,9 +514,9 @@ img {
 }
 
 .btn {
-  color: inherit;
-  border-bottom: none;
-  box-shadow: none;
+  color: revert;
+  border-bottom: revert;
+  box-shadow: revert;
   display: inline-block;
   padding: 10px 20px;
   color: #333;
@@ -518,8 +529,8 @@ img {
 }
 
 .btn:hover, .btn:focus {
-  color: inherit;
-  box-shadow: none;
+  color: revert;
+  box-shadow: revert;
 }
 
 .btn--primary {
@@ -744,9 +755,9 @@ img {
 
 .pager-list .pager-list__item a,
 .pager-list .pager-list__item > span {
-  color: inherit;
-  border-bottom: none;
-  box-shadow: none;
+  color: revert;
+  border-bottom: revert;
+  box-shadow: revert;
   display: inline-block;
   padding: 5px 10px;
   border: 1px solid #ddd;
@@ -755,8 +766,8 @@ img {
 .pager-list .pager-list__item a:hover, .pager-list .pager-list__item a:focus,
 .pager-list .pager-list__item > span:hover,
 .pager-list .pager-list__item > span:focus {
-  color: inherit;
-  box-shadow: none;
+  color: revert;
+  box-shadow: revert;
 }
 
 .pager-list .pager-list__item:first-child a,
@@ -790,7 +801,9 @@ img {
 }
 
 .tag a {
-  display: inline-block;
+  color: revert;
+  border-bottom: revert;
+  box-shadow: revert;
   padding: 5px 10px;
   color: #305697;
   background-color: #f5f9fe;
@@ -798,9 +811,18 @@ img {
   text-decoration: none;
 }
 
+.tag a:hover, .tag a:focus {
+  color: revert;
+  box-shadow: revert;
+}
+
 .tag a::before {
   content: "# ";
   color: #5c89d6;
+}
+
+.tag a:hover, .tag a:focus {
+  color: inherit;
 }
 
 #site-header {
@@ -1107,15 +1129,15 @@ img {
 }
 
 .block--block-tallgrasschurch-branding .logo a {
-  color: inherit;
-  border-bottom: none;
-  box-shadow: none;
+  color: revert;
+  border-bottom: revert;
+  box-shadow: revert;
   display: block;
 }
 
 .block--block-tallgrasschurch-branding .logo a:hover, .block--block-tallgrasschurch-branding .logo a:focus {
-  color: inherit;
-  box-shadow: none;
+  color: revert;
+  box-shadow: revert;
 }
 
 .block--block-tallgrasschurch-branding .logo img {
@@ -1166,9 +1188,9 @@ img {
 }
 
 .block--block-social-media .menu--social-media .menu__item a {
-  color: inherit;
-  border-bottom: none;
-  box-shadow: none;
+  color: revert;
+  border-bottom: revert;
+  box-shadow: revert;
   display: inline-flex;
   align-self: center;
   padding: 5px;
@@ -1177,8 +1199,8 @@ img {
 }
 
 .block--block-social-media .menu--social-media .menu__item a:hover, .block--block-social-media .menu--social-media .menu__item a:focus {
-  color: inherit;
-  box-shadow: none;
+  color: revert;
+  box-shadow: revert;
 }
 
 .block--block-social-media .menu--social-media .menu__item a svg {
@@ -1274,14 +1296,19 @@ img {
 }
 
 .block--block-tallgrasschurch-main-menu .menu--main .menu__item a {
+  color: revert;
+  border-bottom: revert;
+  box-shadow: revert;
   color: inherit;
-  border-bottom: none;
-  box-shadow: none;
+}
+
+.block--block-tallgrasschurch-main-menu .menu--main .menu__item a:hover, .block--block-tallgrasschurch-main-menu .menu--main .menu__item a:focus {
+  color: revert;
+  box-shadow: revert;
 }
 
 .block--block-tallgrasschurch-main-menu .menu--main .menu__item a:hover, .block--block-tallgrasschurch-main-menu .menu--main .menu__item a:focus {
   color: inherit;
-  box-shadow: none;
 }
 
 .block--block-tallgrasschurch-page-title {
@@ -1305,9 +1332,9 @@ img {
 }
 
 .block--block-subnav .menu--main .menu__item a {
-  color: inherit;
-  border-bottom: none;
-  box-shadow: none;
+  color: revert;
+  border-bottom: revert;
+  box-shadow: revert;
   padding: .5em 1em;
   color: #777;
   background-color: #f9f9f9;
@@ -1316,8 +1343,8 @@ img {
 }
 
 .block--block-subnav .menu--main .menu__item a:hover, .block--block-subnav .menu--main .menu__item a:focus {
-  color: inherit;
-  box-shadow: none;
+  color: revert;
+  box-shadow: revert;
 }
 
 .block--block-subnav .menu--main .menu__item a.is-active {
@@ -1392,14 +1419,19 @@ img {
 }
 
 .file-upload-list .file-upload-list__item a {
+  color: revert;
+  border-bottom: revert;
+  box-shadow: revert;
   color: inherit;
-  border-bottom: none;
-  box-shadow: none;
+}
+
+.file-upload-list .file-upload-list__item a:hover, .file-upload-list .file-upload-list__item a:focus {
+  color: revert;
+  box-shadow: revert;
 }
 
 .file-upload-list .file-upload-list__item a:hover, .file-upload-list .file-upload-list__item a:focus {
   color: inherit;
-  box-shadow: none;
 }
 
 .file-upload-list .file-upload-list__item + .file-upload-list__item {
@@ -1480,20 +1512,22 @@ img {
 }
 
 .menu-local-tasks-list .menu-local-tasks-list__item a {
-  color: inherit;
-  border-bottom: none;
-  box-shadow: none;
+  color: revert;
+  border-bottom: revert;
+  box-shadow: revert;
   display: block;
   padding: 10px 20px;
+  color: inherit;
   background-color: #f9f9f9;
 }
 
 .menu-local-tasks-list .menu-local-tasks-list__item a:hover, .menu-local-tasks-list .menu-local-tasks-list__item a:focus {
-  color: inherit;
-  box-shadow: none;
+  color: revert;
+  box-shadow: revert;
 }
 
 .menu-local-tasks-list .menu-local-tasks-list__item a:hover, .menu-local-tasks-list .menu-local-tasks-list__item a:focus {
+  color: inherit;
   text-decoration: underline;
 }
 

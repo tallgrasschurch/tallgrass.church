@@ -19,7 +19,7 @@
   font-size: 1.4rem;
 
   a {
-    display: inline-block;
+    @include remove-link-styles;
     padding: $grid-gutter-width-xs $grid-gutter-width-sm;
     color: $blue-500;
     background-color: $blue-100;
@@ -29,6 +29,11 @@
     &::before {
       content: "# ";
       color: $blue-400;
+    }
+
+    &:hover,
+    &:focus {
+      color: inherit;
     }
   }
 }
