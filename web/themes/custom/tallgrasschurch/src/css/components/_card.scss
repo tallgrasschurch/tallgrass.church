@@ -29,16 +29,36 @@
   }
 
   .card__content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
     font-size: 1.6rem;
   }
 
   .card__header {
+    display: flex;
+    flex-direction: column;
     margin: $grid-gutter-width-md;
   }
 
   .card__title {
+    order: 2;
     font-size: 2.4rem;
-    margin: 0;
+    margin-bottom: $grid-gutter-width-sm;
+  }
+
+  .card__label {
+    order: 1;
+    margin-bottom: $grid-gutter-width;
+    color: $grey-600;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+  }
+
+  .card__date {
+    order: 3;
+    color: $grey-600;
+    font-size: 1.4rem;
   }
 
   .card__body {
@@ -46,7 +66,7 @@
   }
 
   .card__footer {
-    margin: $grid-gutter-width-md;
+    margin: auto $grid-gutter-width-md $grid-gutter-width-md;
   }
 }
 
@@ -97,17 +117,14 @@
 }
 
 .card-deck--2-col {
-  @extend .card-deck;
   grid-template-columns: 1fr 1fr;
 }
 
 .card-deck--3-col {
-  @extend .card-deck;
   grid-template-columns: 1fr 1fr 1fr;
 }
 
 .card-deck--4-col {
-  @extend .card-deck;
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 

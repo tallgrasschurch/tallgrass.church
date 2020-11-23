@@ -3,7 +3,7 @@
 // --------------------------------------------------
 
 
-.block--block-home-recent-series {
+.block--block-latest-resources {
   margin-top: $grid-gutter-width-xl;
 
   > .container {
@@ -11,7 +11,7 @@
   }
 }
 
-.view-recent-series {
+.view-latest-resources {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   column-gap: $grid-gutter-width;
@@ -21,10 +21,9 @@
 
   .view-content {
     grid-column: 1 / span 2;
-
-    > * {
-      margin: 0;
-    }
+    @extend .card-deck;
+    @extend .card-deck--3-col;
+    margin: 0;
   }
 
   .view-footer {
@@ -34,17 +33,17 @@
     text-align: right;
   }
 
-  .view-recent-series__title,
-  .view-recent-series__more {
+  .view-latest-resources__title,
+  .view-latest-resources__more {
     margin: 0;
   }
 
-  .view-recent-series__title {
+  .view-latest-resources__title {
     font-size: 1.8rem;
     font-weight: normal;
   }
 
-  .view-recent-series__more {
+  .view-latest-resources__more {
     font-size: 1.4rem;
   }
 }

@@ -31,7 +31,7 @@
  *   - name
  *   - link
  *
- * Date formats (for use with the format_date filter on the raw date variable):
+ * Date formats (for use with the format_date filter on the date_raw variable):
  * - short
  * - medium
  * - long
@@ -61,7 +61,7 @@
 {% if node_type == 'teaching' %}
   <div class="page-title-meta">
     <div class="page-title-meta__item page-title-meta__item--date">
-      <time datetime="{{ date_raw|format_date('html_datetime') }}">{{ date_raw|format_date('custom', 'F j, Y') }}</time>
+      <time datetime="{{ date_raw|format_date('html_datetime') }}">{{ date_raw|format_date('long') }}</time>
     </div>
 
     {% if speaker is defined and speaker is not empty %}

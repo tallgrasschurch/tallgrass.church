@@ -45,7 +45,7 @@
   <article{{ attributes.addClass(classes) }}>
     <div class="card__img">
       {{ content.field_image }}
-    </div>
+    </div><!-- .card__img -->
 
     <div class="card__content">
       <header class="card__header">
@@ -56,17 +56,17 @@
           </h2>
         {% endif %}
         {{ title_suffix }}
-      </header>
+      </header><!-- .card__header -->
 
       <div class="card__body">
         {{ content|without('field_image') }}
-      </div>
+      </div><!-- .card__body -->
 
       <div class="card__footer">
-        <a href="{{ url }}" class="btn btn--primary">View series &rarr;</a>
-      </div>
-    </div>
-  </article>
+        <a href="{{ url }}">View series &rarr;</a>
+      </div><!-- .card__footer -->
+    </div><!-- .card__content -->
+  </article><!-- .card -->
 
 {% else %}
 
