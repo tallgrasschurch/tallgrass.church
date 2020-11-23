@@ -19,15 +19,16 @@
   }
 }
 
+// TODO: This could still use a little work in relation to admin links
 @mixin remove-link-styles {
-  color: revert;
-  border-bottom: revert;
-  box-shadow: revert;
+  //color: unset;
+  border-bottom: unset;
+  box-shadow: unset;
 
   &:hover,
   &:focus {
-    color: revert;
-    box-shadow: revert;
+    //color: unset;
+    box-shadow: unset;
   }
 }
 
