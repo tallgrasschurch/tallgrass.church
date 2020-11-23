@@ -13,7 +13,7 @@
 %}
 
 {% set view_mode = element['#view_mode'] %}
-{% if view_mode != 'card' %}
+{% if view_mode not in ['card', 'card_horizontal'] %}
   {% set classes = classes|merge(['field--' ~ field_name|clean_class ~ '-' ~ image_position|clean_class]) %}
 {% endif %}
 

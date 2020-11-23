@@ -55,7 +55,6 @@
 // -------------------------
 
 .card--h {
-  @extend .card;
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: $grid-gutter-width;

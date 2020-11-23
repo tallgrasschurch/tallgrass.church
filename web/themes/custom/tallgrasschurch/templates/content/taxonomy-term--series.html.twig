@@ -30,13 +30,17 @@
     https://drupal.stackexchange.com/questions/195970/custom-taxonomy-term-template
     https://www.drupal.org/project/drupal/issues/2767243#comment-12576785
 #}
-{% if view_mode == 'card' %}
+{% if view_mode in ['card', 'card_horizontal'] %}
 
   {%
     set classes = [
-      'card--h',
+      'card',
     ]
   %}
+
+  {% if view_mode == 'card_horizontal' %}
+    {% set classes = classes|merge(['card--h']) %}
+  {% endif %}
 
   <article{{ attributes.addClass(classes) }}>
     <div class="card__img">
