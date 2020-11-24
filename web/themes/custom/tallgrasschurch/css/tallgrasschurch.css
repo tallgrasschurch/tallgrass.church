@@ -548,7 +548,9 @@ img {
 
 .card .card__img {
   width: 100%;
-  height: 100%;
+  height: auto;
+  background-color: #305697;
+  text-align: center;
 }
 
 .card .card__img * {
@@ -556,7 +558,8 @@ img {
   height: 100%;
 }
 
-.card .card__img img {
+.card .card__img img,
+.card .card__img svg {
   display: block;
   object-fit: cover;
 }
@@ -628,7 +631,7 @@ img {
 
 .card-deck, .view-latest-resources .view-content {
   display: grid;
-  gap: 40px;
+  gap: 20px;
   margin-top: 40px;
   margin-bottom: 40px;
 }
