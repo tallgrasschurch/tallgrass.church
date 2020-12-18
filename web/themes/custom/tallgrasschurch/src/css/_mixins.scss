@@ -7,28 +7,28 @@
 // -------------------------
 
 @mixin add-link-styles {
-  color: $link-color;
-  text-decoration: none;
-  box-shadow: inset 0 -0.1em 0 $blue-200;
-  transition: all 0.5s ease;
+  //color: $link-color;
+  //text-decoration: none;
+  //box-shadow: inset 0 -0.1em 0 $blue-200;
+  //transition: all 0.5s ease;
 
   &:hover,
   &:focus {
-    color: $link-color-hover;
-    box-shadow: inset 0 -0.5em 0 $yellow-300;
+    //color: $link-color-hover;
+    //box-shadow: inset 0 -0.5em 0 $yellow-300;
   }
 }
 
 // TODO: This could still use a little work in relation to admin links
 @mixin remove-link-styles {
   //color: unset;
-  border-bottom: unset;
-  box-shadow: unset;
+  //border-bottom: unset;
+  //box-shadow: unset;
 
   &:hover,
   &:focus {
     //color: unset;
-    box-shadow: unset;
+    //box-shadow: unset;
   }
 }
 

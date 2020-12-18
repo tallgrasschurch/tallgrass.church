@@ -1,0 +1,12 @@
+//
+// Home page news and events block
+// --------------------------------------------------
+
+
+.block--block-news-and-events {
+  margin-top: $grid-gutter-width-xl;
+
+  > .container {
+    @include add-container-styles;
+  }
+}

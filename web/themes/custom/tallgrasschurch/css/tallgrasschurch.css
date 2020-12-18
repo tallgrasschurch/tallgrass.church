@@ -358,30 +358,6 @@ body {
   background-color: white;
 }
 
-a {
-  color: #305697;
-  text-decoration: none;
-  box-shadow: inset 0 -0.1em 0 #d1e0fa;
-  transition: all 0.5s ease;
-}
-
-a:hover, a:focus {
-  color: #052761;
-  box-shadow: inset 0 -0.5em 0 #fce3b6;
-}
-
-#toolbar-administration a,
-.contextual-links a {
-  border-bottom: unset;
-  box-shadow: unset;
-}
-
-#toolbar-administration a:hover, #toolbar-administration a:focus,
-.contextual-links a:hover,
-.contextual-links a:focus {
-  box-shadow: unset;
-}
-
 p,
 ul, ol, dl,
 h1, h2, h3, h4, h5, h6 {
@@ -437,14 +413,8 @@ img {
 }
 
 .alert a, .status-messages .status-messages__message a {
-  border-bottom: unset;
-  box-shadow: unset;
   color: inherit;
   text-decoration: underline;
-}
-
-.alert a:hover, .status-messages .status-messages__message a:hover, .alert a:focus, .status-messages .status-messages__message a:focus {
-  box-shadow: unset;
 }
 
 .alert .alert__heading, .status-messages .status-messages__message .alert__heading {
@@ -512,8 +482,6 @@ img {
 }
 
 .btn {
-  border-bottom: unset;
-  box-shadow: unset;
   display: inline-block;
   padding: 10px 20px;
   color: #333;
@@ -523,10 +491,6 @@ img {
   line-height: 1.5;
   text-decoration: none;
   cursor: pointer;
-}
-
-.btn:hover, .btn:focus {
-  box-shadow: unset;
 }
 
 .btn--primary {
@@ -772,17 +736,9 @@ img {
 
 .pager-list .pager-list__item a,
 .pager-list .pager-list__item > span {
-  border-bottom: unset;
-  box-shadow: unset;
   display: inline-block;
   padding: 5px 10px;
   border: 1px solid #ddd;
-}
-
-.pager-list .pager-list__item a:hover, .pager-list .pager-list__item a:focus,
-.pager-list .pager-list__item > span:hover,
-.pager-list .pager-list__item > span:focus {
-  box-shadow: unset;
 }
 
 .pager-list .pager-list__item:first-child a,
@@ -816,17 +772,11 @@ img {
 }
 
 .tag a {
-  border-bottom: unset;
-  box-shadow: unset;
   padding: 5px 10px;
   color: #305697;
   background-color: #f5f9fe;
   border-radius: 15px;
   text-decoration: none;
-}
-
-.tag a:hover, .tag a:focus {
-  box-shadow: unset;
 }
 
 .tag a::before {
@@ -1142,13 +1092,7 @@ img {
 }
 
 .block--block-tallgrasschurch-branding .logo a {
-  border-bottom: unset;
-  box-shadow: unset;
   display: block;
-}
-
-.block--block-tallgrasschurch-branding .logo a:hover, .block--block-tallgrasschurch-branding .logo a:focus {
-  box-shadow: unset;
 }
 
 .block--block-tallgrasschurch-branding .logo img {
@@ -1199,17 +1143,11 @@ img {
 }
 
 .block--block-social-media .menu--social-media .menu__item a {
-  border-bottom: unset;
-  box-shadow: unset;
   display: inline-flex;
   align-self: center;
   padding: 5px;
   border: 1px solid #d1e0fa;
   border-radius: 10px;
-}
-
-.block--block-social-media .menu--social-media .menu__item a:hover, .block--block-social-media .menu--social-media .menu__item a:focus {
-  box-shadow: unset;
 }
 
 .block--block-social-media .menu--social-media .menu__item a svg {
@@ -1228,6 +1166,41 @@ img {
 
 .block--block-social-media .menu--social-media .menu__item a:hover svg path, .block--block-social-media .menu--social-media .menu__item a:focus svg path {
   fill: #305697;
+}
+
+.block--block-news-and-events {
+  margin-top: 80px;
+}
+
+.block--block-news-and-events > .container {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+@media (min-width: 576px) {
+  .block--block-news-and-events > .container {
+    width: 560px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (min-width: 768px) {
+  .block--block-news-and-events > .container {
+    width: 740px;
+  }
+}
+
+@media (min-width: 992px) {
+  .block--block-news-and-events > .container {
+    width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .block--block-news-and-events > .container {
+    width: 1160px;
+  }
 }
 
 .block--block-home-recent-series {
@@ -1382,13 +1355,7 @@ img {
 }
 
 .block--block-tallgrasschurch-main-menu .menu--main .menu__item a {
-  border-bottom: unset;
-  box-shadow: unset;
   color: inherit;
-}
-
-.block--block-tallgrasschurch-main-menu .menu--main .menu__item a:hover, .block--block-tallgrasschurch-main-menu .menu--main .menu__item a:focus {
-  box-shadow: unset;
 }
 
 .block--block-tallgrasschurch-main-menu .menu--main .menu__item a:hover, .block--block-tallgrasschurch-main-menu .menu--main .menu__item a:focus {
@@ -1416,17 +1383,11 @@ img {
 }
 
 .block--block-subnav .menu--main .menu__item a {
-  border-bottom: unset;
-  box-shadow: unset;
   padding: .5em 1em;
   color: #777;
   background-color: #f9f9f9;
   border: 1px solid #eee;
   border-radius: 15px;
-}
-
-.block--block-subnav .menu--main .menu__item a:hover, .block--block-subnav .menu--main .menu__item a:focus {
-  box-shadow: unset;
 }
 
 .block--block-subnav .menu--main .menu__item a.is-active {
@@ -1501,13 +1462,7 @@ img {
 }
 
 .file-upload-list .file-upload-list__item a {
-  border-bottom: unset;
-  box-shadow: unset;
   color: inherit;
-}
-
-.file-upload-list .file-upload-list__item a:hover, .file-upload-list .file-upload-list__item a:focus {
-  box-shadow: unset;
 }
 
 .file-upload-list .file-upload-list__item a:hover, .file-upload-list .file-upload-list__item a:focus {
@@ -1592,16 +1547,10 @@ img {
 }
 
 .menu-local-tasks-list .menu-local-tasks-list__item a {
-  border-bottom: unset;
-  box-shadow: unset;
   display: block;
   padding: 10px 20px;
   color: inherit;
   background-color: #f9f9f9;
-}
-
-.menu-local-tasks-list .menu-local-tasks-list__item a:hover, .menu-local-tasks-list .menu-local-tasks-list__item a:focus {
-  box-shadow: unset;
 }
 
 .menu-local-tasks-list .menu-local-tasks-list__item a:hover, .menu-local-tasks-list .menu-local-tasks-list__item a:focus {
