@@ -11,13 +11,15 @@
   margin: 0;
   padding: ($grid-gutter-width * 4) 0;
   color: $brand-primary;
-  background: url('../img/SpringintheClub-hero-web.jpg') top center;
+  background: url('../img/bettertogether-hero-blank.jpg') right 180px;
   background-size: cover;
   background-repeat: no-repeat;
-  background-color: $gray-200;
+  background-color: white;
   text-shadow: 0px 1px 2px white;
 
-  @media (min-width: $screen-lg) {}
+  @media (min-width: $screen-lg) {
+    background-position: right top;
+  }
 
   .container {}
 

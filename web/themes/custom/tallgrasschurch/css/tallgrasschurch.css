@@ -1233,11 +1233,16 @@ form .preview {
   margin: 0;
   padding: 80px 0;
   color: #305696;
-  background: url("../img/SpringintheClub-hero-web.jpg") top center;
+  background: url("../img/bettertogether-hero-blank.jpg") right 180px;
   background-size: cover;
   background-repeat: no-repeat;
-  background-color: #eee;
+  background-color: white;
   text-shadow: 0px 1px 2px white;
+}
+@media (min-width: 992px) {
+  #block-tallgrasschurch-hero-home {
+    background-position: right top;
+  }
 }
 @media (min-width: 992px) {
   #block-tallgrasschurch-hero-home .block-wrapper {
