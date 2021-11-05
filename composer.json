@@ -1,64 +1,78 @@
 {
-  "name": "tallgrasschurch/tallgrass.church",
-  "type": "project",
-  "description": "Tallgrass Community Church",
-  "homepage": "http://tallgrass.church",
-  "authors": [
-    {
-      "name": "D. Nathan Dillon",
-      "role": "Developer",
-      "homepage": "https://natedillon.com"
-    }
-  ],
-  "repositories": [
-    {
-      "type": "composer",
-      "url": "https://packages.drupal.org/8"
-    }
-  ],
-  "require": {
-    "composer/installers": "^1.9",
-    "cweagans/composer-patches": "^1.6",
-    "drupal/core": "^8.9",
-    "drush/drush": "^10.3",
-    "drupal/devel": "^4.0",
-    "drupal/pathauto": "^1.0",
-    "drupal/google_analytics": "^2.4",
-    "drupal/insert": "^2.0",
-    "drupal/field_group": "^3.0",
-    "drupal/address": "^1.9",
-    "drupal/twig_tweak": "^2.0",
-    "drupal/captcha": "^1.0",
-    "drupal/recaptcha": "^3.0",
-    "drupal/convert_bundles": "^1.0",
-    "drupal/podcast": "^1.0",
-    "drupal/redirect": "^1.4",
-    "drupal/core-composer-scaffold": "^9.0"
-  },
-  "minimum-stability": "dev",
-  "prefer-stable": true,
-  "config": {
-    "sort-packages": true
-  },
-  "extra": {
-    "drupal-scaffold": {
-      "locations": {
-          "web-root": "web/"
-      }
+    "name": "tallgrasschurch/tallgrass.church",
+    "type": "project",
+    "description": "Tallgrass Community Church",
+    "homepage": "http://tallgrass.church",
+    "authors": [
+        {
+            "name": "D. Nathan Dillon",
+            "role": "Developer",
+            "homepage": "https://natedillon.com"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        }
+    ],
+    "require": {
+        "composer/installers": "^1.9",
+        "cweagans/composer-patches": "^1.6",
+        "drupal/core": "^9.2",
+        "drush/drush": "^10.3",
+        "drupal/devel": "^4.0",
+        "drupal/pathauto": "^1.0",
+        "drupal/google_analytics": "^2.4",
+        "drupal/insert": "^2.0",
+        "drupal/field_group": "^3.0",
+        "drupal/address": "^1.9",
+        "drupal/twig_tweak": "^2.0",
+        "drupal/captcha": "^1.0",
+        "drupal/recaptcha": "^3.0",
+        "drupal/convert_bundles": "^1.0",
+        "drupal/podcast": "^1.0",
+        "drupal/redirect": "^1.4",
+        "drupal/core-composer-scaffold": "^9.0"
     },
-    "installer-paths": {
-      "web/core": ["type:drupal-core"],
-      "web/libraries/{$name}": ["type:drupal-library"],
-      "web/modules/contrib/{$name}": ["type:drupal-module"],
-      "web/modules/custom/{$name}": ["type:drupal-custom-module"],
-      "web/profiles/contrib/{$name}": ["type:drupal-profile"],
-      "web/themes/contrib/{$name}": ["type:drupal-theme"],
-      "web/themes/custom/{$name}": ["type:drupal-custom-theme"]
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "sort-packages": true
     },
-    "patches": {
-      "drupal/core": {
-        "Add option to show only start or end date in the DateTime Range custom formatter": "https://www.drupal.org/files/issues/2018-05-23/drupal-display-one-date-formatter-2827055-25.patch"
-      }
+    "extra": {
+        "drupal-scaffold": {
+            "locations": {
+                "web-root": "web/"
+            }
+        },
+        "installer-paths": {
+            "web/core": [
+                "type:drupal-core"
+            ],
+            "web/libraries/{$name}": [
+                "type:drupal-library"
+            ],
+            "web/modules/contrib/{$name}": [
+                "type:drupal-module"
+            ],
+            "web/modules/custom/{$name}": [
+                "type:drupal-custom-module"
+            ],
+            "web/profiles/contrib/{$name}": [
+                "type:drupal-profile"
+            ],
+            "web/themes/contrib/{$name}": [
+                "type:drupal-theme"
+            ],
+            "web/themes/custom/{$name}": [
+                "type:drupal-custom-theme"
+            ]
+        },
+        "patches": {
+            "drupal/core": {
+                "Add option to show only start or end date in the DateTime Range custom formatter": "https://www.drupal.org/files/issues/2018-05-23/drupal-display-one-date-formatter-2827055-25.patch"
+            }
+        }
     }
-  }
 }
