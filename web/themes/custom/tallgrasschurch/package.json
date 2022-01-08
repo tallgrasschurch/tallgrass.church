@@ -16,7 +16,7 @@
     "grunt-sass": "^3.1.0",
     "load-grunt-tasks": "^5.1.0",
     "normalize.css": "^8.0.1",
-    "sass": "^1.46.0",
+    "sass": "^1.47.0",
     "time-grunt": "^2.0.0"
   },
   "browserslist": [
