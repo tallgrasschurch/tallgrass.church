@@ -9,6 +9,7 @@ libraries:
 libraries-override:
   #system/base: false
 base theme: stable
+logo: logo.png
 regions:
   header: 'Header'
   content_above: 'Above the content'
