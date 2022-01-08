@@ -1229,19 +1229,20 @@ form .preview {
 }
 
 #block-tallgrasschurch-hero-home {
-  min-height: 500px;
+  min-height: 300px;
   margin: 0;
   padding: 80px 0;
-  color: #305696;
-  background: url("../img/bettertogether-hero-blank.jpg") right 180px;
+  color: white;
+  background-image: url("../img/bluehills-hero.jpg");
+  background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   background-color: white;
-  text-shadow: 0px 1px 2px white;
+  text-shadow: 0px 1px 2px black;
 }
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   #block-tallgrasschurch-hero-home {
-    background-position: right top;
+    min-height: 400px;
   }
 }
 @media (min-width: 992px) {
@@ -1250,6 +1251,10 @@ form .preview {
     grid-template-columns: repeat(12, [col] 1fr);
     grid-gap: 20px;
   }
+}
+#block-tallgrasschurch-hero-home .field--field-block-title,
+#block-tallgrasschurch-hero-home .field--body {
+  text-align: center;
 }
 #block-tallgrasschurch-hero-home .field--field-block-title {
   margin: 0 0 10px;
@@ -1287,6 +1292,13 @@ form .preview {
 @media (min-width: 992px) {
   #block-tallgrasschurch-hero-home .field--body {
     grid-row-start: 2;
+    grid-column-start: 3;
+    grid-column-end: span 8;
+  }
+}
+@media (min-width: 1200px) {
+  #block-tallgrasschurch-hero-home .field--body {
+    grid-column-start: 4;
     grid-column-end: span 6;
   }
 }
