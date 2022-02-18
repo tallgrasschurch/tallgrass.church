@@ -1,6 +1,6 @@
 {
   "name": "@tallgrasschurch/tallgrass.church",
-  "description": "Drupal theme for Tallgrass Community Church in Manhattan, Kansas.",
+  "description": "Drupal theme for Tallgrass at The Well in Manhattan, Kansas.",
   "author": "D. Nathan Dillon",
   "repository": {
     "type": "git",
@@ -8,7 +8,7 @@
   },
   "private": true,
   "devDependencies": {
-    "autoprefixer": "^9.8.8",
+    "autoprefixer": "^10.4.2",
     "grunt": "^1.4.1",
     "grunt-concurrent": "^3.0.0",
     "grunt-contrib-watch": "^1.1.0",
@@ -16,6 +16,8 @@
     "grunt-sass": "^3.1.0",
     "load-grunt-tasks": "^5.1.0",
     "normalize.css": "^8.0.1",
-    "sass": "^1.47.0",
+    "postcss": "^8.4.6",
+    "sass": "^1.49.8",
     "time-grunt": "^2.0.0"
+  }
 }
