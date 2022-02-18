@@ -3,11 +3,14 @@
 // --------------------------------------------------
 
 
+@use "sass:math";
+
+
 .field--field-file-upload {
 
   .field__label {
     margin: 0;
-    padding: ($grid-gutter-width / 2) ($grid-gutter-width);
+    padding: math.div($grid-gutter-width, 2) ($grid-gutter-width);
     color: white;
     background-color: $brand-primary;
     border-bottom: 1px solid white;
@@ -22,7 +25,7 @@
 
     li {
       display: block;
-      padding: ($grid-gutter-width / 2) ($grid-gutter-width);
+      padding: math.div($grid-gutter-width, 2) ($grid-gutter-width);
       border-bottom: 1px solid white;
 
       &:nth-child(odd) {
