@@ -18,8 +18,4 @@
     "normalize.css": "^8.0.1",
     "sass": "^1.47.0",
     "time-grunt": "^2.0.0"
-  },
-  "browserslist": [
-    "defaults"
-  ]
 }
