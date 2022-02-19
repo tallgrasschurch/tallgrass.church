@@ -8,10 +8,11 @@
   },
   "private": true,
   "scripts": {
-    "build": "npm-run-all build:*",
-    "build:clean": "del-cli css/*",
+    "build": "npm-run-all clean build:*",
     "build:sass": "sass --no-source-map src/css:css",
     "build:postcss": "postcss --no-map -u autoprefixer -r css",
+    "clean": "npm-run-all clean:*",
+    "clean:css": "del-cli css/*",
     "start": "npm-run-all build watch",
     "watch": "npm-run-all --parallel watch:*",
     "watch:css": "onchange \"src/css\" -- npm-run-all build:sass build:postcss"
