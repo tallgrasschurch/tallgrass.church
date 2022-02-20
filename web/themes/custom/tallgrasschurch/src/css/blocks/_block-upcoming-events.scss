@@ -3,6 +3,9 @@
 // --------------------------------------------------
 
 
+@use "sass:math";
+
+
 #block-tallgrasschurch-upcoming-events {
   margin: 0;
   padding: $grid-gutter-width 0;
@@ -41,7 +44,7 @@
       display: block;
       height: 100%;
       min-height: calc(#{$date-month-font-size} + #{$date-day-font-size} + (#{$date-padding-size} * 2 * 2) + #{$grid-gutter-width});
-      padding: ($grid-gutter-width / 2) ($grid-gutter-width / 2) ($grid-gutter-width / 2) (($grid-gutter-width / 2) + 70px);
+      padding: math.div($grid-gutter-width, 2) math.div($grid-gutter-width, 2) math.div($grid-gutter-width, 2) (math.div($grid-gutter-width, 2) + 70px);
       color: inherit;
       background-color: white;
       border: 1px solid $grey-lighter;
@@ -58,8 +61,8 @@
 
       .views-row__date {
         position: absolute;
-        top: ($grid-gutter-width / 2);
-        left: ($grid-gutter-width / 2);
+        top: math.div($grid-gutter-width, 2);
+        left: math.div($grid-gutter-width, 2);
         width: 60px;
         overflow: hidden;
         color: white;

@@ -3,6 +3,9 @@
 // --------------------------------------------------
 
 
+@use "sass:math";
+
+
 // Default margins
 // -------------------------
 
@@ -20,7 +23,7 @@ dl {
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
-  margin: $line-height-computed 0 ($line-height-computed / 2);
+  margin: $line-height-computed 0 math.div($line-height-computed, 2);
 }
 
 h1, .h1 { font-size: $h1-font-size; }
@@ -47,6 +50,6 @@ dl {
 
   dd {
     margin-left: 0;
-    margin-bottom: ($line-height-computed / 2);
+    margin-bottom: math.div($line-height-computed, 2);
   }
 }

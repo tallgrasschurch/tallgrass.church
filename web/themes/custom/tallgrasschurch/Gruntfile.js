@@ -50,7 +50,7 @@ module.exports = function(grunt) {
         ],
         tasks: [
           'sass',
-          'postcss',
+          'postcss --force',
         ],
       },
       livereload: {
@@ -83,7 +83,7 @@ module.exports = function(grunt) {
   // Build task
   grunt.registerTask('build', [
     'sass',
-    'postcss'
+    'postcss --force'
   ]);
 
   // Default task
