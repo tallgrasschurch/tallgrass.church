@@ -3,29 +3,32 @@
 // --------------------------------------------------
 
 
+@use "sass:math";
+
+
 // TODO: Add documentation
 @function column-span($screen-size: screen-sm, $columns: 1) {
   @if $screen-size == screen-sm {
     $container-width: $container-sm - ($grid-gutter-width * 2);
-    $column-width: ($container-width - ($grid-gutter-width * ($grid-columns - 1))) / $grid-columns;
+    $column-width: math.div(($container-width - ($grid-gutter-width * ($grid-columns - 1))), $grid-columns);
     $total-column-width: $column-width * $columns;
     $total-gutter-width: $grid-gutter-width * ($columns - 1);
     @return $total-column-width + $total-gutter-width;
   } @else if $screen-size == screen-md {
     $container-width: $container-md - ($grid-gutter-width * 2);
-    $column-width: ($container-width - ($grid-gutter-width * ($grid-columns - 1))) / $grid-columns;
+    $column-width: math.div(($container-width - ($grid-gutter-width * ($grid-columns - 1))), $grid-columns);
     $total-column-width: $column-width * $columns;
     $total-gutter-width: $grid-gutter-width * ($columns - 1);
     @return $total-column-width + $total-gutter-width;
   } @else if $screen-size == screen-lg {
     $container-width: $container-lg - ($grid-gutter-width * 2);
-    $column-width: ($container-width - ($grid-gutter-width * ($grid-columns - 1))) / $grid-columns;
+    $column-width: math.div(($container-width - ($grid-gutter-width * ($grid-columns - 1))), $grid-columns);
     $total-column-width: $column-width * $columns;
     $total-gutter-width: $grid-gutter-width * ($columns - 1);
     @return $total-column-width + $total-gutter-width;
   } @else if $screen-size == screen-xl {
     $container-width: $container-xl - ($grid-gutter-width * 2);
-    $column-width: ($container-width - ($grid-gutter-width * ($grid-columns - 1))) / $grid-columns;
+    $column-width: math.div(($container-width - ($grid-gutter-width * ($grid-columns - 1))), $grid-columns);
     $total-column-width: $column-width * $columns;
     $total-gutter-width: $grid-gutter-width * ($columns - 1);
     @return $total-column-width + $total-gutter-width;

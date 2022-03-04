@@ -1,25 +1,30 @@
 {
   "name": "@tallgrasschurch/tallgrass.church",
-  "description": "Drupal theme for Tallgrass Community Church in Manhattan, Kansas.",
+  "description": "Drupal theme for Tallgrass at The Well in Manhattan, Kansas.",
   "author": "D. Nathan Dillon",
   "repository": {
     "type": "git",
     "url": "https://github.com/tallgrasschurch/tallgrass.church.git"
   },
   "private": true,
-  "devDependencies": {
-    "autoprefixer": "^9.8.8",
-    "grunt": "^1.4.1",
-    "grunt-concurrent": "^3.0.0",
-    "grunt-contrib-watch": "^1.1.0",
-    "grunt-postcss": "^0.9.0",
-    "grunt-sass": "^3.1.0",
-    "load-grunt-tasks": "^5.1.0",
-    "normalize.css": "^8.0.1",
-    "sass": "^1.47.0",
-    "time-grunt": "^2.0.0"
+  "scripts": {
+    "build": "npm-run-all clean build:*",
+    "build:sass": "sass --no-source-map src/css:css",
+    "build:postcss": "postcss --no-map -u autoprefixer -r css",
+    "clean": "npm-run-all clean:*",
+    "clean:css": "del-cli css/*",
+    "start": "npm-run-all build watch",
+    "watch": "npm-run-all --parallel watch:*",
+    "watch:css": "onchange \"src/css\" -- npm-run-all build:sass build:postcss"
   },
-  "browserslist": [
-    "defaults"
-  ]
+  "devDependencies": {
+    "autoprefixer": "^10.4.2",
+    "del-cli": "^4.0.1",
+    "normalize.css": "^8.0.1",
+    "npm-run-all": "^4.1.5",
+    "onchange": "^7.1.0",
+    "postcss": "^8.4.6",
+    "postcss-cli": "^9.1.0",
+    "sass": "^1.49.8"
+  }
 }

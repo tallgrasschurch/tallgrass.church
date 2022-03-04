@@ -3,6 +3,9 @@
 // --------------------------------------------------
 
 
+@use "sass:math";
+
+
 #block-tallgrasschurch-news-and-events {
   background-color: white;
 
@@ -72,7 +75,7 @@
 
       .news-content-article-header__heading {
         order: 2;
-        margin: 0 0 ($grid-gutter-width / 2);
+        margin: 0 0 math.div($grid-gutter-width, 2);
         font-size: $h4-font-size;
       }
 
@@ -108,7 +111,7 @@
     }
 
     .news-content-article-body {
-      margin-bottom: ($grid-gutter-width / 2);
+      margin-bottom: math.div($grid-gutter-width, 2);
     }
 
     .news-content-article-more {
@@ -140,7 +143,7 @@
 
       .events-content__title {
         margin: 0;
-        padding: ($grid-gutter-width / 2) $grid-gutter-width;
+        padding: math.div($grid-gutter-width, 2) $grid-gutter-width;
       }
     }
 
@@ -237,7 +240,7 @@
       a {
         display: block;
         margin: 0 (-$grid-gutter-width) (-$grid-gutter-width);
-        padding: ($grid-gutter-width / 2) $grid-gutter-width;
+        padding: math.div($grid-gutter-width, 2) $grid-gutter-width;
         background-color: rgba(black, .2);
         text-decoration: none;
       }
