@@ -19,7 +19,7 @@
     "require": {
         "composer/installers": "^2.0",
         "cweagans/composer-patches": "^1.7",
-        "drupal/core": "^9.3",
+        "drupal/core": "^9.4",
         "drush/drush": "^10.6",
         "drupal/devel": "^4.1",
         "drupal/pathauto": "^1.8",
@@ -71,7 +71,8 @@
         },
         "patches": {
             "drupal/core": {
-                "Add option to show only start or end date in the DateTime Range custom formatter": "https://www.drupal.org/files/issues/2018-05-23/drupal-display-one-date-formatter-2827055-25.patch"
+                "Add option to show only start or end date in the DateTime Range custom formatter": "https://www.drupal.org/files/issues/2018-05-23/drupal-display-one-date-formatter-2827055-25.patch",
+                "Switching on aggregation generates fatal SQL error when using multi-column Fields": "https://www.drupal.org/files/issues/2022-04-18/2815881-157.patch"
             }
         }
     }
