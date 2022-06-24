@@ -46,11 +46,18 @@
 
   .card__img {
     order: 1;
-    margin: 0 0 math.div($grid-gutter-width, 2);
     line-height: 1;
     text-align: center;
 
     img {}
+  }
+
+  .card__body + .card__img {
+    margin-bottom: math.div($grid-gutter-width, 2);
+  }
+
+  .card__img + .card__body {
+    margin-top: math.div($grid-gutter-width, 2);
   }
 }
 
@@ -107,5 +114,13 @@
     .card {
       margin: 0;
     }
+  }
+}
+
+.card-deck--3-column {
+  @extend .card-deck;
+
+  @media (min-width: $screen-md) {
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
