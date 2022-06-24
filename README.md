@@ -24,28 +24,20 @@ Commit any changes to the repository (including the `composer.lock` file).
 
 **Note:** When updating Drupal, the update command should be run locally, tested, then deployed to the server. Once the changes are deployed, the `composer install` command can be run on the server in order to update the installation. Running the the `composer update` command directly on the server may cause excessive resource usage.
 
-## Theme Development
+## Theme development
 
-For theme development, you must have [npm](https://www.npmjs.com/) and [Grunt](https://gruntjs.com/) installed in order to build the static files.
+For theme development, you must have [Node Version Manager (nvm)](https://github.com/nvm-sh/nvm) installed in order to build the static files.
 
-Once the requirements are installed, navigate to the `web/themes/custom/tallgrasschurch` directory and install the npm requirements:
+Navigate to the `web/themes/custom/tallgrasschurch` directory, and run the `nvm use` command to switch to the project version of [Node.js](https://nodejs.org/) (installing Node.js if needed). Install the npm requirements with the `npm install` command.
 
-```
-npm install
-```
+**Note:** Edit Sass and JavaScript files from the `src` directory. Files in the `css` and `js` directories will be overwritten on build.
 
-**Note:** Edit CSS and JavaScript files from the `src` directory. Files in the `css` and `js` directories will be overwritten on build.
+### npm commands
 
-### Grunt Commands
+#### `npm start`
 
-#### `grunt`
+Builds the static files and watches for changes.
 
-The default command, which runs `grunt serve`.
-
-#### `grunt build`
+#### `npm build`
 
 Builds the static files.
-
-#### `grunt serve`
-
-Runs `grunt build` and then watches for changes.
