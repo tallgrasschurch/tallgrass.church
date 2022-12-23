@@ -19,7 +19,7 @@
     "require": {
         "composer/installers": "^2.0",
         "cweagans/composer-patches": "^1.7",
-        "drupal/core": "^9.3",
+        "drupal/core": "9.4.*",
         "drush/drush": "^10.6",
         "drupal/devel": "^4.1",
         "drupal/pathauto": "^1.8",
