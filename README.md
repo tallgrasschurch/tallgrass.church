@@ -2,6 +2,8 @@
 
 The website for Tallgrass Community Church in Manhattan, Kansas.
 
+**Update:** Tallgrass Church is now [Mosaic Church](https://mosaicmhk.com). This repository will be archived as we transition to our new website.
+
 ## Drupal Development
 
 In addition to the [Drupal 8 system requirements](https://www.drupal.org/docs/8/system-requirements), this project requires [Composer](https://getcomposer.org/) for installation.
